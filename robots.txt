@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://antoniofurtadoSP.github.io/imoveis-site/sitemap.xml
