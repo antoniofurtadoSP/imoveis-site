@@ -14,6 +14,16 @@
     
         <style>
             
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-S2G6KJM02B"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-S2G6KJM02B');
+        </script>
+        
+        <style>
         /* RESET E CONFIGURAÇÕES GERAIS - LUXURY DESIGN */
         * {
             margin: 0;
@@ -131,12 +141,18 @@
             display: flex;
             align-items: center;
             text-decoration: none;
+            height: 100%;
+            padding: 10px 0;
         }
 
         .logo-img {
-            height: 70px;
-            width: auto;
-            transition: transform 0.3s ease;
+        height: 80px !important;
+        width: auto !important;
+        max-width: 100%;
+        max-height: none !important;
+        transition: transform 0.3s ease;
+        object-fit: contain;
+        display: block; 
         }
 
         .logo-img:hover {
@@ -154,7 +170,12 @@
             }
             
             .logo-img {
-                height: 40px;
+                height: 60px;
+            }
+            
+            nav {
+                min-height: 90px;
+                padding: 12px 30px;
             }
         }
         
@@ -176,11 +197,12 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 25px 80px;
+            padding: 15px 80px;
             max-width: 1400px;
             margin: 0 auto;
             width: 100%;
             box-sizing: border-box;
+            min-height: 100px;
         }
 
         .nav-links {
@@ -377,7 +399,7 @@
             top: 20px;
             right: 20px;
             background: var(--primary-gold);
-            color: var(--dark);
+            color: white;
             padding: 8px 20px;
             font-size: 11px;
             text-transform: uppercase;
@@ -660,6 +682,18 @@
             background: white;
             color: var(--dark);
             transform: none;
+        }
+
+        /* CONTADOR DE RESULTADOS */
+        .results-info {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 14px;
+            color: var(--gray);
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            display: none;
         }
 
         /* ASSISTENTE VIRTUAL */
@@ -1038,24 +1072,30 @@
                 width: 100%;
                 left: 0;
                 right: 0;
+                overflow-x: hidden;
             }
             
             nav {
-                padding: 15px 20px 10px 20px;
+                padding: 18px 20px 12px 20px;
                 flex-direction: column;
                 align-items: center;
-                gap: 15px;
+                gap: 12px;
                 width: 100%;
+                min-height: auto;
             }
             
             .logo-container {
                 flex-shrink: 0;
-                margin-bottom: 5px;
+                margin-bottom: 0;
+                padding: 5px 0;
+                width: 100%;
+                justify-content: center;
             }
             
             .logo-img {
-                height: 50px;
+                height: 55px;
                 width: auto;
+                max-width: 90%;
             }
 
             .nav-links {
@@ -1127,12 +1167,17 @@
         /* Media query para telas muito pequenas */
         @media (max-width: 480px) {
             nav {
-                padding: 12px 15px 8px 15px;
-                gap: 12px;
+                padding: 15px 15px 10px 15px;
+                gap: 10px;
+            }
+            
+            .logo-container {
+                padding: 3px 0;
             }
             
             .logo-img {
-                height: 45px;
+                height: 48px;
+                max-width: 85%;
             }
             
             .nav-links {
@@ -1393,12 +1438,13 @@
             <img src="db_imagens/logo.png" alt="Consultoria Imobiliária" class="logo-img">
         </a>
         <ul class="nav-links">
-            <li><a href="#properties">Imóveis</a></li>
-            <li><a href="#experience">Experiência</a></li>
-            <li><a href="#services">Serviços</a></li>
-            <li><a href="#contact">Contato</a></li>
-            <li><a href="https://wa.me/5511969043012" target="_blank" style="color: #25D366; font-weight: bold;">
-                <i class="fab fa-whatsapp"></i> WhatsApp
+            <li><a href="index.html#properties">Imóveis</a></li>
+            <li><a href="avaliador.html" style="color: #D4AF37; font-weight: bold;"> Avaliador</a></li>
+            <li><a href="experiencia.html">Experiência</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="index.html#contact">Contato</a></li>
+            <li><a href="https://wa.me/5511969043012" target="_blank" style="color: #25D366; font-weight: bold; font-size: 24px;">
+                <i class="fab fa-whatsapp"></i>
             </a></li>
         </ul>
     </nav>
@@ -1474,33 +1520,290 @@
             <div class="properties-grid" id="properties-grid">
     
             <div class="property-card" 
+                 data-id="40"
+                 data-tipo="Rural"
+                 data-finalidade="Venda"
+                 data-bairro="guaripocaba dos souzas"
+                 data-quartos="0"
+                 data-preco="3853815.61"
+                 data-area="381000.0"
+                 style="display: block;"
+                 onclick="if(event.target.tagName !== 'A' && event.target.tagName !== 'BUTTON') window.location.href='imovel_40.html'">
+            
+                <div class="property-badge" style="background: #2c3e50;">VENDA</div>
+            
+                <div class="property-image">
+                    <img src="db_imagens/20260214115216_whatsapp-image-2026-02-14-at-11-49-20.jpeg" alt="Rural em Guaripocaba dos Souzas">
+                </div>
+            
+                <div class="property-info">
+                    <div class="property-location">Guaripocaba dos Souzas • Bragança Paulista</div>
+                    <h3 class="property-title">Rural - Guaripocaba dos Souzas</h3>
+                    <div class="property-features">
+                        <span>381000.0m²</span>
+                        <span>|</span>
+                        <span>0 Quartos</span>
+                        <span>|</span>
+                        <span>0 Banheiros</span>
+                    </div>
+                    <div class="property-price">R$ 3.853.815,61</div>
+                    <a href="imovel_40.html" class="property-button" onclick="event.stopPropagation()">VER DETALHES</a>
+                </div>
+            </div>
+    
+            <div class="property-card" 
+                 data-id="39"
+                 data-tipo="Comercial"
+                 data-finalidade="Locação"
+                 data-bairro="mooca"
+                 data-quartos="0"
+                 data-preco="4800.0"
+                 data-area="110.0"
+                 style="display: block;"
+                 onclick="if(event.target.tagName !== 'A' && event.target.tagName !== 'BUTTON') window.location.href='imovel_39.html'">
+            
+                <div class="property-badge" style="background: #c0a062;">LOCAÇÃO</div>
+            
+                <div class="property-image">
+                    <img src="db_imagens/20260213201414_whatsapp-image-2026-02-13-at-20-06-49-1.jpeg" alt="Comercial em Mooca">
+                </div>
+            
+                <div class="property-info">
+                    <div class="property-location">Mooca • São Paulo</div>
+                    <h3 class="property-title">Comercial - Mooca</h3>
+                    <div class="property-features">
+                        <span>110.0m²</span>
+                        <span>|</span>
+                        <span>0 Quartos</span>
+                        <span>|</span>
+                        <span>2 Banheiros</span>
+                    </div>
+                    <div class="property-price">R$ 4.800,00/mês</div>
+                    <a href="imovel_39.html" class="property-button" onclick="event.stopPropagation()">VER DETALHES</a>
+                </div>
+            </div>
+    
+            <div class="property-card" 
+                 data-id="38"
+                 data-tipo="Apartamento"
+                 data-finalidade="Venda"
+                 data-bairro="consolação"
+                 data-quartos="1"
+                 data-preco="399000.0"
+                 data-area="44.7"
+                 style="display: block;"
+                 onclick="if(event.target.tagName !== 'A' && event.target.tagName !== 'BUTTON') window.location.href='imovel_38.html'">
+            
+                <div class="property-badge" style="background: #2c3e50;">VENDA</div>
+            
+                <div class="property-image">
+                    <img src="db_imagens/20260213100826_WhatsApp Image 2026-02-13 at 10.01.54.jpeg" alt="Apartamento em Consolação">
+                </div>
+            
+                <div class="property-info">
+                    <div class="property-location">Consolação • São Paulo</div>
+                    <h3 class="property-title">Apartamento - Consolação</h3>
+                    <div class="property-features">
+                        <span>44.7m²</span>
+                        <span>|</span>
+                        <span>1 Quartos</span>
+                        <span>|</span>
+                        <span>1 Banheiros</span>
+                    </div>
+                    <div class="property-price">R$ 399.000,00</div>
+                    <a href="imovel_38.html" class="property-button" onclick="event.stopPropagation()">VER DETALHES</a>
+                </div>
+            </div>
+    
+            <div class="property-card" 
+                 data-id="37"
+                 data-tipo="Comercial"
+                 data-finalidade="Locação"
+                 data-bairro="vila gomes cardim"
+                 data-quartos="0"
+                 data-preco="3700.0"
+                 data-area="144.0"
+                 style="display: block;"
+                 onclick="if(event.target.tagName !== 'A' && event.target.tagName !== 'BUTTON') window.location.href='imovel_37.html'">
+            
+                <div class="property-badge" style="background: #c0a062;">LOCAÇÃO</div>
+            
+                <div class="property-image">
+                    <img src="db_imagens/20260212131453_WhatsApp Image 2026-02-11 at 11.30.53.jpeg" alt="Comercial em Vila Gomes Cardim">
+                </div>
+            
+                <div class="property-info">
+                    <div class="property-location">Vila Gomes Cardim • São Paulo</div>
+                    <h3 class="property-title">Comercial - Vila Gomes Cardim</h3>
+                    <div class="property-features">
+                        <span>144.0m²</span>
+                        <span>|</span>
+                        <span>0 Quartos</span>
+                        <span>|</span>
+                        <span>2 Banheiros</span>
+                    </div>
+                    <div class="property-price">R$ 3.700,00/mês</div>
+                    <a href="imovel_37.html" class="property-button" onclick="event.stopPropagation()">VER DETALHES</a>
+                </div>
+            </div>
+    
+            <div class="property-card" 
+                 data-id="36"
+                 data-tipo="Casa"
+                 data-finalidade="Venda"
+                 data-bairro="mooca"
+                 data-quartos="3"
+                 data-preco="1400000.0"
+                 data-area="165.0"
+                 style="display: block;"
+                 onclick="if(event.target.tagName !== 'A' && event.target.tagName !== 'BUTTON') window.location.href='imovel_36.html'">
+            
+                <div class="property-badge" style="background: #2c3e50;">VENDA</div>
+            
+                <div class="property-image">
+                    <img src="db_imagens/20260212132738_transferir.jpeg" alt="Casa em Mooca">
+                </div>
+            
+                <div class="property-info">
+                    <div class="property-location">Mooca • São Paulo</div>
+                    <h3 class="property-title">Casa - Mooca</h3>
+                    <div class="property-features">
+                        <span>165.0m²</span>
+                        <span>|</span>
+                        <span>3 Quartos</span>
+                        <span>|</span>
+                        <span>4 Banheiros</span>
+                    </div>
+                    <div class="property-price">R$ 1.400.000,00</div>
+                    <a href="imovel_36.html" class="property-button" onclick="event.stopPropagation()">VER DETALHES</a>
+                </div>
+            </div>
+    
+            <div class="property-card" 
+                 data-id="35"
+                 data-tipo="Apartamento"
+                 data-finalidade="Venda"
+                 data-bairro="vila bertioga"
+                 data-quartos="2"
+                 data-preco="400000.0"
+                 data-area="56.0"
+                 style="display: block;"
+                 onclick="if(event.target.tagName !== 'A' && event.target.tagName !== 'BUTTON') window.location.href='imovel_35.html'">
+            
+                <div class="property-badge" style="background: #2c3e50;">VENDA</div>
+            
+                <div class="property-image">
+                    <img src="db_imagens/20260212132456_WhatsApp Image 2026-02-09 at 15.34.27.jpeg" alt="Apartamento em Vila Bertioga">
+                </div>
+            
+                <div class="property-info">
+                    <div class="property-location">Vila Bertioga • São Paulo</div>
+                    <h3 class="property-title">Apartamento - Vila Bertioga</h3>
+                    <div class="property-features">
+                        <span>56.0m²</span>
+                        <span>|</span>
+                        <span>2 Quartos</span>
+                        <span>|</span>
+                        <span>1 Banheiros</span>
+                    </div>
+                    <div class="property-price">R$ 400.000,00</div>
+                    <a href="imovel_35.html" class="property-button" onclick="event.stopPropagation()">VER DETALHES</a>
+                </div>
+            </div>
+    
+            <div class="property-card" 
+                 data-id="34"
+                 data-tipo="Casa"
+                 data-finalidade="Locação"
+                 data-bairro="vila prudente"
+                 data-quartos="7"
+                 data-preco="12000.0"
+                 data-area="417.0"
+                 style="display: block;"
+                 onclick="if(event.target.tagName !== 'A' && event.target.tagName !== 'BUTTON') window.location.href='imovel_34.html'">
+            
+                <div class="property-badge" style="background: #c0a062;">LOCAÇÃO</div>
+            
+                <div class="property-image">
+                    <img src="db_imagens/20260212132109_WhatsApp Image 2026-02-06 at 09.04.44 (1).jpeg" alt="Casa em Vila Prudente">
+                </div>
+            
+                <div class="property-info">
+                    <div class="property-location">Vila Prudente • São Paulo</div>
+                    <h3 class="property-title">Casa - Vila Prudente</h3>
+                    <div class="property-features">
+                        <span>417.0m²</span>
+                        <span>|</span>
+                        <span>7 Quartos</span>
+                        <span>|</span>
+                        <span>5 Banheiros</span>
+                    </div>
+                    <div class="property-price">R$ 12.000,00/mês</div>
+                    <a href="imovel_34.html" class="property-button" onclick="event.stopPropagation()">VER DETALHES</a>
+                </div>
+            </div>
+    
+            <div class="property-card" 
+                 data-id="33"
+                 data-tipo="Sobrado"
+                 data-finalidade="Locação"
+                 data-bairro="cidade mãe do céu"
+                 data-quartos="2"
+                 data-preco="3000.0"
+                 data-area="88.0"
+                 style="display: block;"
+                 onclick="if(event.target.tagName !== 'A' && event.target.tagName !== 'BUTTON') window.location.href='imovel_33.html'">
+            
+                <div class="property-badge" style="background: #c0a062;">LOCAÇÃO</div>
+            
+                <div class="property-image">
+                    <img src="db_imagens/20260212132956_WhatsApp Image 2026-02-05 at 13.53.35 (1).jpeg" alt="Sobrado em Cidade Mãe do Céu">
+                </div>
+            
+                <div class="property-info">
+                    <div class="property-location">Cidade Mãe do Céu • São Paulo</div>
+                    <h3 class="property-title">Sobrado - Cidade Mãe do Céu</h3>
+                    <div class="property-features">
+                        <span>88.0m²</span>
+                        <span>|</span>
+                        <span>2 Quartos</span>
+                        <span>|</span>
+                        <span>2 Banheiros</span>
+                    </div>
+                    <div class="property-price">R$ 3.000,00/mês</div>
+                    <a href="imovel_33.html" class="property-button" onclick="event.stopPropagation()">VER DETALHES</a>
+                </div>
+            </div>
+    
+            <div class="property-card" 
                  data-id="30"
                  data-tipo="Sobrado"
                  data-finalidade="Locação"
                  data-bairro="tatuapé"
                  data-quartos="2"
                  data-preco="2150.0"
-                 data-area="0"
-                 onclick="window.location.href='imovel_30.html'">
+                 data-area="90.0"
+                 style="display: block;"
+                 onclick="if(event.target.tagName !== 'A' && event.target.tagName !== 'BUTTON') window.location.href='imovel_30.html'">
             
                 <div class="property-badge" style="background: #c0a062;">LOCAÇÃO</div>
             
                 <div class="property-image">
-                    <img src="db_imagens/20260202124744_IMG_5064.JPEG" alt="Sobrado em Tatuapé">
+                    <img src="db_imagens/20260212135156_transferir.jpeg" alt="Sobrado em Tatuapé">
                 </div>
             
                 <div class="property-info">
                     <div class="property-location">Tatuapé • São Paulo</div>
                     <h3 class="property-title">Sobrado - Tatuapé</h3>
                     <div class="property-features">
-                        <span>0m²</span>
+                        <span>90.0m²</span>
                         <span>|</span>
                         <span>2 Quartos</span>
                         <span>|</span>
                         <span>1 Banheiros</span>
                     </div>
                     <div class="property-price">R$ 2.150,00/mês</div>
-                    <a href="imovel_30.html" class="property-button">VER DETALHES</a>
+                    <a href="imovel_30.html" class="property-button" onclick="event.stopPropagation()">VER DETALHES</a>
                 </div>
             </div>
     
@@ -1512,12 +1815,13 @@
                  data-quartos="3"
                  data-preco="1325000.0"
                  data-area="280.0"
-                 onclick="window.location.href='imovel_29.html'">
+                 style="display: block;"
+                 onclick="if(event.target.tagName !== 'A' && event.target.tagName !== 'BUTTON') window.location.href='imovel_29.html'">
             
                 <div class="property-badge" style="background: #2c3e50;">VENDA</div>
             
                 <div class="property-image">
-                    <img src="db_imagens/20260202110845_transferir (32).jpeg" alt="Sobrado em Mooca">
+                    <img src="db_imagens/20260212174138_transferir (22).jpeg" alt="Sobrado em Mooca">
                 </div>
             
                 <div class="property-info">
@@ -1531,7 +1835,7 @@
                         <span>3 Banheiros</span>
                     </div>
                     <div class="property-price">R$ 1.325.000,00</div>
-                    <a href="imovel_29.html" class="property-button">VER DETALHES</a>
+                    <a href="imovel_29.html" class="property-button" onclick="event.stopPropagation()">VER DETALHES</a>
                 </div>
             </div>
     
@@ -1543,7 +1847,8 @@
                  data-quartos="4"
                  data-preco="10000.0"
                  data-area="175.0"
-                 onclick="window.location.href='imovel_28.html'">
+                 style="display: block;"
+                 onclick="if(event.target.tagName !== 'A' && event.target.tagName !== 'BUTTON') window.location.href='imovel_28.html'">
             
                 <div class="property-badge" style="background: #c0a062;">LOCAÇÃO</div>
             
@@ -1562,7 +1867,7 @@
                         <span>3 Banheiros</span>
                     </div>
                     <div class="property-price">R$ 10.000,00/mês</div>
-                    <a href="imovel_28.html" class="property-button">VER DETALHES</a>
+                    <a href="imovel_28.html" class="property-button" onclick="event.stopPropagation()">VER DETALHES</a>
                 </div>
             </div>
     
@@ -1574,7 +1879,8 @@
                  data-quartos="0"
                  data-preco="218000.0"
                  data-area="30.0"
-                 onclick="window.location.href='imovel_27.html'">
+                 style="display: block;"
+                 onclick="if(event.target.tagName !== 'A' && event.target.tagName !== 'BUTTON') window.location.href='imovel_27.html'">
             
                 <div class="property-badge" style="background: #2c3e50;">VENDA</div>
             
@@ -1593,7 +1899,7 @@
                         <span>1 Banheiros</span>
                     </div>
                     <div class="property-price">R$ 218.000,00</div>
-                    <a href="imovel_27.html" class="property-button">VER DETALHES</a>
+                    <a href="imovel_27.html" class="property-button" onclick="event.stopPropagation()">VER DETALHES</a>
                 </div>
             </div>
     
@@ -1605,7 +1911,8 @@
                  data-quartos="2"
                  data-preco="789000.0"
                  data-area="85.0"
-                 onclick="window.location.href='imovel_26.html'">
+                 style="display: block;"
+                 onclick="if(event.target.tagName !== 'A' && event.target.tagName !== 'BUTTON') window.location.href='imovel_26.html'">
             
                 <div class="property-badge" style="background: #2c3e50;">VENDA</div>
             
@@ -1624,7 +1931,7 @@
                         <span>2 Banheiros</span>
                     </div>
                     <div class="property-price">R$ 789.000,00</div>
-                    <a href="imovel_26.html" class="property-button">VER DETALHES</a>
+                    <a href="imovel_26.html" class="property-button" onclick="event.stopPropagation()">VER DETALHES</a>
                 </div>
             </div>
     
@@ -1636,7 +1943,8 @@
                  data-quartos="3"
                  data-preco="1049000.0"
                  data-area="181.0"
-                 onclick="window.location.href='imovel_25.html'">
+                 style="display: block;"
+                 onclick="if(event.target.tagName !== 'A' && event.target.tagName !== 'BUTTON') window.location.href='imovel_25.html'">
             
                 <div class="property-badge" style="background: #2c3e50;">VENDA</div>
             
@@ -1655,7 +1963,7 @@
                         <span>3 Banheiros</span>
                     </div>
                     <div class="property-price">R$ 1.049.000,00</div>
-                    <a href="imovel_25.html" class="property-button">VER DETALHES</a>
+                    <a href="imovel_25.html" class="property-button" onclick="event.stopPropagation()">VER DETALHES</a>
                 </div>
             </div>
     
@@ -1667,7 +1975,8 @@
                  data-quartos="0"
                  data-preco="15000.0"
                  data-area="700.0"
-                 onclick="window.location.href='imovel_24.html'">
+                 style="display: block;"
+                 onclick="if(event.target.tagName !== 'A' && event.target.tagName !== 'BUTTON') window.location.href='imovel_24.html'">
             
                 <div class="property-badge" style="background: linear-gradient(90deg, #2c3e50 50%, #c0a062 50%);">VENDA/LOCAÇÃO</div>
             
@@ -1686,7 +1995,7 @@
                         <span>13 Banheiros</span>
                     </div>
                     <div class="property-price">R$ 3.300.000,00<br><small>ou R$ 15.000,00/mês</small></div>
-                    <a href="imovel_24.html" class="property-button">VER DETALHES</a>
+                    <a href="imovel_24.html" class="property-button" onclick="event.stopPropagation()">VER DETALHES</a>
                 </div>
             </div>
     
@@ -1698,7 +2007,8 @@
                  data-quartos="2"
                  data-preco="2900.0"
                  data-area="80.0"
-                 onclick="window.location.href='imovel_23.html'">
+                 style="display: block;"
+                 onclick="if(event.target.tagName !== 'A' && event.target.tagName !== 'BUTTON') window.location.href='imovel_23.html'">
             
                 <div class="property-badge" style="background: #c0a062;">LOCAÇÃO</div>
             
@@ -1717,7 +2027,7 @@
                         <span>2 Banheiros</span>
                     </div>
                     <div class="property-price">R$ 2.900,00/mês</div>
-                    <a href="imovel_23.html" class="property-button">VER DETALHES</a>
+                    <a href="imovel_23.html" class="property-button" onclick="event.stopPropagation()">VER DETALHES</a>
                 </div>
             </div>
     
@@ -1729,7 +2039,8 @@
                  data-quartos="3"
                  data-preco="491000.0"
                  data-area="90.0"
-                 onclick="window.location.href='imovel_22.html'">
+                 style="display: block;"
+                 onclick="if(event.target.tagName !== 'A' && event.target.tagName !== 'BUTTON') window.location.href='imovel_22.html'">
             
                 <div class="property-badge" style="background: #2c3e50;">VENDA</div>
             
@@ -1748,7 +2059,7 @@
                         <span>5 Banheiros</span>
                     </div>
                     <div class="property-price">R$ 491.000,00</div>
-                    <a href="imovel_22.html" class="property-button">VER DETALHES</a>
+                    <a href="imovel_22.html" class="property-button" onclick="event.stopPropagation()">VER DETALHES</a>
                 </div>
             </div>
     
@@ -1760,7 +2071,8 @@
                  data-quartos="0"
                  data-preco="2500.0"
                  data-area="75.0"
-                 onclick="window.location.href='imovel_21.html'">
+                 style="display: block;"
+                 onclick="if(event.target.tagName !== 'A' && event.target.tagName !== 'BUTTON') window.location.href='imovel_21.html'">
             
                 <div class="property-badge" style="background: #c0a062;">LOCAÇÃO</div>
             
@@ -1779,7 +2091,7 @@
                         <span>2 Banheiros</span>
                     </div>
                     <div class="property-price">R$ 2.500,00/mês</div>
-                    <a href="imovel_21.html" class="property-button">VER DETALHES</a>
+                    <a href="imovel_21.html" class="property-button" onclick="event.stopPropagation()">VER DETALHES</a>
                 </div>
             </div>
     
@@ -1791,7 +2103,8 @@
                  data-quartos="2"
                  data-preco="2790.0"
                  data-area="85.0"
-                 onclick="window.location.href='imovel_20.html'">
+                 style="display: block;"
+                 onclick="if(event.target.tagName !== 'A' && event.target.tagName !== 'BUTTON') window.location.href='imovel_20.html'">
             
                 <div class="property-badge" style="background: #c0a062;">LOCAÇÃO</div>
             
@@ -1810,7 +2123,7 @@
                         <span>2 Banheiros</span>
                     </div>
                     <div class="property-price">R$ 2.790,00/mês</div>
-                    <a href="imovel_20.html" class="property-button">VER DETALHES</a>
+                    <a href="imovel_20.html" class="property-button" onclick="event.stopPropagation()">VER DETALHES</a>
                 </div>
             </div>
     
@@ -1822,7 +2135,8 @@
                  data-quartos="2"
                  data-preco="550000.0"
                  data-area="127.0"
-                 onclick="window.location.href='imovel_19.html'">
+                 style="display: block;"
+                 onclick="if(event.target.tagName !== 'A' && event.target.tagName !== 'BUTTON') window.location.href='imovel_19.html'">
             
                 <div class="property-badge" style="background: #2c3e50;">VENDA</div>
             
@@ -1841,7 +2155,7 @@
                         <span>1 Banheiros</span>
                     </div>
                     <div class="property-price">R$ 550.000,00</div>
-                    <a href="imovel_19.html" class="property-button">VER DETALHES</a>
+                    <a href="imovel_19.html" class="property-button" onclick="event.stopPropagation()">VER DETALHES</a>
                 </div>
             </div>
     
@@ -1853,7 +2167,8 @@
                  data-quartos="2"
                  data-preco="530000.0"
                  data-area="92.8"
-                 onclick="window.location.href='imovel_18.html'">
+                 style="display: block;"
+                 onclick="if(event.target.tagName !== 'A' && event.target.tagName !== 'BUTTON') window.location.href='imovel_18.html'">
             
                 <div class="property-badge" style="background: #2c3e50;">VENDA</div>
             
@@ -1872,7 +2187,7 @@
                         <span>1 Banheiros</span>
                     </div>
                     <div class="property-price">R$ 530.000,00</div>
-                    <a href="imovel_18.html" class="property-button">VER DETALHES</a>
+                    <a href="imovel_18.html" class="property-button" onclick="event.stopPropagation()">VER DETALHES</a>
                 </div>
             </div>
     
@@ -1884,7 +2199,8 @@
                  data-quartos="2"
                  data-preco="3700.0"
                  data-area="63.0"
-                 onclick="window.location.href='imovel_16.html'">
+                 style="display: block;"
+                 onclick="if(event.target.tagName !== 'A' && event.target.tagName !== 'BUTTON') window.location.href='imovel_16.html'">
             
                 <div class="property-badge" style="background: #c0a062;">LOCAÇÃO</div>
             
@@ -1903,7 +2219,7 @@
                         <span>2 Banheiros</span>
                     </div>
                     <div class="property-price">R$ 3.700,00/mês</div>
-                    <a href="imovel_16.html" class="property-button">VER DETALHES</a>
+                    <a href="imovel_16.html" class="property-button" onclick="event.stopPropagation()">VER DETALHES</a>
                 </div>
             </div>
     
@@ -1915,7 +2231,8 @@
                  data-quartos="4"
                  data-preco="1590000.0"
                  data-area="280.0"
-                 onclick="window.location.href='imovel_14.html'">
+                 style="display: block;"
+                 onclick="if(event.target.tagName !== 'A' && event.target.tagName !== 'BUTTON') window.location.href='imovel_14.html'">
             
                 <div class="property-badge" style="background: #2c3e50;">VENDA</div>
             
@@ -1934,7 +2251,7 @@
                         <span>5 Banheiros</span>
                     </div>
                     <div class="property-price">R$ 1.590.000,00</div>
-                    <a href="imovel_14.html" class="property-button">VER DETALHES</a>
+                    <a href="imovel_14.html" class="property-button" onclick="event.stopPropagation()">VER DETALHES</a>
                 </div>
             </div>
     
@@ -1946,7 +2263,8 @@
                  data-quartos="3"
                  data-preco="4000.0"
                  data-area="80.0"
-                 onclick="window.location.href='imovel_13.html'">
+                 style="display: block;"
+                 onclick="if(event.target.tagName !== 'A' && event.target.tagName !== 'BUTTON') window.location.href='imovel_13.html'">
             
                 <div class="property-badge" style="background: #c0a062;">LOCAÇÃO</div>
             
@@ -1965,7 +2283,7 @@
                         <span>2 Banheiros</span>
                     </div>
                     <div class="property-price">R$ 4.000,00/mês</div>
-                    <a href="imovel_13.html" class="property-button">VER DETALHES</a>
+                    <a href="imovel_13.html" class="property-button" onclick="event.stopPropagation()">VER DETALHES</a>
                 </div>
             </div>
     
@@ -1977,7 +2295,8 @@
                  data-quartos="3"
                  data-preco="3800.0"
                  data-area="80.0"
-                 onclick="window.location.href='imovel_12.html'">
+                 style="display: block;"
+                 onclick="if(event.target.tagName !== 'A' && event.target.tagName !== 'BUTTON') window.location.href='imovel_12.html'">
             
                 <div class="property-badge" style="background: #c0a062;">LOCAÇÃO</div>
             
@@ -1996,7 +2315,7 @@
                         <span>2 Banheiros</span>
                     </div>
                     <div class="property-price">R$ 3.800,00/mês</div>
-                    <a href="imovel_12.html" class="property-button">VER DETALHES</a>
+                    <a href="imovel_12.html" class="property-button" onclick="event.stopPropagation()">VER DETALHES</a>
                 </div>
             </div>
     
@@ -2008,7 +2327,8 @@
                  data-quartos="2"
                  data-preco="3500.0"
                  data-area="59.0"
-                 onclick="window.location.href='imovel_11.html'">
+                 style="display: block;"
+                 onclick="if(event.target.tagName !== 'A' && event.target.tagName !== 'BUTTON') window.location.href='imovel_11.html'">
             
                 <div class="property-badge" style="background: #c0a062;">LOCAÇÃO</div>
             
@@ -2027,7 +2347,7 @@
                         <span>2 Banheiros</span>
                     </div>
                     <div class="property-price">R$ 3.500,00/mês</div>
-                    <a href="imovel_11.html" class="property-button">VER DETALHES</a>
+                    <a href="imovel_11.html" class="property-button" onclick="event.stopPropagation()">VER DETALHES</a>
                 </div>
             </div>
     
@@ -2039,7 +2359,8 @@
                  data-quartos="2"
                  data-preco="1700.0"
                  data-area="45.0"
-                 onclick="window.location.href='imovel_10.html'">
+                 style="display: block;"
+                 onclick="if(event.target.tagName !== 'A' && event.target.tagName !== 'BUTTON') window.location.href='imovel_10.html'">
             
                 <div class="property-badge" style="background: #c0a062;">LOCAÇÃO</div>
             
@@ -2058,7 +2379,7 @@
                         <span>1 Banheiros</span>
                     </div>
                     <div class="property-price">R$ 1.700,00/mês</div>
-                    <a href="imovel_10.html" class="property-button">VER DETALHES</a>
+                    <a href="imovel_10.html" class="property-button" onclick="event.stopPropagation()">VER DETALHES</a>
                 </div>
             </div>
     
@@ -2070,7 +2391,8 @@
                  data-quartos="3"
                  data-preco="550000.0"
                  data-area="149.0"
-                 onclick="window.location.href='imovel_9.html'">
+                 style="display: block;"
+                 onclick="if(event.target.tagName !== 'A' && event.target.tagName !== 'BUTTON') window.location.href='imovel_9.html'">
             
                 <div class="property-badge" style="background: #2c3e50;">VENDA</div>
             
@@ -2089,7 +2411,7 @@
                         <span>2 Banheiros</span>
                     </div>
                     <div class="property-price">R$ 550.000,00</div>
-                    <a href="imovel_9.html" class="property-button">VER DETALHES</a>
+                    <a href="imovel_9.html" class="property-button" onclick="event.stopPropagation()">VER DETALHES</a>
                 </div>
             </div>
     
@@ -2101,7 +2423,8 @@
                  data-quartos="2"
                  data-preco="2300.0"
                  data-area="50.0"
-                 onclick="window.location.href='imovel_8.html'">
+                 style="display: block;"
+                 onclick="if(event.target.tagName !== 'A' && event.target.tagName !== 'BUTTON') window.location.href='imovel_8.html'">
             
                 <div class="property-badge" style="background: #c0a062;">LOCAÇÃO</div>
             
@@ -2120,7 +2443,7 @@
                         <span>1 Banheiros</span>
                     </div>
                     <div class="property-price">R$ 2.300,00/mês</div>
-                    <a href="imovel_8.html" class="property-button">VER DETALHES</a>
+                    <a href="imovel_8.html" class="property-button" onclick="event.stopPropagation()">VER DETALHES</a>
                 </div>
             </div>
     
@@ -2132,7 +2455,8 @@
                  data-quartos="2"
                  data-preco="2300.0"
                  data-area="80.0"
-                 onclick="window.location.href='imovel_7.html'">
+                 style="display: block;"
+                 onclick="if(event.target.tagName !== 'A' && event.target.tagName !== 'BUTTON') window.location.href='imovel_7.html'">
             
                 <div class="property-badge" style="background: #c0a062;">LOCAÇÃO</div>
             
@@ -2151,7 +2475,7 @@
                         <span>2 Banheiros</span>
                     </div>
                     <div class="property-price">R$ 2.300,00/mês</div>
-                    <a href="imovel_7.html" class="property-button">VER DETALHES</a>
+                    <a href="imovel_7.html" class="property-button" onclick="event.stopPropagation()">VER DETALHES</a>
                 </div>
             </div>
     
@@ -2163,7 +2487,8 @@
                  data-quartos="0"
                  data-preco="3000.0"
                  data-area="100.0"
-                 onclick="window.location.href='imovel_6.html'">
+                 style="display: block;"
+                 onclick="if(event.target.tagName !== 'A' && event.target.tagName !== 'BUTTON') window.location.href='imovel_6.html'">
             
                 <div class="property-badge" style="background: #c0a062;">LOCAÇÃO</div>
             
@@ -2182,7 +2507,7 @@
                         <span>2 Banheiros</span>
                     </div>
                     <div class="property-price">R$ 3.000,00/mês</div>
-                    <a href="imovel_6.html" class="property-button">VER DETALHES</a>
+                    <a href="imovel_6.html" class="property-button" onclick="event.stopPropagation()">VER DETALHES</a>
                 </div>
             </div>
     
@@ -2194,7 +2519,8 @@
                  data-quartos="2"
                  data-preco="2500.0"
                  data-area="180.0"
-                 onclick="window.location.href='imovel_5.html'">
+                 style="display: block;"
+                 onclick="if(event.target.tagName !== 'A' && event.target.tagName !== 'BUTTON') window.location.href='imovel_5.html'">
             
                 <div class="property-badge" style="background: #c0a062;">LOCAÇÃO</div>
             
@@ -2213,7 +2539,7 @@
                         <span>1 Banheiros</span>
                     </div>
                     <div class="property-price">R$ 2.500,00/mês</div>
-                    <a href="imovel_5.html" class="property-button">VER DETALHES</a>
+                    <a href="imovel_5.html" class="property-button" onclick="event.stopPropagation()">VER DETALHES</a>
                 </div>
             </div>
     
@@ -2225,7 +2551,8 @@
                  data-quartos="0"
                  data-preco="2300.0"
                  data-area="50.0"
-                 onclick="window.location.href='imovel_4.html'">
+                 style="display: block;"
+                 onclick="if(event.target.tagName !== 'A' && event.target.tagName !== 'BUTTON') window.location.href='imovel_4.html'">
             
                 <div class="property-badge" style="background: #c0a062;">LOCAÇÃO</div>
             
@@ -2244,7 +2571,7 @@
                         <span>1 Banheiros</span>
                     </div>
                     <div class="property-price">R$ 2.300,00/mês</div>
-                    <a href="imovel_4.html" class="property-button">VER DETALHES</a>
+                    <a href="imovel_4.html" class="property-button" onclick="event.stopPropagation()">VER DETALHES</a>
                 </div>
             </div>
     
@@ -2256,7 +2583,8 @@
                  data-quartos="3"
                  data-preco="2900.0"
                  data-area="80.0"
-                 onclick="window.location.href='imovel_3.html'">
+                 style="display: block;"
+                 onclick="if(event.target.tagName !== 'A' && event.target.tagName !== 'BUTTON') window.location.href='imovel_3.html'">
             
                 <div class="property-badge" style="background: #c0a062;">LOCAÇÃO</div>
             
@@ -2275,7 +2603,7 @@
                         <span>3 Banheiros</span>
                     </div>
                     <div class="property-price">R$ 2.900,00/mês</div>
-                    <a href="imovel_3.html" class="property-button">VER DETALHES</a>
+                    <a href="imovel_3.html" class="property-button" onclick="event.stopPropagation()">VER DETALHES</a>
                 </div>
             </div>
     
@@ -2287,7 +2615,8 @@
                  data-quartos="4"
                  data-preco="5000.0"
                  data-area="238.0"
-                 onclick="window.location.href='imovel_2.html'">
+                 style="display: block;"
+                 onclick="if(event.target.tagName !== 'A' && event.target.tagName !== 'BUTTON') window.location.href='imovel_2.html'">
             
                 <div class="property-badge" style="background: #c0a062;">LOCAÇÃO</div>
             
@@ -2306,7 +2635,7 @@
                         <span>3 Banheiros</span>
                     </div>
                     <div class="property-price">R$ 5.000,00/mês</div>
-                    <a href="imovel_2.html" class="property-button">VER DETALHES</a>
+                    <a href="imovel_2.html" class="property-button" onclick="event.stopPropagation()">VER DETALHES</a>
                 </div>
             </div>
     
@@ -2318,7 +2647,8 @@
                  data-quartos="4"
                  data-preco="5600.0"
                  data-area="280.0"
-                 onclick="window.location.href='imovel_1.html'">
+                 style="display: block;"
+                 onclick="if(event.target.tagName !== 'A' && event.target.tagName !== 'BUTTON') window.location.href='imovel_1.html'">
             
                 <div class="property-badge" style="background: linear-gradient(90deg, #2c3e50 50%, #c0a062 50%);">VENDA/LOCAÇÃO</div>
             
@@ -2337,7 +2667,7 @@
                         <span>4 Banheiros</span>
                     </div>
                     <div class="property-price">R$ 1.100.000,00<br><small>ou R$ 5.600,00/mês</small></div>
-                    <a href="imovel_1.html" class="property-button">VER DETALHES</a>
+                    <a href="imovel_1.html" class="property-button" onclick="event.stopPropagation()">VER DETALHES</a>
                 </div>
             </div>
     
@@ -2349,30 +2679,6 @@
             <!-- Paginação -->
             <div class="pagination" id="pagination"></div>
         
-        </section>
-
-        <!-- EXPERIÊNCIA IMERSIVA -->
-        <section class="section immersive-section" id="experience">
-            <div class="immersive-content">
-                <div class="immersive-text">
-                    <h2>EXPERIÊNCIA</h2>
-                    <p>Antonio Furtado revoluciona a forma como você explora propriedades, oferecendo uma experiência digital que transcende as limitações físicas.</p>
-                    <p>Proporcionamos uma experiência exclusiva na aquisição de imóveis, utilizando tecnologia para conectar você à propriedade que mais combina com seu momento.</p>
-                
-                    <ul class="features-list">
-                        <li>Atendimento Consultivo Personalizado</li>
-                        <li>Análise de Mercado Especializada</li>
-                        <li>Tour Virtual em 360°</li>
-                        <li>Vídeos Cinematográficos Profissionais</li>
-                        <li>Assessoria Jurídica Completa</li>
-                        <li>Gestão de Patrimônio</li>
-                    </ul>
-                </div>
-            
-                <div class="immersive-visual">
-                    <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=800&q=80" alt="Experiência Elite">
-                </div>
-            </div>
         </section>
 
         <!-- NEWSLETTER LUXURY -->
@@ -2398,18 +2704,19 @@
                 <div class="footer-column">
                     <h3>NAVEGAÇÃO</h3>
                     <ul>
-                        <li><a href="#properties">Propriedades</a></li>
-                        <li><a href="#experience">Experiência</a></li>
-                        <li><a href="#services">Serviços</a></li>
-                        <li><a href="#contact">Client Portal</a></li>
+                        <li><a href="index.html#properties">Propriedades</a></li>
+                        <li><a href="avaliador.html">Avaliador</a></li>
+                        <li><a href="experiencia.html">Experiência</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="index.html#contact">Contato</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
                     <h3>SERVIÇOS</h3>
                     <ul>
-                        <li><a href="#services">Avaliação Imobiliária</a></li>
+                        <li><a href="avaliador.html">Avaliação Imobiliária</a></li>
                         <li><a href="#services">Consultoria de Investimento</a></li>
-                        <li><a href="#services">Property Management</a></li>
+                        <li><a href="#services">Gestão de Imóveis</a></li>
                         <li><a href="#services">Assessoria Jurídica</a></li>
                     </ul>
                 </div>
@@ -2417,7 +2724,7 @@
                     <h3>CONTATO</h3>
                     <ul>
                         <li><a href="tel:+5511969043012">+55 11 96904-3012</a></li>
-                        <li><a href="mailto:atendimento@antoniofurtado.com.br">atendimento@antoniofurtado.com.br</a></li>
+                        <li><a href="mailto:contato@antoniofurtado.com.br">contato@antoniofurtado.com.br</a></li>
                         <li><a href="#contact">São Paulo - SP | CRECI 208024</a></li>
                     </ul>
                 </div>
@@ -2436,16 +2743,125 @@
         
 
         <script>
+            // === SISTEMA DE PAGINAÇÃO SIMPLIFICADO ===
+            let paginaAtual = 1;
+            const IMOVEIS_POR_PAGINA = 15;
+            let todosOsCards = [];
+        
+            // Inicializar quando página carregar
+            window.addEventListener('load', function() {
+                console.log('Inicializando paginacao...');
+                
+                // Pegar todos os cards
+                todosOsCards = Array.from(document.querySelectorAll('.property-card'));
+                console.log('Total de imoveis:', todosOsCards.length);
+                
+                if (todosOsCards.length === 0) {
+                    console.error('ERRO: Nenhum card encontrado!');
+                    return;
+                }
+                
+                // Mostrar primeira página
+                mostrarPagina(1);
+                console.log('Paginacao inicializada com sucesso!');
+            });
+        
+            function mostrarPagina(numeroPagina) {
+                const totalPaginas = Math.ceil(todosOsCards.length / IMOVEIS_POR_PAGINA);
+                
+                // Validar página
+                if (numeroPagina < 1 || numeroPagina > totalPaginas) {
+                    console.warn('Pagina invalida:', numeroPagina);
+                    return;
+                }
+                
+                paginaAtual = numeroPagina;
+                console.log('Mostrando pagina', paginaAtual, 'de', totalPaginas);
+                
+                const inicio = (paginaAtual - 1) * IMOVEIS_POR_PAGINA;
+                const fim = inicio + IMOVEIS_POR_PAGINA;
+                
+                // Esconder TODOS os cards primeiro
+                todosOsCards.forEach(card => {
+                    card.style.display = 'none';
+                });
+                
+                // Mostrar apenas os cards da página atual
+                const cardsParaMostrar = todosOsCards.slice(inicio, fim);
+                cardsParaMostrar.forEach(card => {
+                    card.style.display = 'block';
+                });
+                
+                console.log('Mostrando', cardsParaMostrar.length, 'imoveis');
+                
+                // Atualizar contador
+                atualizarContador(inicio, fim);
+                
+                // Criar botões de paginação
+                criarBotoesPaginacao(totalPaginas);
+                
+                // Scroll suave para o topo
+                if (paginaAtual > 1) {
+                    document.getElementById('properties').scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+            
+            function atualizarContador(inicio, fim) {
+                const contador = document.getElementById('results-info');
+                if (contador) {
+                    const total = todosOsCards.length;
+                    const de = inicio + 1;
+                    const ate = Math.min(fim, total);
+                    contador.textContent = 'Mostrando ' + de + '-' + ate + ' de ' + total + ' imoveis';
+                    contador.style.display = 'block';
+                }
+            }
+            
+            function criarBotoesPaginacao(totalPaginas) {
+                const container = document.getElementById('pagination');
+                if (!container) return;
+                
+                if (totalPaginas <= 1) {
+                    container.innerHTML = '';
+                    return;
+                }
+                
+                let html = '';
+                
+                // Botão Anterior
+                const anteriorDisabled = paginaAtual === 1 ? 'disabled' : '';
+                html += '<button class="pagination-btn" onclick="mostrarPagina(' + (paginaAtual - 1) + ')" ' + anteriorDisabled + '>‹ Anterior</button>';
+                
+                // Números das páginas
+                for (let i = 1; i <= totalPaginas; i++) {
+                    // Mostrar sempre primeira, última, e páginas próximas da atual
+                    if (i === 1 || i === totalPaginas || (i >= paginaAtual - 2 && i <= paginaAtual + 2)) {
+                        const ativo = i === paginaAtual ? 'active' : '';
+                        html += '<button class="pagination-btn page-number ' + ativo + '" onclick="mostrarPagina(' + i + ')">' + i + '</button>';
+                    } else if (i === paginaAtual - 3 || i === paginaAtual + 3) {
+                        html += '<span style="padding: 0 10px;">...</span>';
+                    }
+                }
+                
+                // Botão Próximo
+                const proximoDisabled = paginaAtual === totalPaginas ? 'disabled' : '';
+                html += '<button class="pagination-btn" onclick="mostrarPagina(' + (paginaAtual + 1) + ')" ' + proximoDisabled + '>Próximo ›</button>';
+                
+                container.innerHTML = html;
+            }
+        </script>
+
+        <script>
             // Armazenar dados dos imóveis para filtragem
             const propriedades = [];
-            const IMOVEIS_POR_PAGINA = 15;
-            let paginaAtual = 1;
             let propriedadesFiltradas = [];
         
             // Extrair dados dos cards
             function extrairDadosPropriedades() {
                 const cards = document.querySelectorAll('.property-card');
-                cards.forEach(card => {
+                console.log('Total de cards encontrados:', cards.length);
+                
+                cards.forEach((card, index) => {
                     propriedades.push({
                         elemento: card,
                         id: card.dataset.id,
@@ -2457,117 +2873,8 @@
                         area: parseFloat(card.dataset.area) || 0
                     });
                 });
+                
                 propriedadesFiltradas = [...propriedades];
-                renderizarPaginacao();
-            }
-        
-            // Função para renderizar a paginação
-            function renderizarPaginacao() {
-                const totalPaginas = Math.ceil(propriedadesFiltradas.length / IMOVEIS_POR_PAGINA);
-                const inicio = (paginaAtual - 1) * IMOVEIS_POR_PAGINA;
-                const fim = inicio + IMOVEIS_POR_PAGINA;
-                
-                // Ocultar todos os cards primeiro
-                propriedades.forEach(prop => {
-                    prop.elemento.style.display = 'none';
-                });
-                
-                // Mostrar apenas os cards da página atual
-                propriedadesFiltradas.slice(inicio, fim).forEach(prop => {
-                    prop.elemento.style.display = 'block';
-                });
-                
-                // Atualizar botões de paginação
-                atualizarBotoesPaginacao(totalPaginas);
-                
-                // Scroll para o topo da seção de propriedades
-                if (paginaAtual > 1) {
-                    document.getElementById('properties').scrollIntoView({ 
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            }
-            
-            // Atualizar botões de paginação
-            function atualizarBotoesPaginacao(totalPaginas) {
-                const paginationDiv = document.getElementById('pagination');
-                
-                if (totalPaginas <= 1) {
-                    paginationDiv.innerHTML = '';
-                    return;
-                }
-                
-                let html = `
-                    <button class="pagination-btn" onclick="irParaPagina(${paginaAtual - 1})" ${paginaAtual === 1 ? 'disabled' : ''}>
-                        ‹ Anterior
-                    </button>
-                `;
-                
-                // Mostrar primeiras páginas
-                for (let i = 1; i <= Math.min(3, totalPaginas); i++) {
-                    html += `
-                        <button class="pagination-btn page-number ${i === paginaAtual ? 'active' : ''}" 
-                                onclick="irParaPagina(${i})">
-                            ${i}
-                        </button>
-                    `;
-                }
-                
-                // Adicionar "..." se necessário
-                if (totalPaginas > 6 && paginaAtual > 4) {
-                    html += '<span style="padding: 0 10px;">...</span>';
-                }
-                
-                // Mostrar páginas ao redor da página atual
-                if (paginaAtual > 3 && paginaAtual < totalPaginas - 2) {
-                    for (let i = paginaAtual - 1; i <= paginaAtual + 1; i++) {
-                        if (i > 3 && i < totalPaginas - 2) {
-                            html += `
-                                <button class="pagination-btn page-number ${i === paginaAtual ? 'active' : ''}" 
-                                        onclick="irParaPagina(${i})">
-                                    ${i}
-                                </button>
-                            `;
-                        }
-                    }
-                }
-                
-                // Adicionar "..." se necessário
-                if (totalPaginas > 6 && paginaAtual < totalPaginas - 3) {
-                    html += '<span style="padding: 0 10px;">...</span>';
-                }
-                
-                // Mostrar últimas páginas
-                if (totalPaginas > 3) {
-                    for (let i = Math.max(4, totalPaginas - 2); i <= totalPaginas; i++) {
-                        if (i !== paginaAtual || i > 3) {
-                            html += `
-                                <button class="pagination-btn page-number ${i === paginaAtual ? 'active' : ''}" 
-                                        onclick="irParaPagina(${i})">
-                                    ${i}
-                                </button>
-                            `;
-                        }
-                    }
-                }
-                
-                html += `
-                    <button class="pagination-btn" onclick="irParaPagina(${paginaAtual + 1})" ${paginaAtual === totalPaginas ? 'disabled' : ''}>
-                        Próximo ›
-                    </button>
-                `;
-                
-                paginationDiv.innerHTML = html;
-            }
-            
-            // Ir para uma página específica
-            function irParaPagina(pagina) {
-                const totalPaginas = Math.ceil(propriedadesFiltradas.length / IMOVEIS_POR_PAGINA);
-                if (pagina >= 1 && pagina <= totalPaginas) {
-                    paginaAtual = pagina;
-                    renderizarPaginacao();
-                }
             }
         
             // Função de filtragem
@@ -2615,9 +2922,19 @@
                     return mostrar;
                 });
             
-                // Resetar para primeira página após filtrar
+                // Mostrar/ocultar com base no filtro
+                propriedades.forEach(prop => {
+                    if (propriedadesFiltradas.includes(prop)) {
+                        prop.elemento.style.display = 'block';
+                    } else {
+                        prop.elemento.style.display = 'none';
+                    }
+                });
+                
+                // Atualizar todosOsCards para paginação funcionar com filtro
+                todosOsCards = propriedadesFiltradas.map(p => p.elemento);
                 paginaAtual = 1;
-                renderizarPaginacao();
+                mostrarPagina(1);
             
                 // Atualizar contador de resultados
                 const resultsDiv = document.getElementById('search-results');
@@ -2650,18 +2967,175 @@
             
                 // Restaurar todas as propriedades
                 propriedadesFiltradas = [...propriedades];
+                todosOsCards = propriedadesFiltradas.map(p => p.elemento);
                 paginaAtual = 1;
-                renderizarPaginacao();
+                mostrarPagina(1);
             
                 // Ocultar resultados
                 document.getElementById('search-results').style.display = 'none';
             }
         
+            // Inicializar dados quando carregar
+            window.addEventListener('load', function() {
+                setTimeout(extrairDadosPropriedades, 200);
+            });
+        
+            // Busca rápida no input de bairro
+            document.addEventListener('DOMContentLoaded', function() {
+                const bairroInput = document.getElementById('filter-bairro');
+                if (bairroInput) {
+                    bairroInput.addEventListener('keyup', function(e) {
+                        if (e.key === 'Enter') {
+                            filtrarImoveis();
+                        }
+                    });
+                }
+            });
+        </script>
+            
+        <script>
+            const PRECOS_BASE = {
+                "jardins": { venda: 15000, aluguel: 80 },
+                "itaim bibi": { venda: 14000, aluguel: 75 },
+                "moema": { venda: 12000, aluguel: 65 },
+                "vila mariana": { venda: 11000, aluguel: 60 },
+                "pinheiros": { venda: 13000, aluguel: 70 },
+                "mooca": { venda: 8500, aluguel: 45 },
+                "tatuapé": { venda: 9000, aluguel: 48 },
+                "santo amaro": { venda: 10000, aluguel: 55 },
+                "santana": { venda: 8000, aluguel: 43 },
+                "penha": { venda: 6500, aluguel: 35 },
+                "itaquera": { venda: 5500, aluguel: 30 },
+                "santo andré": { venda: 7500, aluguel: 40 },
+                "são bernardo": { venda: 7000, aluguel: 38 },
+                "são caetano": { venda: 9000, aluguel: 48 },
+                "santos": { venda: 9000, aluguel: 50 },
+                "guarujá": { venda: 8000, aluguel: 45 },
+                "campinas": { venda: 8000, aluguel: 42 },
+                "default_sp_capital": { venda: 8000, aluguel: 42 },
+                "default_sp_interior": { venda: 6000, aluguel: 32 },
+                "default_outros": { venda: 5000, aluguel: 28 }
+            };
+            
+            const MULTIPLICADORES_TIPO = {
+                "Apartamento": 1.0, "Casa": 0.95, "Cobertura": 1.3,
+                "Sobrado": 0.98, "Kitnet": 0.85, "Comercial": 1.2
+            };
+            
+            const BONUS_CARACTERISTICAS = {
+                "piscina": 0.08, "churrasqueira": 0.03, "sacada": 0.04,
+                "suite": 0.06, "elevador": 0.05, "portaria": 0.04
+            };
+            
+            const FATOR_CONSERVACAO = {
+                "Novo (até 2 anos)": 1.15, "Semi Novo (3-5 anos)": 1.05,
+                "Bom (6-15 anos)": 1.0, "Regular (16-30 anos)": 0.90, "Reformar (>30 anos)": 0.75
+            };
+
+            const fmt = (v) => new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL', minimumFractionDigits: 0, maximumFractionDigits: 0 }).format(v);
+
+            function calcularAvaliacao() {
+                const area = parseFloat(document.getElementById('aval-area').value);
+                const bairro = (document.getElementById('aval-bairro').value || '').trim().toLowerCase();
+                const cidade = (document.getElementById('aval-cidade').value || '').trim().toLowerCase();
+                const uf = document.getElementById('aval-uf').value;
+                const tipo = document.getElementById('aval-tipo').value;
+                const conservacao = document.getElementById('aval-conservacao').value;
+
+                if (!area || area <= 0 || !bairro || !cidade) return null;
+
+                let precoBase;
+                if (PRECOS_BASE[bairro]) {
+                    precoBase = PRECOS_BASE[bairro];
+                } else if (uf === 'SP') {
+                    precoBase = cidade === 'são paulo' ? PRECOS_BASE.default_sp_capital : PRECOS_BASE.default_sp_interior;
+                } else {
+                    precoBase = PRECOS_BASE.default_outros;
+                }
+
+                const multTipo = MULTIPLICADORES_TIPO[tipo] || 1.0;
+                let multCaract = 1.0;
+                if (document.getElementById('carac-piscina').checked) multCaract += BONUS_CARACTERISTICAS.piscina;
+                if (document.getElementById('carac-churrasqueira').checked) multCaract += BONUS_CARACTERISTICAS.churrasqueira;
+                if (document.getElementById('carac-sacada').checked) multCaract += BONUS_CARACTERISTICAS.sacada;
+                if (document.getElementById('carac-suite').checked) multCaract += BONUS_CARACTERISTICAS.suite;
+                if (document.getElementById('carac-elevador').checked) multCaract += BONUS_CARACTERISTICAS.elevador;
+                if (document.getElementById('carac-portaria').checked) multCaract += BONUS_CARACTERISTICAS.portaria;
+                const fatorConserv = FATOR_CONSERVACAO[conservacao] || 1.0;
+
+                const valorVenda   = area * precoBase.venda   * multTipo * multCaract * fatorConserv;
+                const valorAluguel = area * precoBase.aluguel * multTipo * multCaract * fatorConserv;
+
+                return {
+                    valorVenda, valorAluguel,
+                    m2Venda:   valorVenda   / area,
+                    m2Aluguel: valorAluguel / area,
+                    rentabilidade: (valorAluguel * 12 / valorVenda) * 100,
+                    retornoAnos: valorVenda / (valorAluguel * 12)
+                };
+            }
+
+            function atualizarDisplay(r) {
+                if (!r) return;
+                document.getElementById('valor-venda').textContent    = fmt(r.valorVenda);
+                document.getElementById('preco-m2-venda').textContent = fmt(r.m2Venda) + '/m²';
+                document.getElementById('valor-aluguel').textContent  = fmt(r.valorAluguel) + '/mês';
+                document.getElementById('preco-m2-aluguel').textContent = fmt(r.m2Aluguel) + '/m²';
+                document.getElementById('det-m2-venda').textContent   = fmt(r.m2Venda);
+                document.getElementById('det-m2-aluguel').textContent = fmt(r.m2Aluguel);
+                document.getElementById('det-rentabilidade').textContent = r.rentabilidade.toFixed(2) + '% a.a.';
+                document.getElementById('det-retorno').textContent    = r.retornoAnos.toFixed(1) + ' anos';
+            }
+
+            function avaliarImovelAuto() {
+                const r = calcularAvaliacao();
+                if (r) atualizarDisplay(r);
+            }
+
+            function avaliarImovel() {
+                const area   = parseFloat(document.getElementById('aval-area').value);
+                const bairro = document.getElementById('aval-bairro').value.trim();
+                const cidade = document.getElementById('aval-cidade').value.trim();
+                if (!area || area <= 0) { alert('Por favor, informe a área total do imóvel!'); return; }
+                if (!bairro || !cidade) { alert('Por favor, preencha o bairro e a cidade!'); return; }
+                const r = calcularAvaliacao();
+                if (r) {
+                    atualizarDisplay(r);
+                    document.getElementById('detalhes-avaliacao').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }
+            }
+
+            function buscarCEPAvaliador() {
+                const cep = document.getElementById('aval-cep').value.replace(/\D/g, '');
+                if (cep.length !== 8) { alert('CEP inválido! Digite 8 dígitos.'); return; }
+                fetch(`https://viacep.com.br/ws/${cep}/json/`)
+                    .then(r => r.json())
+                    .then(data => {
+                        if (data.erro) { alert('CEP não encontrado!'); return; }
+                        document.getElementById('aval-bairro').value = data.bairro || '';
+                        document.getElementById('aval-cidade').value = data.localidade || '';
+                        document.getElementById('aval-uf').value     = data.uf || 'SP';
+                        avaliarImovelAuto();
+                    })
+                    .catch(() => alert('Erro ao buscar CEP. Verifique sua conexão.'));
+            }
+
+            // Máscara de CEP
+            document.getElementById('aval-cep').addEventListener('input', function(e) {
+                let value = e.target.value.replace(/\D/g, '');
+                if (value.length > 5) value = value.slice(0, 5) + '-' + value.slice(5, 8);
+                e.target.value = value;
+            });
+        
+            // ============================================================================
+            // AVALIADOR DE IMÓVEIS INDEX - FUNÇÕES JAVASCRIPT
+            // ============================================================================
+            
             // Newsletter
             function assinarNewsletter() {
                 const email = document.getElementById('newsletter-email').value;
                 if (email) {
-                    alert(`Obrigado por se inscrever!\n\n$Consultoria Imobiliária enviará oportunidades exclusivas para: ${email}`);
+                    alert(`Obrigado por se inscrever!\n\nConsultoria Imobiliária enviará oportunidades exclusivas para: ${email}`);
                     document.getElementById('newsletter-email').value = '';
                 }
             }
@@ -2699,10 +3173,67 @@
                 }
             });
         
-            // Inicializar
-            document.addEventListener('DOMContentLoaded', function() {
+            // Inicializar paginação
+            function inicializarPaginacao() {
                 extrairDadosPropriedades();
-            });
+                console.log('Paginação inicializada com', propriedades.length, 'imóveis');
+            }
+            
+            // Tentar inicializar imediatamente ou quando o DOM estiver pronto
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', inicializarPaginacao);
+            } else {
+                // DOM já está carregado
+                inicializarPaginacao();
+            }
+        </script>
+        
+        <!-- Analytics Tracker -->
+        <script>
+        (function() {
+            'use strict';
+            
+            function detectarDispositivo() {
+                const ua = navigator.userAgent;
+                if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
+                    return 'Tablet';
+                }
+                if (/Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua)) {
+                    return 'Mobile';
+                }
+                return 'Desktop';
+            }
+            
+            function registrarAcesso() {
+                const dados = {
+                    pagina: window.location.pathname,
+                    url_completa: window.location.href,
+                    referencia: document.referrer || 'Direto',
+                    dispositivo: detectarDispositivo(),
+                    user_agent: navigator.userAgent,
+                    timestamp: new Date().toISOString()
+                };
+                
+                // Salvar em localStorage
+                try {
+                    let acessos = JSON.parse(localStorage.getItem('analytics_acessos') || '[]');
+                    acessos.push(dados);
+                    if (acessos.length > 100) {
+                        acessos = acessos.slice(-100);
+                    }
+                    localStorage.setItem('analytics_acessos', JSON.stringify(acessos));
+                    console.log('Analytics registrado:', dados);
+                } catch (e) {
+                    console.error('Erro ao salvar analytics:', e);
+                }
+            }
+            
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', registrarAcesso);
+            } else {
+                registrarAcesso();
+            }
+        })();
         </script>
     </body>
     </html>
