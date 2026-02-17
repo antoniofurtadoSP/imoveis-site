@@ -1,0 +1,12 @@
+# Gerado automaticamente pelo Sistema Imobiliário
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+
+# Permitir imagens do site
+!db_imagens/
+!db_imagens/*.png
+!db_imagens/*.jpg
+!db_imagens/*.jpeg
+!db_imagens/*.webp
