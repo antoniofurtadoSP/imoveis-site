@@ -10,3 +10,4 @@ Thumbs.db
 !db_imagens/*.jpg
 !db_imagens/*.jpeg
 !db_imagens/*.webp
+# Permitir imagens do site (adicionado automaticamente)
