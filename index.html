@@ -2841,255 +2841,145 @@
         
 
         <script>
-            // === SISTEMA DE PAGINAÇÃO SIMPLIFICADO ===
-            let paginaAtual = 1;
-            const IMOVEIS_POR_PAGINA = 15;
-            let todosOsCards = [];
-        
-            // Inicializar quando página carregar
-            window.addEventListener('load', function() {
-                console.log('Inicializando paginacao...');
-                
-                // Pegar todos os cards
-                todosOsCards = Array.from(document.querySelectorAll('.property-card'));
-                console.log('Total de imoveis:', todosOsCards.length);
-                
-                if (todosOsCards.length === 0) {
-                    console.error('ERRO: Nenhum card encontrado!');
-                    return;
-                }
-                
-                // Mostrar primeira página
-                mostrarPagina(1);
-                console.log('Paginacao inicializada com sucesso!');
-            });
-        
-            function mostrarPagina(numeroPagina) {
-                const totalPaginas = Math.ceil(todosOsCards.length / IMOVEIS_POR_PAGINA);
-                
-                // Validar página
-                if (numeroPagina < 1 || numeroPagina > totalPaginas) {
-                    console.warn('Pagina invalida:', numeroPagina);
-                    return;
-                }
-                
-                paginaAtual = numeroPagina;
-                console.log('Mostrando pagina', paginaAtual, 'de', totalPaginas);
-                
-                const inicio = (paginaAtual - 1) * IMOVEIS_POR_PAGINA;
-                const fim = inicio + IMOVEIS_POR_PAGINA;
-                
-                // Esconder TODOS os cards primeiro
-                todosOsCards.forEach(card => {
-                    card.style.display = 'none';
-                });
-                
-                // Mostrar apenas os cards da página atual
-                const cardsParaMostrar = todosOsCards.slice(inicio, fim);
-                cardsParaMostrar.forEach(card => {
-                    card.style.display = 'block';
-                });
-                
-                console.log('Mostrando', cardsParaMostrar.length, 'imoveis');
-                
-                // Atualizar contador
-                atualizarContador(inicio, fim);
-                
-                // Criar botões de paginação
-                criarBotoesPaginacao(totalPaginas);
-                
-                // Scroll suave para o topo
-                if (paginaAtual > 1) {
-                    document.getElementById('properties').scrollIntoView({ behavior: 'smooth' });
-                }
-            }
-            
-            function atualizarContador(inicio, fim) {
-                const contador = document.getElementById('results-info');
-                if (contador) {
-                    const total = todosOsCards.length;
-                    const de = inicio + 1;
-                    const ate = Math.min(fim, total);
-                    contador.textContent = 'Mostrando ' + de + '-' + ate + ' de ' + total + ' imoveis';
-                    contador.style.display = 'block';
-                }
-            }
-            
-            function criarBotoesPaginacao(totalPaginas) {
-                const container = document.getElementById('pagination');
-                if (!container) return;
-                
-                if (totalPaginas <= 1) {
-                    container.innerHTML = '';
-                    return;
-                }
-                
-                let html = '';
-                
-                // Botão Anterior
-                const anteriorDisabled = paginaAtual === 1 ? 'disabled' : '';
-                html += '<button class="pagination-btn" onclick="mostrarPagina(' + (paginaAtual - 1) + ')" ' + anteriorDisabled + '>‹ Anterior</button>';
-                
-                // Números das páginas
-                for (let i = 1; i <= totalPaginas; i++) {
-                    // Mostrar sempre primeira, última, e páginas próximas da atual
-                    if (i === 1 || i === totalPaginas || (i >= paginaAtual - 2 && i <= paginaAtual + 2)) {
-                        const ativo = i === paginaAtual ? 'active' : '';
-                        html += '<button class="pagination-btn page-number ' + ativo + '" onclick="mostrarPagina(' + i + ')">' + i + '</button>';
-                    } else if (i === paginaAtual - 3 || i === paginaAtual + 3) {
-                        html += '<span style="padding: 0 10px;">...</span>';
-                    }
-                }
-                
-                // Botão Próximo
-                const proximoDisabled = paginaAtual === totalPaginas ? 'disabled' : '';
-                html += '<button class="pagination-btn" onclick="mostrarPagina(' + (paginaAtual + 1) + ')" ' + proximoDisabled + '>Próximo ›</button>';
-                
-                container.innerHTML = html;
-            }
-        </script>
+    // ═══════════════════════════════════════════════════════════
+    //  SISTEMA UNIFICADO DE PAGINAÇÃO + FILTROS - ImobEx
+    //  Corrigido para mostrar todos os 39 imóveis
+    // ═══════════════════════════════════════════════════════════
 
-        <script>
-            // Armazenar dados dos imóveis para filtragem
-            const propriedades = [];
-            let propriedadesFiltradas = [];
-        
-            // Extrair dados dos cards
-            function extrairDadosPropriedades() {
-                const cards = document.querySelectorAll('.property-card');
-                console.log('Total de cards encontrados:', cards.length);
-                
-                cards.forEach((card, index) => {
-                    propriedades.push({
-                        elemento: card,
-                        id: card.dataset.id,
-                        tipo: card.dataset.tipo,
-                        finalidade: card.dataset.finalidade,
-                        bairro: card.dataset.bairro,
-                        quartos: parseInt(card.dataset.quartos) || 0,
-                        preco: parseFloat(card.dataset.preco) || 0,
-                        area: parseFloat(card.dataset.area) || 0
-                    });
-                });
-                
-                propriedadesFiltradas = [...propriedades];
+    const IMOVEIS_POR_PAGINA = 12;
+    let todosOsCards = [];
+    let cardsFiltrados = [];
+    let paginaAtual = 1;
+
+    // Inicializar ao carregar a página
+    window.addEventListener('load', function() {
+        todosOsCards = Array.from(document.querySelectorAll('.property-card'));
+        console.log('Total de imóveis carregados:', todosOsCards.length);
+        cardsFiltrados = [...todosOsCards];
+        mostrarPagina(1);
+    });
+
+    function mostrarPagina(numero) {
+        const total = cardsFiltrados.length;
+        const totalPaginas = Math.ceil(total / IMOVEIS_POR_PAGINA);
+        if (numero < 1) numero = 1;
+        if (numero > totalPaginas && totalPaginas > 0) numero = totalPaginas;
+        paginaAtual = numero;
+
+        const inicio = (paginaAtual - 1) * IMOVEIS_POR_PAGINA;
+        const fim = inicio + IMOVEIS_POR_PAGINA;
+
+        // Esconde todos
+        todosOsCards.forEach(c => c.style.display = 'none');
+
+        // Mostra só os filtrados da página atual
+        cardsFiltrados.slice(inicio, fim).forEach(c => c.style.display = 'block');
+
+        // Contador
+        const contador = document.getElementById('results-info');
+        if (contador) {
+            if (total === 0) {
+                contador.textContent = 'Nenhum imóvel encontrado';
+            } else {
+                const de = inicio + 1;
+                const ate = Math.min(fim, total);
+                contador.textContent = 'Mostrando ' + de + '-' + ate + ' de ' + total + ' imóveis';
             }
-        
-            // Função de filtragem
-            function filtrarImoveis() {
-                const tipo = document.getElementById('filter-tipo').value;
-                const finalidade = document.getElementById('filter-finalidade').value;
-                const bairro = document.getElementById('filter-bairro').value.toLowerCase();
-                const quartos = document.getElementById('filter-quartos').value;
-                const precoMax = document.getElementById('filter-preco').value;
-                const areaMin = document.getElementById('filter-area').value;
-            
-                propriedadesFiltradas = propriedades.filter(prop => {
-                    let mostrar = true;
-                
-                    // Filtro por tipo
-                    if (tipo && prop.tipo !== tipo) {
-                        mostrar = false;
+            contador.style.display = 'block';
+        }
+
+        // Paginação
+        const pagDiv = document.getElementById('pagination');
+        if (pagDiv) {
+            if (totalPaginas <= 1) {
+                pagDiv.innerHTML = '';
+            } else {
+                let html = '';
+                html += '<button class="pagination-btn" onclick="mostrarPagina(' + (paginaAtual-1) + ')" ' + (paginaAtual===1?'disabled':'') + '>‹ Anterior</button>';
+                for (let i = 1; i <= totalPaginas; i++) {
+                    if (i===1 || i===totalPaginas || (i>=paginaAtual-2 && i<=paginaAtual+2)) {
+                        const ativo = i===paginaAtual ? 'active' : '';
+                        html += '<button class="pagination-btn page-number ' + ativo + '" onclick="mostrarPagina(' + i + ')">' + i + '</button>';
+                    } else if (i===paginaAtual-3 || i===paginaAtual+3) {
+                        html += '<span style="padding:0 10px">...</span>';
                     }
-                
-                    // Filtro por finalidade
-                    if (finalidade && prop.finalidade !== finalidade) {
-                        mostrar = false;
-                    }
-                
-                    // Filtro por bairro
-                    if (bairro && !prop.bairro.includes(bairro)) {
-                        mostrar = false;
-                    }
-                
-                    // Filtro por quartos
-                    if (quartos && prop.quartos < parseInt(quartos)) {
-                        mostrar = false;
-                    }
-                
-                    // Filtro por preço
-                    if (precoMax && prop.preco > parseFloat(precoMax)) {
-                        mostrar = false;
-                    }
-                
-                    // Filtro por área
-                    if (areaMin && prop.area < parseFloat(areaMin)) {
-                        mostrar = false;
-                    }
-                
-                    return mostrar;
-                });
-            
-                // Mostrar/ocultar com base no filtro
-                propriedades.forEach(prop => {
-                    if (propriedadesFiltradas.includes(prop)) {
-                        prop.elemento.style.display = 'block';
-                    } else {
-                        prop.elemento.style.display = 'none';
-                    }
-                });
-                
-                // Atualizar todosOsCards para paginação funcionar com filtro
-                todosOsCards = propriedadesFiltradas.map(p => p.elemento);
-                paginaAtual = 1;
-                mostrarPagina(1);
-            
-                // Atualizar contador de resultados
-                const resultsDiv = document.getElementById('search-results');
-                const resultsCount = document.getElementById('results-count');
-            
-                if (propriedadesFiltradas.length === 0) {
-                    resultsDiv.style.display = 'block';
-                    resultsCount.innerHTML = '<strong>0</strong> propriedades encontradas';
-                } else {
-                    resultsDiv.style.display = 'block';
-                    resultsCount.innerHTML = `<strong>${propriedadesFiltradas.length}</strong> propriedades encontradas`;
                 }
-            
-                // Scroll para resultados
-                if (propriedadesFiltradas.length > 0) {
-                    document.getElementById('properties').scrollIntoView({ 
-                        behavior: 'smooth' 
-                    });
-                }
+                html += '<button class="pagination-btn" onclick="mostrarPagina(' + (paginaAtual+1) + ')" ' + (paginaAtual===totalPaginas?'disabled':'') + '>Próximo ›</button>';
+                pagDiv.innerHTML = html;
             }
-        
-            // Função para limpar filtros
-            function limparFiltros() {
-                document.getElementById('filter-tipo').value = '';
-                document.getElementById('filter-finalidade').value = '';
-                document.getElementById('filter-bairro').value = '';
-                document.getElementById('filter-quartos').value = '';
-                document.getElementById('filter-preco').value = '';
-                document.getElementById('filter-area').value = '';
-            
-                // Restaurar todas as propriedades
-                propriedadesFiltradas = [...propriedades];
-                todosOsCards = propriedadesFiltradas.map(p => p.elemento);
-                paginaAtual = 1;
-                mostrarPagina(1);
-            
-                // Ocultar resultados
-                document.getElementById('search-results').style.display = 'none';
-            }
-        
-            // Inicializar dados quando carregar
-            window.addEventListener('load', function() {
-                setTimeout(extrairDadosPropriedades, 200);
+        }
+
+        if (paginaAtual > 1) {
+            const sec = document.getElementById('properties');
+            if (sec) sec.scrollIntoView({behavior:'smooth'});
+        }
+    }
+
+    // ── Filtros ─────────────────────────────────────────────────
+    function filtrarImoveis() {
+        const tipo       = (document.getElementById('filter-tipo')?.value || '').trim();
+        const finalidade = (document.getElementById('filter-finalidade')?.value || '').trim();
+        const bairro     = (document.getElementById('filter-bairro')?.value || '').toLowerCase().trim();
+        const quartos    = parseInt(document.getElementById('filter-quartos')?.value || '0') || 0;
+        const precoMax   = parseFloat(document.getElementById('filter-preco')?.value || '0') || 0;
+        const areaMin    = parseFloat(document.getElementById('filter-area')?.value || '0') || 0;
+
+        cardsFiltrados = todosOsCards.filter(card => {
+            const cTipo       = (card.dataset.tipo || '').trim();
+            const cFinalidade = (card.dataset.finalidade || '').trim();
+            const cBairro     = (card.dataset.bairro || '').toLowerCase();
+            const cQuartos    = parseInt(card.dataset.quartos) || 0;
+            const cPreco      = parseFloat(card.dataset.preco) || 0;
+            const cArea       = parseFloat(card.dataset.area) || 0;
+
+            if (tipo && cTipo !== tipo) return false;
+            if (finalidade && cFinalidade !== finalidade) return false;
+            if (bairro && !cBairro.includes(bairro)) return false;
+            if (quartos && cQuartos < quartos) return false;
+            if (precoMax && cPreco > precoMax) return false;
+            if (areaMin && cArea < areaMin) return false;
+            return true;
+        });
+
+        paginaAtual = 1;
+        mostrarPagina(1);
+
+        // Mostrar contador de resultados do filtro
+        const resultsDiv   = document.getElementById('search-results');
+        const resultsCount = document.getElementById('results-count');
+        if (resultsDiv && resultsCount) {
+            resultsDiv.style.display = 'block';
+            resultsCount.innerHTML = '<strong>' + cardsFiltrados.length + '</strong> propriedade(s) encontrada(s)';
+        }
+
+        const sec = document.getElementById('properties');
+        if (sec) sec.scrollIntoView({behavior:'smooth'});
+    }
+
+    function limparFiltros() {
+        ['filter-tipo','filter-finalidade','filter-bairro','filter-quartos','filter-preco','filter-area']
+            .forEach(id => { const el = document.getElementById(id); if(el) el.value = ''; });
+
+        cardsFiltrados = [...todosOsCards];
+        paginaAtual = 1;
+        mostrarPagina(1);
+
+        const resultsDiv = document.getElementById('search-results');
+        if (resultsDiv) resultsDiv.style.display = 'none';
+    }
+
+    // Busca por Enter no campo bairro
+    document.addEventListener('DOMContentLoaded', function() {
+        const bairroInput = document.getElementById('filter-bairro');
+        if (bairroInput) {
+            bairroInput.addEventListener('keyup', function(e) {
+                if (e.key === 'Enter') filtrarImoveis();
             });
+        }
+    });
+</script>
+
         
-            // Busca rápida no input de bairro
-            document.addEventListener('DOMContentLoaded', function() {
-                const bairroInput = document.getElementById('filter-bairro');
-                if (bairroInput) {
-                    bairroInput.addEventListener('keyup', function(e) {
-                        if (e.key === 'Enter') {
-                            filtrarImoveis();
-                        }
-                    });
-                }
-            });
-        </script>
             
         <script>
             const PRECOS_BASE = {
