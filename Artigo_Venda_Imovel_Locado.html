@@ -74,7 +74,7 @@
             --emerald: #2e7d6e;
             --white: #ffffff;
             --gold-light: #f4e4a6;
-            --dark-transparent: rgba(26, 26, 26, 0.95);
+            --dark-transparent: rgba(26, 26, 26, 1);
         }
 
         body {
@@ -216,7 +216,7 @@
             left: 0;
             width: 100%;
             z-index: 1000;
-            background: rgba(26, 26, 26, 0.95);
+            background: #1a1a1a;
             backdrop-filter: blur(10px);
             transition: all 0.5s ease;
             overflow-x: hidden;
@@ -1757,6 +1757,7 @@
                         <li><a href="#services">Consultoria de Investimento</a></li>
                         <li><a href="#services">Gestão de Imóveis</a></li>
                         <li><a href="#services">Assessoria Jurídica</a></li>
+                        <li><a href="https://backend-cadastro-imoveis.onrender.com/cadastro" target="_blank" style="color: #D4AF37;">Anuncie seu Imóvel</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
@@ -1786,9 +1787,9 @@
             window.addEventListener('scroll', () => {
                 const header = document.querySelector('header');
                 if (window.scrollY > 100) {
-                    header.style.background = 'rgba(26, 26, 26, 0.98)';
+                    header.style.background = '#1a1a1a';
                 } else {
-                    header.style.background = 'rgba(26, 26, 26, 0.95)';
+                    header.style.background = '#1a1a1a';
                 }
             });
 
