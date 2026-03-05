@@ -7,413 +7,220 @@
     <meta name="description" content="Mobilidade urbana e valorização imobiliária em SP. Entenda por que imóveis próximos ao metrô valorizam até 25% mais em 2026.">
     <meta name="author" content="Antonio Furtado - CRECI 208024">
     <link rel="canonical" href="https://www.antoniofurtado.com.br/Artigo_Mobilidade_Metro_SP.html">
-
+    
     <!-- Open Graph -->
     <meta property="og:title" content="Efeito Metrô: Valorização de até 25% em SP">
     <meta property="og:description" content="Por que imóveis próximos ao metrô valorizam mais. Análise do Plano Diretor, ETEUs e yield de investimento.">
     <meta property="og:image" content="https://images.pexels.com/photos/2040428/pexels-photo-2040428.jpeg?auto=compress&cs=tinysrgb&w=1200">
     <meta property="og:type" content="article">
-
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S2G6KJM02B"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-S2G6KJM02B');
-    </script>
-
+    
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
+    
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
         :root {
-            --primary-gold: #D4AF37;
+            --primary-gold: #d4af37;
             --dark: #1a1a1a;
-            --light: #f8f8f8;
             --gray: #4a4a4a;
         }
-
-        html { scroll-behavior: smooth; overflow-x: hidden; }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: 'Lato', 'Arial', sans-serif;
-            color: var(--dark);
-            background: var(--light);
-            overflow-x: hidden;
+            font-family: 'Lato', sans-serif;
             line-height: 1.6;
+            color: var(--gray);
+            padding-top: 100px;
         }
-
-        a { text-decoration: none; color: inherit; transition: color 0.3s; }
-
-        /* HEADER */
-        header {
-            position: fixed;
-            top: 0; left: 0; right: 0;
-            z-index: 1000;
-            background: rgba(26,26,26,0.97);
-            backdrop-filter: blur(10px);
-        }
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 60px;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-        .logo-container { display: flex; align-items: center; height: 100%; padding: 10px 0; }
-        .logo-img { height: 80px; width: auto; object-fit: contain; display: block; transition: transform 0.3s; }
-        .logo-img:hover { transform: scale(1.05); }
-        .nav-links { display: flex; list-style: none; gap: 35px; align-items: center; }
-        .nav-links a { color: rgba(255,255,255,0.85); font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; transition: color 0.3s; }
-        .nav-links a:hover { color: var(--primary-gold); }
-
-        /* HERO */
+        h1, h2, h3 { font-family: 'Cormorant Garamond', serif; }
+        
         .hero {
             position: relative;
             min-height: 65vh;
-<<<<<<< HEAD
             background: linear-gradient(rgba(26, 26, 26, 0.85), rgba(26, 26, 26, 0.75)), 
                         url('https://images.pexels.com/photos/2040428/pexels-photo-2040428.jpeg?auto=compress&cs=tinysrgb&w=1920') center/cover;
-=======
-            background: linear-gradient(rgba(26,26,26,0.85), rgba(26,26,26,0.75)),
-                        url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1920&q=80') center/cover;
->>>>>>> be6d615f20d530352d8710d6beea453ab3697767
             color: white;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 140px 40px 100px;
+            padding: 100px 40px;
         }
         .hero h1 {
-            font-family: 'Cormorant Garamond', serif;
             font-size: 56px;
-            font-weight: 300;
-            letter-spacing: 4px;
+            margin-bottom: 20px;
             color: var(--primary-gold);
             text-transform: uppercase;
-            margin-bottom: 20px;
         }
-        .hero p {
-            font-size: 18px;
-            color: rgba(255,255,255,0.85);
-            letter-spacing: 1px;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        /* CONTEÚDO */
-        .article-body {
+        
+        .section {
             max-width: 1000px;
             margin: 0 auto;
-            padding: 70px 40px;
+            padding: 60px 40px;
         }
-
+        
         .intro {
             font-size: 19px;
             padding: 35px;
             background: linear-gradient(135deg, #f8f8f8 0%, #e8e8e8 100%);
             border-left: 5px solid var(--primary-gold);
-            margin-bottom: 50px;
-            line-height: 1.9;
+            margin-bottom: 40px;
         }
-
+        
         h2 {
-            font-family: 'Cormorant Garamond', serif;
             font-size: 36px;
-            font-weight: 300;
-            letter-spacing: 3px;
             color: var(--dark);
-            margin: 55px 0 25px;
+            margin: 50px 0 30px;
             padding-bottom: 15px;
             border-bottom: 3px solid var(--primary-gold);
         }
-
+        
         h3 {
-            font-family: 'Cormorant Garamond', serif;
             font-size: 24px;
-            font-weight: 400;
             color: var(--gray);
             margin: 30px 0 15px;
-            letter-spacing: 1px;
         }
-
+        
         p, li {
             font-size: 17px;
-            line-height: 1.95;
+            line-height: 1.9;
             margin-bottom: 16px;
-            color: var(--gray);
         }
-
+        
         .highlight {
             background: #fff9e6;
             padding: 30px;
-            margin: 35px 0;
+            margin: 30px 0;
             border-left: 5px solid var(--primary-gold);
         }
-
+        
         .stats-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 25px;
             margin: 40px 0;
         }
-
+        
         .stat-card {
             background: white;
-            padding: 35px 25px;
+            padding: 30px;
             text-align: center;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
             border-top: 4px solid var(--primary-gold);
         }
-
+        
         .stat-number {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 52px;
+            font-size: 48px;
             font-weight: 700;
             color: var(--primary-gold);
             display: block;
             margin-bottom: 10px;
         }
-
+        
         .cta {
             background: #e6f7e6;
             border: 2px solid #51cf66;
-            padding: 35px;
-            margin: 50px 0 30px;
+            padding: 30px;
+            margin: 40px 0;
             border-radius: 8px;
         }
-
-        .cta h3 { color: var(--dark); margin-bottom: 15px; }
-
+        
         .back-btn {
             display: inline-block;
-            margin-top: 20px;
+            margin-top: 40px;
             padding: 15px 40px;
             background: var(--dark);
             color: white;
+            text-decoration: none;
             text-transform: uppercase;
             letter-spacing: 2px;
-            font-size: 13px;
-            transition: all 0.3s;
         }
-        .back-btn:hover { background: var(--primary-gold); color: var(--dark); }
-
-        /* FOOTER */
-        footer {
-            background: var(--dark);
-            color: white;
-            padding: 80px 60px 40px;
-            margin-top: 80px;
+        
+        .back-btn:hover {
+            background: var(--primary-gold);
+            color: var(--dark);
         }
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 50px;
-            max-width: 1200px;
-            margin: 0 auto 50px;
-        }
-        .footer-logo { height: 70px; width: auto; margin-bottom: 20px; }
-        .footer-column h3 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 16px;
-            letter-spacing: 3px;
-            color: var(--primary-gold);
-            margin-bottom: 25px;
-            font-weight: 300;
-        }
-        .footer-column ul { list-style: none; }
-        .footer-column ul li { margin-bottom: 12px; }
-        .footer-column ul li a { color: rgba(255,255,255,0.65); font-size: 13px; letter-spacing: 1px; transition: color 0.3s; }
-        .footer-column ul li a:hover { color: var(--primary-gold); }
-        .footer-bottom {
-            text-align: center;
-            padding-top: 40px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            color: rgba(255,255,255,0.4);
-            font-size: 12px;
-            letter-spacing: 1px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        /* CHATBOT */
-        .chatbot { position: fixed; bottom: 30px; right: 30px; z-index: 9999; }
-        .chatbot-btn {
-            display: flex; align-items: center; justify-content: center;
-            width: 60px; height: 60px;
-            background: #25D366;
-            border-radius: 50%;
-            color: white; font-size: 28px;
-            box-shadow: 0 4px 20px rgba(37,211,102,0.4);
-            transition: transform 0.3s;
-            text-decoration: none;
-        }
-        .chatbot-btn:hover { transform: scale(1.1); }
-
+        
         @media (max-width: 768px) {
-            nav { padding: 12px 20px; }
-            .nav-links { gap: 15px; }
-            .nav-links a { font-size: 11px; }
-            .logo-img { height: 55px; }
-            .hero h1 { font-size: 34px; }
-            .article-body { padding: 40px 20px; }
-            h2 { font-size: 28px; }
+            .hero h1 { font-size: 36px; }
+            .section { padding: 40px 20px; }
         }
     </style>
 </head>
 <body>
-
-    <!-- HEADER -->
-    <header>
-        <nav>
-            <a href="index.html" class="logo-container">
-                <img src="db_imagens/logo.png" alt="Consultoria Imobiliária" class="logo-img">
-            </a>
-            <ul class="nav-links">
-                <li><a href="index.html#properties">Imóveis</a></li>
-                <li><a href="avaliador.html" style="color: #D4AF37; font-weight: bold;">Avaliador</a></li>
-                <li><a href="experiencia.html">Experiência</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="index.html#contact">Contato</a></li>
-                <li><a href="https://wa.me/5511969043012" target="_blank" style="color: #25D366; font-weight: bold; font-size: 24px;">
-                    <i class="fab fa-whatsapp"></i>
-                </a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- HERO -->
     <section class="hero">
         <div>
             <h1>Mobilidade Urbana e Valorização</h1>
             <p>Por que o "Efeito Metrô" dita o preço do m² em 2026</p>
         </div>
     </section>
-
-    <!-- CONTEÚDO DO ARTIGO -->
-    <div class="article-body">
-
+    
+    <div class="section">
         <div class="intro">
             <p><strong>O mercado imobiliário de São Paulo sempre foi pautado pela localização</strong>, mas em 2026 o conceito de "bem localizado" mudou. Não se trata mais apenas de estar em um bairro nobre, mas de <strong>quão rápido você consegue se deslocar sem depender de um automóvel</strong>. Entenda como os novos eixos de transporte estão redesenhando o mapa de valorização da capital.</p>
         </div>
-
+        
         <h2>1. O Plano Diretor e o Adensamento dos Eixos de Transporte</h2>
         <p>As mudanças no Plano Diretor Estratégico de São Paulo incentivaram a construção de prédios com maior densidade próximos ao transporte público (os chamados <strong>ETEUs - Eixos de Estruturação da Transformação Urbana</strong>).</p>
-
+        
         <h3>O fim da vaga de garagem obrigatória:</h3>
         <p>Em muitas regiões próximas ao metrô, novos empreendimentos não possuem vagas de garagem para todas as unidades. Isso <strong>valoriza absurdamente os prédios antigos</strong> que possuem vagas e, simultaneamente, cria um mercado gigante para apartamentos compactos focados em jovens profissionais.</p>
-
+        
         <div class="stats-grid">
             <div class="stat-card">
                 <span class="stat-number">25%</span>
                 <p><strong>Valorização superior</strong> em imóveis a 500m do metrô</p>
             </div>
+            
             <div class="stat-card">
                 <span class="stat-number">500m</span>
                 <p><strong>Raio ideal</strong> de proximidade com estações</p>
             </div>
+            
             <div class="stat-card">
                 <span class="stat-number">40min</span>
                 <p><strong>Economia diária</strong> para quem mora perto do metrô</p>
             </div>
         </div>
-
+        
         <h2>2. O Fenômeno dos Studios e o Yield de Investimento</h2>
         <p>Para o investidor, o foco em 2026 mudou da valorização bruta para o <strong>Yield (rendimento sobre o aluguel)</strong>.</p>
-
+        
         <div class="highlight">
             <h3>Eficiência do m²:</h3>
             <p>Apartamentos tipo "Studio" (25m² a 35m²) em bairros como <strong>Tatuapé, Mooca e Pinheiros</strong> possuem o aluguel por metro quadrado mais caro da cidade. O motivo é simples: a demanda por moradia individual de curta e média permanência nunca foi tão alta.</p>
         </div>
-
+        
         <h3>Nômades Digitais e Trabalho Híbrido:</h3>
         <p>Profissionais que não precisam estar no escritório todos os dias buscam <strong>hubs de conveniência</strong> onde possam resolver a vida a pé. Se o seu imóvel está em um desses hubs, <strong>o risco de vacância (imóvel vazio) é praticamente nulo</strong>.</p>
-
+        
         <h2>3. Sustentabilidade e o Custo do Condomínio</h2>
         <p>Em 2026, a eficiência energética tornou-se um fator de desempate na hora da compra.</p>
-
+        
         <h3>Certificações Verdes:</h3>
         <p>Prédios com selos de sustentabilidade (reuso de águas cinzas, energia fotovoltaica para áreas comuns e iluminação LED inteligente) são mais procurados por um motivo financeiro direto: <strong>o valor do condomínio é até 20% menor</strong>.</p>
-
+        
         <div class="highlight">
             <p><strong>Impacto na revenda:</strong> Um imóvel com taxa condominial elevada devido à ineficiência técnica <strong>perde liquidez rapidamente</strong> no mercado secundário.</p>
         </div>
-
+        
         <h2>4. O Eixo Platina e a Descentralização do Emprego</h2>
         <p>Não podemos falar de São Paulo sem mencionar o maior projeto urbanístico da iniciativa privada atual: o <strong>Eixo Platina</strong>, na Zona Leste.</p>
-
+        
         <h3>O Novo Polo Corporativo:</h3>
         <p>Ao criar lajes corporativas de alto padrão fora do eixo Berrini/Faria Lima, o Tatuapé e arredores retêm o profissional de alta renda no próprio bairro.</p>
-
+        
         <p><strong>Consequência imobiliária:</strong> Isso eleva a demanda por apartamentos de alto padrão (3 a 4 dormitórios) para famílias que agora podem morar e trabalhar na mesma região, economizando até <strong>2 horas diárias de trânsito</strong>.</p>
-
+        
         <h2>Conclusão: Onde colocar o seu capital?</h2>
         <p>Se você busca <strong>valorização real acima da inflação</strong> para os próximos 5 anos, a estratégia deve ser clara: busque <strong>eixos de expansão de transporte</strong> e bairros que estão recebendo infraestrutura corporativa.</p>
-
+        
         <div class="cta">
             <h3><strong>📞 Consultoria Especializada em Investimentos</strong></h3>
             <p>O tempo de deslocamento tornou-se o novo luxo de São Paulo, e o mercado imobiliário está precificando cada minuto economizado.</p>
             <p style="margin-top: 20px;"><strong>Antonio Furtado - CRECI 208024</strong><br>
             Especialista em Investimentos Imobiliários<br>
-            WhatsApp: <a href="https://wa.me/5511969043012" style="color: #2e7d6e; font-weight: bold;">(11) 96904-3012</a></p>
+            WhatsApp: <a href="https://wa.me/5511969043012" style="color: var(--primary-gold);">(11) 96904-3012</a></p>
         </div>
-
+        
         <a href="blog.html" class="back-btn">← Voltar para o Blog</a>
-
     </div>
-
-    <!-- FOOTER -->
-    <footer id="contact">
-        <div class="footer-content">
-            <div class="footer-column">
-                <img src="db_imagens/logo.png" alt="Antonio Furtado - Consultor Imobiliário" class="footer-logo">
-                <p style="color: rgba(255,255,255,0.7); font-size: 14px; line-height: 1.8; margin-top: 15px;">
-                    Excelência incomparável em consultoria imobiliária com Antonio Furtado.
-                </p>
-            </div>
-            <div class="footer-column">
-                <h3>NAVEGAÇÃO</h3>
-                <ul>
-                    <li><a href="index.html#properties">Propriedades</a></li>
-                    <li><a href="avaliador.html">Avaliador</a></li>
-                    <li><a href="experiencia.html">Experiência</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="index.html#contact">Contato</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h3>SERVIÇOS</h3>
-                <ul>
-                    <li><a href="avaliador.html">Avaliação Imobiliária</a></li>
-                    <li><a href="#services">Consultoria de Investimento</a></li>
-                    <li><a href="#services">Gestão de Imóveis</a></li>
-                    <li><a href="#services">Assessoria Jurídica</a></li>
-                    <li><a href="https://backend-cadastro-imoveis.onrender.com/cadastro" target="_blank" style="color: #D4AF37;">Anuncie seu Imóvel</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h3>CONTATO</h3>
-                <ul>
-                    <li><a href="tel:+5511969043012">+55 11 96904-3012</a></li>
-                    <li><a href="mailto:contato@antoniofurtado.com.br">contato@antoniofurtado.com.br</a></li>
-                    <li><a href="#contact">São Paulo - SP | CRECI 208024</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>© 2026 Antonio Furtado. Todos os direitos reservados.</p>
-        </div>
-    </footer>
-
-    <!-- WHATSAPP -->
-    <div class="chatbot">
-        <a href="https://wa.me/5511969043012" target="_blank" class="chatbot-btn">💬</a>
-    </div>
-
 </body>
 </html>
