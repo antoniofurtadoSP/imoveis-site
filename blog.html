@@ -354,7 +354,11 @@
 
         <!-- ARTIGO 9: Mobilidade e Metrô SP -->
         <div class="blog-card" onclick="window.location.href='Artigo_Mobilidade_Metro_SP.html'">
+<<<<<<< HEAD
             <img src="https://images.pexels.com/photos/2040428/pexels-photo-2040428.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Mobilidade Urbana e Metrô SP" class="blog-card-image">
+=======
+            <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&q=80" alt="Mobilidade Urbana e Metrô SP" class="blog-card-image">
+>>>>>>> be6d615f20d530352d8710d6beea453ab3697767
             <div class="blog-card-content">
                 <div class="blog-card-category">Mobilidade e Valorização</div>
                 <h3>Efeito Metrô: Valorização de até 25% em SP</h3>
@@ -403,7 +407,11 @@
                 <h3>CONTATO</h3>
                 <ul>
                     <li><a href="tel:+5511969043012">+55 11 96904-3012</a></li>
+<<<<<<< HEAD
                     <li><a href="/cdn-cgi/l/email-protection#a5c6cacbd1c4d1cae5c4cbd1cacbcccac3d0d7d1c4c1ca8bc6cac88bc7d7"><span class="__cf_email__" data-cfemail="0a6965647e6b7e654a6b647e656463656c7f787e6b6e6524696567246878">[email&#160;protected]</span></a></li>
+=======
+                    <li><a href="mailto:contato@antoniofurtado.com.br">contato@antoniofurtado.com.br</a></li>
+>>>>>>> be6d615f20d530352d8710d6beea453ab3697767
                     <li><a href="#contact">São Paulo - SP | CRECI 208024</a></li>
                 </ul>
             </div>
@@ -412,6 +420,7 @@
             <p>© 2026 Antonio Furtado. Todos os direitos reservados.</p>
         </div>
     </footer>
+<<<<<<< HEAD
 
     <!-- ASSISTENTE VIRTUAL -->
     <div class="chatbot">
@@ -433,3 +442,36 @@
                 if (this.getAttribute('href').startsWith('#') && this.getAttribute('href') !== '#') {
                     e.preventDefault();
                     const target = document
+=======
+
+    <!-- ASSISTENTE VIRTUAL -->
+    <div class="chatbot">
+        <a href="https://wa.me/5511969043012" target="_blank" class="chatbot-btn">💬</a>
+    </div>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = '#1a1a1a';
+            } else {
+                header.style.background = '#1a1a1a';
+            }
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                if (this.getAttribute('href').startsWith('#') && this.getAttribute('href') !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
+>>>>>>> be6d615f20d530352d8710d6beea453ab3697767
