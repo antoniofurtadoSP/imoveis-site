@@ -3,7 +3,3 @@
 Thumbs.db
 *.pyc
 __pycache__/
-
-db_imagens/*.jpeg
-db_imagens/*.jpg
-db_imagens/*.webp
