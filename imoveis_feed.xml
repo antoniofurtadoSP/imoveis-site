@@ -4,7 +4,7 @@
     <Provider>Antonio Furtado - Consultoria Imobiliária</Provider>
     <Email>contato@antoniofurtado.com.br</Email>
     <ContactName>Antonio Furtado</ContactName>
-    <PublishDate>2026-03-16T13:58:58</PublishDate>
+    <PublishDate>2026-03-16T16:28:02</PublishDate>
   </Header>
   <Listings>
     <Listing>
@@ -4279,6 +4279,80 @@ Este é o momento de investir em um dos pontos mais conectados de São Paulo. Ag
         <PostalCode>01210-002</PostalCode>
         <Latitude>-23.9261457</Latitude>
         <Longitude>-46.4010782</Longitude>
+      </Location>
+    </Listing>
+    <Listing>
+      <ListingID>IMOB-00085</ListingID>
+      <Title>Apartamento a venda em Vila Monumento, São Paulo</Title>
+      <TransactionType>For Sale</TransactionType>
+      <PublicationType>STANDARD</PublicationType>
+      <DetailViewUrl>https://www.antoniofurtado.com.br/imovel-85.html</DetailViewUrl>
+      <Media>
+        <Item medium="image" primary="true">https://www.antoniofurtado.com.br/fotos/20260316162611_6236082157.jpg</Item>
+        <Item medium="image">https://www.antoniofurtado.com.br/fotos/20260316162611_6236082169.jpg</Item>
+        <Item medium="image">https://www.antoniofurtado.com.br/fotos/20260316162621_6236082156.jpg</Item>
+        <Item medium="image">https://www.antoniofurtado.com.br/fotos/20260316162621_6236082168.jpg</Item>
+        <Item medium="image">https://www.antoniofurtado.com.br/fotos/20260316162621_6236082176.jpg</Item>
+        <Item medium="image">https://www.antoniofurtado.com.br/fotos/20260316162637_6236082159 (1).jpg</Item>
+        <Item medium="image">https://www.antoniofurtado.com.br/fotos/20260316162637_6236082171 (1).jpg</Item>
+        <Item medium="image">https://www.antoniofurtado.com.br/fotos/20260316162640_6236082182 (1).jpg</Item>
+        <Item medium="image">https://www.antoniofurtado.com.br/fotos/20260316162640_6236082157 (1).jpg</Item>
+        <Item medium="image">https://www.antoniofurtado.com.br/fotos/20260316162640_6236082159.jpg</Item>
+        <Item medium="image">https://www.antoniofurtado.com.br/fotos/20260316162640_6236082171.jpg</Item>
+        <Item medium="image">https://www.antoniofurtado.com.br/fotos/20260316162640_6236082182.jpg</Item>
+        <Item medium="image">https://www.antoniofurtado.com.br/fotos/20260316162704_6236082172.jpg</Item>
+        <Item medium="image">https://www.antoniofurtado.com.br/fotos/20260316162704_6236082185.jpg</Item>
+        <Item medium="image">https://www.antoniofurtado.com.br/fotos/20260316162704_6236082181.jpg</Item>
+        <Item medium="image">https://www.antoniofurtado.com.br/fotos/20260316162704_6236082170.jpg</Item>
+        <Item medium="image">https://www.antoniofurtado.com.br/fotos/20260316162704_6236082160.jpg</Item>
+        <Item medium="image">https://www.antoniofurtado.com.br/fotos/20260316162704_6236082167.jpg</Item>
+        <Item medium="image">https://www.antoniofurtado.com.br/fotos/20260316162704_6236082177.jpg</Item>
+        <Item medium="image">https://www.antoniofurtado.com.br/fotos/20260316162704_6236082186.jpg</Item>
+        <Item medium="image">https://www.antoniofurtado.com.br/fotos/20260316162710_6236082188.jpg</Item>
+        <Item medium="image">https://www.antoniofurtado.com.br/fotos/20260316162710_6236082153.jpg</Item>
+      </Media>
+      <Details>
+        <PropertyType>Residential / Apartment</PropertyType>
+        <Description>Apartamento Garden Mobiliado com 121m² e Quintal Privativo em São Paulo
+Esta é uma oportunidade rara para quem busca o conforto de uma casa com a segurança de um edifício. Este Apartamento Garden, localizado em uma região estratégica de São Paulo, oferece um espaço total de 121 metros quadrados, sendo 63 metros quadrados de área útil interna complementados por um generoso espaço externo privativo.
+Diferenciais do Imóvel e Conforto:
+Com 11 anos de construção, o imóvel está em excelente estado de conservação e é entregue mobiliado, facilitando a mudança imediata. A planta foi planejada para oferecer funcionalidade e bem-estar em cada detalhe:
+Configuração Interna: São 2 dormitórios bem distribuídos, incluindo uma suíte confortável para maior privacidade do casal.
+Banheiros: O apartamento conta com 2 banheiros completos, atendendo perfeitamente tanto os moradores quanto as visitas.
+Vaga de Garagem: Dispõe de 1 vaga de garagem vinculada à unidade.
+O Privilégio do Espaço Garden:
+O grande destaque deste imóvel é a sua área externa. Diferente dos apartamentos convencionais, aqui você desfruta de uma varanda integrada e um quintal privativo. Esse espaço ao ar livre é ideal para quem tem animais de estimação, aprecia o cultivo de plantas ou deseja um local seguro para as crianças brincarem ao ar livre sem sair de casa.
+Localização e Conveniência:
+Situado em uma área de fácil acesso na capital paulista, o edifício está localizado próximo à Escola SENAI. Essa proximidade com instituições de ensino renomadas agrega valor constante ao patrimônio e oferece praticidade para famílias e estudantes. A região conta com infraestrutura completa de serviços, comércios e transporte.
+Resumo das Informações Técnicas:
+Área Total: 121 metros quadrados.
+Área Útil: 63 metros quadrados.
+Dormitórios: 2 quartos, sendo 1 suíte.
+Vagas: 1 vaga de garagem.
+Idade do Imóvel: 11 anos.
+Condição: Totalmente mobiliado e pronto para morar.
+Este apartamento combina o melhor dos dois mundos: a praticidade de um ambiente moderno e mobiliado com o luxo de um quintal exclusivo no coração de São Paulo. Agende sua visita e venha conhecer este refúgio urbano.</Description>
+        <ListPrice currency="BRL">1100000</ListPrice>
+        <PropertyAdministrationFee currency="BRL">1200</PropertyAdministrationFee>
+        <Taxes currency="BRL">530</Taxes>
+        <LivingArea unit="square metres">63</LivingArea>
+        <LotArea unit="square metres">121</LotArea>
+        <Bedrooms>2</Bedrooms>
+        <Suites>1</Suites>
+        <Bathrooms>2</Bathrooms>
+        <Garage>1</Garage>
+      </Details>
+      <Location displayAddress="Street">
+        <Country abbreviation="BR">Brasil</Country>
+        <State abbreviation="SP">SP</State>
+        <City>São Paulo</City>
+        <Neighborhood>Vila Monumento</Neighborhood>
+        <Address>Rua Engenheiro Prudente</Address>
+        <StreetNumber>35</StreetNumber>
+        <Complement>apto11</Complement>
+        <PostalCode>01550-000</PostalCode>
+        <Latitude>-23.5764219</Latitude>
+        <Longitude>-46.6137805</Longitude>
       </Location>
     </Listing>
   </Listings>
