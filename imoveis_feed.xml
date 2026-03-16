@@ -4,7 +4,7 @@
     <Provider>Antonio Furtado - Consultoria Imobiliária</Provider>
     <Email>contato@antoniofurtado.com.br</Email>
     <ContactName>Antonio Furtado</ContactName>
-    <PublishDate>2026-03-16T13:51:54</PublishDate>
+    <PublishDate>2026-03-16T13:58:58</PublishDate>
   </Header>
   <Listings>
     <Listing>
@@ -4223,6 +4223,62 @@ Localizado em ponto estratégico, podendo ser utilizado para diversos tipos de c
         <PostalCode>03065-050</PostalCode>
         <Latitude>-23.5402524</Latitude>
         <Longitude>-46.5766424</Longitude>
+      </Location>
+    </Listing>
+    <Listing>
+      <ListingID>IMOB-00084</ListingID>
+      <Title>Casa a venda em Santa Efigênia, São Paulo</Title>
+      <TransactionType>For Sale</TransactionType>
+      <PublicationType>STANDARD</PublicationType>
+      <DetailViewUrl>https://www.antoniofurtado.com.br/imovel-84.html</DetailViewUrl>
+      <Media>
+        <Item medium="image" primary="true">https://www.antoniofurtado.com.br/fotos/20260316135754_WhatsApp Image 2026-03-16 at 13.48.27.jpeg</Item>
+        <Item medium="image">https://www.antoniofurtado.com.br/fotos/20260316135801_WhatsApp Image 2026-03-16 at 13.48.29.jpeg</Item>
+        <Item medium="image">https://www.antoniofurtado.com.br/fotos/20260316135801_WhatsApp Image 2026-03-16 at 13.48.28 (2).jpeg</Item>
+        <Item medium="image">https://www.antoniofurtado.com.br/fotos/20260316135801_WhatsApp Image 2026-03-16 at 13.48.28 (1).jpeg</Item>
+        <Item medium="image">https://www.antoniofurtado.com.br/fotos/20260316135801_WhatsApp Image 2026-03-16 at 13.48.28.jpeg</Item>
+        <Item medium="image">https://www.antoniofurtado.com.br/fotos/20260316135813_WhatsApp Image 2026-03-16 at 13.48.29 (2).jpeg</Item>
+        <Item medium="image">https://www.antoniofurtado.com.br/fotos/20260316135813_WhatsApp Image 2026-03-16 at 13.48.29 (1).jpeg</Item>
+        <Item medium="image">https://www.antoniofurtado.com.br/fotos/20260316135818_WhatsApp Image 2026-03-16 at 13.48.30.jpeg</Item>
+      </Media>
+      <Details>
+        <PropertyType>Residential / Home</PropertyType>
+        <Description>Apartamento de 41m² ao lado do Metrô República: Moradia ou Investimento com Alta Liquidez
+Se você procura um imóvel estratégico no coração de São Paulo, este apartamento de 41 metros quadrados é a escolha ideal. Localizado a poucos passos da estação de metrô República, o imóvel combina a praticidade da vida urbana com um excelente potencial de rentabilidade, sendo perfeito tanto para quem deseja morar quanto para quem busca renda através de locação.
+Destaques do Imóvel e Diferenciais:
+O apartamento possui 5 anos de construção, apresentando uma estrutura moderna e conservada. Com uma planta funcional de 41 metros quadrados de área útil, cada espaço foi planejado para oferecer conforto e agilidade no dia a dia.
+Organização Interna: O dormitório e a cozinha já contam com armários planejados de boa qualidade, otimizando o armazenamento e o espaço de circulação.
+Ambiente Externo: Possui uma sacada que proporciona ventilação natural e uma vista privilegiada da dinâmica do centro da capital.
+Economia: O valor de condomínio é considerado baixo para a região, o que aumenta a margem de lucro para investidores e reduz o custo fixo para moradores.
+Localização e Potencial de Renda:
+Estar posicionado ao lado do Metrô República garante mobilidade total para qualquer ponto da cidade. A região é um polo de alta demanda para aluguel tradicional e, principalmente, para locações de curta temporada via plataformas digitais, devido à proximidade com centros culturais, gastronômicos e de lazer.
+Facilidades para Aquisição:
+A documentação do imóvel está totalmente regularizada e o apartamento está apto para financiamento bancário. Por ser uma construção recente, com apenas 5 anos, o imóvel exige baixo investimento em manutenção e oferece liquidez imediata no mercado imobiliário.
+Resumo Técnico:
+Metragem: 41 metros quadrados de área útil.
+Configuração: 1 dormitório e 1 banheiro social.
+Idade do imóvel: 5 anos.
+Localização: Próximo ao Metrô República, Centro de São Paulo.
+Diferenciais: Sacada, armários embutidos e pronto para financiar.
+Este é o momento de investir em um dos pontos mais conectados de São Paulo. Agende uma visita para conhecer este imóvel funcional e estratégico.</Description>
+        <ListPrice currency="BRL">198000</ListPrice>
+        <PropertyAdministrationFee currency="BRL">278</PropertyAdministrationFee>
+        <LivingArea unit="square metres">41</LivingArea>
+        <LotArea unit="square metres">41</LotArea>
+        <Bedrooms>1</Bedrooms>
+        <Bathrooms>1</Bathrooms>
+      </Details>
+      <Location displayAddress="Street">
+        <Country abbreviation="BR">Brasil</Country>
+        <State abbreviation="SP">SP</State>
+        <City>São Paulo</City>
+        <Neighborhood>Santa Efigênia</Neighborhood>
+        <Address>Rua Vitória</Address>
+        <StreetNumber>948</StreetNumber>
+        <Complement>apto 801</Complement>
+        <PostalCode>01210-002</PostalCode>
+        <Latitude>-23.9261457</Latitude>
+        <Longitude>-46.4010782</Longitude>
       </Location>
     </Listing>
   </Listings>
