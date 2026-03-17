@@ -4,7 +4,7 @@
     <Provider>Antonio Furtado - Consultoria Imobiliária</Provider>
     <Email>contato@antoniofurtado.com.br</Email>
     <ContactName>Antonio Furtado</ContactName>
-    <PublishDate>2026-03-17T09:33:12</PublishDate>
+    <PublishDate>2026-03-17T15:38:04</PublishDate>
   </Header>
   <Listings>
     <Listing>
@@ -4353,6 +4353,61 @@ Este apartamento combina o melhor dos dois mundos: a praticidade de um ambiente 
         <PostalCode>01550-000</PostalCode>
         <Latitude>-23.5764219</Latitude>
         <Longitude>-46.6137805</Longitude>
+      </Location>
+    </Listing>
+    <Listing>
+      <ListingID>IMOB-00086</ListingID>
+      <Title>Apartamento para alugar em Mooca, São Paulo</Title>
+      <TransactionType>For Rent</TransactionType>
+      <PublicationType>STANDARD</PublicationType>
+      <DetailViewUrl>https://www.antoniofurtado.com.br/imovel-86.html</DetailViewUrl>
+      <Media>
+        <Item medium="image" primary="true">https://www.antoniofurtado.com.br/fotos/20260317153036_558480978_2935919463267103_2270737811045079861_n.jpg</Item>
+        <Item medium="image">https://www.antoniofurtado.com.br/fotos/20260317153039_558105322_1805208806770391_3025933210029063096_n.jpg</Item>
+        <Item medium="image">https://www.antoniofurtado.com.br/fotos/20260317153039_558043341_1056218073100647_869726591416505178_n.jpg</Item>
+        <Item medium="image">https://www.antoniofurtado.com.br/fotos/20260317153039_558605943_1293553148932654_6483674097768939203_n.jpg</Item>
+        <Item medium="image">https://www.antoniofurtado.com.br/fotos/20260317153057_559001604_4383963168416108_228932736229869155_n.jpg</Item>
+        <Item medium="image">https://www.antoniofurtado.com.br/fotos/20260317153057_558138996_1129772349257021_5258147986065976965_n.jpg</Item>
+        <Item medium="image">https://www.antoniofurtado.com.br/fotos/20260317153127_558173102_4245623285694064_6060101505704600797_n.jpg</Item>
+        <Item medium="image">https://www.antoniofurtado.com.br/fotos/20260317153127_558666653_4137134453169569_1493399246608129534_n.jpg</Item>
+        <Item medium="image">https://www.antoniofurtado.com.br/fotos/20260317153127_559181529_2726391577564696_5361745047421161306_n.jpg</Item>
+        <Item medium="image">https://www.antoniofurtado.com.br/fotos/20260317153153_557932109_1325188235135619_5970368013072221522_n.jpg</Item>
+        <Item medium="image">https://www.antoniofurtado.com.br/fotos/20260317153153_558898736_567602769748554_6026386122265035363_n.jpg</Item>
+        <Item medium="image">https://www.antoniofurtado.com.br/fotos/20260317153153_558155383_1107224201525890_6081929108916683729_n.jpg</Item>
+        <Item medium="image">https://www.antoniofurtado.com.br/fotos/20260317153153_559618292_1789404708341649_6182938678957114381_n.jpg</Item>
+        <Item medium="image">https://www.antoniofurtado.com.br/fotos/20260317153153_558951284_4075690399368638_2085375481918211590_n.jpg</Item>
+        <Item medium="image">https://www.antoniofurtado.com.br/fotos/20260317153153_558397061_2008772259925788_4399108468747296264_n.jpg</Item>
+        <Item medium="image">https://www.antoniofurtado.com.br/fotos/20260317153153_558158607_685651017886717_7096136359382180882_n.jpg</Item>
+        <Item medium="image">https://www.antoniofurtado.com.br/fotos/20260317153153_558480978_1131002748995247_4454914813034972255_n.jpg</Item>
+        <Item medium="image">https://www.antoniofurtado.com.br/fotos/20260317153153_559742030_1301663884750822_4053554028395371746_n.jpg</Item>
+        <Item medium="image">https://www.antoniofurtado.com.br/fotos/20260317153153_558201977_1735867084035862_3034659147637275798_n.jpg</Item>
+        <Item medium="image">https://www.antoniofurtado.com.br/fotos/20260317153153_558921613_1353586876123455_4419267132505168203_n.jpg</Item>
+      </Media>
+      <Details>
+        <PropertyType>Residential / Apartment</PropertyType>
+        <Description>Apartamento para Locação na Mooca
+Apartamento com 66m² com dois quartos, cozinha com armários, uma sala espaçosa, e um banheiro.
+ Localizado no coração da Mooca próximo de escolas, ótimas padarias, facilidade de acesso a diversas regiões da cidade
+Condominio com salação de festas, academia, piscina, quadra poliesportiva, bicicletário, etc</Description>
+        <RentalPrice currency="BRL" period="Monthly">2400</RentalPrice>
+        <PropertyAdministrationFee currency="BRL">885</PropertyAdministrationFee>
+        <LivingArea unit="square metres">66</LivingArea>
+        <LotArea unit="square metres">66</LotArea>
+        <Bedrooms>2</Bedrooms>
+        <Bathrooms>1</Bathrooms>
+        <Garage>1</Garage>
+      </Details>
+      <Location displayAddress="Street">
+        <Country abbreviation="BR">Brasil</Country>
+        <State abbreviation="SP">SP</State>
+        <City>São Paulo</City>
+        <Neighborhood>Mooca</Neighborhood>
+        <Address>Rua dos Campineiros</Address>
+        <StreetNumber>838</StreetNumber>
+        <Complement>apto 92</Complement>
+        <PostalCode>03167-020</PostalCode>
+        <Latitude>-23.5573849</Latitude>
+        <Longitude>-46.590498</Longitude>
       </Location>
     </Listing>
   </Listings>
