@@ -4,7 +4,7 @@
     <Provider>Antonio Furtado - Consultoria Imobiliária</Provider>
     <Email>contato@antoniofurtado.com.br</Email>
     <ContactName>Antonio Furtado</ContactName>
-    <PublishDate>2026-03-18T12:38:38</PublishDate>
+    <PublishDate>2026-03-18T13:38:14</PublishDate>
   </Header>
   <Listings>
     <Listing>
@@ -4547,6 +4547,72 @@ Entre em contato para conhecer de perto todos os detalhes deste excelente imóve
         <PostalCode>08150-060</PostalCode>
         <Latitude>-23.5158081</Latitude>
         <Longitude>-46.4175029</Longitude>
+      </Location>
+    </Listing>
+    <Listing>
+      <ListingID>IMOB-00089</ListingID>
+      <Title>Apartamento a venda em Cidade Popular, São Paulo</Title>
+      <TransactionType>For Sale</TransactionType>
+      <PublicationType>STANDARD</PublicationType>
+      <DetailViewUrl>https://www.antoniofurtado.com.br/imovel-89.html</DetailViewUrl>
+      <Media>
+        <Item medium="image" primary="true">https://www.antoniofurtado.com.br/fotos/20260318133550_6229263355.jpg</Item>
+        <Item medium="image">https://www.antoniofurtado.com.br/fotos/20260318133550_6229263357.jpg</Item>
+        <Item medium="image">https://www.antoniofurtado.com.br/fotos/20260318133550_6229263338.jpg</Item>
+        <Item medium="image">https://www.antoniofurtado.com.br/fotos/20260318133550_6229263347.jpg</Item>
+        <Item medium="image">https://www.antoniofurtado.com.br/fotos/20260318133550_6229263356.jpg</Item>
+        <Item medium="image">https://www.antoniofurtado.com.br/fotos/20260318133550_6229263351 (1).jpg</Item>
+        <Item medium="image">https://www.antoniofurtado.com.br/fotos/20260318133550_6229263358 (1).jpg</Item>
+        <Item medium="image">https://www.antoniofurtado.com.br/fotos/20260318133550_6229263341 (1).jpg</Item>
+        <Item medium="image">https://www.antoniofurtado.com.br/fotos/20260318133550_6229263339 (1).jpg</Item>
+        <Item medium="image">https://www.antoniofurtado.com.br/fotos/20260318133551_6229263351.jpg</Item>
+        <Item medium="image">https://www.antoniofurtado.com.br/fotos/20260318133551_6229263358.jpg</Item>
+        <Item medium="image">https://www.antoniofurtado.com.br/fotos/20260318133551_6229263341.jpg</Item>
+        <Item medium="image">https://www.antoniofurtado.com.br/fotos/20260318133551_6229263339.jpg</Item>
+        <Item medium="image">https://www.antoniofurtado.com.br/fotos/20260318133551_6229263346.jpg</Item>
+      </Media>
+      <Details>
+        <PropertyType>Residential / Apartment</PropertyType>
+        <Description>Apartamento Reformado de 2 Dormitórios no Condomínio Estação Primavera: Pronto para Morar
+Se você busca o seu primeiro imóvel ou um investimento seguro na região de Guaianazes, este apartamento de 40 metros quadrados na Cidade Popular é a oportunidade que você esperava. 
+Totalmente reformado e com documentação em dia, o imóvel está pronto para financiamento em qualquer banco e oferece o conforto de uma unidade que não precisa de reparos.
+Destaques do Imóvel e Reforma
+O apartamento destaca-se pela excelente iluminação natural em todos os ambientes, criando uma atmosfera acolhedora e ventilada. A reforma recente priorizou a praticidade e a estética moderna:
+. Piso frio com visual laminado em todo o imóvel, unindo a beleza da madeira com a facilidade de manutenção do piso frio. 
+. Dois dormitórios bem distribuídos e com espaços funcionais. 
+. Sala confortável para dois ambientes, cozinha integrada e banheiro social.
+Infraestrutura Completa no Condomínio
+O Condomínio Estação Primavera oferece uma área de lazer pensada para o bem-estar da família, com diferenciais que valorizam o patrimônio:
+. Salão de festas equipado com área de churrasqueira para suas comemorações. 
+. Área fitness e quadra para atividades físicas. 
+. Playground, espaço pet e uma ampla área de lazer cercada por árvores. 
+. Condomínio totalmente acessível e com estacionamento rotativo para os moradores.
+Localização Estratégica em Guaianazes
+A localização na Cidade Popular é um dos pontos fortes deste imóvel, facilitando o acesso aos serviços essenciais do dia a dia. Você estará próximo ao Hospital Geral de Guaianazes, diversas UBS, escolas e uma rede completa de supermercados e atacadões. A região oferece mobilidade rápida e um comércio variado que atende todas as necessidades.
+Condições de Venda e Financiamento
+O imóvel está com a documentação rigorosamente em ordem, totalmente quitado e pronto para o processo de financiamento bancário imediato.
+. Valor de venda: R$ 180.000,00 . 
+Condomínio: aproximadamente R$ 300. 
+. Área útil: 40 metros quadrados. 
+. Vagas: 1 vaga de garagem (sistema rotativo).
+Esta é uma oportunidade real de sair do aluguel e investir em um imóvel quitado e reformado. Agende sua visita e conheça este condomínio tranquilo e bem localizado.</Description>
+        <ListPrice currency="BRL">180000</ListPrice>
+        <PropertyAdministrationFee currency="BRL">300</PropertyAdministrationFee>
+        <LivingArea unit="square metres">40</LivingArea>
+        <LotArea unit="square metres">40</LotArea>
+        <Bedrooms>2</Bedrooms>
+        <Bathrooms>1</Bathrooms>
+        <Garage>1</Garage>
+      </Details>
+      <Location displayAddress="Street">
+        <Country abbreviation="BR">Brasil</Country>
+        <State abbreviation="SP">SP</State>
+        <City>São Paulo</City>
+        <Neighborhood>Cidade Popular</Neighborhood>
+        <Address>Rua Raposo da Fonseca</Address>
+        <StreetNumber>1044</StreetNumber>
+        <Complement>de 520/521 ao fim</Complement>
+        <PostalCode>08460-520</PostalCode>
       </Location>
     </Listing>
   </Listings>
