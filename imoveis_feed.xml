@@ -4,7 +4,7 @@
     <Provider>Antonio Furtado - Consultoria Imobiliária</Provider>
     <Email>contato@antoniofurtado.com.br</Email>
     <ContactName>Antonio Furtado</ContactName>
-    <PublishDate>2026-03-18T12:16:43</PublishDate>
+    <PublishDate>2026-03-18T12:38:38</PublishDate>
   </Header>
   <Listings>
     <Listing>
@@ -4478,6 +4478,75 @@ As condições para locação são facilitadas, aceitando-se 3 meses de depósit
         <PostalCode>03067000</PostalCode>
         <Latitude>-23.5358552</Latitude>
         <Longitude>-46.5736345</Longitude>
+      </Location>
+    </Listing>
+    <Listing>
+      <ListingID>IMOB-00088</ListingID>
+      <Title>Apartamento a venda em Parque Santa Rita, São Paulo</Title>
+      <TransactionType>For Sale</TransactionType>
+      <PublicationType>STANDARD</PublicationType>
+      <DetailViewUrl>https://www.antoniofurtado.com.br/imovel-88.html</DetailViewUrl>
+      <Media>
+        <Item medium="image" primary="true">https://www.antoniofurtado.com.br/fotos/20260318123737_6131788063.jpg</Item>
+        <Item medium="image">https://www.antoniofurtado.com.br/fotos/20260318123747_6131788049 (1).jpg</Item>
+        <Item medium="image">https://www.antoniofurtado.com.br/fotos/20260318123747_6131788052 (1).jpg</Item>
+        <Item medium="image">https://www.antoniofurtado.com.br/fotos/20260318123747_6131788070 (1).jpg</Item>
+        <Item medium="image">https://www.antoniofurtado.com.br/fotos/20260318123747_6131788050.jpg</Item>
+        <Item medium="image">https://www.antoniofurtado.com.br/fotos/20260318123747_6131788052.jpg</Item>
+        <Item medium="image">https://www.antoniofurtado.com.br/fotos/20260318123747_6131788049.jpg</Item>
+        <Item medium="image">https://www.antoniofurtado.com.br/fotos/20260318123747_6131788070.jpg</Item>
+        <Item medium="image">https://www.antoniofurtado.com.br/fotos/20260318123810_6131788057.jpg</Item>
+        <Item medium="image">https://www.antoniofurtado.com.br/fotos/20260318123810_6131788043.jpg</Item>
+        <Item medium="image">https://www.antoniofurtado.com.br/fotos/20260318123811_6131788047.jpg</Item>
+        <Item medium="image">https://www.antoniofurtado.com.br/fotos/20260318123811_6131788062.jpg</Item>
+        <Item medium="image">https://www.antoniofurtado.com.br/fotos/20260318123824_6131788044.jpg</Item>
+        <Item medium="image">https://www.antoniofurtado.com.br/fotos/20260318123824_6131788051.jpg</Item>
+        <Item medium="image">https://www.antoniofurtado.com.br/fotos/20260318123824_6131788053.jpg</Item>
+        <Item medium="image">https://www.antoniofurtado.com.br/fotos/20260318123824_6131788048.jpg</Item>
+        <Item medium="image">https://www.antoniofurtado.com.br/fotos/20260318123832_6131788066.jpg</Item>
+        <Item medium="image">https://www.antoniofurtado.com.br/fotos/20260318123832_6131788058.jpg</Item>
+        <Item medium="image">https://www.antoniofurtado.com.br/fotos/20260318123832_6131788065.jpg</Item>
+      </Media>
+      <Details>
+        <PropertyType>Residential / Apartment</PropertyType>
+        <Description>Apartamento à Venda no Parque Santa Rita: 2 Quartos 
+Se você busca um imóvel que combine segurança, conforto e uma localização estratégica na Zona Leste de São Paulo, este apartamento no Parque Santa Rita é a escolha ideal. Situado na Rua Manoel Rodrigues da Rocha, o imóvel oferece um ambiente acolhedor e funcional, perfeito para quem deseja praticidade no dia a dia.
+Espaço e Conforto Interno
+O apartamento possui 42 metros quadrados de área útil, com uma planta inteligente que totaliza 48 metros quadrados de área total. 
+A distribuição dos ambientes foi pensada para garantir o máximo de aproveitamento:
+. Dois dormitórios arejados com boa iluminação natural.
+ . Um banheiro social completo e bem posicionado. 
+. Sala e cozinha integradas, criando um ambiente moderno para convivência.
+Infraestrutura de Lazer e Segurança
+Morar neste condomínio é ter a tranquilidade de uma estrutura completa à sua disposição. O empreendimento oferece diversas opções para relaxar e se exercitar:
+. Portaria 24 horas e guarita de controle, garantindo segurança total para os moradores. 
+. Salão de festas equipado para suas celebrações e momentos especiais. 
+. Churrasqueira estilo parrilla, ideal para os momentos de lazer com amigos. 
+. Quadra poliesportiva e salão de jogos para o entretenimento de todas as idades. 
+. Área verde preservada, proporcionando um contato mais próximo com a natureza dentro da cidade.
+Localização Privilegiada
+O bairro Parque Santa Rita destaca-se pela conveniência, estando cercado por uma ampla rede de comércios, escolas e serviços essenciais. O fácil acesso às principais vias da região facilita o deslocamento e torna este imóvel uma excelente opção tanto para moradia quanto para investimento.
+Este apartamento está disponível para visitação imediata. 
+Entre em contato para conhecer de perto todos os detalhes deste excelente imóvel no Parque Santa Rita.</Description>
+        <ListPrice currency="BRL">160000</ListPrice>
+        <PropertyAdministrationFee currency="BRL">330</PropertyAdministrationFee>
+        <LivingArea unit="square metres">42</LivingArea>
+        <LotArea unit="square metres">42</LotArea>
+        <Bedrooms>2</Bedrooms>
+        <Bathrooms>1</Bathrooms>
+        <Garage>1</Garage>
+      </Details>
+      <Location displayAddress="Street">
+        <Country abbreviation="BR">Brasil</Country>
+        <State abbreviation="SP">SP</State>
+        <City>São Paulo</City>
+        <Neighborhood>Parque Santa Rita</Neighborhood>
+        <Address>Rua Manoel Rodrigues da Rocha</Address>
+        <StreetNumber>347</StreetNumber>
+        <Complement>bloco 7 ap 31</Complement>
+        <PostalCode>08150-060</PostalCode>
+        <Latitude>-23.5158081</Latitude>
+        <Longitude>-46.4175029</Longitude>
       </Location>
     </Listing>
   </Listings>
