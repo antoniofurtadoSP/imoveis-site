@@ -4515,17 +4515,21 @@
             function assinarNewsletter() {
                 const email = document.getElementById('newsletter-email').value;
                 if (email) {
-                    fetch('http://localhost:5000/newsletter', {
+                    fetch('https://formspree.io/f/mjgajqpd', {
                         method: 'POST',
                         headers: {
+                            'Accept': 'application/json',
                             'Content-Type': 'application/json'
                         },
                         body: JSON.stringify({ email: email })
                     })
-                    .then(response => response.json())
-                    .then(data => {
-                        alert(data.message);
-                        document.getElementById('newsletter-email').value = '';
+                    .then(response => {
+                        if (response.ok) {
+                            alert('Obrigado por se inscrever! Enviaremos oportunidades exclusivas para você.');
+                            document.getElementById('newsletter-email').value = '';
+                        } else {
+                            alert('Ocorreu um erro ao tentar se inscrever. Por favor, tente novamente mais tarde.');
+                        }
                     })
                     .catch(error => {
                         console.error('Erro:', error);
