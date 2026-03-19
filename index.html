@@ -4515,8 +4515,22 @@
             function assinarNewsletter() {
                 const email = document.getElementById('newsletter-email').value;
                 if (email) {
-                    alert(`Obrigado por se inscrever!\n\nConsultoria Imobiliária enviará oportunidades exclusivas para: ${email}`);
-                    document.getElementById('newsletter-email').value = '';
+                    fetch('http://localhost:5000/newsletter', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ email: email })
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        alert(data.message);
+                        document.getElementById('newsletter-email').value = '';
+                    })
+                    .catch(error => {
+                        console.error('Erro:', error);
+                        alert('Ocorreu um erro ao tentar se inscrever. Por favor, tente novamente mais tarde.');
+                    });
                 }
             }
         
