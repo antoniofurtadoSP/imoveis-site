@@ -1445,20 +1445,25 @@
         .hero {
             position: relative;
             min-height: 60vh;
-            max-height: 65vh;
             background: linear-gradient(rgba(26,26,26,0.88), rgba(26,26,26,0.78)),
-                        url('db_imagens/hero_administracao_profissional.png') center bottom/cover no-repeat;
+                        url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1920&q=80') center/cover no-repeat;
             color: white;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             padding: 80px 40px;
-            margin-bottom: 60px;
-            overflow: hidden;
+            margin-bottom: 0;
         }
         .hero-content h1 { font-size: 56px; margin-bottom: 20px; color: var(--primary-gold); text-transform: uppercase; letter-spacing: 2px; }
         .hero-content p { font-size: 18px; max-width: 800px; margin: 0 auto; color: rgba(255,255,255,0.95); font-weight: 300; }
+        .imagem-destaque {
+            width: 100%;
+            max-width: 1000px;
+            margin: 50px auto;
+            display: block;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
         .section { max-width: 1000px; margin: 0 auto; padding: 0 40px 80px; }
         .content-section { margin-bottom: 60px; }
         .article-intro { font-size: 19px; font-style: italic; line-height: 1.9; color: var(--gray); margin-bottom: 40px; padding: 35px; background: linear-gradient(135deg, #f8f8f8 0%, #e8e8e8 100%); border-left: 5px solid var(--primary-gold); }
@@ -1508,11 +1513,6 @@
     </nav>
 </header>
         
-    <nav class="breadcrumb" aria-label="breadcrumb">
-        <a href="index.html">Home</a><span>›</span>
-        <a href="blog.html">Blog</a><span>›</span>
-        <span>Administração Profissional</span>
-    </nav>
     <section class="hero">
         <div class="hero-content">
             <h1>O Maior Erro dos Proprietários</h1>
@@ -1520,6 +1520,7 @@
         </div>
     </section>
     <div class="section">
+        <img src="db_imagens/hero_administracao_profissional.png" alt="Administração Profissional de Imóveis" class="imagem-destaque">
         <div class="content-section">
             <p class="article-intro">"Para muitas pessoas, investir em imóveis continua sendo uma das formas mais seguras de construir patrimônio e gerar renda. No entanto, possuir um imóvel para locação não significa, necessariamente, obter um bom retorno financeiro."</p>
             <p>É comum encontrar proprietários que administram seus imóveis por conta própria, acreditando que isso representa economia. Na prática, essa decisão pode resultar em <strong>períodos prolongados de vacância, contratos inadequados, inadimplência, conflitos com inquilinos e perda de rentabilidade</strong>.</p>
