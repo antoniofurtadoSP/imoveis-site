@@ -1448,6 +1448,88 @@
                 height: 60px;
             }
         }
+
+        /* ========== NOVAS SEÇÕES: GESTÃO PATRIMONIAL ========== */
+        .pillars-grid, .investors-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 1200px;
+            margin: 50px auto 0;
+        }
+        .investors-grid { grid-template-columns: repeat(4, 1fr); }
+        .pillar-card, .investor-card {
+            background: #fff;
+            border: 1px solid #eee;
+            padding: 40px 28px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .pillar-card:hover, .investor-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+        }
+        .pillar-card i, .investor-card i {
+            font-size: 32px;
+            color: #D4AF37;
+            margin-bottom: 18px;
+        }
+        .pillar-card h3, .investor-card h3 {
+            font-size: 18px;
+            letter-spacing: 0.5px;
+            margin-bottom: 10px;
+            color: #111;
+        }
+        .pillar-card p, .investor-card p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .owners-section { background: #111; color: #fff; }
+        .owners-grid { max-width: 800px; margin: 0 auto; text-align: left; }
+        .owners-text p { color: #ddd; line-height: 1.8; margin-bottom: 20px; }
+        .owners-problems { list-style: none; padding: 0; margin: 20px 0; }
+        .owners-problems li {
+            padding: 10px 0;
+            border-bottom: 1px solid #333;
+            color: #eee;
+        }
+        .owners-problems li i { color: #D4AF37; margin-right: 12px; }
+
+        .stats-section { background: #f7f6f4; }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .stat-number {
+            display: block;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 48px;
+            color: #D4AF37;
+            font-weight: 700;
+        }
+        .stat-label {
+            display: block;
+            font-size: 13px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #555;
+            margin-top: 6px;
+        }
+
+        @media (max-width: 992px) {
+            .pillars-grid { grid-template-columns: repeat(2, 1fr); }
+            .investors-grid { grid-template-columns: repeat(2, 1fr); }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 600px) {
+            .pillars-grid, .investors-grid, .stats-grid { grid-template-columns: 1fr; }
+        }
         
     </style>
     </head>
@@ -1461,7 +1543,7 @@
         </a>
         <ul class="nav-links">
             <li><a href="index.html#properties">Imóveis</a></li>
-            <li><a href="avaliador.html" style="color: #D4AF37; font-weight: bold;"> Avaliador</a></li>
+            <li><a href="avaliador.html" style="color: #D4AF37; font-weight: bold;"> Simulador de Rentabilidade</a></li>
             <li><a href="experiencia.html">Experiência</a></li>
             <li><a href="blog.html">Blog</a></li>
             <li><a href="index.html#contact">Contato</a></li>
@@ -1711,7 +1793,7 @@ Localizada na Rua João Caetano, esta casa está próxima a pontos de interesse 
                     <h3>NAVEGAÇÃO</h3>
                     <ul>
                         <li><a href="index.html#properties">Propriedades</a></li>
-                        <li><a href="avaliador.html">Avaliador</a></li>
+                        <li><a href="avaliador.html">Simulador de Rentabilidade</a></li>
                         <li><a href="experiencia.html">Experiência</a></li>
                         <li><a href="blog.html">Blog</a></li>
                         <li><a href="index.html#contact">Contato</a></li>
@@ -1720,7 +1802,7 @@ Localizada na Rua João Caetano, esta casa está próxima a pontos de interesse 
                 <div class="footer-column">
                     <h3>SERVIÇOS</h3>
                     <ul>
-                        <li><a href="avaliador.html">Avaliação Imobiliária</a></li>
+                        <li><a href="avaliador.html">Viabilidade de Locação</a></li>
                         <li><a href="#services">Consultoria de Investimento</a></li>
                         <li><a href="#services">Gestão de Imóveis</a></li>
                         <li><a href="#services">Assessoria Jurídica</a></li>

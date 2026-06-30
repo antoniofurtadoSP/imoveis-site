@@ -3,25 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Avaliador de Imóveis | Consultoria Imobiliária</title>
-    <meta name="description" content="Avalie seu imóvel gratuitamente e descubra o valor de mercado em segundos. Estimativa profissional com Antonio Furtado - CRECI 208024">
+    <title>Simulador de Rentabilidade de Locação | Consultoria Imobiliária</title>
+    <meta name="description" content="Descubra a rentabilidade e o potencial de locação do seu imóvel. Simulação gratuita de aluguel, retorno e valor de mercado com Antonio Furtado - CRECI 208024">
     
     <!-- META TAGS OPEN GRAPH PARA REDES SOCIAIS -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.antoniofurtado.com.br/avaliador">
-    <meta property="og:title" content="Avaliação Gratuita de Imóveis | Antonio Furtado - CRECI 208024">
-    <meta property="og:description" content="Descubra o valor real do seu imóvel com análise profissional baseada em dados de mercado. Resultado instantâneo e 100% gratuito.">
+    <meta property="og:title" content="Simulador de Rentabilidade de Locação | Antonio Furtado - CRECI 208024">
+    <meta property="og:description" content="Simule a rentabilidade do seu imóvel para locação: estimativa de aluguel, retorno e valor de mercado, baseados em dados reais.">
     <meta property="og:image" content="https://www.antoniofurtado.com.br/preview-avaliador.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Avaliação Gratuita de Imóveis - Antonio Furtado">
+    <meta property="og:image:alt" content="Simulador de Rentabilidade de Locação - Antonio Furtado">
     <meta property="og:site_name" content="Antonio Furtado - Consultoria Imobiliária">
     <meta property="og:locale" content="pt_BR">
     
     <!-- TWITTER CARD -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Avaliação Gratuita de Imóveis | Antonio Furtado">
-    <meta name="twitter:description" content="Descubra o valor real do seu imóvel com análise profissional. Resultado instantâneo e 100% gratuito.">
+    <meta name="twitter:title" content="Simulador de Rentabilidade de Locação | Antonio Furtado">
+    <meta name="twitter:description" content="Simule a rentabilidade do seu imóvel para locação: estimativa de aluguel, retorno e valor de mercado.">
     <meta name="twitter:image" content="https://www.antoniofurtado.com.br/preview-avaliador.png">
     
     <!-- FONTS -->
@@ -1443,6 +1443,88 @@
                 height: 60px;
             }
         }
+
+        /* ========== NOVAS SEÇÕES: GESTÃO PATRIMONIAL ========== */
+        .pillars-grid, .investors-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 1200px;
+            margin: 50px auto 0;
+        }
+        .investors-grid { grid-template-columns: repeat(4, 1fr); }
+        .pillar-card, .investor-card {
+            background: #fff;
+            border: 1px solid #eee;
+            padding: 40px 28px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .pillar-card:hover, .investor-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+        }
+        .pillar-card i, .investor-card i {
+            font-size: 32px;
+            color: #D4AF37;
+            margin-bottom: 18px;
+        }
+        .pillar-card h3, .investor-card h3 {
+            font-size: 18px;
+            letter-spacing: 0.5px;
+            margin-bottom: 10px;
+            color: #111;
+        }
+        .pillar-card p, .investor-card p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .owners-section { background: #111; color: #fff; }
+        .owners-grid { max-width: 800px; margin: 0 auto; text-align: left; }
+        .owners-text p { color: #ddd; line-height: 1.8; margin-bottom: 20px; }
+        .owners-problems { list-style: none; padding: 0; margin: 20px 0; }
+        .owners-problems li {
+            padding: 10px 0;
+            border-bottom: 1px solid #333;
+            color: #eee;
+        }
+        .owners-problems li i { color: #D4AF37; margin-right: 12px; }
+
+        .stats-section { background: #f7f6f4; }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .stat-number {
+            display: block;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 48px;
+            color: #D4AF37;
+            font-weight: 700;
+        }
+        .stat-label {
+            display: block;
+            font-size: 13px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #555;
+            margin-top: 6px;
+        }
+
+        @media (max-width: 992px) {
+            .pillars-grid { grid-template-columns: repeat(2, 1fr); }
+            .investors-grid { grid-template-columns: repeat(2, 1fr); }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 600px) {
+            .pillars-grid, .investors-grid, .stats-grid { grid-template-columns: 1fr; }
+        }
         
         
         /* Estilos específicos da página avaliador */
@@ -1497,7 +1579,7 @@
         </a>
         <ul class="nav-links">
             <li><a href="index.html#properties">Imóveis</a></li>
-            <li><a href="avaliador.html" style="color: #D4AF37; font-weight: bold;"> Avaliador</a></li>
+            <li><a href="avaliador.html" style="color: #D4AF37; font-weight: bold;"> Simulador de Rentabilidade</a></li>
             <li><a href="experiencia.html">Experiência</a></li>
             <li><a href="blog.html">Blog</a></li>
             <li><a href="index.html#contact">Contato</a></li>
@@ -1511,8 +1593,8 @@
 
     <!-- HERO DO AVALIADOR -->
     <section class="avaliador-hero">
-        <h1>💎 AVALIE SEU IMÓVEL</h1>
-        <p>Estimativa gratuita e instantânea do valor do seu imóvel — sem compromisso</p>
+        <h1>📊 SIMULE A RENTABILIDADE DO SEU IMÓVEL</h1>
+        <p>Descubra o potencial de renda com locação, a rentabilidade estimada e o valor de mercado — gratuito e instantâneo</p>
     </section>
 
     <!-- CONTAINER DO AVALIADOR -->
@@ -1646,16 +1728,16 @@
             <!-- Cards de Resultado -->
             <div style="display: grid; grid-template-columns: 1fr; gap: 16px; margin-bottom: 20px;">
 
-                <div style="background: linear-gradient(135deg, #2e7d6e 0%, #1a5447 100%); border-radius: 14px; padding: 28px; text-align: center; box-shadow: 0 8px 32px rgba(46,125,110,0.3);">
-                    <div style="color: rgba(255,255,255,0.7); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px;">Estimativa de Venda</div>
-                    <div id="valor-venda" style="color: #fff; font-size: 38px; font-weight: 700; letter-spacing: -1px; transition: all 0.4s;">— —</div>
-                    <div id="preco-m2-venda" style="color: rgba(255,255,255,0.6); font-size: 13px; margin-top: 6px; transition: all 0.4s;">Preencha os dados ao lado</div>
-                </div>
-
                 <div style="background: linear-gradient(135deg, #3a2a00 0%, #5a4200 100%); border: 1px solid rgba(212,175,55,0.4); border-radius: 14px; padding: 28px; text-align: center; box-shadow: 0 8px 32px rgba(212,175,55,0.15);">
                     <div style="color: rgba(212,175,55,0.7); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px;">Estimativa de Aluguel / mês</div>
                     <div id="valor-aluguel" style="color: #D4AF37; font-size: 38px; font-weight: 700; letter-spacing: -1px; transition: all 0.4s;">— —</div>
                     <div id="preco-m2-aluguel" style="color: rgba(212,175,55,0.5); font-size: 13px; margin-top: 6px; transition: all 0.4s;">Preencha os dados ao lado</div>
+                </div>
+
+                <div style="background: linear-gradient(135deg, #2e7d6e 0%, #1a5447 100%); border-radius: 14px; padding: 28px; text-align: center; box-shadow: 0 8px 32px rgba(46,125,110,0.3);">
+                    <div style="color: rgba(255,255,255,0.7); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px;">Estimativa de Venda</div>
+                    <div id="valor-venda" style="color: #fff; font-size: 38px; font-weight: 700; letter-spacing: -1px; transition: all 0.4s;">— —</div>
+                    <div id="preco-m2-venda" style="color: rgba(255,255,255,0.6); font-size: 13px; margin-top: 6px; transition: all 0.4s;">Preencha os dados ao lado</div>
                 </div>
             </div>
 
@@ -1717,7 +1799,7 @@
                     <h3>NAVEGAÇÃO</h3>
                     <ul>
                         <li><a href="index.html#properties">Propriedades</a></li>
-                        <li><a href="avaliador.html">Avaliador</a></li>
+                        <li><a href="avaliador.html">Simulador de Rentabilidade</a></li>
                         <li><a href="experiencia.html">Experiência</a></li>
                         <li><a href="blog.html">Blog</a></li>
                         <li><a href="index.html#contact">Contato</a></li>
@@ -1726,7 +1808,7 @@
                 <div class="footer-column">
                     <h3>SERVIÇOS</h3>
                     <ul>
-                        <li><a href="avaliador.html">Avaliação Imobiliária</a></li>
+                        <li><a href="avaliador.html">Viabilidade de Locação</a></li>
                         <li><a href="#services">Consultoria de Investimento</a></li>
                         <li><a href="#services">Gestão de Imóveis</a></li>
                         <li><a href="#services">Assessoria Jurídica</a></li>

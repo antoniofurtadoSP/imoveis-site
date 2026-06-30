@@ -3,8 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Consultoria Imobiliária |Imóveis para Todos os Estilos de Vida</title>
-        <meta name="description" content="Corretor de imóveis em São Paulo. Antonio Furtado, CRECI 208024. Apartamentos, casas e imóveis comerciais para compra e locação nos melhores bairros de SP.">
+        <title>Consultoria Imobiliária | Gestão Patrimonial Imobiliária em São Paulo</title>
+        <meta name="description" content="Administração de imóveis residenciais e comerciais em São Paulo. Antonio Furtado, CRECI 208024. Gestão patrimonial profissional para proprietários e investidores: segurança jurídica, análise de inquilinos e tecnologia.">
+        <meta name="keywords" content="administração de imóveis, administradora de imóveis São Paulo, gestão patrimonial imobiliária, administrador de imóveis zona leste, administração de imóveis na Mooca, como administrar imóvel alugado, administrar imóvel para locação">
     
         <!-- FONTS -->
         <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
@@ -1425,6 +1426,88 @@
                 height: 60px;
             }
         }
+
+        /* ========== NOVAS SEÇÕES: GESTÃO PATRIMONIAL ========== */
+        .pillars-grid, .investors-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 1200px;
+            margin: 50px auto 0;
+        }
+        .investors-grid { grid-template-columns: repeat(4, 1fr); }
+        .pillar-card, .investor-card {
+            background: #fff;
+            border: 1px solid #eee;
+            padding: 40px 28px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .pillar-card:hover, .investor-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+        }
+        .pillar-card i, .investor-card i {
+            font-size: 32px;
+            color: #D4AF37;
+            margin-bottom: 18px;
+        }
+        .pillar-card h3, .investor-card h3 {
+            font-size: 18px;
+            letter-spacing: 0.5px;
+            margin-bottom: 10px;
+            color: #111;
+        }
+        .pillar-card p, .investor-card p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .owners-section { background: #111; color: #fff; }
+        .owners-grid { max-width: 800px; margin: 0 auto; text-align: left; }
+        .owners-text p { color: #ddd; line-height: 1.8; margin-bottom: 20px; }
+        .owners-problems { list-style: none; padding: 0; margin: 20px 0; }
+        .owners-problems li {
+            padding: 10px 0;
+            border-bottom: 1px solid #333;
+            color: #eee;
+        }
+        .owners-problems li i { color: #D4AF37; margin-right: 12px; }
+
+        .stats-section { background: #f7f6f4; }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .stat-number {
+            display: block;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 48px;
+            color: #D4AF37;
+            font-weight: 700;
+        }
+        .stat-label {
+            display: block;
+            font-size: 13px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #555;
+            margin-top: 6px;
+        }
+
+        @media (max-width: 992px) {
+            .pillars-grid { grid-template-columns: repeat(2, 1fr); }
+            .investors-grid { grid-template-columns: repeat(2, 1fr); }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 600px) {
+            .pillars-grid, .investors-grid, .stats-grid { grid-template-columns: 1fr; }
+        }
         
         </style>
         </head>
@@ -1439,7 +1522,7 @@
         </a>
         <ul class="nav-links">
             <li><a href="index.html#properties">Imóveis</a></li>
-            <li><a href="avaliador.html" style="color: #D4AF37; font-weight: bold;"> Avaliador</a></li>
+            <li><a href="avaliador.html" style="color: #D4AF37; font-weight: bold;"> Simulador de Rentabilidade</a></li>
             <li><a href="experiencia.html">Experiência</a></li>
             <li><a href="blog.html">Blog</a></li>
             <li><a href="index.html#contact">Contato</a></li>
@@ -1455,9 +1538,13 @@
         <section class="hero" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1920&q=85') center/cover;">
             <div class="hero-overlay"></div>
             <div class="hero-content">
-                <h1>RESIDÊNCIAS EXTRAORDINÁRIAS</h1>
-                <p>Encontre o imóvel ideal para o seu momento atual, com opções que unem conforto, segurança e a qualidade que sua família merece com Antonio Furtado</p>
-            
+                <h1>Seu patrimônio merece uma gestão profissional.</h1>
+                <p>Administramos imóveis residenciais e comerciais com foco em segurança, rentabilidade e tranquilidade para proprietários e investidores.</p>
+                <div class="hero-cta-group" style="display:flex; gap:20px; justify-content:center; flex-wrap:wrap; margin: 30px 0 10px;">
+                    <a href="#owners" class="hero-btn-primary" style="background:#D4AF37; color:#111; padding:16px 34px; border-radius:2px; font-weight:600; letter-spacing:1px; text-decoration:none; text-transform:uppercase; font-size:14px;">Quero administrar meu imóvel</a>
+                    <a href="#properties" class="hero-btn-secondary" style="background:transparent; color:#fff; border:1px solid #fff; padding:16px 34px; border-radius:2px; font-weight:600; letter-spacing:1px; text-decoration:none; text-transform:uppercase; font-size:14px;">Conheça nossos imóveis</a>
+                </div>
+
                 
         <!-- BUSCA INTELIGENTE -->
         <div class="search-container">
@@ -1513,10 +1600,117 @@
             </div>
         </section>
 
+        <!-- PILARES / DIFERENCIAIS -->
+        <section class="section pillars-section" id="pillars">
+            <h2 class="section-title">GESTÃO PATRIMONIAL COMPLETA</h2>
+            <p class="section-subtitle">Administrar um imóvel exige mais do que encontrar um inquilino. Seis pilares sustentam nossa gestão.</p>
+            <div class="pillars-grid">
+                <div class="pillar-card">
+                    <i class="fas fa-building-columns"></i>
+                    <h3>Gestão Patrimonial</h3>
+                    <p>Administração completa da locação, do contrato à prestação de contas.</p>
+                </div>
+                <div class="pillar-card">
+                    <i class="fas fa-scale-balanced"></i>
+                    <h3>Segurança Jurídica</h3>
+                    <p>Contratos bem elaborados e acompanhamento especializado em cada etapa.</p>
+                </div>
+                <div class="pillar-card">
+                    <i class="fas fa-user-shield"></i>
+                    <h3>Análise de Inquilinos</h3>
+                    <p>Seleção criteriosa de locatários para reduzir riscos de inadimplência.</p>
+                </div>
+                <div class="pillar-card">
+                    <i class="fas fa-handshake"></i>
+                    <h3>Garantias Locatícias</h3>
+                    <p>Soluções modernas de garantia através de parceiros especializados.</p>
+                </div>
+                <div class="pillar-card">
+                    <i class="fas fa-microchip"></i>
+                    <h3>Tecnologia</h3>
+                    <p>Sistema próprio, acompanhamento digital e atendimento eficiente.</p>
+                </div>
+                <div class="pillar-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Rentabilidade</h3>
+                    <p>Estratégias para reduzir vacância e preservar o valor do patrimônio.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PARA PROPRIETÁRIOS -->
+        <section class="section owners-section" id="owners">
+            <div class="owners-grid">
+                <div class="owners-text">
+                    <h2 class="section-title" style="text-align:left;">PARA PROPRIETÁRIOS</h2>
+                    <p>Administrar um imóvel exige tempo, conhecimento jurídico e estrutura que a maioria dos proprietários não tem disponível. Os problemas mais comuns:</p>
+                    <ul class="owners-problems">
+                        <li><i class="fas fa-circle-exclamation"></i> Inadimplência e cobranças</li>
+                        <li><i class="fas fa-circle-exclamation"></i> Imóveis vazios por longos períodos</li>
+                        <li><i class="fas fa-circle-exclamation"></i> Contratos inadequados ou desatualizados</li>
+                        <li><i class="fas fa-circle-exclamation"></i> Manutenção e desgaste do imóvel</li>
+                        <li><i class="fas fa-circle-exclamation"></i> Tempo e energia consumidos na gestão</li>
+                    </ul>
+                    <p>Assumimos essa complexidade para que seu imóvel gere renda com previsibilidade e segurança.</p>
+                    <a href="index.html#contact" class="hero-btn-primary" style="display:inline-block; background:#D4AF37; color:#111; padding:14px 30px; border-radius:2px; font-weight:600; letter-spacing:1px; text-decoration:none; text-transform:uppercase; font-size:13px; margin-top:10px;">Solicitar uma consultoria</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- PARA INVESTIDORES -->
+        <section class="section investors-section" id="investors">
+            <h2 class="section-title">PARA INVESTIDORES</h2>
+            <p class="section-subtitle">Um imóvel é um patrimônio que precisa ser administrado como um investimento.</p>
+            <div class="investors-grid">
+                <div class="investor-card">
+                    <i class="fas fa-sack-dollar"></i>
+                    <h3>Renda Previsível</h3>
+                    <p>Fluxo de locação acompanhado e organizado mês a mês.</p>
+                </div>
+                <div class="investor-card">
+                    <i class="fas fa-vault"></i>
+                    <h3>Preservação Patrimonial</h3>
+                    <p>Manutenção e cuidados que protegem o valor do imóvel ao longo do tempo.</p>
+                </div>
+                <div class="investor-card">
+                    <i class="fas fa-arrow-trend-up"></i>
+                    <h3>Valorização</h3>
+                    <p>Acompanhamento de mercado para decisões que sustentam a valorização do ativo.</p>
+                </div>
+                <div class="investor-card">
+                    <i class="fas fa-display"></i>
+                    <h3>Gestão Profissional</h3>
+                    <p>Processos estruturados, em vez de administração informal e reativa.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ESTATÍSTICAS -->
+        <section class="section stats-section" id="stats">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">+50</span>
+                    <span class="stat-label">Imóveis administrados</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">+100</span>
+                    <span class="stat-label">Clientes atendidos</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">+30</span>
+                    <span class="stat-label">Contratos ativos</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">5+</span>
+                    <span class="stat-label">Anos de experiência</span>
+                </div>
+            </div>
+        </section>
+
         <!-- PROPRIEDADES EM DESTAQUE -->
         <section class="section" id="properties">
-            <h2 class="section-title">PROPRIEDADES EXCLUSIVAS</h2>
-            <p class="section-subtitle">Onde a qualidade encontra o seu estilo, uma lista preparada com rigor para garantir o melhor custo benefício e satisfação em cada detalhe</p>
+            <h2 class="section-title">IMÓVEIS PARA COMPRA E LOCAÇÃO</h2>
+            <p class="section-subtitle">A venda e a locação seguem fazendo parte do nosso trabalho — sempre com o mesmo padrão de gestão e cuidado</p>
         
             <div class="properties-grid" id="properties-grid">
     
@@ -6042,13 +6236,13 @@
         
         </section>
 
-        <!-- NEWSLETTER LUXURY -->
+        <!-- CHAMADA FINAL -->
         <section class="section newsletter">
-            <h2>CURADORIA EXCLUSIVA</h2>
-            <p>Receba em primeira mão as melhores oportunidades do mercado imobiliário para o seu perfil</p>
+            <h2>Transforme seu imóvel em uma fonte de renda segura.</h2>
+            <p>Conheça um modelo moderno de administração imobiliária voltado para proprietários que valorizam segurança, transparência e rentabilidade.</p>
             <form class="newsletter-form" onsubmit="return false;">
                 <input type="email" placeholder="Seu melhor e-mail" required id="newsletter-email">
-                <button type="button" onclick="assinarNewsletter()">ASSINAR</button>
+                <button type="button" onclick="assinarNewsletter()">SOLICITAR UMA CONSULTORIA</button>
             </form>
         </section>
 
@@ -6066,7 +6260,7 @@
                     <h3>NAVEGAÇÃO</h3>
                     <ul>
                         <li><a href="index.html#properties">Propriedades</a></li>
-                        <li><a href="avaliador.html">Avaliador</a></li>
+                        <li><a href="avaliador.html">Simulador de Rentabilidade</a></li>
                         <li><a href="experiencia.html">Experiência</a></li>
                         <li><a href="blog.html">Blog</a></li>
                         <li><a href="index.html#contact">Contato</a></li>
@@ -6075,7 +6269,7 @@
                 <div class="footer-column">
                     <h3>SERVIÇOS</h3>
                     <ul>
-                        <li><a href="avaliador.html">Avaliação Imobiliária</a></li>
+                        <li><a href="avaliador.html">Viabilidade de Locação</a></li>
                         <li><a href="#services">Consultoria de Investimento</a></li>
                         <li><a href="#services">Gestão de Imóveis</a></li>
                         <li><a href="#services">Assessoria Jurídica</a></li>
