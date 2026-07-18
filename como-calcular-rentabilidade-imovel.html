@@ -3,39 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Imobiliário | Antonio Furtado Consultoria</title>
-    <meta name="description" content="Artigos, dicas e guias sobre o mercado imobiliário. Informações sobre locação, compra, venda e direitos imobiliários.">
-    <meta name="author" content="Antonio Furtado - CRECI 208024">
-    <meta name="keywords" content="blog imobiliário, mercado imobiliário, locação, compra e venda de imóveis, direitos do inquilino">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.antoniofurtado.com.br/blog.html">
-    <meta property="og:title" content="Blog Imobiliário - Antonio Furtado Consultoria">
-    <meta property="og:description" content="Artigos, dicas e guias sobre o mercado imobiliário. Informações atualizadas sobre locação, compra, venda e seus direitos.">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1200&q=80">
+    <title>Como calcular a rentabilidade de um imóvel corretamente | Gestão Patrimonial Imobiliária</title>
+    <meta name="description" content="Aprenda a calcular a rentabilidade real de um imóvel, considerando aluguel, vacância, despesas e valorização patrimonial. Descubra os indicadores que todo proprietário deve acompanhar.">
+    <meta name="author" content="Antonio Furtado">
+    <meta name="keywords" content="como calcular a rentabilidade de um imóvel, rentabilidade imobiliária, investimento em imóveis, retorno sobre investimento imobiliário, ROI imobiliário, administração de imóveis, gestão patrimonial imobiliária, imóveis para renda, fluxo de caixa imobiliário, vacância imobiliária, valorização imobiliária">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <link rel="canonical" href="https://www.antoniofurtado.com.br/como-calcular-rentabilidade-imovel.html">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.antoniofurtado.com.br/como-calcular-rentabilidade-imovel.html">
+    <meta property="og:title" content="Como Calcular a Rentabilidade Real de um Imóvel">
+    <meta property="og:description" content="Aprenda a calcular a rentabilidade real de um imóvel, considerando aluguel, vacância, despesas e valorização patrimonial.">
+    <meta property="og:image" content="https://www.antoniofurtado.com.br/db_imagens/hero_rentabilidade_real.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:site_name" content="Antonio Furtado - Consultoria Imobiliária">
     <meta property="og:locale" content="pt_BR">
-    
-    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://www.antoniofurtado.com.br/blog.html">
-    <meta name="twitter:title" content="Blog Imobiliário - Antonio Furtado Consultoria">
-    <meta name="twitter:description" content="Artigos e guias sobre o mercado imobiliário. Informações sobre locação, compra, venda e direitos.">
-    <meta name="twitter:image" content="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1200&q=80">
-    <meta name="twitter:creator" content="@antoniofurtado">
-    
-    <!-- WhatsApp -->
-    <meta property="og:image:alt" content="Blog Imobiliário - Artigos e guias sobre o mercado imobiliário">
-    
-    <!-- FONTS -->
+    <meta name="twitter:title" content="Como Calcular a Rentabilidade Real de um Imóvel">
+    <meta name="twitter:description" content="Aprenda a calcular a rentabilidade real de um imóvel considerando vacância e despesas.">
+    <meta name="twitter:image" content="https://www.antoniofurtado.com.br/db_imagens/hero_rentabilidade_real.png">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-    
-    <!-- FONT AWESOME -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
     <style>
         
         <!-- Google tag (gtag.js) -->
@@ -1534,129 +1522,69 @@
             .pillars-grid, .investors-grid, .stats-grid { grid-template-columns: 1fr; }
         }
         
-        
-        /* ESTILOS ADICIONAIS DO BLOG */
-        body {
-            padding-top: 100px;
-        }
-        
+        body { padding-top: 100px; }
         .hero {
             position: relative;
-            min-height: 60vh;
-            background: linear-gradient(rgba(26, 26, 26, 0.9), rgba(26, 26, 26, 0.8)), 
-                        url('https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1920&q=80') center/cover;
+            min-height: 65vh;
+            background: linear-gradient(rgba(26,26,26,0.72), rgba(26,26,26,0.62)),
+                        url('db_imagens/hero_rentabilidade_real.png') center/cover no-repeat;
             color: white;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 80px 40px;
+            padding: 100px 40px;
             margin-bottom: 60px;
         }
-
-        .hero-content h1 {
-            font-size: 56px;
-            margin-bottom: 20px;
-            color: var(--primary-gold);
-            text-transform: uppercase;
-        }
-
-        .hero-content p {
-            font-size: 18px;
-            max-width: 800px;
-            margin: 0 auto 30px;
-            color: rgba(255, 255, 255, 0.95);
-            font-weight: 300;
-        }
-        
-        /* ARTIGOS DO BLOG */
-        .blog-grid {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 60px 40px;
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 40px;
-        }
-
-        .blog-card {
-            background: white;
-            border-radius: 0;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            transition: all 0.3s;
-            cursor: pointer;
-        }
-
-        .blog-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.2);
-        }
-
-        .blog-card-image {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-        }
-
-        .blog-card-content {
-            padding: 30px;
-        }
-
-        .blog-card-category {
-            color: var(--primary-gold);
-            font-size: 12px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 10px;
-        }
-
-        .blog-card h3 {
-            font-size: 24px;
-            margin-bottom: 15px;
-            color: var(--dark);
-        }
-
-        .blog-card-excerpt {
-            font-size: 14px;
-            color: var(--gray);
-            line-height: 1.8;
-            margin-bottom: 20px;
-        }
-
-        .blog-card-meta {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 12px;
-            color: var(--gray);
-            border-top: 1px solid #e0e0e0;
-            padding-top: 15px;
-        }
-
-        .read-more {
-            color: var(--primary-gold);
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-size: 12px;
-        }
-        
-        /* RESPONSIVO */
+        .badge-modulo { display: inline-block; background: var(--primary-gold); color: var(--dark); padding: 6px 18px; font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 20px; }
+        .hero-content h1 { font-size: 42px; margin-bottom: 20px; color: var(--primary-gold); text-transform: uppercase; letter-spacing: 1px; line-height: 1.25; }
+        .hero-content p { font-size: 18px; max-width: 800px; margin: 0 auto; color: rgba(255,255,255,0.95); font-weight: 300; }
+        .leitura { color: rgba(255,255,255,0.6); font-size: 14px; margin-top: 15px; }
+        .section { max-width: 1000px; margin: 0 auto; padding: 0 40px 80px; }
+        .content-section { margin-bottom: 55px; }
+        .article-intro { font-size: 19px; font-style: italic; line-height: 1.9; color: var(--dark); margin-bottom: 40px; padding: 35px; background: linear-gradient(135deg, #f8f8f8 0%, #e8e8e8 100%); border-left: 5px solid var(--primary-gold); font-family: "Cormorant Garamond", serif; }
+        h2 { font-size: 38px; color: var(--dark); margin-bottom: 30px; margin-top: 55px; padding-bottom: 15px; border-bottom: 3px solid var(--primary-gold); }
+        h3 { font-size: 24px; color: var(--gray); margin: 30px 0 15px; font-weight: 600; }
+        p { font-size: 17px; line-height: 1.9; color: var(--gray); margin-bottom: 18px; }
+        strong { color: var(--dark); font-weight: 600; }
+        .highlight { background: linear-gradient(135deg, #f8f8f8 0%, #e8e8e8 100%); padding: 35px; margin: 35px 0; border-left: 5px solid var(--primary-gold); }
+        .warning { background: #ffe6e6; border: 2px solid #ff6b6b; padding: 25px; margin: 30px 0; border-radius: 8px; }
+        .success { background: #e6f7e6; border: 2px solid #51cf66; padding: 25px; margin: 30px 0; border-radius: 8px; }
+        .formula-box { background: var(--dark); color: white; padding: 30px 35px; margin: 30px 0; border-radius: 8px; text-align: center; }
+        .formula-box .formula { font-family: "Cormorant Garamond", serif; font-size: 26px; color: var(--primary-gold); font-weight: 700; margin-bottom: 0; }
+        .calculo-tabela { width: 100%; border-collapse: collapse; margin: 25px 0; box-shadow: 0 5px 20px rgba(0,0,0,0.08); }
+        .calculo-tabela td { padding: 14px 25px; border-bottom: 1px solid #e8e8e8; font-size: 16px; color: var(--gray); }
+        .calculo-tabela tr:last-child td { border-bottom: none; background: #f8f8f8; font-weight: 700; color: var(--dark); }
+        .calculo-tabela td:last-child { text-align: right; font-weight: 600; color: var(--dark); }
+        .calculo-tabela.resultado tr:last-child td { color: var(--primary-gold); background: var(--dark); }
+        .indicador-card { background: white; border-left: 6px solid var(--primary-gold); padding: 22px 30px; margin: 18px 0; box-shadow: 0 5px 20px rgba(0,0,0,0.08); }
+        .indicador-card h3 { font-size: 19px; color: var(--dark); margin: 0 0 8px; font-family: "Cormorant Garamond", serif; }
+        .indicador-card p { margin-bottom: 0; }
+        .lista-perguntas { list-style: none; padding: 0; margin: 25px 0; }
+        .lista-perguntas li { padding: 14px 0 14px 40px; position: relative; border-bottom: 1px solid #eee; font-size: 17px; line-height: 1.7; color: var(--gray); font-style: italic; }
+        .lista-perguntas li:last-child { border-bottom: none; }
+        .lista-perguntas li::before { content: "?"; position: absolute; left: 0; top: 10px; color: var(--primary-gold); font-weight: 700; font-size: 22px; font-family: "Cormorant Garamond", serif; }
+        .faq { margin: 50px 0; }
+        .faq-item { border-bottom: 1px solid #e0e0e0; padding: 25px 0; }
+        .faq-item h4 { font-size: 18px; color: var(--dark); margin-bottom: 12px; font-family: "Cormorant Garamond", serif; font-weight: 700; }
+        .faq-item p { margin: 0; }
+        .author-box { display: flex; gap: 25px; align-items: center; background: var(--dark); color: white; padding: 35px; margin: 50px 0; }
+        .author-initial { width: 80px; height: 80px; border-radius: 50%; background: var(--primary-gold); display: flex; align-items: center; justify-content: center; font-size: 36px; font-family: "Cormorant Garamond", serif; font-weight: 700; color: var(--dark); flex-shrink: 0; }
+        .author-info h3 { color: var(--primary-gold); font-size: 22px; margin-bottom: 8px; }
+        .author-info p { color: rgba(255,255,255,0.85); font-size: 15px; margin-bottom: 5px; }
+        .author-info a { color: var(--primary-gold); }
+        .back-to-blog { display: inline-block; margin-top: 50px; padding: 18px 45px; background: var(--dark); color: white; text-decoration: none; font-size: 15px; text-transform: uppercase; letter-spacing: 2px; transition: all 0.3s; font-weight: 600; }
+        .back-to-blog:hover { background: var(--primary-gold); color: var(--dark); transform: translateY(-2px); }
         @media (max-width: 768px) {
-            .hero-content h1 {
-                font-size: 36px;
-            }
-            
-            .blog-grid {
-                grid-template-columns: 1fr;
-                padding: 40px 20px;
-            }
+            .hero-content h1 { font-size: 26px; }
+            .section { padding: 0 20px 60px; }
+            .author-box { flex-direction: column; text-align: center; }
+            .calculo-tabela td { padding: 10px 14px; font-size: 14px; }
+            .formula-box .formula { font-size: 18px; }
         }
     </style>
 </head>
 <body>
-
     
         <!-- HEADER FIXO MINIMALISTA -->
 <header>
@@ -1677,388 +1605,211 @@
     </nav>
 </header>
         
-
-    <!-- HERO SECTION -->
     <section class="hero">
         <div class="hero-content">
-            <h1>Blog Imobiliário</h1>
-            <p>Informações, dicas e guias sobre o mercado imobiliário</p>
+            <span class="badge-modulo">Módulo II · Capítulo 14 de 100</span>
+            <h1>Como Calcular a Rentabilidade Real de um Imóvel</h1>
+            <p>O indicador que todo proprietário deveria conhecer.</p>
+            <p class="leitura">⏱ Tempo estimado de leitura: 16 minutos</p>
         </div>
     </section>
 
-    <!-- GRADE DE ARTIGOS -->
-    <div class="blog-grid">
+    <div class="section">
+        <div class="content-section">
+            <p class="article-intro">Pergunte a dez proprietários quanto vale o imóvel que possuem e, provavelmente, quase todos saberão responder. Agora pergunte a esses mesmos proprietários qual é a rentabilidade anual do patrimônio que possuem. <strong>Poucos saberão responder com precisão.</strong></p>
 
-        <!-- ARTIGO: Capítulo 14 - Rentabilidade Real (Início Módulo II) -->
-        <div class="blog-card" onclick="window.location.href='como-calcular-rentabilidade-imovel.html'">
-            <img src="db_imagens/hero_rentabilidade_real.png" alt="Como calcular a rentabilidade real de um imóvel" class="blog-card-image">
-            <div class="blog-card-content">
-                <div class="blog-card-category">Biblioteca · Módulo II</div>
-                <h3>Como Calcular a Rentabilidade Real de um Imóvel</h3>
-                <p class="blog-card-excerpt">
-                    Aprenda a calcular a rentabilidade real de um imóvel, considerando aluguel, vacância, despesas e valorização patrimonial.
-                </p>
-                <div class="blog-card-meta">
-                    <span>📅 Julho 2026</span>
-                    <span class="read-more">Ler Mais →</span>
-                </div>
+            <p>Esse é um dos maiores problemas da administração imobiliária. Muitos acompanham o valor do imóvel. Poucos acompanham o desempenho do investimento.</p>
+
+            <p>Imagine um empresário que conhece o faturamento da empresa, mas não sabe qual é o lucro. Seria possível administrar um negócio dessa forma? Provavelmente não. Com imóveis acontece exatamente a mesma coisa.</p>
+
+            <div class="highlight">
+                <p><strong>💡 Conhecer apenas o valor de mercado não basta.</strong> É preciso entender quanto aquele patrimônio realmente produz. Neste capítulo você aprenderá a calcular a rentabilidade de um imóvel de forma prática e descobrirá por que ele deve orientar praticamente todas as decisões de um proprietário.</p>
             </div>
         </div>
 
-        <!-- ARTIGO: Capítulo 13 - Ativo ou Passivo -->
-        <div class="blog-card" onclick="window.location.href='imovel-ativo-ou-passivo.html'">
-            <img src="db_imagens/hero_ativo_ou_passivo.png" alt="Seu imóvel é um ativo ou um passivo" class="blog-card-image">
-            <div class="blog-card-content">
-                <div class="blog-card-category">Biblioteca · Módulo I</div>
-                <h3>Seu Imóvel é um Ativo ou um Passivo? A Resposta Pode Surpreender Você</h3>
-                <p class="blog-card-excerpt">
-                    Descubra quando um imóvel realmente gera riqueza e quando passa a consumir dinheiro, e aprenda a transformar seu patrimônio em um ativo rentável.
-                </p>
-                <div class="blog-card-meta">
-                    <span>📅 Julho 2026</span>
-                    <span class="read-more">Ler Mais →</span>
-                </div>
+        <div class="content-section">
+            <h2>O Que é Rentabilidade Imobiliária?</h2>
+            <p>Rentabilidade é o retorno financeiro obtido por um investimento durante determinado período. No caso dos imóveis, ela representa quanto o patrimônio gera de resultado em relação ao seu valor.</p>
+            <p>Esse retorno pode ocorrer de duas formas: pela renda obtida com o aluguel e pela valorização do imóvel ao longo do tempo. Os dois fatores são importantes. Entretanto, muitos proprietários concentram toda a atenção apenas no aluguel mensal e deixam de observar diversos elementos que afetam o resultado final. <strong>A rentabilidade real é sempre mais complexa do que parece.</strong></p>
+        </div>
+
+        <div class="content-section">
+            <h2>O Erro Mais Comum</h2>
+            <p>Imagine um proprietário que recebe R$ 4.000 por mês de aluguel. Ele acredita que esse é o rendimento do imóvel. Mas será que realmente é?</p>
+            <p>Antes de chegar ao valor líquido ainda precisam ser considerados: períodos de vacância, IPTU, condomínio (quando suportado pelo proprietário), seguro, manutenção, honorários profissionais, pequenas reformas, despesas extraordinárias e impostos, quando aplicáveis.</p>
+
+            <div class="warning">
+                <p><strong>⚠️ Receita não é lucro.</strong> Somente depois de descontar esses custos é possível conhecer a verdadeira rentabilidade. Essa diferença parece simples, mas muda completamente a análise de um patrimônio.</p>
             </div>
         </div>
 
-        <!-- ARTIGO: Capítulo 12 - Perfil do Proprietário de Sucesso -->
-        <div class="blog-card" onclick="window.location.href='perfil-proprietario-sucesso-habitos-patrimonio.html'">
-            <img src="db_imagens/hero_perfil_proprietario_sucesso.png" alt="O perfil do proprietário de sucesso: 12 hábitos que constroem patrimônio" class="blog-card-image">
-            <div class="blog-card-content">
-                <div class="blog-card-category">Biblioteca · Módulo I</div>
-                <h3>O Perfil do Proprietário de Sucesso: 12 Hábitos que Constroem Patrimônio de Verdade</h3>
-                <p class="blog-card-excerpt">
-                    Descubra os hábitos dos proprietários que constroem patrimônio, aumentam a rentabilidade dos imóveis e reduzem riscos por meio da gestão patrimonial.
-                </p>
-                <div class="blog-card-meta">
-                    <span>📅 Julho 2026</span>
-                    <span class="read-more">Ler Mais →</span>
-                </div>
+        <div class="content-section">
+            <h2>Como Calcular a Rentabilidade Bruta</h2>
+            <p>O cálculo da rentabilidade bruta é relativamente simples:</p>
+
+            <div class="formula-box">
+                <p class="formula">Rentabilidade Bruta = Aluguel Anual ÷ Valor Atual do Imóvel × 100</p>
+            </div>
+
+            <p><strong>Exemplo:</strong></p>
+            <table class="calculo-tabela">
+                <tr><td>Valor do imóvel</td><td>R$ 800.000</td></tr>
+                <tr><td>Aluguel mensal</td><td>R$ 4.800</td></tr>
+                <tr><td>Receita anual</td><td>R$ 57.600</td></tr>
+                <tr><td>Rentabilidade bruta</td><td>7,2% ao ano</td></tr>
+            </table>
+
+            <p>Esse cálculo oferece uma primeira referência. Mas ainda não mostra o desempenho real do investimento.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>Como Calcular a Rentabilidade Líquida</h2>
+            <p>Agora entram os custos. Imagine o seguinte cenário anual:</p>
+
+            <table class="calculo-tabela resultado">
+                <tr><td>Receita com aluguel</td><td>R$ 57.600</td></tr>
+                <tr><td>Vacância</td><td>R$ 4.800</td></tr>
+                <tr><td>Manutenção</td><td>R$ 3.000</td></tr>
+                <tr><td>Seguro</td><td>R$ 900</td></tr>
+                <tr><td>IPTU pago pelo proprietário</td><td>R$ 2.300</td></tr>
+                <tr><td>Outras despesas</td><td>R$ 1.000</td></tr>
+                <tr><td>Resultado líquido</td><td>R$ 45.600</td></tr>
+                <tr><td>Rentabilidade líquida</td><td>5,7% ao ano</td></tr>
+            </table>
+
+            <p>Observe que a diferença entre a rentabilidade bruta e a líquida é significativa. É exatamente por isso que proprietários experientes acompanham indicadores completos.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>A Vacância Altera Completamente o Resultado</h2>
+            <p>Poucos fatores afetam tanto a rentabilidade quanto o tempo em que o imóvel permanece desocupado. Um imóvel alugado por R$ 5.000 mensais que permanece vazio durante dois meses deixa de gerar R$ 10.000 em receita. Esse valor nunca será recuperado.</p>
+            <p>Mesmo que o aluguel seja elevado nos meses seguintes, aquele período perdido desapareceu definitivamente. <strong>Reduzir a vacância significa aumentar automaticamente a rentabilidade anual.</strong></p>
+        </div>
+
+        <div class="content-section">
+            <h2>O Valor do Imóvel Também Muda</h2>
+            <p>Outro erro frequente é utilizar o valor de compra como referência permanente. Imagine que um imóvel foi adquirido por R$ 500.000 há dez anos. Hoje ele vale R$ 900.000. A rentabilidade deve ser calculada sobre o valor atual do patrimônio.</p>
+
+            <div class="success">
+                <p><strong>✅ Caso contrário,</strong> o proprietário terá uma percepção distorcida do desempenho do investimento. O patrimônio evolui. Os indicadores também precisam evoluir.</p>
             </div>
         </div>
 
-        <!-- ARTIGO: Capítulo 11 - Quanto Custa Administrar Sozinho -->
-        <div class="blog-card" onclick="window.location.href='quanto-custa-administrar-imovel-sozinho.html'">
-            <img src="db_imagens/hero_custo_administrar_sozinho.png" alt="Quanto custa administrar um imóvel sozinho" class="blog-card-image">
-            <div class="blog-card-content">
-                <div class="blog-card-category">Biblioteca · Módulo I</div>
-                <h3>Quanto Custa Administrar um Imóvel Sozinho? O Prejuízo que Ninguém Calcula</h3>
-                <p class="blog-card-excerpt">
-                    Descubra os custos invisíveis de administrar um imóvel sem gestão profissional e veja como a vacância, a manutenção e decisões equivocadas reduzem sua rentabilidade.
-                </p>
-                <div class="blog-card-meta">
-                    <span>📅 Julho 2026</span>
-                    <span class="read-more">Ler Mais →</span>
-                </div>
+        <div class="content-section">
+            <h2>Rentabilidade Não Deve Ser Analisada Isoladamente</h2>
+            <p>Um imóvel pode apresentar excelente rentabilidade e, ao mesmo tempo, elevado risco de inadimplência. Outro pode oferecer retorno menor, porém com estabilidade muito maior. Por isso, proprietários profissionais acompanham outros indicadores importantes:</p>
+
+            <div class="indicador-card">
+                <h3>Taxa de vacância</h3>
+                <p>Quanto tempo o imóvel permanece desocupado ao longo do ano.</p>
+            </div>
+            <div class="indicador-card">
+                <h3>Tempo médio de locação</h3>
+                <p>Quanto tempo, em média, o imóvel leva para ser alugado.</p>
+            </div>
+            <div class="indicador-card">
+                <h3>Rotatividade de inquilinos</h3>
+                <p>Com que frequência o imóvel passa por trocas de locatário.</p>
+            </div>
+            <div class="indicador-card">
+                <h3>Custo anual de manutenção</h3>
+                <p>Quanto o imóvel exige em reparos e conservação a cada ano.</p>
+            </div>
+            <div class="indicador-card">
+                <h3>Fluxo de caixa</h3>
+                <p>O equilíbrio entre entradas e saídas de recursos ao longo do tempo.</p>
+            </div>
+            <div class="indicador-card">
+                <h3>Valorização patrimonial</h3>
+                <p>A evolução do valor de mercado do imóvel ao longo dos anos.</p>
+            </div>
+
+            <p>Todos esses dados ajudam a compreender o desempenho global do patrimônio.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>O Papel da Gestão Patrimonial</h2>
+            <p>Uma boa gestão não aumenta apenas o valor do aluguel. Ela melhora praticamente todos os indicadores do imóvel: reduz vacância, planeja manutenção, evita despesas desnecessárias, preserva a valorização, melhora a qualidade da divulgação e atrai melhores locatários.</p>
+            <p>Esses fatores produzem impacto direto sobre a rentabilidade. Por isso, dois imóveis praticamente idênticos podem apresentar resultados completamente diferentes.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>Como Acompanhar a Evolução do Patrimônio</h2>
+            <p>Calcular a rentabilidade uma única vez não basta. O ideal é criar uma rotina de acompanhamento. Uma avaliação anual já permite identificar tendências importantes. Perguntas como estas ajudam nesse processo:</p>
+
+            <ul class="lista-perguntas">
+                <li>Minha vacância aumentou ou diminuiu?</li>
+                <li>Minha rentabilidade evoluiu?</li>
+                <li>Os custos de manutenção cresceram?</li>
+                <li>O imóvel continua competitivo?</li>
+                <li>Meu patrimônio está produzindo o retorno esperado?</li>
+            </ul>
+
+            <p>Responder regularmente a essas perguntas permite corrigir problemas antes que eles se tornem prejuízos.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>O Proprietário que Conhece Seus Números Toma Melhores Decisões</h2>
+            <p>Imagine dois proprietários. O primeiro sabe apenas quanto recebe de aluguel. O segundo conhece rentabilidade líquida, vacância, fluxo de caixa, custo anual de manutenção, valorização do patrimônio e retorno sobre investimento.</p>
+            <p>Qual deles terá maior capacidade para decidir o momento de reformar, reajustar o aluguel ou adquirir novos imóveis? A resposta parece evidente.</p>
+
+            <div class="highlight">
+                <p><strong>Conhecimento reduz incertezas.</strong> Indicadores transformam decisões em estratégia.</p>
             </div>
         </div>
 
-        <!-- ARTIGO: Capítulo 10 - 10 Mitos Sobre Investir em Imóveis -->
-        <div class="blog-card" onclick="window.location.href='maiores-mitos-investir-imoveis-renda.html'">
-            <img src="db_imagens/hero_10_mitos_investir.png" alt="Os 10 maiores mitos sobre investir em imóveis para renda" class="blog-card-image">
-            <div class="blog-card-content">
-                <div class="blog-card-category">Biblioteca · Módulo I</div>
-                <h3>Os 10 Maiores Mitos Sobre Investir em Imóveis para Renda</h3>
-                <p class="blog-card-excerpt">
-                    Descubra os maiores mitos sobre investimento em imóveis, aluguel e renda passiva, e aprenda a aumentar a rentabilidade com uma gestão profissional.
-                </p>
-                <div class="blog-card-meta">
-                    <span>📅 Julho 2026</span>
-                    <span class="read-more">Ler Mais →</span>
-                </div>
+        <div class="content-section">
+            <h2>Conclusão</h2>
+            <p>O valor de um imóvel é importante. Mas o desempenho desse patrimônio é ainda mais importante. Acompanhar a rentabilidade permite compreender se o imóvel está realmente cumprindo seu papel como investimento.</p>
+            <p>Mais do que calcular um percentual, esse indicador ajuda o proprietário a identificar desperdícios, reduzir vacância, controlar despesas e tomar decisões fundamentadas.</p>
+
+            <div class="highlight">
+                <p><strong>Patrimônio não deve ser administrado por percepção.</strong> Deve ser administrado por números. Quanto melhor forem esses números, maiores serão as possibilidades de construir riqueza de forma consistente ao longo do tempo.</p>
+            </div>
+
+            <div class="success">
+                <h3><strong>📞 Chamada para Ação</strong></h3>
+                <p>Conhecer o valor do seu imóvel é importante. Conhecer o desempenho dele é indispensável. Todo proprietário que deseja construir patrimônio de forma consistente precisa deixar de perguntar apenas "quanto meu imóvel vale?" e começar a perguntar "quanto meu imóvel realmente produz?". Essa mudança de perspectiva é o primeiro passo para transformar um patrimônio imobiliário em um investimento administrado de maneira profissional.</p>
+                <p style="margin-top: 15px;"><strong>Antonio Furtado - CRECI 208024</strong><br>
+                WhatsApp: <a href="https://wa.me/5511969043012" style="color: var(--primary-gold);">(11) 96904-3012</a></p>
             </div>
         </div>
 
-        <!-- ARTIGO: Capítulo 9 - Enriquecer com Imóveis -->
-        <div class="blog-card" onclick="window.location.href='proprietarios-enriquecem-com-imoveis-ou-acumulam-problemas.html'">
-            <img src="db_imagens/hero_enriquecer_imoveis.png" alt="Por que alguns proprietários enriquecem com imóveis enquanto outros acumulam problemas" class="blog-card-image">
-            <div class="blog-card-content">
-                <div class="blog-card-category">Biblioteca · Módulo I</div>
-                <h3>Por que Alguns Proprietários Enriquecem com Imóveis Enquanto Outros Apenas Acumulam Problemas?</h3>
-                <p class="blog-card-excerpt">
-                    Descubra a diferença entre proprietários que constroem patrimônio com imóveis e aqueles que enfrentam vacância, despesas e baixa rentabilidade.
-                </p>
-                <div class="blog-card-meta">
-                    <span>📅 Julho 2026</span>
-                    <span class="read-more">Ler Mais →</span>
-                </div>
+        <div class="faq">
+            <h2>Perguntas Frequentes</h2>
+            <div class="faq-item">
+                <h4>Como calcular a rentabilidade de um imóvel?</h4>
+                <p>Divida o resultado anual obtido pelo imóvel pelo valor atual de mercado e multiplique por 100. Para uma análise mais precisa, utilize o resultado líquido após descontar todas as despesas.</p>
+            </div>
+            <div class="faq-item">
+                <h4>O que é rentabilidade líquida?</h4>
+                <p>É o retorno obtido depois de descontados custos como vacância, manutenção, seguros, tributos e demais despesas relacionadas ao imóvel.</p>
+            </div>
+            <div class="faq-item">
+                <h4>A valorização do imóvel entra no cálculo?</h4>
+                <p>A valorização é um componente importante da análise patrimonial, mas normalmente é acompanhada separadamente da rentabilidade gerada pelo aluguel.</p>
+            </div>
+            <div class="faq-item">
+                <h4>Qual indicador é mais importante para um proprietário?</h4>
+                <p>Não existe um único indicador. Rentabilidade, vacância, fluxo de caixa e custo de manutenção devem ser analisados em conjunto.</p>
+            </div>
+            <div class="faq-item">
+                <h4>Vale a pena acompanhar esses números todos os anos?</h4>
+                <p>Sim. O acompanhamento periódico permite identificar tendências, corrigir problemas rapidamente e tomar decisões mais estratégicas.</p>
             </div>
         </div>
 
-        <!-- ARTIGO: Capítulo 8 - 10 Sinais de Má Administração -->
-        <div class="blog-card" onclick="window.location.href='10-sinais-de-que-seu-imovel-esta-sendo-mal-administrado.html'">
-            <img src="db_imagens/hero_10_sinais.png" alt="10 sinais de que seu imóvel está sendo mal administrado" class="blog-card-image">
-            <div class="blog-card-content">
-                <div class="blog-card-category">Biblioteca · Módulo I</div>
-                <h3>Os 10 Sinais de que Seu Imóvel Está Sendo Mal Administrado</h3>
-                <p class="blog-card-excerpt">
-                    Descubra os principais sinais de uma administração imobiliária ineficiente e saiba como proteger a rentabilidade do seu patrimônio.
-                </p>
-                <div class="blog-card-meta">
-                    <span>📅 Julho 2026</span>
-                    <span class="read-more">Ler Mais →</span>
-                </div>
+        <div class="author-box">
+            <div class="author-initial">A</div>
+            <div class="author-info">
+                <h3>Antônio Furtado</h3>
+                <p>Corretor de Imóveis · CRECI 208024</p>
+                <p>Especialista em locação e administração de imóveis na <strong style="color: var(--primary-gold);">Mooca, Belém, Tatuapé, Vila Prudente</strong> e região.</p>
+                <p><a href="https://www.antoniofurtado.com.br">www.antoniofurtado.com.br</a> · <a href="https://wa.me/5511969043012">(11) 96904-3012</a></p>
             </div>
         </div>
-
-        <!-- ARTIGO: Capítulo 7 - Renda Previsível -->
-        <div class="blog-card" onclick="window.location.href='como-transformar-um-imovel-em-uma-fonte-de-renda-previsivel.html'">
-            <img src="db_imagens/hero_renda_previsivel.png" alt="Como transformar um imóvel em uma fonte de renda previsível" class="blog-card-image">
-            <div class="blog-card-content">
-                <div class="blog-card-category">Biblioteca · Módulo I</div>
-                <h3>Como Transformar um Imóvel em uma Fonte de Renda Previsível</h3>
-                <p class="blog-card-excerpt">
-                    Os 5 pilares da renda previsível e os indicadores que todo proprietário deveria acompanhar para proteger seu patrimônio.
-                </p>
-                <div class="blog-card-meta">
-                    <span>📅 Julho 2026</span>
-                    <span class="read-more">Ler Mais →</span>
-                </div>
-            </div>
-        </div>
-
-        <!-- ARTIGO: Por que Administrar Imóvel Exige Mais -->
-        <div class="blog-card" onclick="window.location.href='por-que-administrar-imovel-exige-mais.html'">
-            <img src="db_imagens/hero_administrar_imovel.png" alt="Por que administrar um imóvel exige muito mais do que receber o aluguel" class="blog-card-image">
-            <div class="blog-card-content">
-                <div class="blog-card-category">Gestão Patrimonial</div>
-                <h3>Por que Administrar um Imóvel Exige Muito Mais do que Receber o Aluguel</h3>
-                <p class="blog-card-excerpt">
-                    O que você não vê na gestão profissional é o que mais importa. Conheça as dezenas de atividades que protegem seu patrimônio.
-                </p>
-                <div class="blog-card-meta">
-                    <span>📅 Julho 2026</span>
-                    <span class="read-more">Ler Mais →</span>
-                </div>
-            </div>
-        </div>
-
-        <!-- ARTIGO: Capítulo 5 - Patrimônio ou Problema -->
-        <div class="blog-card" onclick="window.location.href='imovel-patrimonio-ou-fonte-de-preocupacoes.html'">
-            <img src="db_imagens/hero_patrimonio_ou_problema.png" alt="Seu imóvel é um patrimônio ou uma fonte de preocupações?" class="blog-card-image">
-            <div class="blog-card-content">
-                <div class="blog-card-category">Biblioteca · Módulo I</div>
-                <h3>Seu Imóvel é um Patrimônio ou Apenas uma Fonte de Preocupações?</h3>
-                <p class="blog-card-excerpt">
-                    A diferença entre proprietários que acumulam patrimônio e os que acumulam preocupações. Gestão estratégica vs. administração reativa.
-                </p>
-                <div class="blog-card-meta">
-                    <span>📅 Julho 2026</span>
-                    <span class="read-more">Ler Mais →</span>
-                </div>
-            </div>
-        </div>
-
-        <!-- ARTIGO: Capítulo 4 - Custo da Vacância -->
-        <div class="blog-card" onclick="window.location.href='quanto-custa-um-mes-de-vacancia.html'">
-            <img src="db_imagens/hero_custo_vacancia.png" alt="Quanto custa um mês de vacância" class="blog-card-image">
-            <div class="blog-card-content">
-                <div class="blog-card-category">Biblioteca · Módulo I</div>
-                <h3>Quanto Realmente Custa um Mês de Vacância?</h3>
-                <p class="blog-card-excerpt">
-                    Simulação real: 1 mês de imóvel vazio pode custar R$ 4.800. Faça as contas e descubra o verdadeiro impacto no seu patrimônio.
-                </p>
-                <div class="blog-card-meta">
-                    <span>📅 Julho 2026</span>
-                    <span class="read-more">Ler Mais →</span>
-                </div>
-            </div>
-        </div>
-
-        <!-- ARTIGO 1: 7 Erros dos Proprietários -->
-        <div class="blog-card" onclick="window.location.href='7-erros-que-fazem-proprietarios-perderem-dinheiro-na-locacao.html'">
-            <img src="db_imagens/hero_7_erros_proprietarios.png" alt="Os 7 erros que fazem proprietários perderem dinheiro na locação" class="blog-card-image">
-            <div class="blog-card-content">
-                <div class="blog-card-category">Biblioteca · Módulo I</div>
-                <h3>Os 7 Erros que fazem Proprietários Perderem Dinheiro na Locação</h3>
-                <p class="blog-card-excerpt">
-                    Descubra os erros mais comuns que geram prejuízos silenciosos na locação e saiba como proteger seu patrimônio.
-                </p>
-                <div class="blog-card-meta">
-                    <span>📅 Julho 2026</span>
-                    <span class="read-more">Ler Mais →</span>
-                </div>
-            </div>
-        </div>
-        
-        <!-- ARTIGO 2: Por que alguns imóveis alugam rápido -->
-        <div class="blog-card" onclick="window.location.href='Artigo_Por_Que_Alugam.html'">
-            <img src="db_imagens/hero_por_que_alugam.png" alt="Por que alguns imóveis alugam rápido" class="blog-card-image">
-            <div class="blog-card-content">
-                <div class="blog-card-category">Gestão e Locação</div>
-                <h3>Por que alguns imóveis alugam em dias e outros ficam meses vazios?</h3>
-                <p class="blog-card-excerpt">
-                    Estratégia, divulgação e gestão profissional são os pilares para locar rápido e bem. Descubra o que faz a diferença.
-                </p>
-                <div class="blog-card-meta">
-                    <span>📅 Julho 2026</span>
-                    <span class="read-more">Ler Mais →</span>
-                </div>
-            </div>
-        </div>
-        
-        <!-- ARTIGO 2: Manter Imóvel Vazio é Mais Caro -->
-        <div class="blog-card" onclick="window.location.href='Artigo_Imovel_Vazio.html'">
-            <img src="db_imagens/hero_imovel_vazio.png" alt="Manter um Imóvel Vazio é Mais Caro do que Você Imagina" class="blog-card-image">
-            <div class="blog-card-content">
-                <div class="blog-card-category">Gestão e Locação</div>
-                <h3>Imóvel Vazio é Mais Caro do que Parece</h3>
-                <p class="blog-card-excerpt">
-                    Condomínio, IPTU, desvalorização e oportunidade perdida. Entenda os custos invisíveis da vacância e como reduzi-los.
-                </p>
-                <div class="blog-card-meta">
-                    <span>📅 Junho 2026</span>
-                    <span class="read-more">Ler Mais →</span>
-                </div>
-            </div>
-        </div>
-        
-        <!-- ARTIGO 2: O Maior Erro dos Proprietários -->
-        <div class="blog-card" onclick="window.location.href='Artigo_Administracao_Profissional.html'">
-            <img src="db_imagens/hero_administracao_profissional.png" alt="Administração Profissional de Imóveis" class="blog-card-image">
-            <div class="blog-card-content">
-                <div class="blog-card-category">Gestão e Locação</div>
-                <h3>O Maior Erro dos Proprietários</h3>
-                <p class="blog-card-excerpt">
-                    Não é deixar o imóvel vazio. É administrá-lo sem estratégia. Saiba como a gestão profissional protege seu patrimônio.
-                </p>
-                <div class="blog-card-meta">
-                    <span>📅 Junho 2026</span>
-                    <span class="read-more">Ler Mais →</span>
-                </div>
-            </div>
-        </div>
-        
-        <!-- ARTIGO 3: Onde Investir em SP -->
-        <div class="blog-card" onclick="window.location.href='Artigo_Onde_Investir_SP.html'">
-            <img src="db_imagens/Catedral-da-Se_270122_Foto.Walley.Waetge.jpg" alt="São Paulo - Catedral da Sé" class="blog-card-image">
-            <div class="blog-card-content">
-                <div class="blog-card-category">Investimento e Valorização</div>
-                <h3>4 Bairros que Mais Valorizam até 2028</h3>
-                <p class="blog-card-excerpt">
-                    Vila Mariana, Penha, Barra Funda e Centro. Descubra onde investir com análise de metrô, retrofit e investimentos públicos em SP.
-                </p>
-                <div class="blog-card-meta">
-                    <span>📅 Fevereiro 2026</span>
-                    <span class="read-more">Ler Mais →</span>
-                </div>
-            </div>
-        </div>
-        
-        <!-- ARTIGO 2: SAC vs PRICE -->
-        <div class="blog-card" onclick="window.location.href='Artigo_SAC_vs_PRICE.html'">
-            <img src="https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=800&q=80" alt="SAC vs PRICE" class="blog-card-image">
-            <div class="blog-card-content">
-                <div class="blog-card-category">Financiamento</div>
-                <h3>SAC vs PRICE: Economize R$ 240 mil</h3>
-                <p class="blog-card-excerpt">
-                    Compare as tabelas de financiamento. Simulação real mostra diferença brutal em juros. Qual escolher para seu perfil?
-                </p>
-                <div class="blog-card-meta">
-                    <span>📅 Fevereiro 2026</span>
-                    <span class="read-more">Ler Mais →</span>
-                </div>
-            </div>
-        </div>
-        
-        <!-- ARTIGO 2: Casas de Vila em SP -->
-        <div class="blog-card" onclick="window.location.href='Artigo_Casas_Vila_SP.html'">
-            <img src="https://images.unsplash.com/photo-1449844908441-8829872d2607?w=800&q=80" alt="Casas de Vila SP" class="blog-card-image">
-            <div class="blog-card-content">
-                <div class="blog-card-category">Investimento Premium</div>
-                <h3>Casas de Vila em SP: Oásis Urbano</h3>
-                <p class="blog-card-excerpt">
-                    O tesouro escondido de Pinheiros, Vila Mariana e Perdizes. Raridade, valorização e exclusividade no coração de SP.
-                </p>
-                <div class="blog-card-meta">
-                    <span>📅 Fevereiro 2026</span>
-                    <span class="read-more">Ler Mais →</span>
-                </div>
-            </div>
-        </div>
-        
-        <!-- ARTIGO 2: Centro SP Retrofit -->
-        <div class="blog-card" onclick="window.location.href='Artigo_Centro_SP_Retrofit.html'">
-            <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&q=80" alt="Centro SP Retrofit" class="blog-card-image">
-            <div class="blog-card-content">
-                <div class="blog-card-category">Mercado e Investimento</div>
-                <h3>O Renascimento do Centro de SP</h3>
-                <p class="blog-card-excerpt">
-                    Santa Cecília e República lideram movimento de retrofit. Prédios históricos anos 50/60 se tornam oportunidades valiosas.
-                </p>
-                <div class="blog-card-meta">
-                    <span>📅 Fevereiro 2026</span>
-                    <span class="read-more">Ler Mais →</span>
-                </div>
-            </div>
-        </div>
-        
-        <!-- ARTIGO 3: Avaliação de Imóveis -->
-        <div class="blog-card" onclick="window.location.href='Artigo_Avaliacao_Imoveis.html'">
-            <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80" alt="Avaliação de Imóveis" class="blog-card-image">
-            <div class="blog-card-content">
-                <div class="blog-card-category">Avaliação e Mercado</div>
-                <h3>Avaliação de Imóveis</h3>
-                <p class="blog-card-excerpt">
-                    A ciência por trás do preço. Entenda PTAM, NBR 14653 e os critérios técnicos que determinam o valor de mercado.
-                </p>
-                <div class="blog-card-meta">
-                    <span>📅 Fevereiro 2026</span>
-                    <span class="read-more">Ler Mais →</span>
-                </div>
-            </div>
-        </div>
-        
-        <!-- ARTIGO 3: Venda de Imóvel Locado -->
-        <div class="blog-card" onclick="window.location.href='Artigo_Venda_Imovel_Locado.html'">
-            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80" alt="Venda de Imóvel Locado" class="blog-card-image">
-            <div class="blog-card-content">
-                <div class="blog-card-category">Direitos do Locatário</div>
-                <h3>Imóvel Alugado Colocado à Venda</h3>
-                <p class="blog-card-excerpt">
-                    O que fazer quando o proprietário anuncia a venda? Entenda seus direitos, prazos e proteções legais.
-                </p>
-                <div class="blog-card-meta">
-                    <span>📅 Fevereiro 2026</span>
-                    <span class="read-more">Ler Mais →</span>
-                </div>
-            </div>
-        </div>
-        
-        <!-- ARTIGO 4: Manual do Locatário -->
-        <div class="blog-card" onclick="window.location.href='Manual_do_Locatario.html'">
-            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800&q=80" alt="Manual do Locatário" class="blog-card-image">
-            <div class="blog-card-content">
-                <div class="blog-card-category">Guia Completo</div>
-                <h3>Manual do Locatário - Módulo 1</h3>
-                <p class="blog-card-excerpt">
-                    Guia completo sobre manutenção e responsabilidades em contratos de locação. Entenda seus direitos e deveres.
-                </p>
-                <div class="blog-card-meta">
-                    <span>📅 Fevereiro 2026</span>
-                    <span class="read-more">Ler Mais →</span>
-                </div>
-            </div>
-        </div>
-        
-        <!-- ARTIGO 5: Compra Segura em SP -->
-        <div class="blog-card" onclick="window.location.href='Artigo_Compra_Segura_SP.html'">
-            <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80" alt="Compra Segura em SP" class="blog-card-image">
-            <div class="blog-card-content">
-                <div class="blog-card-category">Guia de Compra</div>
-                <h3>Como Comprar Imóvel em SP com Segurança</h3>
-                <p class="blog-card-excerpt">
-                    Documentação essencial, certidões e due diligence. Evite fraudes e problemas jurídicos na compra do seu imóvel.
-                </p>
-                <div class="blog-card-meta">
-                    <span>📅 Fevereiro 2026</span>
-                    <span class="read-more">Ler Mais →</span>
-                </div>
-            </div>
-        </div>
-        
+        <a href="blog.html" class="back-to-blog">← Voltar para o Blog</a>
     </div>
-
     
         <!-- FOOTER ELEGANTE -->
         <footer id="contact">
@@ -2139,6 +1890,5 @@
             });
         </script>
         
-
 </body>
 </html>
