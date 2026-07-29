@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha Cadastral de Locação | Antonio Furtado Imóveis</title>
+    <meta name="description" content="Preencha sua ficha cadastral de locação de forma segura, diretamente pelo site, com envio de documentos.">
+    <meta name="robots" content="noindex, nofollow">
+
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        /* estilos gerais mock */
+        /* estilos especificos mock */
+
+        /* Estilos específicos da Ficha Cadastral de Locação */
+        .flocacao-container {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 160px 20px 100px;
+        }
+        .flocacao-intro {
+            background: white;
+            border-left: 5px solid #D4AF37;
+            padding: 28px 32px;
+            margin-bottom: 30px;
+        }
+        .flocacao-intro h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: #1a1a1a;
+            letter-spacing: 1px;
+        }
+        .flocacao-intro p { color: #555; font-size: 15.5px; letter-spacing: normal; }
+        .flocacao-intro p.flocacao-aviso {
+            margin-top: 14px;
+            font-size: 13.5px;
+            color: #555;
+            border-top: 1px solid #e0e0e0;
+            padding-top: 14px;
+        }
+        #form-ficha { display: flex; flex-direction: column; gap: 18px; }
+        .flocacao-card {
+            background: white;
+            border-radius: 6px;
+            padding: 26px 28px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+        }
+        .flocacao-card h3.flocacao-secao {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 20px;
+            color: #2e7d6e;
+            margin-bottom: 6px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #D4AF37;
+            letter-spacing: 1px;
+        }
+        .flocacao-card label {
+            display: block;
+            font-size: 14.5px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 8px;
+            margin-top: 16px;
+            letter-spacing: normal;
+        }
+        .flocacao-card label:first-of-type { margin-top: 0; }
+        .flocacao-card label .flocacao-req { color: #c0392b; margin-left: 3px; }
+        .flocacao-card label .flocacao-opt { color: #999; font-weight: 400; font-size: 12.5px; margin-left: 6px; }
+        .flocacao-card input[type="text"],
+        .flocacao-card input[type="email"],
+        .flocacao-card input[type="tel"],
+        .flocacao-card input[type="date"],
+        .flocacao-card textarea {
+            width: 100%;
+            padding: 11px 13px;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            font-family: 'Lato', sans-serif;
+            font-size: 15px;
+            color: #1a1a1a;
+            background: #fff;
+            letter-spacing: normal;
+        }
+        .flocacao-card input:focus, .flocacao-card textarea:focus {
+            outline: none;
+            border-color: #D4AF37;
+            box-shadow: 0 0 0 3px rgba(212,175,55,0.15);
+        }
+        .flocacao-card textarea { resize: vertical; min-height: 70px; }
+        .flocacao-radio-group { display: flex; flex-wrap: wrap; gap: 10px 22px; }
+        .flocacao-radio-group label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 400;
+            margin: 0;
+            font-size: 15px;
+            cursor: pointer;
+        }
+        .flocacao-radio-group input[type="radio"] { width: 18px; height: 18px; accent-color: #D4AF37; }
+        .flocacao-file-drop {
+            border: 2px dashed #e0e0e0;
+            border-radius: 6px;
+            padding: 22px;
+            text-align: center;
+            cursor: pointer;
+            transition: border-color 0.2s, background 0.2s;
+            position: relative;
+        }
+        .flocacao-file-drop:hover { border-color: #D4AF37; background: #fffdf5; }
+        .flocacao-file-drop.has-file { border-color: #2e7d6e; background: #f4fbf9; }
+        .flocacao-file-drop input[type="file"] {
+            position: absolute; inset: 0; opacity: 0; cursor: pointer;
+        }
+        .flocacao-file-drop .flocacao-file-label { font-size: 14px; color: #555; letter-spacing: normal; }
+        .flocacao-file-drop .flocacao-file-name { font-size: 13.5px; color: #2e7d6e; font-weight: 600; margin-top: 6px; word-break: break-all; }
+        .flocacao-file-hint { font-size: 12.5px; color: #999; margin-top: 6px; letter-spacing: normal; }
+        .flocacao-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0 20px; }
+        .flocacao-grid-2 > div { min-width: 0; }
+        @media (max-width: 600px) { .flocacao-grid-2 { grid-template-columns: 1fr; } }
+        #btn-enviar {
+            background: #1a1a1a;
+            color: white;
+            border: none;
+            padding: 18px;
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        #btn-enviar:hover { background: #D4AF37; color: #1a1a1a; }
+        #btn-enviar:disabled { opacity: 0.6; cursor: not-allowed; }
+        #status-msg {
+            margin-top: 16px;
+            padding: 16px 18px;
+            border-radius: 6px;
+            font-size: 14.5px;
+            display: none;
+            letter-spacing: normal;
+        }
+        #status-msg.ok { display: block; background: #e6f7e6; border: 1px solid #51cf66; color: #2e7d32; }
+        #status-msg.erro { display: block; background: #fdecea; border: 1px solid #f5b3ac; color: #c0392b; }
+        .flocacao-campo-erro { border-color: #c0392b !important; }
+        .flocacao-msg-erro-campo { color: #c0392b; font-size: 12.5px; margin-top: 5px; display: none; letter-spacing: normal; }
+    </style>
+</head>
+<body>
+
+    <header>MOCK HEADER</header>
+
+    <div class="flocacao-container">
+        <div class="flocacao-intro">
+            <h2>Ficha Cadastral de Locação</h2>
+            <p>Preencha os dados abaixo com atenção. As informações e documentos enviados serão usados exclusivamente para a análise do seu cadastro de locação.</p>
+            <p class="flocacao-aviso">🔒 Seus documentos são enviados de forma segura e ficam armazenados apenas para fins de análise cadastral, conforme a Lei Geral de Proteção de Dados (LGPD).</p>
+        </div>
+
+        <form id="form-ficha" novalidate>
+
+            <div class="flocacao-card">
+                <h3 class="flocacao-secao">Dados Pessoais</h3>
+
+                <label for="nome_completo">Nome Completo do Proponente<span class="flocacao-req">*</span></label>
+                <input type="text" id="nome_completo" name="nome_completo" required autocomplete="name">
+                <div class="flocacao-msg-erro-campo">Informe o nome completo.</div>
+
+                <div class="flocacao-grid-2">
+                    <div>
+                        <label for="data_nascimento">Data de Nascimento<span class="flocacao-req">*</span></label>
+                        <input type="date" id="data_nascimento" name="data_nascimento" required>
+                        <div class="flocacao-msg-erro-campo">Informe a data de nascimento.</div>
+                    </div>
+                    <div>
+                        <label for="nacionalidade">Nacionalidade<span class="flocacao-req">*</span></label>
+                        <input type="text" id="nacionalidade" name="nacionalidade" required placeholder="Ex: Brasileira">
+                        <div class="flocacao-msg-erro-campo">Informe a nacionalidade.</div>
+                    </div>
+                </div>
+
+                <label>Estado Civil<span class="flocacao-req">*</span></label>
+                <div class="flocacao-radio-group" id="grupo-estado-civil">
+                    <label><input type="radio" name="estado_civil" value="Solteiro(a)" required> Solteiro(a)</label>
+                    <label><input type="radio" name="estado_civil" value="Casado(a)"> Casado(a)</label>
+                    <label><input type="radio" name="estado_civil" value="Divorciado(a)"> Divorciado(a)</label>
+                    <label><input type="radio" name="estado_civil" value="Viúvo(a)"> Viúvo(a)</label>
+                    <label><input type="radio" name="estado_civil" value="União Estável"> União Estável</label>
+                </div>
+                <div class="flocacao-msg-erro-campo" id="erro-estado-civil">Selecione o estado civil.</div>
+
+                <div class="flocacao-grid-2">
+                    <div>
+                        <label for="cpf">CPF (somente números)<span class="flocacao-req">*</span></label>
+                        <input type="text" id="cpf" name="cpf" required inputmode="numeric" maxlength="14" placeholder="000.000.000-00">
+                        <div class="flocacao-msg-erro-campo">Informe um CPF válido.</div>
+                    </div>
+                    <div>
+                        <label for="rg_orgao_expedidor">RG / Órgão Expedidor<span class="flocacao-req">*</span></label>
+                        <input type="text" id="rg_orgao_expedidor" name="rg_orgao_expedidor" required placeholder="Ex: 12.345.678-9 SSP/SP">
+                        <div class="flocacao-msg-erro-campo">Informe o RG e o órgão expedidor.</div>
+                    </div>
+                </div>
+
+                <div class="flocacao-grid-2">
+                    <div>
+                        <label for="profissao">Profissão <span class="flocacao-opt">(opcional)</span></label>
+                        <input type="text" id="profissao" name="profissao">
+                    </div>
+                    <div>
+                        <label for="renda_mensal_bruta">Renda Mensal Bruta (R$)<span class="flocacao-req">*</span></label>
+                        <input type="text" id="renda_mensal_bruta" name="renda_mensal_bruta" required inputmode="decimal" placeholder="Ex: 4500,00">
+                        <div class="flocacao-msg-erro-campo">Informe a renda mensal bruta.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flocacao-card">
+                <h3 class="flocacao-secao">Contato</h3>
+
+                <div class="flocacao-grid-2">
+                    <div>
+                        <label for="telefone_celular">Telefone Celular (DDD + Número)<span class="flocacao-req">*</span></label>
+                        <input type="tel" id="telefone_celular" name="telefone_celular" required placeholder="(11) 90000-0000">
+                        <div class="flocacao-msg-erro-campo">Informe um telefone válido.</div>
+                    </div>
+                    <div>
+                        <label for="email_principal">E-mail Principal<span class="flocacao-req">*</span></label>
+                        <input type="email" id="email_principal" name="email_principal" required placeholder="seuemail@exemplo.com">
+                        <div class="flocacao-msg-erro-campo">Informe um e-mail válido.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flocacao-card">
+                <h3 class="flocacao-secao">Endereço Atual</h3>
+
+                <label for="endereco_residencial">Endereço Residencial Atual (Rua, Número, Complemento)<span class="flocacao-req">*</span></label>
+                <textarea id="endereco_residencial" name="endereco_residencial" required></textarea>
+                <div class="flocacao-msg-erro-campo">Informe o endereço residencial.</div>
+
+                <div class="flocacao-grid-2">
+                    <div>
+                        <label for="cep">CEP <span class="flocacao-opt">(opcional)</span></label>
+                        <input type="text" id="cep" name="cep" inputmode="numeric" maxlength="9" placeholder="00000-000">
+                    </div>
+                    <div>
+                        <label for="cidade_estado">Cidade e Estado <span class="flocacao-opt">(opcional)</span></label>
+                        <input type="text" id="cidade_estado" name="cidade_estado" placeholder="Ex: São Paulo/SP">
+                    </div>
+                </div>
+
+                <label for="tempo_moradia">Tempo de Moradia no Endereço Atual <span class="flocacao-opt">(opcional)</span></label>
+                <input type="text" id="tempo_moradia" name="tempo_moradia" placeholder="Ex: 2 anos e 3 meses">
+            </div>
+
+            <div class="flocacao-card">
+                <h3 class="flocacao-secao">Documentos</h3>
+
+                <label>Você possui comprovante de renda? <span class="flocacao-opt">(Ex: holerite, declaração de IR, extrato bancário)</span></label>
+                <div class="flocacao-radio-group">
+                    <label><input type="radio" name="possui_comprovante_renda" value="Sim"> Sim</label>
+                    <label><input type="radio" name="possui_comprovante_renda" value="Não"> Não</label>
+                </div>
+
+                <label style="margin-top:24px;">Documento de Identificação (Frente e Verso) — RG ou CNH<span class="flocacao-req">*</span></label>
+                <div class="flocacao-file-drop" data-target="doc_identificacao">
+                    <input type="file" id="doc_identificacao" name="doc_identificacao" accept=".jpg,.jpeg,.png,.pdf" required>
+                    <div class="flocacao-file-label">📎 Clique ou arraste o arquivo aqui</div>
+                    <div class="flocacao-file-name"></div>
+                </div>
+                <div class="flocacao-file-hint">Formatos aceitos: JPG, PNG ou PDF · até 10MB</div>
+                <div class="flocacao-msg-erro-campo">Anexe o documento de identificação.</div>
+
+                <label style="margin-top:20px;">Comprovante de Renda (3 últimos holerites, IR ou extratos)<span class="flocacao-req">*</span></label>
+                <div class="flocacao-file-drop" data-target="comprovante_renda">
+                    <input type="file" id="comprovante_renda" name="comprovante_renda" accept=".jpg,.jpeg,.png,.pdf" required>
+                    <div class="flocacao-file-label">📎 Clique ou arraste o arquivo aqui</div>
+                    <div class="flocacao-file-name"></div>
+                </div>
+                <div class="flocacao-file-hint">Formatos aceitos: JPG, PNG ou PDF · até 10MB</div>
+                <div class="flocacao-msg-erro-campo">Anexe o comprovante de renda.</div>
+
+                <label style="margin-top:20px;">Comprovante de Residência<span class="flocacao-req">*</span></label>
+                <div class="flocacao-file-drop" data-target="comprovante_residencia">
+                    <input type="file" id="comprovante_residencia" name="comprovante_residencia" accept=".jpg,.jpeg,.png,.pdf" required>
+                    <div class="flocacao-file-label">📎 Clique ou arraste o arquivo aqui</div>
+                    <div class="flocacao-file-name"></div>
+                </div>
+                <div class="flocacao-file-hint">Formatos aceitos: JPG, PNG ou PDF · até 10MB</div>
+                <div class="flocacao-msg-erro-campo">Anexe o comprovante de residência.</div>
+            </div>
+
+            <button type="submit" id="btn-enviar">Enviar Ficha Cadastral</button>
+            <div id="status-msg"></div>
+        </form>
+    </div>
+
+    <footer>MOCK FOOTER</footer>
+
+    <script>
+        // URL da API que recebe a ficha (PythonAnywhere)
+        const ENDPOINT_URL = "https://antoniofurtado.pythonanywhere.com/api/ficha-locacao";
+
+        const form = document.getElementById('form-ficha');
+        const statusMsg = document.getElementById('status-msg');
+        const btnEnviar = document.getElementById('btn-enviar');
+
+        // Preview de nome de arquivo nos campos de upload
+        document.querySelectorAll('.flocacao-file-drop').forEach(drop => {
+            const input = drop.querySelector('input[type="file"]');
+            const nameEl = drop.querySelector('.flocacao-file-name');
+            input.addEventListener('change', () => {
+                if (input.files.length > 0) {
+                    const file = input.files[0];
+                    if (file.size > 10 * 1024 * 1024) {
+                        nameEl.textContent = '⚠️ Arquivo maior que 10MB. Escolha outro.';
+                        drop.classList.remove('has-file');
+                        input.value = '';
+                        return;
+                    }
+                    nameEl.textContent = '✓ ' + file.name;
+                    drop.classList.add('has-file');
+                } else {
+                    nameEl.textContent = '';
+                    drop.classList.remove('has-file');
+                }
+            });
+        });
+
+        // Máscara simples de CPF
+        document.getElementById('cpf').addEventListener('input', (e) => {
+            let v = e.target.value.replace(/\D/g, '').slice(0, 11);
+            v = v.replace(/(\d{3})(\d)/, '$1.$2');
+            v = v.replace(/(\d{3})(\d)/, '$1.$2');
+            v = v.replace(/(\d{3})(\d{1,2})$/, '$1-$2');
+            e.target.value = v;
+        });
+
+        // Máscara simples de CEP
+        document.getElementById('cep').addEventListener('input', (e) => {
+            let v = e.target.value.replace(/\D/g, '').slice(0, 8);
+            v = v.replace(/(\d{5})(\d)/, '$1-$2');
+            e.target.value = v;
+        });
+
+        function limparErros() {
+            form.querySelectorAll('.flocacao-campo-erro').forEach(el => el.classList.remove('flocacao-campo-erro'));
+            form.querySelectorAll('.flocacao-msg-erro-campo').forEach(el => el.style.display = 'none');
+        }
+
+        function validarFormulario() {
+            limparErros();
+            let valido = true;
+
+            form.querySelectorAll('input[required], textarea[required]').forEach(campo => {
+                if (campo.type === 'radio') return;
+                if (!campo.value.trim()) {
+                    campo.classList.add('flocacao-campo-erro');
+                    const erro = campo.parentElement.querySelector('.flocacao-msg-erro-campo') || campo.closest('.flocacao-card')?.querySelector('.flocacao-msg-erro-campo');
+                    if (erro) erro.style.display = 'block';
+                    valido = false;
+                }
+            });
+
+            if (!form.querySelector('input[name="estado_civil"]:checked')) {
+                document.getElementById('erro-estado-civil').style.display = 'block';
+                valido = false;
+            }
+
+            const email = document.getElementById('email_principal');
+            if (email.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
+                email.classList.add('flocacao-campo-erro');
+                valido = false;
+            }
+
+            return valido;
+        }
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            statusMsg.className = '';
+            statusMsg.style.display = 'none';
+
+            if (!validarFormulario()) {
+                statusMsg.className = 'erro';
+                statusMsg.textContent = 'Revise os campos destacados em vermelho antes de enviar.';
+                statusMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                return;
+            }
+
+            btnEnviar.disabled = true;
+            btnEnviar.textContent = 'Enviando...';
+
+            const formData = new FormData(form);
+
+            try {
+                const resposta = await fetch(ENDPOINT_URL, {
+                    method: 'POST',
+                    body: formData
+                });
+
+                if (!resposta.ok) {
+                    throw new Error('Falha no envio (código ' + resposta.status + ')');
+                }
+
+                const dados = await resposta.json();
+
+                statusMsg.className = 'ok';
+                statusMsg.textContent = '✅ Ficha enviada com sucesso! Entraremos em contato em breve.';
+                form.reset();
+                document.querySelectorAll('.flocacao-file-drop').forEach(d => d.classList.remove('has-file'));
+                document.querySelectorAll('.flocacao-file-name').forEach(n => n.textContent = '');
+                btnEnviar.textContent = 'Enviar Ficha Cadastral';
+
+            } catch (erro) {
+                statusMsg.className = 'erro';
+                statusMsg.textContent = '❌ Não foi possível enviar sua ficha agora. Isso pode acontecer se o servidor estiver temporariamente indisponível. Tente novamente em alguns minutos ou entre em contato pelo WhatsApp.';
+                btnEnviar.disabled = false;
+                btnEnviar.textContent = 'Enviar Ficha Cadastral';
+            }
+
+            statusMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        });
+    </script>
+</body>
+</html>
