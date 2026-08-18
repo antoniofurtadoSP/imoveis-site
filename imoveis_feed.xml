@@ -4,9 +4,81 @@
     <Provider>Antonio Furtado Gestão Patrimonial Imobiliária</Provider>
     <Email>contato@antoniofurtado.com.br</Email>
     <ContactName>Antonio Furtado</ContactName>
-    <PublishDate>2026-08-18T14:45:43</PublishDate>
+    <PublishDate>2026-08-18T15:58:17</PublishDate>
   </Header>
   <Listings>
+    <Listing>
+      <ListingID>IMOB-00220</ListingID>
+      <Title>Comercial para alugar em República, São Paulo</Title>
+      <TransactionType>For Rent</TransactionType>
+      <PublicationType>STANDARD</PublicationType>
+      <DetailViewUrl>https://www.antoniofurtado.com.br/imovel_220.html</DetailViewUrl>
+      <Media>
+        <Item medium="image" caption="imagem1" primary="true">https://www.antoniofurtado.com.br/db_imagens/20260818153413_fachada%20antiga.jpg</Item>
+        <Item medium="image" caption="imagem2">https://www.antoniofurtado.com.br/db_imagens/20260818153414_marconi%2084%201.JPG</Item>
+        <Item medium="image" caption="imagem3">https://www.antoniofurtado.com.br/db_imagens/20260818153414_marconi%2084%202.JPG</Item>
+        <Item medium="image" caption="imagem4">https://www.antoniofurtado.com.br/db_imagens/20260818153414_marconi%2084%203.JPG</Item>
+        <Item medium="image" caption="imagem5">https://www.antoniofurtado.com.br/db_imagens/20260818153412_banheiro%20m%C3%BAltiplo.jpg</Item>
+        <Item medium="image" caption="imagem6">https://www.antoniofurtado.com.br/db_imagens/20260818153412_corredor%20andar%20superior.jpg</Item>
+        <Item medium="image" caption="imagem7">https://www.antoniofurtado.com.br/db_imagens/20260818153413_corredor%20t%C3%A9rreo..jpeg</Item>
+        <Item medium="image" caption="imagem8">https://www.antoniofurtado.com.br/db_imagens/20260818153413_fachada%20antiga%203.jpg</Item>
+        <Item medium="image" caption="imagem9">https://www.antoniofurtado.com.br/db_imagens/20260818153413_marconi%2084%20banheiro%201.JPG</Item>
+        <Item medium="image" caption="imagem10">https://www.antoniofurtado.com.br/db_imagens/20260818153413_marconi%2084%20copa.JPG</Item>
+        <Item medium="image" caption="imagem11">https://www.antoniofurtado.com.br/db_imagens/20260818153413_marconi%2084%20sala.JPG</Item>
+        <Item medium="image" caption="imagem12">https://www.antoniofurtado.com.br/db_imagens/20260818153414_marconi%20banheiro%20social.JPG</Item>
+        <Item medium="image" caption="imagem13">https://www.antoniofurtado.com.br/db_imagens/20260818153414_%C3%A1rea%20servi%C3%A7o.jpeg</Item>
+        <Item medium="image" caption="imagem14">https://www.antoniofurtado.com.br/db_imagens/20260818153414_banheiro..jpg</Item>
+        <Item medium="image" caption="imagem15">https://www.antoniofurtado.com.br/db_imagens/20260818153414_escada%20a.jpeg</Item>
+        <Item medium="image" caption="imagem16">https://www.antoniofurtado.com.br/db_imagens/20260818153414_escada%20b.jpg</Item>
+        <Item medium="image" caption="imagem17">https://www.antoniofurtado.com.br/db_imagens/20260818153414_marconi%2084%207.JPG</Item>
+        <Item medium="image" caption="imagem18">https://www.antoniofurtado.com.br/db_imagens/20260818153414_marconi%2084%2010.JPG</Item>
+        <Item medium="image" caption="imagem19">https://www.antoniofurtado.com.br/db_imagens/20260818153415_marconi%2084%2011.JPG</Item>
+        <Item medium="image" caption="imagem20">https://www.antoniofurtado.com.br/db_imagens/20260818153415_marconi%2084%20ar.JPG</Item>
+      </Media>
+      <Details>
+        <UsageType>Commercial</UsageType>
+        <PropertyType>Commercial / Comercial</PropertyType>
+        <Description>Oportunidade Comercial: Loja de 205m² na Rua Marconi – Centro de São Paulo
+Alugue um ponto comercial estratégico com 205m² de área total, situado na Rua Marconi, no coração do Centro de São Paulo. Imóvel ideal para varejo ou serviços, com localização privilegiada a apenas 300 metros das estações de metrô República e Anhangabaú, garantindo alto fluxo constante de pedestres.
+Infraestrutura e Diferenciais
+Área Privativa: 159,70m² de loja no térreo e 45,40m² de mezanino.
+Fachada: Imponente, com 10 metros de frente e 2 portas elétricas para maior segurança e praticidade.
+Acabamento: Piso em porcelanato claro, escada em granito preto e forro novo com iluminação embutida.
+Climatização: Equipado com ar-condicionado de cortina e aparelhos de ar-condicionado instalados em todos os pisos.
+Instalações: Copa com pia em granito preto, 3 banheiros no térreo e 1 banheiro na sobreloja.
+Informações Financeiras e Cadastrais
+Aluguel: R$ 10.300,00 mensais (com 30 dias de carência para obras e adequações).
+Condomínio: R$ 816,00.
+IPTU (2026): 10 parcelas de R$ 604,93.
+Este imóvel oferece o equilíbrio perfeito entre visibilidade, localização estratégica no centro financeiro e comercial de São Paulo e infraestrutura pronta para operação imediata. Agende sua visita.</Description>
+        <RentalPrice currency="BRL">10300</RentalPrice>
+        <PropertyAdministrationFee currency="BRL">816</PropertyAdministrationFee>
+        <YearlyTax currency="BRL">604.93</YearlyTax>
+        <LotArea unit="square metres">205</LotArea>
+        <LivingArea unit="square metres">205</LivingArea>
+        <Bedrooms>0</Bedrooms>
+        <Suites>0</Suites>
+        <Bathrooms>3</Bathrooms>
+        <Garage type="Parking Space">0</Garage>
+      </Details>
+      <Location displayAddress="Street">
+        <Country abbreviation="BR">Brasil</Country>
+        <State abbreviation="SP">SP</State>
+        <City>São Paulo</City>
+        <Neighborhood>República</Neighborhood>
+        <Address>Rua Marconi</Address>
+        <StreetNumber>84</StreetNumber>
+        <PostalCode>01047-000</PostalCode>
+        <Latitude>-23.5457583</Latitude>
+        <Longitude>-46.6404738</Longitude>
+      </Location>
+      <ContactInfo>
+        <Name>Antonio Furtado</Name>
+        <Email>contato@antoniofurtado.com.br</Email>
+        <Website>https://www.antoniofurtado.com.br</Website>
+        <OfficeName>Antonio Furtado Gestão Patrimonial Imobiliária</OfficeName>
+      </ContactInfo>
+    </Listing>
     <Listing>
       <ListingID>IMOB-00219</ListingID>
       <Title>Comercial para alugar em República, São Paulo</Title>
