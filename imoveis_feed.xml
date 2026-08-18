@@ -4,7 +4,7 @@
     <Provider>Antonio Furtado Gestão Patrimonial Imobiliária</Provider>
     <Email>contato@antoniofurtado.com.br</Email>
     <ContactName>Antonio Furtado</ContactName>
-    <PublishDate>2026-08-18T15:58:17</PublishDate>
+    <PublishDate>2026-08-18T17:31:46</PublishDate>
   </Header>
   <Listings>
     <Listing>
@@ -86,25 +86,25 @@ Este imóvel oferece o equilíbrio perfeito entre visibilidade, localização es
       <PublicationType>STANDARD</PublicationType>
       <DetailViewUrl>https://www.antoniofurtado.com.br/imovel_219.html</DetailViewUrl>
       <Media>
-        <Item medium="image" caption="imagem1" primary="true">https://www.antoniofurtado.com.br/db_imagens/20260818131143_Av%20S%20Luis%20204%201%20(16).jpg</Item>
-        <Item medium="image" caption="imagem2">https://www.antoniofurtado.com.br/db_imagens/20260818131142_Av%20S%20Luis%20204%201%20(1).JPG</Item>
-        <Item medium="image" caption="imagem3">https://www.antoniofurtado.com.br/db_imagens/20260818131142_Av%20S%20Luis%20204%201%20(3).JPG</Item>
-        <Item medium="image" caption="imagem4">https://www.antoniofurtado.com.br/db_imagens/20260818131142_Av%20S%20Luis%20204%201%20(9).JPG</Item>
-        <Item medium="image" caption="imagem5">https://www.antoniofurtado.com.br/db_imagens/20260818131142_Av%20S%20Luis%20204%201%20(5).JPG</Item>
-        <Item medium="image" caption="imagem6">https://www.antoniofurtado.com.br/db_imagens/20260818131142_Av%20S%20Luis%20204%201%20(6).JPG</Item>
-        <Item medium="image" caption="imagem7">https://www.antoniofurtado.com.br/db_imagens/20260818131142_Av%20S%20Luis%20204%201%20(7).JPG</Item>
-        <Item medium="image" caption="imagem8">https://www.antoniofurtado.com.br/db_imagens/20260818131142_Av%20S%20Luis%20204%201%20(8).JPG</Item>
-        <Item medium="image" caption="imagem9">https://www.antoniofurtado.com.br/db_imagens/20260818131143_Av%20S%20Luis%20204%201%20(10).JPG</Item>
-        <Item medium="image" caption="imagem10">https://www.antoniofurtado.com.br/db_imagens/20260818131143_Av%20S%20Luis%20204%201%20(11).JPG</Item>
-        <Item medium="image" caption="imagem11">https://www.antoniofurtado.com.br/db_imagens/20260818131143_Av%20S%20Luis%20204%201%20(15).jpg</Item>
-        <Item medium="image" caption="imagem12">https://www.antoniofurtado.com.br/db_imagens/20260818131143_Av%20S%20Luis%20204%201%20(17).jpg</Item>
-        <Item medium="image" caption="imagem13">https://www.antoniofurtado.com.br/db_imagens/20260818131143_Av%20S%20Luis%20204%201%20(18).jpg</Item>
-        <Item medium="image" caption="imagem14">https://www.antoniofurtado.com.br/db_imagens/20260818131143_Av%20S%20Luis%20204%201%20(19).jpg</Item>
-        <Item medium="image" caption="imagem15">https://www.antoniofurtado.com.br/db_imagens/20260818131143_Av%20S%20Luis%20204%201%20(20).jpg</Item>
+        <Item medium="image" caption="imagem1" primary="true">https://www.antoniofurtado.com.br/db_imagens/20260818131143_Av%20S%20Luis%20204%201%20(19).jpg</Item>
+        <Item medium="image" caption="imagem2">https://www.antoniofurtado.com.br/db_imagens/20260818131143_Av%20S%20Luis%20204%201%20(16).jpg</Item>
+        <Item medium="image" caption="imagem3">https://www.antoniofurtado.com.br/db_imagens/20260818131143_Av%20S%20Luis%20204%201%20(15).jpg</Item>
+        <Item medium="image" caption="imagem4">https://www.antoniofurtado.com.br/db_imagens/20260818131143_Av%20S%20Luis%20204%201%20(20).jpg</Item>
+        <Item medium="image" caption="imagem5">https://www.antoniofurtado.com.br/db_imagens/20260818131144_Condom%C3%ADnio%20Louvre.jpg</Item>
+        <Item medium="image" caption="imagem6">https://www.antoniofurtado.com.br/db_imagens/20260818131143_Av%20S%20Luis%20204%201%20(18).jpg</Item>
+        <Item medium="image" caption="imagem7">https://www.antoniofurtado.com.br/db_imagens/20260818131142_Av%20S%20Luis%20204%201%20(1).JPG</Item>
+        <Item medium="image" caption="imagem8">https://www.antoniofurtado.com.br/db_imagens/20260818131142_Av%20S%20Luis%20204%201%20(3).JPG</Item>
+        <Item medium="image" caption="imagem9">https://www.antoniofurtado.com.br/db_imagens/20260818131142_Av%20S%20Luis%20204%201%20(9).JPG</Item>
+        <Item medium="image" caption="imagem10">https://www.antoniofurtado.com.br/db_imagens/20260818131142_Av%20S%20Luis%20204%201%20(5).JPG</Item>
+        <Item medium="image" caption="imagem11">https://www.antoniofurtado.com.br/db_imagens/20260818131142_Av%20S%20Luis%20204%201%20(6).JPG</Item>
+        <Item medium="image" caption="imagem12">https://www.antoniofurtado.com.br/db_imagens/20260818131142_Av%20S%20Luis%20204%201%20(7).JPG</Item>
+        <Item medium="image" caption="imagem13">https://www.antoniofurtado.com.br/db_imagens/20260818131142_Av%20S%20Luis%20204%201%20(8).JPG</Item>
+        <Item medium="image" caption="imagem14">https://www.antoniofurtado.com.br/db_imagens/20260818131143_Av%20S%20Luis%20204%201%20(10).JPG</Item>
+        <Item medium="image" caption="imagem15">https://www.antoniofurtado.com.br/db_imagens/20260818131143_Av%20S%20Luis%20204%201%20(17).jpg</Item>
         <Item medium="image" caption="imagem16">https://www.antoniofurtado.com.br/db_imagens/20260818131143_Av%20S%20Luis%20204%201%20(21).JPG</Item>
-        <Item medium="image" caption="imagem17">https://www.antoniofurtado.com.br/db_imagens/20260818131144_Condom%C3%ADnio%20Louvre.jpg</Item>
-        <Item medium="image" caption="imagem18">https://www.antoniofurtado.com.br/db_imagens/20260818131144_Hall%20do%20Cond%20Louvre%201.jpg</Item>
-        <Item medium="image" caption="imagem19">https://www.antoniofurtado.com.br/db_imagens/20260818131144_hall%20do%20Cond%20Louvre.jpg</Item>
+        <Item medium="image" caption="imagem17">https://www.antoniofurtado.com.br/db_imagens/20260818131144_Hall%20do%20Cond%20Louvre%201.jpg</Item>
+        <Item medium="image" caption="imagem18">https://www.antoniofurtado.com.br/db_imagens/20260818131144_hall%20do%20Cond%20Louvre.jpg</Item>
+        <Item medium="image" caption="imagem19">https://www.antoniofurtado.com.br/db_imagens/20260818131143_Av%20S%20Luis%20204%201%20(11).JPG</Item>
         <Item medium="image" caption="imagem20">https://www.antoniofurtado.com.br/db_imagens/20260818131144_Loja_02_03_13_1.JPG</Item>
         <Item medium="image" caption="imagem21">https://www.antoniofurtado.com.br/db_imagens/20260818131144_Loja_02_03_13_4.JPG</Item>
       </Media>
