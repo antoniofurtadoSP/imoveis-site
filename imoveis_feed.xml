@@ -4,9 +4,59 @@
     <Provider>Antonio Furtado Gestão Patrimonial Imobiliária</Provider>
     <Email>contato@antoniofurtado.com.br</Email>
     <ContactName>Antonio Furtado</ContactName>
-    <PublishDate>2026-08-19T09:03:43</PublishDate>
+    <PublishDate>2026-08-19T10:57:34</PublishDate>
   </Header>
   <Listings>
+    <Listing>
+      <ListingID>IMOB-00221</ListingID>
+      <Title>Comercial para alugar em Centro, São Paulo</Title>
+      <TransactionType>For Rent</TransactionType>
+      <PublicationType>STANDARD</PublicationType>
+      <DetailViewUrl>https://www.antoniofurtado.com.br/imovel_221.html</DetailViewUrl>
+      <Media>
+        <Item medium="image" caption="imagem1" primary="true">https://www.antoniofurtado.com.br/db_imagens/20260819105035_RQuitanda_2.jpg</Item>
+        <Item medium="image" caption="imagem2">https://www.antoniofurtado.com.br/db_imagens/20260819105035_RQuitanda_3.jpg</Item>
+        <Item medium="image" caption="imagem3">https://www.antoniofurtado.com.br/db_imagens/20260819105035_RQuitanda_4.jpg</Item>
+        <Item medium="image" caption="imagem4">https://www.antoniofurtado.com.br/db_imagens/20260819105035_RQuitanda_5.JPG</Item>
+        <Item medium="image" caption="imagem5">https://www.antoniofurtado.com.br/db_imagens/20260819105036_RQuitanda_6.JPG</Item>
+        <Item medium="image" caption="imagem6">https://www.antoniofurtado.com.br/db_imagens/20260819105036_RQuitanda_7.jpg</Item>
+        <Item medium="image" caption="imagem7">https://www.antoniofurtado.com.br/db_imagens/20260819105036_RQuitanda_8.jpg</Item>
+        <Item medium="image" caption="imagem8">https://www.antoniofurtado.com.br/db_imagens/20260819105148_RQuitanda_1.png</Item>
+      </Media>
+      <Details>
+        <UsageType>Commercial</UsageType>
+        <PropertyType>Commercial / Comercial</PropertyType>
+        <Description>Loja comercial no Centro de São Paulo, com 421m² de área total dividida entre térreo e sobreloja, situada em prédio histórico com fachada preservada e ampla visibilidade. O imóvel possui doze metros de frente, pé direito duplo e excelente fluxo de pedestres, próximo à Praça do Patriarca, Viaduto do Chá e Estação de Metrô.
+A distribuição interna conta com vão livre, área de ventilação natural com fechamento em vidro temperado, escadas em granito e vários aparelhos de ar-condicionado instalados. O pavimento térreo dispõe de dois banheiros completos, incluindo opção acessível. A sobreloja oferece um salão amplo, copa equipada com pia em granito e três banheiros adicionais. O sistema de segurança e operação conta com portas de aço automáticas e manuais, além de extintores de incêndio atualizados.
+A localização estratégica na região central garante alta circulação diária e proximidade com órgãos públicos como a Prefeitura e o Tribunal de Justiça, além de importantes referências culturais como o Centro Cultural Banco do Brasil. O entorno é consolidado pelo comércio diversificado, com bancos, redes de varejo, farmácias, padarias e restaurantes tradicionais, sendo um ponto comercial ideal para empresas que buscam destaque, facilidade de acesso e representatividade no Centro Histórico.</Description>
+        <RentalPrice currency="BRL">24000</RentalPrice>
+        <PropertyAdministrationFee currency="BRL">0</PropertyAdministrationFee>
+        <YearlyTax currency="BRL">2520.99</YearlyTax>
+        <LotArea unit="square metres">421</LotArea>
+        <LivingArea unit="square metres">421</LivingArea>
+        <Bedrooms>0</Bedrooms>
+        <Suites>0</Suites>
+        <Bathrooms>3</Bathrooms>
+        <Garage type="Parking Space">0</Garage>
+      </Details>
+      <Location displayAddress="Street">
+        <Country abbreviation="BR">Brasil</Country>
+        <State abbreviation="SP">SP</State>
+        <City>São Paulo</City>
+        <Neighborhood>Centro</Neighborhood>
+        <Address>Rua da Quitanda</Address>
+        <StreetNumber>127</StreetNumber>
+        <PostalCode>01012-010</PostalCode>
+        <Latitude>-23.5476789</Latitude>
+        <Longitude>-46.6350946</Longitude>
+      </Location>
+      <ContactInfo>
+        <Name>Antonio Furtado</Name>
+        <Email>contato@antoniofurtado.com.br</Email>
+        <Website>https://www.antoniofurtado.com.br</Website>
+        <OfficeName>Antonio Furtado Gestão Patrimonial Imobiliária</OfficeName>
+      </ContactInfo>
+    </Listing>
     <Listing>
       <ListingID>IMOB-00220</ListingID>
       <Title>Comercial para alugar em República, São Paulo</Title>
