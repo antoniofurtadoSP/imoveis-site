@@ -4,7 +4,7 @@
     <Provider>Antonio Furtado Gestão Patrimonial Imobiliária</Provider>
     <Email>contato@antoniofurtado.com.br</Email>
     <ContactName>Antonio Furtado</ContactName>
-    <PublishDate>2026-08-18T20:06:44</PublishDate>
+    <PublishDate>2026-08-19T09:03:43</PublishDate>
   </Header>
   <Listings>
     <Listing>
@@ -161,64 +161,58 @@ Matrículas (5º Cartório de Registro de Imóveis): 97.778, 97.779 e 20.712.</D
     </Listing>
     <Listing>
       <ListingID>IMOB-00218</ListingID>
-      <Title>Comercial para alugar em Santo Amaro, São Paulo</Title>
+      <Title>Apartamento para alugar em Vila Zilda (Tatuapé), São Paulo</Title>
       <TransactionType>For Rent</TransactionType>
       <PublicationType>STANDARD</PublicationType>
       <DetailViewUrl>https://www.antoniofurtado.com.br/imovel_218.html</DetailViewUrl>
       <Media>
-        <Item medium="image" caption="imagem1" primary="true">https://www.antoniofurtado.com.br/db_imagens/20260818130035_imgi_13_f08562dc-9fc6-4767-b0ef-d2ebfd7d8787.png</Item>
-        <Item medium="image" caption="imagem2">https://www.antoniofurtado.com.br/db_imagens/20260818130035_imgi_14_71e5d631-da32-45cf-bc1b-44a615532d01.png</Item>
-        <Item medium="image" caption="imagem3">https://www.antoniofurtado.com.br/db_imagens/20260818130035_imgi_15_43a0f48a-590c-4727-b2cc-8a2f45319691.png</Item>
-        <Item medium="image" caption="imagem4">https://www.antoniofurtado.com.br/db_imagens/20260818130035_imgi_16_f3d62522-8c1c-46fa-a74c-ab8f8717d1db.png</Item>
-        <Item medium="image" caption="imagem5">https://www.antoniofurtado.com.br/db_imagens/20260818130035_imgi_17_1727ce52-928f-4226-adb6-a67d20263d24.png</Item>
-        <Item medium="image" caption="imagem6">https://www.antoniofurtado.com.br/db_imagens/20260818130035_imgi_18_ffb72df5-5e5e-48ae-8aaf-f21523fa5273.png</Item>
-        <Item medium="image" caption="imagem7">https://www.antoniofurtado.com.br/db_imagens/20260818130036_imgi_19_39b7c711-0fe4-4d28-9813-8c5b7dbf5e5b.png</Item>
-        <Item medium="image" caption="imagem8">https://www.antoniofurtado.com.br/db_imagens/20260818130036_imgi_20_d9b4ec28-ed70-4063-b796-cf9fddd5da30.png</Item>
-        <Item medium="image" caption="imagem9">https://www.antoniofurtado.com.br/db_imagens/20260818130036_imgi_21_86f24549-7a9a-4051-851d-4b1b0ff02df2.png</Item>
-        <Item medium="image" caption="imagem10">https://www.antoniofurtado.com.br/db_imagens/20260818130036_imgi_22_0e554911-0bfa-4a9a-8d87-3e65a7fae6ed.png</Item>
-        <Item medium="image" caption="imagem11">https://www.antoniofurtado.com.br/db_imagens/20260818130036_imgi_23_ff4eefa6-1432-40a7-a62a-afdd9a3f0e9d.png</Item>
+        <Item medium="image" caption="imagem1" primary="true">https://www.antoniofurtado.com.br/db_imagens/20260817103119_WhatsApp%20Image%202026-08-17%20at%2008.14.22.jpeg</Item>
+        <Item medium="image" caption="imagem2">https://www.antoniofurtado.com.br/db_imagens/20260817103120_WhatsApp%20Image%202026-08-17%20at%2008.14.23%20(1).jpeg</Item>
+        <Item medium="image" caption="imagem3">https://www.antoniofurtado.com.br/db_imagens/20260817103120_WhatsApp%20Image%202026-08-17%20at%2008.14.23%20(2).jpeg</Item>
+        <Item medium="image" caption="imagem4">https://www.antoniofurtado.com.br/db_imagens/20260817103120_WhatsApp%20Image%202026-08-17%20at%2008.14.23%20(3).jpeg</Item>
+        <Item medium="image" caption="imagem5">https://www.antoniofurtado.com.br/db_imagens/20260817103120_WhatsApp%20Image%202026-08-17%20at%2008.14.23.jpeg</Item>
+        <Item medium="image" caption="imagem6">https://www.antoniofurtado.com.br/db_imagens/20260817103120_WhatsApp%20Image%202026-08-17%20at%2008.14.24%20(1).jpeg</Item>
+        <Item medium="image" caption="imagem7">https://www.antoniofurtado.com.br/db_imagens/20260817103120_WhatsApp%20Image%202026-08-17%20at%2008.14.24%20(2).jpeg</Item>
+        <Item medium="image" caption="imagem8">https://www.antoniofurtado.com.br/db_imagens/20260817103120_WhatsApp%20Image%202026-08-17%20at%2008.14.24%20(3).jpeg</Item>
+        <Item medium="image" caption="imagem9">https://www.antoniofurtado.com.br/db_imagens/20260817103120_WhatsApp%20Image%202026-08-17%20at%2008.14.24.jpeg</Item>
+        <Item medium="image" caption="imagem10">https://www.antoniofurtado.com.br/db_imagens/20260817103121_WhatsApp%20Image%202026-08-17%20at%2008.14.25%20(1).jpeg</Item>
+        <Item medium="image" caption="imagem11">https://www.antoniofurtado.com.br/db_imagens/20260817103121_WhatsApp%20Image%202026-08-17%20at%2008.14.25%20(2).jpeg</Item>
+        <Item medium="image" caption="imagem12">https://www.antoniofurtado.com.br/db_imagens/20260817103121_WhatsApp%20Image%202026-08-17%20at%2008.14.25%20(3).jpeg</Item>
+        <Item medium="image" caption="imagem13">https://www.antoniofurtado.com.br/db_imagens/20260817103121_WhatsApp%20Image%202026-08-17%20at%2008.14.25.jpeg</Item>
+        <Item medium="image" caption="imagem14">https://www.antoniofurtado.com.br/db_imagens/20260817103121_WhatsApp%20Image%202026-08-17%20at%2008.14.26%20(1).jpeg</Item>
+        <Item medium="image" caption="imagem15">https://www.antoniofurtado.com.br/db_imagens/20260817103121_WhatsApp%20Image%202026-08-17%20at%2008.14.26%20(2).jpeg</Item>
+        <Item medium="image" caption="imagem16">https://www.antoniofurtado.com.br/db_imagens/20260817103121_WhatsApp%20Image%202026-08-17%20at%2008.14.26%20(3).jpeg</Item>
+        <Item medium="image" caption="imagem17">https://www.antoniofurtado.com.br/db_imagens/20260817103122_WhatsApp%20Image%202026-08-17%20at%2008.14.26.jpeg</Item>
       </Media>
       <Details>
-        <UsageType>Commercial</UsageType>
-        <PropertyType>Commercial / Comercial</PropertyType>
-        <Description>Loja Comercial para Locação no Centro de Santo Amaro, 70m2
-Excelente opção de ponto comercial disponível para aluguel na Rua Manuel Borba, 161, no Centro de Santo Amaro, São Paulo. O imóvel possui 70 metros quadrados de área útil e apresenta total adequação para diversas atividades comerciais. A localização é estratégica para negócios, com alto fluxo de circulação, situando-se próximo ao Largo 13 de maio, Avenida Adolfo Pinheiro, Avenida Presidente Washington Luís, Estação de Metrô e Terminal Santo Amaro.
-Estrutura e Facilidades:
-Área total de 70m2.
-1 sala principal.
-Área de estoque dedicada.
-1 copa.
-1 banheiro.
-Imóvel regularizado com AVCB, detectores e extintores de incêndio.
-Facilidade de estacionamento na região com vagas de zona azul.
-Valores e Condições de Locação:
-Aluguel mensal: R$ 19.000,00.
-Condomínio: Isento.
-IPTU anual: R$ 3.530,60.
-Seguro anual: Sob consulta.
-Garantia locatícia: Depósito caução equivalente a três meses de aluguel.
-Documentação do imóvel totalmente em dia.</Description>
-        <RentalPrice currency="BRL">19000</RentalPrice>
-        <PropertyAdministrationFee currency="BRL">0</PropertyAdministrationFee>
-        <YearlyTax currency="BRL">353</YearlyTax>
-        <LotArea unit="square metres">70</LotArea>
-        <LivingArea unit="square metres">70</LivingArea>
-        <Bedrooms>0</Bedrooms>
-        <Suites>0</Suites>
-        <Bathrooms>2</Bathrooms>
+        <UsageType>Residential</UsageType>
+        <PropertyType>Residential / Apartamento</PropertyType>
+        <Description>Apartamento Stúdio a 4 minutos da estação Carrão para Locação
+
+Stúdio com armários planejados, sacada com vista livre, anda alto, a 4 minutos da estação Carrão
+
+Com portaria 24 horas, academia, piscina, quadra esportiva, churrasqueira e playground, o Condomínio Landmark Tatuapé BY Dialogo é ideal para quem busca conforto e entretenimento. A proximidade com Hospital Tatuapé, Estação Carrão, Colégio Esperanto, Colégio Agostiniano Mendel, Senai e Fatec Tatuapé - Victor Civita adiciona praticidade a essa experiência.</Description>
+        <RentalPrice currency="BRL">2500</RentalPrice>
+        <PropertyAdministrationFee currency="BRL">450</PropertyAdministrationFee>
+        <YearlyTax currency="BRL">95</YearlyTax>
+        <LotArea unit="square metres">25</LotArea>
+        <LivingArea unit="square metres">25</LivingArea>
+        <Bedrooms>1</Bedrooms>
+        <Suites>1</Suites>
+        <Bathrooms>1</Bathrooms>
         <Garage type="Parking Space">0</Garage>
       </Details>
       <Location displayAddress="Street">
         <Country abbreviation="BR">Brasil</Country>
         <State abbreviation="SP">SP</State>
         <City>São Paulo</City>
-        <Neighborhood>Santo Amaro</Neighborhood>
-        <Address>Rua Manuel Borba</Address>
-        <StreetNumber>161</StreetNumber>
-        <Complement>até 289/290</Complement>
-        <PostalCode>04743-010</PostalCode>
-        <Latitude>-23.6530307</Latitude>
-        <Longitude>-46.7049082</Longitude>
+        <Neighborhood>Vila Zilda (Tatuapé)</Neighborhood>
+        <Address>Rua Coronel Sousa Reis</Address>
+        <StreetNumber>150</StreetNumber>
+        <Complement>apto 1115</Complement>
+        <PostalCode>03069-010</PostalCode>
+        <Latitude>-23.5354354</Latitude>
+        <Longitude>-46.5669972</Longitude>
       </Location>
       <ContactInfo>
         <Name>Antonio Furtado</Name>
@@ -246,7 +240,7 @@ Documentação do imóvel totalmente em dia.</Description>
       <Details>
         <UsageType>Residential</UsageType>
         <PropertyType>Residential / Casa</PropertyType>
-        <Description>Casa para Alugar na Vila Madalena, 2 Quartos, 110m² em São Paulo 
+        <Description>Casa para Alugar na Vila Madalena, 2 Quartos, 110m² em São Paulo TESTE CLOUD IMOVEL. 
 
 Excelente casa para locação localizada na Rua Epeira, na Vila Madalena, São Paulo. Com 110 metros quadrados de área útil, o imóvel oferece uma planta prática para quem busca morar em um dos bairros mais bem servidos da capital paulista.
 O imóvel possui dois dormitórios, uma sala de estar, cozinha com copa e dois banheiros. O destaque da casa é o terraço, que abriga a área de lavanderia e conta com um banheiro de apoio.
