@@ -4,7 +4,7 @@
     <Provider>Antonio Furtado Gestão Patrimonial Imobiliária</Provider>
     <Email>contato@antoniofurtado.com.br</Email>
     <ContactName>Antonio Furtado</ContactName>
-    <PublishDate>2026-08-19T10:57:34</PublishDate>
+    <PublishDate>2026-08-19T14:18:58</PublishDate>
   </Header>
   <Listings>
     <Listing>
@@ -22,6 +22,17 @@
         <Item medium="image" caption="imagem6">https://www.antoniofurtado.com.br/db_imagens/20260819105036_RQuitanda_7.jpg</Item>
         <Item medium="image" caption="imagem7">https://www.antoniofurtado.com.br/db_imagens/20260819105036_RQuitanda_8.jpg</Item>
         <Item medium="image" caption="imagem8">https://www.antoniofurtado.com.br/db_imagens/20260819105148_RQuitanda_1.png</Item>
+        <Item medium="image" caption="imagem9">https://www.antoniofurtado.com.br/db_imagens/20260819105743_WhatsApp%20Image%202026-08-19%20at%2010.54.36%20(1).jpeg</Item>
+        <Item medium="image" caption="imagem10">https://www.antoniofurtado.com.br/db_imagens/20260819105743_WhatsApp%20Image%202026-08-19%20at%2010.54.36%20(2).jpeg</Item>
+        <Item medium="image" caption="imagem11">https://www.antoniofurtado.com.br/db_imagens/20260819105743_WhatsApp%20Image%202026-08-19%20at%2010.54.36%20(3).jpeg</Item>
+        <Item medium="image" caption="imagem12">https://www.antoniofurtado.com.br/db_imagens/20260819105743_WhatsApp%20Image%202026-08-19%20at%2010.54.36%20(4).jpeg</Item>
+        <Item medium="image" caption="imagem13">https://www.antoniofurtado.com.br/db_imagens/20260819105743_WhatsApp%20Image%202026-08-19%20at%2010.54.36%20(5).jpeg</Item>
+        <Item medium="image" caption="imagem14">https://www.antoniofurtado.com.br/db_imagens/20260819105743_WhatsApp%20Image%202026-08-19%20at%2010.54.36%20(6).jpeg</Item>
+        <Item medium="image" caption="imagem15">https://www.antoniofurtado.com.br/db_imagens/20260819105743_WhatsApp%20Image%202026-08-19%20at%2010.54.36%20(7).jpeg</Item>
+        <Item medium="image" caption="imagem16">https://www.antoniofurtado.com.br/db_imagens/20260819105744_WhatsApp%20Image%202026-08-19%20at%2010.54.36%20(8).jpeg</Item>
+        <Item medium="image" caption="imagem17">https://www.antoniofurtado.com.br/db_imagens/20260819105744_WhatsApp%20Image%202026-08-19%20at%2010.54.36%20(9).jpeg</Item>
+        <Item medium="image" caption="imagem18">https://www.antoniofurtado.com.br/db_imagens/20260819105744_WhatsApp%20Image%202026-08-19%20at%2010.54.36%20(10).jpeg</Item>
+        <Item medium="image" caption="imagem19">https://www.antoniofurtado.com.br/db_imagens/20260819105744_WhatsApp%20Image%202026-08-19%20at%2010.54.36.jpeg</Item>
       </Media>
       <Details>
         <UsageType>Commercial</UsageType>
@@ -47,8 +58,8 @@ A localização estratégica na região central garante alta circulação diári
         <Address>Rua da Quitanda</Address>
         <StreetNumber>127</StreetNumber>
         <PostalCode>01012-010</PostalCode>
-        <Latitude>-23.5476789</Latitude>
-        <Longitude>-46.6350946</Longitude>
+        <Latitude>-23.547776</Latitude>
+        <Longitude>-46.6354879</Longitude>
       </Location>
       <ContactInfo>
         <Name>Antonio Furtado</Name>
@@ -460,7 +471,7 @@ Agende uma visita e venha posicionar sua empresa no centro comercial mais dinâm
     </Listing>
     <Listing>
       <ListingID>IMOB-00214</ListingID>
-      <Title>Casa à venda em Conjunto Residencial José Bonifácio, São Paulo</Title>
+      <Title>Apartamento à venda em Conjunto Residencial José Bonifácio, São Paulo</Title>
       <TransactionType>For Sale</TransactionType>
       <PublicationType>STANDARD</PublicationType>
       <DetailViewUrl>https://www.antoniofurtado.com.br/imovel_214.html</DetailViewUrl>
@@ -495,7 +506,7 @@ Agende uma visita e venha posicionar sua empresa no centro comercial mais dinâm
       </Media>
       <Details>
         <UsageType>Residential</UsageType>
-        <PropertyType>Residential / Casa</PropertyType>
+        <PropertyType>Residential / Apartamento</PropertyType>
         <Description>Excelente Apartamento à Venda no Bairro José Bonifácio | São Paulo
 Oportunidade ideal para quem busca praticidade, segurança e excelente custo-benefício na Zona Leste de São Paulo. Este imóvel oferece uma planta compacta e funcional, perfeita para moradia ou investimento.
 O apartamento conta com 36 m² de área útil, distribuídos de forma inteligente em 2 dormitórios, 1 sala, 1 cozinha e 1 vaga de garagem.
@@ -533,8 +544,8 @@ Entre em contato para agendar uma visita e conhecer de perto todas as facilidade
         <StreetNumber>2100</StreetNumber>
         <Complement>Apto 206 Torre1</Complement>
         <PostalCode>08253-015</PostalCode>
-        <Latitude>-23.536263</Latitude>
-        <Longitude>-46.4298615</Longitude>
+        <Latitude>-23.5435032</Latitude>
+        <Longitude>-46.4344371</Longitude>
       </Location>
       <ContactInfo>
         <Name>Antonio Furtado</Name>
