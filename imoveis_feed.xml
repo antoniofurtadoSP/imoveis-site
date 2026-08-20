@@ -4,9 +4,74 @@
     <Provider>Antonio Furtado Gestão Patrimonial Imobiliária</Provider>
     <Email>contato@antoniofurtado.com.br</Email>
     <ContactName>Antonio Furtado</ContactName>
-    <PublishDate>2026-08-20T14:02:58</PublishDate>
+    <PublishDate>2026-08-20T15:00:23</PublishDate>
   </Header>
   <Listings>
+    <Listing>
+      <ListingID>IMOB-00222</ListingID>
+      <Title>Casa para alugar em Vila Nova Manchester, São Paulo</Title>
+      <TransactionType>For Rent</TransactionType>
+      <PublicationType>STANDARD</PublicationType>
+      <DetailViewUrl>https://www.antoniofurtado.com.br/imovel_222.html</DetailViewUrl>
+      <Media>
+        <Item medium="image" caption="imagem1" primary="true">https://www.antoniofurtado.com.br/db_imagens/20260820144240_WhatsApp%20Image%202026-08-20%20at%2013.17.27.jpeg</Item>
+        <Item medium="image" caption="imagem2">https://www.antoniofurtado.com.br/db_imagens/20260820144240_WhatsApp%20Image%202026-08-20%20at%2013.17.28%20(1).jpeg</Item>
+        <Item medium="image" caption="imagem3">https://www.antoniofurtado.com.br/db_imagens/20260820144242_WhatsApp%20Image%202026-08-20%20at%2013.17.34.jpeg</Item>
+        <Item medium="image" caption="imagem4">https://www.antoniofurtado.com.br/db_imagens/20260820144241_WhatsApp%20Image%202026-08-20%20at%2013.17.33%20(1).jpeg</Item>
+        <Item medium="image" caption="imagem5">https://www.antoniofurtado.com.br/db_imagens/20260820144241_WhatsApp%20Image%202026-08-20%20at%2013.17.28%20(2).jpeg</Item>
+        <Item medium="image" caption="imagem6">https://www.antoniofurtado.com.br/db_imagens/20260820144242_WhatsApp%20Image%202026-08-20%20at%2013.17.34%20(2).jpeg</Item>
+        <Item medium="image" caption="imagem7">https://www.antoniofurtado.com.br/db_imagens/20260820144241_WhatsApp%20Image%202026-08-20%20at%2013.17.34%20(1).jpeg</Item>
+        <Item medium="image" caption="imagem8">https://www.antoniofurtado.com.br/db_imagens/20260820144241_WhatsApp%20Image%202026-08-20%20at%2013.17.28%20(3).jpeg</Item>
+        <Item medium="image" caption="imagem9">https://www.antoniofurtado.com.br/db_imagens/20260820144241_WhatsApp%20Image%202026-08-20%20at%2013.17.28%20(4).jpeg</Item>
+        <Item medium="image" caption="imagem10">https://www.antoniofurtado.com.br/db_imagens/20260820144241_WhatsApp%20Image%202026-08-20%20at%2013.17.28.jpeg</Item>
+        <Item medium="image" caption="imagem11">https://www.antoniofurtado.com.br/db_imagens/20260820144241_WhatsApp%20Image%202026-08-20%20at%2013.17.33%20(2).jpeg</Item>
+        <Item medium="image" caption="imagem12">https://www.antoniofurtado.com.br/db_imagens/20260820144241_WhatsApp%20Image%202026-08-20%20at%2013.17.33.jpeg</Item>
+        <Item medium="image" caption="imagem13">https://www.antoniofurtado.com.br/db_imagens/20260820144242_WhatsApp%20Image%202026-08-20%20at%2013.17.34%20(4).jpeg</Item>
+        <Item medium="image" caption="imagem14">https://www.antoniofurtado.com.br/db_imagens/20260820144242_WhatsApp%20Image%202026-08-20%20at%2013.17.35%20(1).jpeg</Item>
+        <Item medium="image" caption="imagem15">https://www.antoniofurtado.com.br/db_imagens/20260820144242_WhatsApp%20Image%202026-08-20%20at%2013.17.34%20(3).jpeg</Item>
+        <Item medium="image" caption="imagem16">https://www.antoniofurtado.com.br/db_imagens/20260820144242_WhatsApp%20Image%202026-08-20%20at%2013.17.35%20(2).jpeg</Item>
+        <Item medium="image" caption="imagem17">https://www.antoniofurtado.com.br/db_imagens/20260820144242_WhatsApp%20Image%202026-08-20%20at%2013.17.35.jpeg</Item>
+      </Media>
+      <Details>
+        <UsageType>Residential</UsageType>
+        <PropertyType>Residential / Casa</PropertyType>
+        <Description>Excelente Casa  na Vila Carrão
+Esta casa oferece uma oportunidade incomum no mercado imobiliário da Zona Leste de São Paulo. Trata de duas casas independentes situadas no mesmo lote, disponibilizadas pelo valor de apenas um aluguel. A disposição é altamente recomendada para inquilinos que necessitam de moradia e espaço comercial integrados, ou para famílias que buscam proximidade mantendo a total privacidade entre os núcleos.
+O imóvel possui 180 metros quadrados de área construída, garantindo amplitude em todos os ambientes. A estrutura total compreende três quartos bem dimensionados, dois banheiros completos e uma garagem com capacidade para quatro veículos, característica de alto valor para a região. Embora o corredor de acesso seja compartilhado, a infraestrutura de consumo é totalmente isolada. Os medidores de água, energia elétrica e gás encanado são separados para cada casa, permitindo controle exato e independente dos gastos mensais.
+A qualidade das instalações atende a exigências práticas do cotidiano. A cozinha já conta com armários, otimizando o uso do espaço desde o primeiro dia. A propriedade possui área de serviço completa, muros para maior segurança e permite a presença de animais de estimação de forma regular.
+Localizado em um ponto estratégico entre a Vila Nova Manchester e a Vila Carrão, o imóvel oferece acesso facilitado a vias comerciais, serviços essenciais e transporte público, mantendo o perfil de um bairro tradicional e bem estruturado.
+Valores mensais estimados:
+Aluguel: R$ 4.500,00
+Parcela do IPTU: R$ 85,00
+Esta é uma solução imobiliária estritamente funcional, entregando o dobro de utilidade residencial e comercial sem a necessidade de duplicar os custos de locação.</Description>
+        <RentalPrice currency="BRL">4500</RentalPrice>
+        <PropertyAdministrationFee currency="BRL">0</PropertyAdministrationFee>
+        <YearlyTax currency="BRL">85</YearlyTax>
+        <LotArea unit="square metres">180</LotArea>
+        <LivingArea unit="square metres">180</LivingArea>
+        <Bedrooms>3</Bedrooms>
+        <Suites>0</Suites>
+        <Bathrooms>2</Bathrooms>
+        <Garage type="Parking Space">4</Garage>
+      </Details>
+      <Location displayAddress="Street">
+        <Country abbreviation="BR">Brasil</Country>
+        <State abbreviation="SP">SP</State>
+        <City>São Paulo</City>
+        <Neighborhood>Vila Nova Manchester</Neighborhood>
+        <Address>Rua Tamaindê</Address>
+        <StreetNumber>612</StreetNumber>
+        <PostalCode>03444-000</PostalCode>
+        <Latitude>-23.5441283</Latitude>
+        <Longitude>-46.5346679</Longitude>
+      </Location>
+      <ContactInfo>
+        <Name>Antonio Furtado</Name>
+        <Email>contato@antoniofurtado.com.br</Email>
+        <Website>https://www.antoniofurtado.com.br</Website>
+        <OfficeName>Antonio Furtado Gestão Patrimonial Imobiliária</OfficeName>
+      </ContactInfo>
+    </Listing>
     <Listing>
       <ListingID>IMOB-00221</ListingID>
       <Title>Comercial para alugar em Centro, São Paulo</Title>
