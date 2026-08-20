@@ -4,9 +4,134 @@
     <Provider>Antonio Furtado Gestão Patrimonial Imobiliária</Provider>
     <Email>contato@antoniofurtado.com.br</Email>
     <ContactName>Antonio Furtado</ContactName>
-    <PublishDate>2026-08-20T17:40:10</PublishDate>
+    <PublishDate>2026-08-20T18:17:32</PublishDate>
   </Header>
   <Listings>
+    <Listing>
+      <ListingID>IMOB-00225</ListingID>
+      <Title>Comercial para alugar em Centro, São Paulo</Title>
+      <TransactionType>For Rent</TransactionType>
+      <PublicationType>STANDARD</PublicationType>
+      <DetailViewUrl>https://www.antoniofurtado.com.br/imovel_225.html</DetailViewUrl>
+      <Media>
+        <Item medium="image" caption="imagem1" primary="true">https://www.antoniofurtado.com.br/db_imagens/20260820180554_d0024982-b6e6-4cdb-be91-a72b552f10af.jpg</Item>
+        <Item medium="image" caption="imagem2">https://www.antoniofurtado.com.br/db_imagens/20260820180553_6dc048f3-fc0f-411e-b7a3-fa7a7e3e91ad.jpg</Item>
+        <Item medium="image" caption="imagem3">https://www.antoniofurtado.com.br/db_imagens/20260820180553_5dc94c2a-d821-443a-b8b6-3a846fa4d728.jpg</Item>
+        <Item medium="image" caption="imagem4">https://www.antoniofurtado.com.br/db_imagens/20260820180609_934242ed-d7ad-42dd-a53b-158d036ad245.jpg</Item>
+        <Item medium="image" caption="imagem5">https://www.antoniofurtado.com.br/db_imagens/20260820180609_da9bd4ea-b1b9-4412-8b2c-e2d012b174ce.jpg</Item>
+        <Item medium="image" caption="imagem6">https://www.antoniofurtado.com.br/db_imagens/20260820180609_c34fbbe8-3ec0-426a-bae2-f5b78d0ffd56.jpg</Item>
+        <Item medium="image" caption="imagem7">https://www.antoniofurtado.com.br/db_imagens/20260820180609_d87e8209-127f-4131-a8c3-1e4c8f2ba87a.jpg</Item>
+        <Item medium="image" caption="imagem8">https://www.antoniofurtado.com.br/db_imagens/20260820180618_dabfe058-0f9f-49fb-a329-87cf3327b45b.jpg</Item>
+        <Item medium="image" caption="imagem9">https://www.antoniofurtado.com.br/db_imagens/20260820180618_72b86867-2edc-4bc7-bec3-92c2137a583b.jpg</Item>
+        <Item medium="image" caption="imagem10">https://www.antoniofurtado.com.br/db_imagens/20260820180618_70639b18-6f7f-4797-b45e-8da91844ff83.jpg</Item>
+        <Item medium="image" caption="imagem11">https://www.antoniofurtado.com.br/db_imagens/20260820180619_776b79ef-d297-4356-85bb-ca3b7d88b906.jpg</Item>
+        <Item medium="image" caption="imagem12">https://www.antoniofurtado.com.br/db_imagens/20260820180628_f11bd9af-e77d-46f2-b860-8be1949d77a2.jpg</Item>
+        <Item medium="image" caption="imagem13">https://www.antoniofurtado.com.br/db_imagens/20260820180628_11916021-146b-419b-b8f0-d7bf0c0a5b02.jpg</Item>
+        <Item medium="image" caption="imagem14">https://www.antoniofurtado.com.br/db_imagens/20260820180629_39ba6f8b-aa85-4069-8152-2e0cfd2cb644.jpg</Item>
+        <Item medium="image" caption="imagem15">https://www.antoniofurtado.com.br/db_imagens/20260820180629_16923cca-4e2e-4687-8328-727973bf191b.jpg</Item>
+        <Item medium="image" caption="imagem16">https://www.antoniofurtado.com.br/db_imagens/20260820180640_372fbb6f-202a-4096-842d-c91b1aec28f6.jpg</Item>
+        <Item medium="image" caption="imagem17">https://www.antoniofurtado.com.br/db_imagens/20260820180641_c03404aa-2826-41c6-b4a4-918f3dbb4b83.jpg</Item>
+        <Item medium="image" caption="imagem18">https://www.antoniofurtado.com.br/db_imagens/20260820180641_38d66285-37fb-4075-944d-53a1e78326b6.jpg</Item>
+        <Item medium="image" caption="imagem19">https://www.antoniofurtado.com.br/db_imagens/20260820180641_1ba1fd06-ed99-4867-983d-854a2f63cf1c.jpg</Item>
+      </Media>
+      <Details>
+        <UsageType>Commercial</UsageType>
+        <PropertyType>Commercial / Comercial</PropertyType>
+        <Description>Loja térrea comercial disponível para locação na Rua Mauá, número 44, no Centro Histórico de São Paulo. O imóvel foi totalmente reformado e é ideal para negócios que buscam visibilidade em uma área de excelente movimento. O valor de locação mensal é de R$ 6.000,00, acrescido do encargo de IPTU, estipulado em 10 parcelas de R$ 3.453,22 referentes ao ano de 2024.
+Estrutura e Especificações
+Área útil total de 380 metros quadrados.
+Configuração de ampla área livre que possibilita a montagem de diferentes layouts.
+Fachada de rua equipada com duas portas automáticas.
+Espaço pronto para utilização imediata.
+Infraestrutura interna que inclui um banheiro.
+Vantagens da Localização O ponto comercial destaca-se estrategicamente por estar posicionado de frente para a Estação de Trem Júlio Prestes e para a Sala São Paulo. A mobilidade urbana e o acesso de clientes são amplamente favorecidos pela proximidade com as estações de metrô Luz e Tiradentes. O entorno atrai um fluxo constante de pessoas devido à presença de instituições relevantes, como a Escola SENAI de Informática e o SESC Bom Retiro, além de oferecer fácil deslocamento a pé para o polo comercial da região da Santa Ifigênia.</Description>
+        <RentalPrice currency="BRL">6000</RentalPrice>
+        <PropertyAdministrationFee currency="BRL">0</PropertyAdministrationFee>
+        <YearlyTax currency="BRL">3453.22</YearlyTax>
+        <LotArea unit="square metres">380</LotArea>
+        <LivingArea unit="square metres">380</LivingArea>
+        <Bedrooms>0</Bedrooms>
+        <Suites>0</Suites>
+        <Bathrooms>0</Bathrooms>
+        <Garage type="Parking Space">0</Garage>
+      </Details>
+      <Location displayAddress="Street">
+        <Country abbreviation="BR">Brasil</Country>
+        <State abbreviation="SP">SP</State>
+        <City>São Paulo</City>
+        <Neighborhood>Centro</Neighborhood>
+        <Address>Rua Mauá</Address>
+        <StreetNumber>44</StreetNumber>
+        <PostalCode>01028-000</PostalCode>
+        <Latitude>-23.5363729</Latitude>
+        <Longitude>-46.6314324</Longitude>
+      </Location>
+      <ContactInfo>
+        <Name>Antonio Furtado</Name>
+        <Email>contato@antoniofurtado.com.br</Email>
+        <Website>https://www.antoniofurtado.com.br</Website>
+        <OfficeName>Antonio Furtado Gestão Patrimonial Imobiliária</OfficeName>
+      </ContactInfo>
+    </Listing>
+    <Listing>
+      <ListingID>IMOB-00224</ListingID>
+      <Title>Comercial para alugar em Consolação, São Paulo</Title>
+      <TransactionType>For Rent</TransactionType>
+      <PublicationType>STANDARD</PublicationType>
+      <DetailViewUrl>https://www.antoniofurtado.com.br/imovel_224.html</DetailViewUrl>
+      <Media>
+        <Item medium="image" caption="imagem1" primary="true">https://www.antoniofurtado.com.br/db_imagens/20260820175053_download.jpg</Item>
+        <Item medium="image" caption="imagem2">https://www.antoniofurtado.com.br/db_imagens/20260820175051_download%20(12).jpg</Item>
+        <Item medium="image" caption="imagem3">https://www.antoniofurtado.com.br/db_imagens/20260820175052_download%20(2).jpg</Item>
+        <Item medium="image" caption="imagem4">https://www.antoniofurtado.com.br/db_imagens/20260820175051_download%20(11).jpg</Item>
+        <Item medium="image" caption="imagem5">https://www.antoniofurtado.com.br/db_imagens/20260820175051_download%20(10).jpg</Item>
+        <Item medium="image" caption="imagem6">https://www.antoniofurtado.com.br/db_imagens/20260820175053_download%20(1).jpg</Item>
+        <Item medium="image" caption="imagem7">https://www.antoniofurtado.com.br/db_imagens/20260820175051_download%20(9).jpg</Item>
+        <Item medium="image" caption="imagem8">https://www.antoniofurtado.com.br/db_imagens/20260820175052_download%20(8).jpg</Item>
+        <Item medium="image" caption="imagem9">https://www.antoniofurtado.com.br/db_imagens/20260820175052_download%20(7).jpg</Item>
+        <Item medium="image" caption="imagem10">https://www.antoniofurtado.com.br/db_imagens/20260820175052_download%20(6).jpg</Item>
+        <Item medium="image" caption="imagem11">https://www.antoniofurtado.com.br/db_imagens/20260820175052_download%20(5).jpg</Item>
+        <Item medium="image" caption="imagem12">https://www.antoniofurtado.com.br/db_imagens/20260820175052_download%20(4).jpg</Item>
+        <Item medium="image" caption="imagem13">https://www.antoniofurtado.com.br/db_imagens/20260820175052_download%20(3).jpg</Item>
+      </Media>
+      <Details>
+        <UsageType>Commercial</UsageType>
+        <PropertyType>Commercial / Comercial</PropertyType>
+        <Description>Loja térrea comercial disponível para locação no endereço Rua da Consolação,  bairro da Consolação, em São Paulo. O espaço é voltado para atividades que demandam fluxo e visibilidade em uma das vias mais movimentadas da cidade. O custo de aluguel mensal é de R$ 8.400,00, com despesas adicionais obrigatórias de condomínio estipuladas em R$ 1.771,65 e parcela de IPTU de R$ 814,22 por mês.
+Estrutura e Especificações
+Área útil total de 295 metros quadrados.
+Configuração física de piso térreo complementada por um mezanino.
+Infraestrutura interna que inclui banheiros e espaço designado para refeitório.
+Vantagens da Localização A propriedade está posicionada em um eixo viário de intenso fluxo de veículos e pedestres. O acesso por transporte público é facilitado pela proximidade com a Estação de Metrô Paulista. O imóvel fica inserido em uma região que concentra forte infraestrutura de serviços, comércio e cultura. O entorno imediato abriga centros médicos de alta complexidade, como o Hospital Sírio-Libanês e o Incor, além de pontos de grande circulação, incluindo o Shopping Frei Caneca, o Instituto Moreira Salles e o Museu do Futebol.</Description>
+        <RentalPrice currency="BRL">8400</RentalPrice>
+        <PropertyAdministrationFee currency="BRL">1771.65</PropertyAdministrationFee>
+        <YearlyTax currency="BRL">814.22</YearlyTax>
+        <LotArea unit="square metres">295</LotArea>
+        <LivingArea unit="square metres">295</LivingArea>
+        <Bedrooms>0</Bedrooms>
+        <Suites>0</Suites>
+        <Bathrooms>0</Bathrooms>
+        <Garage type="Parking Space">0</Garage>
+      </Details>
+      <Location displayAddress="Street">
+        <Country abbreviation="BR">Brasil</Country>
+        <State abbreviation="SP">SP</State>
+        <City>São Paulo</City>
+        <Neighborhood>Consolação</Neighborhood>
+        <Address>Rua da Consolação</Address>
+        <StreetNumber>2149</StreetNumber>
+        <Complement>de 1101 a 2459 - lado ímpar</Complement>
+        <PostalCode>01301-100</PostalCode>
+        <Latitude>-23.5538904</Latitude>
+        <Longitude>-46.6604564</Longitude>
+      </Location>
+      <ContactInfo>
+        <Name>Antonio Furtado</Name>
+        <Email>contato@antoniofurtado.com.br</Email>
+        <Website>https://www.antoniofurtado.com.br</Website>
+        <OfficeName>Antonio Furtado Gestão Patrimonial Imobiliária</OfficeName>
+      </ContactInfo>
+    </Listing>
     <Listing>
       <ListingID>IMOB-00223</ListingID>
       <Title>Comercial para alugar em República, São Paulo</Title>
@@ -60,8 +185,8 @@ O entorno comercial e cultural é extremamente movimentado e reconhecido. O ende
         <StreetNumber>120</StreetNumber>
         <Complement>lado par</Complement>
         <PostalCode>01044-000</PostalCode>
-        <Latitude>-23.6925213</Latitude>
-        <Longitude>-46.6489809</Longitude>
+        <Latitude>-23.5465991</Latitude>
+        <Longitude>-46.640664</Longitude>
       </Location>
       <ContactInfo>
         <Name>Antonio Furtado</Name>
