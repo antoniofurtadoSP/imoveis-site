@@ -4,9 +4,72 @@
     <Provider>Antonio Furtado Gestão Patrimonial Imobiliária</Provider>
     <Email>contato@antoniofurtado.com.br</Email>
     <ContactName>Antonio Furtado</ContactName>
-    <PublishDate>2026-08-20T15:00:23</PublishDate>
+    <PublishDate>2026-08-20T17:40:10</PublishDate>
   </Header>
   <Listings>
+    <Listing>
+      <ListingID>IMOB-00223</ListingID>
+      <Title>Comercial para alugar em República, São Paulo</Title>
+      <TransactionType>For Rent</TransactionType>
+      <PublicationType>STANDARD</PublicationType>
+      <DetailViewUrl>https://www.antoniofurtado.com.br/imovel_223.html</DetailViewUrl>
+      <Media>
+        <Item medium="image" caption="imagem1" primary="true">https://www.antoniofurtado.com.br/db_imagens/20260820173328_download%20(11).jpg</Item>
+        <Item medium="image" caption="imagem2">https://www.antoniofurtado.com.br/db_imagens/20260820173328_download%20(12).jpg</Item>
+        <Item medium="image" caption="imagem3">https://www.antoniofurtado.com.br/db_imagens/20260820173201_download%20(13).jpg</Item>
+        <Item medium="image" caption="imagem4">https://www.antoniofurtado.com.br/db_imagens/20260820173203_download.jpg</Item>
+        <Item medium="image" caption="imagem5">https://www.antoniofurtado.com.br/db_imagens/20260820173202_download%20(1).jpg</Item>
+        <Item medium="image" caption="imagem6">https://www.antoniofurtado.com.br/db_imagens/20260820173202_download%20(2).jpg</Item>
+        <Item medium="image" caption="imagem7">https://www.antoniofurtado.com.br/db_imagens/20260820173202_download%20(3).jpg</Item>
+        <Item medium="image" caption="imagem8">https://www.antoniofurtado.com.br/db_imagens/20260820173202_download%20(4).jpg</Item>
+        <Item medium="image" caption="imagem9">https://www.antoniofurtado.com.br/db_imagens/20260820173202_download%20(7).jpg</Item>
+        <Item medium="image" caption="imagem10">https://www.antoniofurtado.com.br/db_imagens/20260820173202_download%20(6).jpg</Item>
+        <Item medium="image" caption="imagem11">https://www.antoniofurtado.com.br/db_imagens/20260820173202_download%20(10).jpg</Item>
+        <Item medium="image" caption="imagem12">https://www.antoniofurtado.com.br/db_imagens/20260820173202_download%20(9).jpg</Item>
+        <Item medium="image" caption="imagem13">https://www.antoniofurtado.com.br/db_imagens/20260820173202_download%20(8).jpg</Item>
+        <Item medium="image" caption="imagem14">https://www.antoniofurtado.com.br/db_imagens/20260820173202_download%20(5).jpg</Item>
+      </Media>
+      <Details>
+        <UsageType>Commercial</UsageType>
+        <PropertyType>Commercial / Comercial</PropertyType>
+        <Description>Excelente loja térrea com subsolo para locação no centro de São Paulo, localizada estrategicamente na Rua Sete de Abril, região da República. Este ponto comercial oferece um espaço amplo e estruturado, preparado para receber diferentes tipos de atividades econômicas com flexibilidade de layout. O valor mensal é de R$ 16.000,00 no formato de pacote, o qual contempla o IPTU incluso e a completa isenção da taxa de condomínio.
+Estrutura e Especificações
+Área total de 382 metros quadrados, divididos simetricamente em 191 metros quadrados no piso térreo e 191 metros quadrados no subsolo.
+Infraestrutura interna equipada com forro de gesso e sistema de ar condicionado modelo cassete.
+Planta de ampla área livre que facilita a personalização do ambiente.
+Dois banheiros e uma copa dedicados ao uso diário de funcionários e clientes.
+Escritório privativo anexado a um lavabo exclusivo.
+Vantagens da Localização O estabelecimento está posicionado em uma área de altíssimo fluxo no Centro Histórico de São Paulo, sendo um excelente negócio para empresas que dependem de visibilidade e circulação constante de pedestres. A mobilidade urbana é um grande destaque, pois o imóvel fica a poucos minutos de caminhada de três importantes polos de transporte, as estações de metrô Anhangabaú, República e São Bento.
+O entorno comercial e cultural é extremamente movimentado e reconhecido. O endereço permite acesso rápido e direto à região da Santa Ifigênia, Galeria do Rock, Teatro Municipal, Praça das Artes, Largo do Paissandú e à Agência Central dos Correios.</Description>
+        <RentalPrice currency="BRL">16000</RentalPrice>
+        <PropertyAdministrationFee currency="BRL">0</PropertyAdministrationFee>
+        <YearlyTax currency="BRL">0</YearlyTax>
+        <LotArea unit="square metres">191</LotArea>
+        <LivingArea unit="square metres">191</LivingArea>
+        <Bedrooms>0</Bedrooms>
+        <Suites>0</Suites>
+        <Bathrooms>0</Bathrooms>
+        <Garage type="Parking Space">0</Garage>
+      </Details>
+      <Location displayAddress="Street">
+        <Country abbreviation="BR">Brasil</Country>
+        <State abbreviation="SP">SP</State>
+        <City>São Paulo</City>
+        <Neighborhood>República</Neighborhood>
+        <Address>Rua Sete de Abril</Address>
+        <StreetNumber>120</StreetNumber>
+        <Complement>lado par</Complement>
+        <PostalCode>01044-000</PostalCode>
+        <Latitude>-23.6925213</Latitude>
+        <Longitude>-46.6489809</Longitude>
+      </Location>
+      <ContactInfo>
+        <Name>Antonio Furtado</Name>
+        <Email>contato@antoniofurtado.com.br</Email>
+        <Website>https://www.antoniofurtado.com.br</Website>
+        <OfficeName>Antonio Furtado Gestão Patrimonial Imobiliária</OfficeName>
+      </ContactInfo>
+    </Listing>
     <Listing>
       <ListingID>IMOB-00222</ListingID>
       <Title>Casa para alugar em Vila Nova Manchester, São Paulo</Title>
