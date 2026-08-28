@@ -4,9 +4,78 @@
     <Provider>Antonio Furtado Gestão Patrimonial Imobiliária</Provider>
     <Email>contato@antoniofurtado.com.br</Email>
     <ContactName>Antonio Furtado</ContactName>
-    <PublishDate>2026-08-27T15:39:17</PublishDate>
+    <PublishDate>2026-08-28T10:29:08</PublishDate>
   </Header>
   <Listings>
+    <Listing>
+      <ListingID>IMOB-00226</ListingID>
+      <Title>Apartamento para alugar em Vila Independência, São Paulo</Title>
+      <TransactionType>For Rent</TransactionType>
+      <PublicationType>STANDARD</PublicationType>
+      <DetailViewUrl>https://www.antoniofurtado.com.br/imovel_226.html</DetailViewUrl>
+      <Media>
+        <Item medium="image" caption="imagem1" primary="true">https://www.antoniofurtado.com.br/db_imagens/20260828101859_download.jpg</Item>
+        <Item medium="image" caption="imagem2">https://www.antoniofurtado.com.br/db_imagens/20260828101859_download%20(1).jpg</Item>
+        <Item medium="image" caption="imagem3">https://www.antoniofurtado.com.br/db_imagens/20260828101929_download%20(11).jpg</Item>
+        <Item medium="image" caption="imagem4">https://www.antoniofurtado.com.br/db_imagens/20260828101858_download%20(5).jpg</Item>
+        <Item medium="image" caption="imagem5">https://www.antoniofurtado.com.br/db_imagens/20260828101858_download%20(2).jpg</Item>
+        <Item medium="image" caption="imagem6">https://www.antoniofurtado.com.br/db_imagens/20260828101858_download%20(7).jpg</Item>
+        <Item medium="image" caption="imagem7">https://www.antoniofurtado.com.br/db_imagens/20260828101858_download%20(6).jpg</Item>
+        <Item medium="image" caption="imagem8">https://www.antoniofurtado.com.br/db_imagens/20260828101858_download%20(4).jpg</Item>
+        <Item medium="image" caption="imagem9">https://www.antoniofurtado.com.br/db_imagens/20260828101858_download%20(3).jpg</Item>
+        <Item medium="image" caption="imagem10">https://www.antoniofurtado.com.br/db_imagens/20260828101929_download%20(9).jpg</Item>
+        <Item medium="image" caption="imagem11">https://www.antoniofurtado.com.br/db_imagens/20260828101929_download%20(8).jpg</Item>
+        <Item medium="image" caption="imagem12">https://www.antoniofurtado.com.br/db_imagens/20260828101929_download%20(10).jpg</Item>
+      </Media>
+      <Details>
+        <UsageType>Residential</UsageType>
+        <PropertyType>Residential / Apartamento</PropertyType>
+        <Description>Aluguel de Apartamento 2 Quartos na Vila Independência, São Paulo, Próximo ao Metrô Tamanduateí
+Apartamento para aluguel com 2 quartos na Vila Independência, São Paulo. Imóvel de 37m² de área útil, posicionado em andar alto com vista livre. A unidade possui 1 banheiro, fechadura eletrônica, cooktop e sistema de aquecimento a gás. A instalação de móveis planejados na cozinha e gabinete do banheiro está programada para a segunda quinzena de outubro. O imóvel possui a vantagem financeira de ser isento de IPTU.
+O imóvel está situado  a apenas 500 metros da Estação Tamanduateí do metrô. O entorno conta ainda com a proximidade do Shopping Central Plaza, facilitando o acesso a comércio e serviços.
+A infraestrutura do prédio oferece diversas comodidades aos moradores:
+Portaria e vigilância 24 horas com sistema de câmeras e alarme
+Coworking
+Lavanderia OMO
+Mercadinho interno
+Academia e sala de ginástica
+Churrasqueira e espaço gourmet
+Salão de festas e pub
+Salão de jogos
+Brinquedoteca e playground
+Bicicletário e área verde
+Dados do Anúncio
+Valor do Aluguel: R$ 2.000
+Valor do Condomínio: R$ 450
+IPTU: Isento</Description>
+        <RentalPrice currency="BRL">2000</RentalPrice>
+        <PropertyAdministrationFee currency="BRL">450</PropertyAdministrationFee>
+        <YearlyTax currency="BRL">0</YearlyTax>
+        <LotArea unit="square metres">37</LotArea>
+        <LivingArea unit="square metres">37</LivingArea>
+        <Bedrooms>2</Bedrooms>
+        <Suites>0</Suites>
+        <Bathrooms>1</Bathrooms>
+        <Garage type="Parking Space">0</Garage>
+      </Details>
+      <Location displayAddress="Street">
+        <Country abbreviation="BR">Brasil</Country>
+        <State abbreviation="SP">SP</State>
+        <City>São Paulo</City>
+        <Neighborhood>Vila Independência</Neighborhood>
+        <Address>Rua Álvaro Fragoso</Address>
+        <StreetNumber>340</StreetNumber>
+        <PostalCode>04223-000</PostalCode>
+        <Latitude>-23.5945933</Latitude>
+        <Longitude>-46.5939974</Longitude>
+      </Location>
+      <ContactInfo>
+        <Name>Antonio Furtado</Name>
+        <Email>contato@antoniofurtado.com.br</Email>
+        <Website>https://www.antoniofurtado.com.br</Website>
+        <OfficeName>Antonio Furtado Gestão Patrimonial Imobiliária</OfficeName>
+      </ContactInfo>
+    </Listing>
     <Listing>
       <ListingID>IMOB-00225</ListingID>
       <Title>Comercial para alugar em Centro, São Paulo</Title>
