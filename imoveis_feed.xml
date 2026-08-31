@@ -4,9 +4,105 @@
     <Provider>Antonio Furtado Gestão Patrimonial Imobiliária</Provider>
     <Email>contato@antoniofurtado.com.br</Email>
     <ContactName>Antonio Furtado</ContactName>
-    <PublishDate>2026-08-31T09:04:06</PublishDate>
+    <PublishDate>2026-08-31T09:55:14</PublishDate>
   </Header>
   <Listings>
+    <Listing>
+      <ListingID>IMOB-00227</ListingID>
+      <Title>Apartamento para alugar em Moema, São Paulo</Title>
+      <TransactionType>For Rent</TransactionType>
+      <PublicationType>STANDARD</PublicationType>
+      <DetailViewUrl>https://www.antoniofurtado.com.br/imovel_227.html</DetailViewUrl>
+      <Media>
+        <Item medium="image" caption="imagem1" primary="true">https://www.antoniofurtado.com.br/db_imagens/20260831094509_WhatsApp%20Image%202026-08-31%20at%2008.59.28%20(1).jpeg</Item>
+        <Item medium="image" caption="imagem2">https://www.antoniofurtado.com.br/db_imagens/20260831094509_WhatsApp%20Image%202026-08-31%20at%2008.59.30%20(1).jpeg</Item>
+        <Item medium="image" caption="imagem3">https://www.antoniofurtado.com.br/db_imagens/20260831094511_WhatsApp%20Image%202026-08-31%20at%2008.59.36%20(2).jpeg</Item>
+        <Item medium="image" caption="imagem4">https://www.antoniofurtado.com.br/db_imagens/20260831094510_WhatsApp%20Image%202026-08-31%20at%2008.59.31.jpeg</Item>
+        <Item medium="image" caption="imagem5">https://www.antoniofurtado.com.br/db_imagens/20260831094510_WhatsApp%20Image%202026-08-31%20at%2008.59.33%20(1).jpeg</Item>
+        <Item medium="image" caption="imagem6">https://www.antoniofurtado.com.br/db_imagens/20260831094509_WhatsApp%20Image%202026-08-31%20at%2008.59.30.jpeg</Item>
+        <Item medium="image" caption="imagem7">https://www.antoniofurtado.com.br/db_imagens/20260831094511_WhatsApp%20Image%202026-08-31%20at%2008.59.35%20(1).jpeg</Item>
+        <Item medium="image" caption="imagem8">https://www.antoniofurtado.com.br/db_imagens/20260831094511_WhatsApp%20Image%202026-08-31%20at%2008.59.36%20(1).jpeg</Item>
+        <Item medium="image" caption="imagem9">https://www.antoniofurtado.com.br/db_imagens/20260831094509_WhatsApp%20Image%202026-08-31%20at%2008.59.28.jpeg</Item>
+        <Item medium="image" caption="imagem10">https://www.antoniofurtado.com.br/db_imagens/20260831094509_WhatsApp%20Image%202026-08-31%20at%2008.59.29.jpeg</Item>
+        <Item medium="image" caption="imagem11">https://www.antoniofurtado.com.br/db_imagens/20260831094512_WhatsApp%20Image%202026-08-31%20at%2008.59.36.jpeg</Item>
+        <Item medium="image" caption="imagem12">https://www.antoniofurtado.com.br/db_imagens/20260831094511_WhatsApp%20Image%202026-08-31%20at%2008.59.35.jpeg</Item>
+        <Item medium="image" caption="imagem13">https://www.antoniofurtado.com.br/db_imagens/20260831094510_WhatsApp%20Image%202026-08-31%20at%2008.59.34%20(1).jpeg</Item>
+        <Item medium="image" caption="imagem14">https://www.antoniofurtado.com.br/db_imagens/20260831094510_WhatsApp%20Image%202026-08-31%20at%2008.59.33.jpeg</Item>
+        <Item medium="image" caption="imagem15">https://www.antoniofurtado.com.br/db_imagens/20260831094511_WhatsApp%20Image%202026-08-31%20at%2008.59.34.jpeg</Item>
+        <Item medium="image" caption="imagem16">https://www.antoniofurtado.com.br/db_imagens/20260831094510_WhatsApp%20Image%202026-08-31%20at%2008.59.32%20(2).jpeg</Item>
+        <Item medium="image" caption="imagem17">https://www.antoniofurtado.com.br/db_imagens/20260831094511_WhatsApp%20Image%202026-08-31%20at%2008.59.34%20(2).jpeg</Item>
+        <Item medium="image" caption="imagem18">https://www.antoniofurtado.com.br/db_imagens/20260831094510_WhatsApp%20Image%202026-08-31%20at%2008.59.33%20(2).jpeg</Item>
+        <Item medium="image" caption="imagem19">https://www.antoniofurtado.com.br/db_imagens/20260831094510_WhatsApp%20Image%202026-08-31%20at%2008.59.32.jpeg</Item>
+        <Item medium="image" caption="imagem20">https://www.antoniofurtado.com.br/db_imagens/20260831094510_WhatsApp%20Image%202026-08-31%20at%2008.59.31%20(2).jpeg</Item>
+        <Item medium="image" caption="imagem21">https://www.antoniofurtado.com.br/db_imagens/20260831094511_WhatsApp%20Image%202026-08-31%20at%2008.59.35%20(2).jpeg</Item>
+        <Item medium="image" caption="imagem22">https://www.antoniofurtado.com.br/db_imagens/20260831094512_WhatsApp%20Image%202026-08-31%20at%2008.59.37%20(1).jpeg</Item>
+        <Item medium="image" caption="imagem23">https://www.antoniofurtado.com.br/db_imagens/20260831094510_WhatsApp%20Image%202026-08-31%20at%2008.59.32%20(1).jpeg</Item>
+        <Item medium="image" caption="imagem24">https://www.antoniofurtado.com.br/db_imagens/20260831094512_WhatsApp%20Image%202026-08-31%20at%2008.59.37.jpeg</Item>
+        <Item medium="image" caption="imagem25">https://www.antoniofurtado.com.br/db_imagens/20260831094509_WhatsApp%20Image%202026-08-31%20at%2008.59.31%20(1).jpeg</Item>
+      </Media>
+      <Details>
+        <UsageType>Residential</UsageType>
+        <PropertyType>Residential / Apartamento</PropertyType>
+        <Description>Apartamento para Locação em Moema 79m² Edifício Maison Charpentier
+
+
+Excelente oportunidade de apartamento para alugar em Moema. Com 79m² de área útil e planta bem distribuída, este imóvel com pintura nova e piso de madeira recém trocado oferece muito conforto e excelente iluminação natural.
+
+Características do Imóvel
+
+
+2 dormitórios com armários planejados, boa incidência de sol e vista agradável.
+
+Sala ampla para 2 ambientes.
+
+Cozinha repleta de armários, equipada com geladeira e micro-ondas.
+
+Área de lavanderia ensolarada com despensa e banheiro anexo.
+
+Corredor com roupeiro embutido.
+
+1 vaga de garagem.
+
+Localização e Condomínio
+Situado no Edifício Maison Charpentier, o imóvel fica em uma das principais alamedas do bairro. A região de Moema é conhecida por ser repleta de infraestrutura, garantindo acesso rápido a serviços, comércios e lazer de qualidade.
+
+Valores da Locação
+
+
+Aluguel: R$ 4.300,00
+
+Condomínio: R$ 1.590,00
+
+IPTU: R$ 112,00</Description>
+        <RentalPrice currency="BRL">4300</RentalPrice>
+        <PropertyAdministrationFee currency="BRL">1590</PropertyAdministrationFee>
+        <YearlyTax currency="BRL">112</YearlyTax>
+        <LotArea unit="square metres">79</LotArea>
+        <LivingArea unit="square metres">79</LivingArea>
+        <Bedrooms>2</Bedrooms>
+        <Suites>0</Suites>
+        <Bathrooms>2</Bathrooms>
+        <Garage type="Parking Space">1</Garage>
+      </Details>
+      <Location displayAddress="Street">
+        <Country abbreviation="BR">Brasil</Country>
+        <State abbreviation="SP">SP</State>
+        <City>São Paulo</City>
+        <Neighborhood>Moema</Neighborhood>
+        <Address>Alameda Jauaperi</Address>
+        <StreetNumber>976</StreetNumber>
+        <Complement>de 803/804 a 1101/1102</Complement>
+        <PostalCode>04523-014</PostalCode>
+        <Latitude>-23.6071325</Latitude>
+        <Longitude>-46.6692344</Longitude>
+      </Location>
+      <ContactInfo>
+        <Name>Antonio Furtado</Name>
+        <Email>contato@antoniofurtado.com.br</Email>
+        <Website>https://www.antoniofurtado.com.br</Website>
+        <OfficeName>Antonio Furtado Gestão Patrimonial Imobiliária</OfficeName>
+      </ContactInfo>
+    </Listing>
     <Listing>
       <ListingID>IMOB-00226</ListingID>
       <Title>Apartamento para alugar em Vila Independência, São Paulo</Title>
