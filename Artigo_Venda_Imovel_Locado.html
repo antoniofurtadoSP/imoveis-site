@@ -43,6 +43,16 @@
     
     <style>
         
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-S2G6KJM02B"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-S2G6KJM02B');
+        </script>
+        
+        <style>
         /* RESET E CONFIGURAÇÕES GERAIS - LUXURY DESIGN */
         * {
             margin: 0;
@@ -165,10 +175,10 @@
         }
 
         .logo-img {
-        height: 80px !important;
-        width: auto !important;
+        height: 80px;
+        width: auto;
         max-width: 100%;
-        max-height: none !important;
+        max-height: none;
         transition: transform 0.3s ease;
         object-fit: contain;
         display: block; 
@@ -242,6 +252,29 @@
             color: var(--primary-gold);
         }
 
+        /* BOTÃO HAMBÚRGUER (visível apenas em mobile) */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: 1px solid rgba(212, 175, 55, 0.5);
+            color: white;
+            font-size: 20px;
+            width: 44px;
+            height: 44px;
+            border-radius: 3px;
+            cursor: pointer;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .menu-toggle:hover,
+        .menu-toggle.active {
+            background: var(--primary-gold);
+            color: var(--dark);
+            border-color: var(--primary-gold);
+        }
+
 /* HERO CINEMATOGRÁFICO - CORRIGIDO */
         .hero {
             position: relative;
@@ -283,8 +316,9 @@
         }
 
         .hero-content p {
-            font-size: 18px;
-            max-width: 600px;
+            font-size: 20px;
+            max-width: 640px;
+            line-height: 1.6;
             margin-bottom: 50px;
             opacity: 0.9;
             animation: fadeInUp 1.5s ease;
@@ -300,12 +334,14 @@
             max-width: 900px;
             width: 90%;
             margin: 0 auto;
+            box-sizing: border-box;
+            overflow: hidden;
             animation: fadeInUp 1.8s ease;
         }
 
         .search-title {
             color: var(--dark);
-            font-size: 24px;
+            font-size: 28px;
             margin-bottom: 30px;
             text-align: center;
             text-transform: uppercase;
@@ -319,10 +355,12 @@
         }
 
         .search-input {
-            padding: 15px;
+            width: 100%;
+            min-width: 0;
+            padding: 17px;
             border: 1px solid #ddd;
             background: white;
-            font-size: 14px;
+            font-size: 16px;
             transition: all 0.3s;
             font-family: 'Lato', sans-serif;
         }
@@ -335,12 +373,12 @@
 
         .search-btn {
             grid-column: 1 / -1;
-            padding: 18px;
+            padding: 20px;
             background: var(--dark);
             color: white;
             border: none;
             cursor: pointer;
-            font-size: 14px;
+            font-size: 16px;
             text-transform: uppercase;
             letter-spacing: 2px;
             transition: all 0.3s;
@@ -1067,8 +1105,7 @@
             }
 
             .search-filters {
-                grid-template-columns: minmax(0, 1fr);
-                padding-right: 15px;
+                grid-template-columns: 1fr;
             }
 
             .immersive-content {
@@ -1095,53 +1132,108 @@
                 right: 0;
                 overflow-x: hidden;
             }
-            
+
+            /* Garante que o filtro de busca fique acima do botão flutuante
+               do WhatsApp em telas pequenas, onde os dois podem se sobrepor
+               verticalmente. Sem isso, o toque no filtro acaba "vazando"
+               para o botão do WhatsApp (que fica fixo no canto). */
+            .hero-content {
+                position: relative;
+                z-index: 1000;
+            }
+
+            .search-container {
+                width: 94%;
+                padding: 30px 20px;
+            }
+
+            /* Botão do WhatsApp menor e mais recolhido no canto em mobile,
+               para reduzir a área de sobreposição com o filtro de busca. */
+            .chatbot {
+                bottom: 20px;
+                right: 16px;
+            }
+
+            .chatbot-btn {
+                width: 54px;
+                height: 54px;
+                font-size: 24px;
+            }
+
             nav {
-                padding: 18px 20px 12px 20px;
-                flex-direction: column;
+                padding: 12px 20px;
+                flex-direction: row;
+                justify-content: space-between;
                 align-items: center;
                 gap: 12px;
                 width: 100%;
-                min-height: auto;
+                min-height: 76px;
             }
             
             .logo-container {
                 flex-shrink: 0;
                 margin-bottom: 0;
                 padding: 5px 0;
-                width: 100%;
-                justify-content: center;
+                width: auto;
+                justify-content: flex-start;
             }
             
             .logo-img {
-                height: 55px;
+                height: 48px;
                 width: auto;
-                max-width: 90%;
+                max-width: 60vw;
             }
 
-            .nav-links {
-                gap: 12px;
-                font-size: 10px;
-                flex-wrap: nowrap;
-                justify-content: center;
-                width: 100%;
-                overflow-x: auto;
-                padding: 0 5px;
-            }
-            
-            .nav-links::-webkit-scrollbar {
-                display: none;
-            }
-            
-            .nav-links li {
-                white-space: nowrap;
+            /* Botão hamburguer visível apenas em mobile */
+            .menu-toggle {
+                display: flex;
                 flex-shrink: 0;
             }
-            
+
+            /* Menu vira um painel dropdown de largura total, escondido por
+               padrão, aberto ao tocar no hamburguer. Substitui o antigo
+               menu horizontal com rolagem, que cortava os itens. */
+            .nav-links {
+                position: fixed;
+                top: 76px;
+                left: 0;
+                right: 0;
+                width: 100%;
+                flex-direction: column;
+                gap: 0;
+                background: #1a1a1a;
+                max-height: 0;
+                overflow: hidden;
+                box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+                transition: max-height 0.35s ease;
+            }
+
+            .nav-links.active {
+                max-height: 80vh;
+                overflow-y: auto;
+            }
+
+            .nav-links li {
+                width: 100%;
+                border-top: 1px solid rgba(255,255,255,0.08);
+            }
+
             .nav-links a {
-                font-size: 10px;
-                padding: 5px 8px;
                 display: block;
+                width: 100%;
+                padding: 16px 24px;
+                font-size: 14px;
+                text-align: center;
+                box-sizing: border-box;
+            }
+
+            .hero {
+                min-height: auto;
+            }
+
+            .hero-content {
+                min-height: auto;
+                padding: 110px 20px 60px 20px;
             }
 
             .hero-content h1 {
@@ -1188,8 +1280,8 @@
         /* Media query para telas muito pequenas */
         @media (max-width: 480px) {
             nav {
-                padding: 15px 15px 10px 15px;
-                gap: 10px;
+                padding: 10px 15px;
+                min-height: 68px;
             }
             
             .logo-container {
@@ -1197,19 +1289,20 @@
             }
             
             .logo-img {
-                height: 48px;
-                max-width: 85%;
+                height: 42px;
+                max-width: 55vw;
             }
-            
+
+            .menu-toggle {
+                width: 40px;
+                height: 40px;
+                font-size: 18px;
+            }
+
             .nav-links {
-                gap: 10px;
+                top: 68px;
             }
-            
-            .nav-links a {
-                font-size: 9px;
-                padding: 5px 6px;
-            }
-            
+
             .hero-content h1 {
                 font-size: 32px;
             }
@@ -1529,20 +1622,6 @@
         @media (max-width: 600px) {
             .pillars-grid, .investors-grid, .stats-grid { grid-template-columns: 1fr; }
         }
-
-        /* ASSISTENTE VIRTUAL - mobile: reduz tamanho/deslocamento para diminuir
-           sobreposição do botão fixo sobre controles como o BUSCAR PROPRIEDADES */
-        @media (max-width: 768px) {
-            .chatbot {
-                bottom: 20px;
-                right: 16px;
-            }
-            .chatbot-btn {
-                width: 54px;
-                height: 54px;
-                font-size: 24px;
-            }
-        }
         
         
         /* ESTILOS ADICIONAIS DO ARTIGO */
@@ -1707,22 +1786,15 @@
 <body>
 
     
-        
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-S2G6KJM02B"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-S2G6KJM02B');
-        </script>
-        
         <!-- HEADER FIXO MINIMALISTA -->
 <header>
     <nav>
         <a href="index.html" class="logo-container">
             <img src="db_imagens/logo.png" alt="Consultoria Imobiliária" class="logo-img">
         </a>
+        <button class="menu-toggle" onclick="toggleMenuMobile(this)" aria-label="Abrir menu" aria-expanded="false">
+            <i class="fas fa-bars"></i>
+        </button>
         <ul class="nav-links">
             <li><a href="imoveis.html">Imóveis</a></li>
             <li><a href="central-gestao-patrimonial-imobiliaria.html">Gestão Patrimonial</a></li>
@@ -1914,6 +1986,45 @@
                         }
                     }
                 });
+            });
+
+            // Menu hamburguer (mobile)
+            function toggleMenuMobile(btn) {
+                const nav = document.querySelector('.nav-links');
+                if (!nav) return;
+                const aberto = nav.classList.toggle('active');
+                btn.classList.toggle('active', aberto);
+                btn.setAttribute('aria-expanded', aberto ? 'true' : 'false');
+                btn.innerHTML = aberto ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+            }
+
+            // Fecha o menu ao clicar em um link ou fora dele
+            document.addEventListener('click', function (e) {
+                const nav = document.querySelector('.nav-links');
+                const btn = document.querySelector('.menu-toggle');
+                if (!nav || !btn || !nav.classList.contains('active')) return;
+                const cliqueDentro = nav.contains(e.target) || btn.contains(e.target);
+                const cliqueEmLink = e.target.closest('.nav-links a');
+                if (cliqueEmLink || !cliqueDentro) {
+                    nav.classList.remove('active');
+                    btn.classList.remove('active');
+                    btn.setAttribute('aria-expanded', 'false');
+                    btn.innerHTML = '<i class="fas fa-bars"></i>';
+                }
+            });
+
+            // Fecha o menu automaticamente se a tela for redimensionada para desktop
+            window.addEventListener('resize', function () {
+                if (window.innerWidth > 768) {
+                    const nav = document.querySelector('.nav-links');
+                    const btn = document.querySelector('.menu-toggle');
+                    if (nav) nav.classList.remove('active');
+                    if (btn) {
+                        btn.classList.remove('active');
+                        btn.setAttribute('aria-expanded', 'false');
+                        btn.innerHTML = '<i class="fas fa-bars"></i>';
+                    }
+                }
             });
         </script>
         
