@@ -4,9 +4,83 @@
     <Provider>Antonio Furtado Gestão Patrimonial Imobiliária</Provider>
     <Email>contato@antoniofurtado.com.br</Email>
     <ContactName>Antonio Furtado</ContactName>
-    <PublishDate>2026-09-02T19:22:58</PublishDate>
+    <PublishDate>2026-09-03T12:58:02</PublishDate>
   </Header>
   <Listings>
+    <Listing>
+      <ListingID>IMOB-00228</ListingID>
+      <Title>Comercial para alugar em Mooca, São Paulo</Title>
+      <TransactionType>For Rent</TransactionType>
+      <PublicationType>STANDARD</PublicationType>
+      <DetailViewUrl>https://www.antoniofurtado.com.br/imovel_228.html</DetailViewUrl>
+      <Media>
+        <Item medium="image" caption="imagem1" primary="true">https://www.antoniofurtado.com.br/db_imagens/20260903124632_8e9fa610-cc19-451d-9d5e-34c482b09100.jpg</Item>
+        <Item medium="image" caption="imagem2">https://www.antoniofurtado.com.br/db_imagens/20260903124632_32e207a9-8807-488e-aca9-f638231683a2.jpg</Item>
+        <Item medium="image" caption="imagem3">https://www.antoniofurtado.com.br/db_imagens/20260903124637_f570d98b-60f3-4654-80a4-7b9eb666e599.jpg</Item>
+        <Item medium="image" caption="imagem4">https://www.antoniofurtado.com.br/db_imagens/20260903124646_5b34e64f-abae-485e-8d6c-dfeb35f59bd9.jpg</Item>
+        <Item medium="image" caption="imagem5">https://www.antoniofurtado.com.br/db_imagens/20260903124646_8aeda206-bd02-4269-a91d-afd6a8b7fbb7.jpg</Item>
+        <Item medium="image" caption="imagem6">https://www.antoniofurtado.com.br/db_imagens/20260903124646_724cdf6a-da4e-4afe-b4b1-91c1f390cfb0.jpg</Item>
+        <Item medium="image" caption="imagem7">https://www.antoniofurtado.com.br/db_imagens/20260903124646_cd640e22-7e2f-4500-b4bc-6d6458343bef.jpg</Item>
+      </Media>
+      <Details>
+        <UsageType>Commercial</UsageType>
+        <PropertyType>Commercial / Comercial</PropertyType>
+        <Description>Ponto Comercial para Alugar na Mooca, 100m² | Excelente Localização
+
+
+Excelente oportunidade de aluguel de ponto comercial na Mooca, localizado na tradicional Rua Visconde de Inhomerim. Com 100 m² de área útil e posição privilegiada em esquina com ampla visibilidade, o espaço é ideal para restaurantes, bares, lanchonetes ou comércios variados.
+
+
+O imóvel possui estrutura montada anteriormente para gastronomia, aproveitando o forte apelo comercial da Zona Leste de São Paulo, ma spode ser alterada para atender vários tipos de comercios. A região conta com grande fluxo diário de pedestres e veículos, fácil acesso ao transporte público e proximidade das estações Juventus-Mooca e Metrô Bresser-Mooca.
+
+Destaques do Imóvel:
+
+
+Área útil: 100 m²
+
+
+Localização: Rua Visconde de Inhomerim, Mooca, São Paulo - SP
+
+
+Perfil: Loja / Ponto Comercial de Esquina
+
+
+Vocação: Gastronomia, comércio em geral ou serviços
+
+
+Valores: Aluguel R$ 5.500/mês | IPTU R$ 300/mês | Condomínio Isento
+
+
+Garanta a localização ideal para o seu negócio em um dos bairros mais tradicionais e movimentados de São Paulo. Agende sua visita!</Description>
+        <RentalPrice currency="BRL">5500</RentalPrice>
+        <PropertyAdministrationFee currency="BRL">0</PropertyAdministrationFee>
+        <YearlyTax currency="BRL">300</YearlyTax>
+        <LotArea unit="square metres">100</LotArea>
+        <LivingArea unit="square metres">100</LivingArea>
+        <Bedrooms>0</Bedrooms>
+        <Suites>0</Suites>
+        <Bathrooms>2</Bathrooms>
+        <Garage type="Parking Space">0</Garage>
+      </Details>
+      <Location displayAddress="Street">
+        <Country abbreviation="BR">Brasil</Country>
+        <State abbreviation="SP">SP</State>
+        <City>São Paulo</City>
+        <Neighborhood>Mooca</Neighborhood>
+        <Address>Rua Visconde de Inhomerim</Address>
+        <StreetNumber>876</StreetNumber>
+        <Complement>de 682/683 ao fim</Complement>
+        <PostalCode>03120-001</PostalCode>
+        <Latitude>-23.5612454</Latitude>
+        <Longitude>-46.5944712</Longitude>
+      </Location>
+      <ContactInfo>
+        <Name>Antonio Furtado</Name>
+        <Email>contato@antoniofurtado.com.br</Email>
+        <Website>https://www.antoniofurtado.com.br</Website>
+        <OfficeName>Antonio Furtado Gestão Patrimonial Imobiliária</OfficeName>
+      </ContactInfo>
+    </Listing>
     <Listing>
       <ListingID>IMOB-00227</ListingID>
       <Title>Apartamento para alugar em Moema, São Paulo</Title>
