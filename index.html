@@ -1606,6 +1606,8 @@
         <a href="index.html" class="logo-container">
             <img src="db_imagens/logo.png" alt="Consultoria Imobiliária" class="logo-img">
         </a>
+<!-- AGENTE IA - BUSCA INTELIGENTE -->
+<script src="ai-agent.js"></script>       
         <button class="menu-toggle" onclick="toggleMenuMobile(this)" aria-label="Abrir menu" aria-expanded="false">
             <i class="fas fa-bars"></i>
         </button>
@@ -1882,7 +1884,7 @@
         </div>
         
 
-        <script>
+       <script>
             // Header scroll effect
             window.addEventListener('scroll', () => {
                 const header = document.querySelector('header');
@@ -1902,22 +1904,26 @@
                 });
             });
 
-            // Redireciona a busca do hero para a página de imóveis, com os filtros na URL
+            // ============================================================
+            // ⚠️ FUNÇÃO ANTIGA - NÃO USAR MAIS (mantida para compatibilidade)
+            // ============================================================
+            // function irParaImoveis() {
+            //     ... removido ...
+            // }
+
+            // ============================================================
+            // 🔥 NOVA FUNÇÃO - INTEGRADA COM O AGENTE IA
+            // ============================================================
             function irParaImoveis() {
-                const params = new URLSearchParams();
-                const tipo = document.getElementById('filter-tipo').value;
-                const finalidade = document.getElementById('filter-finalidade').value;
-                const bairro = document.getElementById('filter-bairro').value;
-                const preco = document.getElementById('filter-preco').value;
-                const quartos = document.getElementById('filter-quartos').value;
-                const area = document.getElementById('filter-area').value;
-                if (tipo) params.set('tipo', tipo);
-                if (finalidade) params.set('finalidade', finalidade);
-                if (bairro) params.set('bairro', bairro);
-                if (preco) params.set('preco', preco);
-                if (quartos) params.set('quartos', quartos);
-                if (area) params.set('area', area);
-                window.location.href = 'imoveis.html' + (params.toString() ? '?' + params.toString() : '');
+                // Esta função agora é gerenciada pelo Agente IA
+                // O agente faz a busca em tempo real na própria página
+                const input = document.getElementById('ai-search-input');
+                if (input && input.value.trim()) {
+                    // Dispara a busca do agente
+                    const event = new Event('click');
+                    const btn = document.getElementById('ai-search-btn');
+                    if (btn) btn.dispatchEvent(event);
+                }
             }
 
             // Menu hamburguer (mobile)
@@ -1958,6 +1964,297 @@
                     }
                 }
             });
+
+            // ============================================================
+            // 🤖 AGENTE DE IA - BUSCA POR LINGUAGEM NATURAL
+            // ============================================================
+            (function() {
+                'use strict';
+
+                const API_BASE = 'https://backend-cadastro-imoveis.onrender.com/api';
+                const SITE_BASE = 'https://www.antoniofurtado.com.br';
+
+                // DOM Elements
+                const input = document.getElementById('ai-search-input');
+                const btnBuscar = document.getElementById('ai-search-btn');
+                const resultsArea = document.getElementById('ai-results-area');
+                const resultsContent = document.getElementById('ai-results-content');
+                const loading = document.getElementById('ai-loading');
+                const chips = document.querySelectorAll('.ai-suggestion-chip');
+
+                // Cache de imóveis
+                let allProperties = [];
+
+                // ============================================================
+                // UTILITÁRIOS
+                // ============================================================
+                function formatCurrency(val) {
+                    if (!val || isNaN(val)) return 'Sob Consulta';
+                    return 'R$ ' + Number(val).toLocaleString('pt-BR', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+                }
+
+                function normalizeText(text) {
+                    return text.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+                }
+
+                function extractSearchTerms(text) {
+                    const stopWords = ['quero', 'busco', 'procuro', 'gostaria', 'preciso', 'encontrar', 'um', 'uma', 'de', 'da', 'do', 'para', 'com', 'por', 'em', 'no', 'na', 'os', 'as'];
+                    const words = text.toLowerCase().split(/\s+/);
+                    return words.filter(w => w.length > 2 && !stopWords.includes(w));
+                }
+
+                // ============================================================
+                // API
+                // ============================================================
+                async function fetchProperties() {
+                    try {
+                        const res = await fetch(`${API_BASE}/imoveis?status=Disponível&por_pagina=100`);
+                        const data = await res.json();
+                        if (data.sucesso) {
+                            allProperties = data.imoveis || [];
+                            return allProperties;
+                        }
+                        return [];
+                    } catch (err) {
+                        console.error('Erro ao buscar imóveis:', err);
+                        return [];
+                    }
+                }
+
+                // ============================================================
+                // MOTOR DE BUSCA
+                // ============================================================
+                function searchProperties(query) {
+                    if (!query || !allProperties || allProperties.length === 0) return [];
+
+                    const terms = extractSearchTerms(query);
+                    if (terms.length === 0) return [];
+
+                    // Detectar intenção
+                    const priceMatch = query.match(/(?:at[eé]?|at[eé]? )?R?\$? ?([\d.]+)/i);
+                    const quartosMatch = query.match(/(\d+)\s*quartos?/i);
+                    const bairroMatch = query.match(/(?:em|no|na|para)\s+([a-zA-Zçãõáéíóúâêîôûàèìòù\s]+)/i);
+                    const tipoMatch = query.match(/(casa|apartamento|terreno|comercial|cobertura|sobrado|kitnet|studio|loft|galpão|sala)/i);
+
+                    const priceTarget = priceMatch ? parseFloat(priceMatch[1].replace(/\./g, '')) : null;
+                    const quartosTarget = quartosMatch ? parseInt(quartosMatch[1]) : null;
+                    const bairroTarget = bairroMatch ? normalizeText(bairroMatch[1].trim()) : null;
+                    const tipoTarget = tipoMatch ? normalizeText(tipoMatch[1]) : null;
+
+                    // Pontuar cada imóvel
+                    const scored = allProperties.map(prop => {
+                        let score = 0;
+
+                        // 1. Tipo
+                        if (tipoTarget && prop.tipo) {
+                            const propTipo = normalizeText(prop.tipo);
+                            if (propTipo.includes(tipoTarget) || tipoTarget.includes(propTipo)) {
+                                score += 25;
+                            }
+                            // Sinônimos
+                            const sinonimos = {
+                                'apartamento': ['apto', 'ap', 'flat', 'studio', 'loft', 'kitnet'],
+                                'casa': ['casa', 'residência', 'sobrado', 'vila'],
+                                'terreno': ['lote', 'gleba'],
+                                'comercial': ['sala', 'loja', 'galpão', 'comércio'],
+                                'cobertura': ['penthouse']
+                            };
+                            for (const [key, values] of Object.entries(sinonimos)) {
+                                if (values.some(v => tipoTarget.includes(v) || v.includes(tipoTarget))) {
+                                    if (key === normalizeText(prop.tipo)) {
+                                        score += 20;
+                                    }
+                                }
+                            }
+                        }
+
+                        // 2. Bairro (prioridade alta)
+                        if (bairroTarget && prop.bairro) {
+                            const propBairro = normalizeText(prop.bairro);
+                            if (propBairro.includes(bairroTarget) || bairroTarget.includes(propBairro)) {
+                                score += 35;
+                            }
+                        }
+
+                        // 3. Quartos
+                        if (quartosTarget && prop.quartos) {
+                            if (prop.quartos >= quartosTarget) {
+                                score += 20;
+                                if (prop.quartos <= quartosTarget + 1) {
+                                    score += 5;
+                                }
+                            }
+                        }
+
+                        // 4. Preço
+                        if (priceTarget) {
+                            const venda = prop.valor_venda || 0;
+                            const locacao = prop.valor_locacao || 0;
+                            if (venda > 0 && venda <= priceTarget * 1.3) {
+                                score += 20;
+                            } else if (locacao > 0 && locacao <= priceTarget * 1.3) {
+                                score += 20;
+                            }
+                        }
+
+                        // 5. Finalidade
+                        const q = query.toLowerCase();
+                        if ((q.includes('alugar') || q.includes('loca') || q.includes('aluguel')) && prop.finalidade && prop.finalidade.includes('Locação')) {
+                            score += 15;
+                        }
+                        if ((q.includes('comprar') || q.includes('venda') || q.includes('adquirir')) && prop.finalidade && prop.finalidade.includes('Venda')) {
+                            score += 15;
+                        }
+
+                        // 6. Palavras-chave na descrição
+                        const desc = normalizeText(prop.descricao || '');
+                        const searchText = normalizeText(query);
+                        const keywords = searchText.split(/\s+/).filter(w => w.length > 3);
+                        let keywordMatches = 0;
+                        for (const kw of keywords) {
+                            if (desc.includes(kw)) keywordMatches++;
+                        }
+                        if (keywordMatches > 0) {
+                            score += Math.min(keywordMatches * 3, 15);
+                        }
+
+                        return { ...prop, score };
+                    });
+
+                    // Filtrar e ordenar
+                    const results = scored
+                        .filter(p => p.score > 0)
+                        .sort((a, b) => b.score - a.score)
+                        .slice(0, 8);
+
+                    return results;
+                }
+
+                // ============================================================
+                // RENDERIZAR RESULTADOS
+                // ============================================================
+                function renderResults(matches, query) {
+                    resultsArea.style.display = 'block';
+
+                    if (!matches || matches.length === 0) {
+                        resultsContent.innerHTML = `
+                            <div class="ai-no-results">
+                                <div class="ai-no-results-icon">🔍</div>
+                                <h3>Nenhum imóvel encontrado para "${query}"</h3>
+                                <p>Tente usar termos diferentes ou verifique a ortografia.</p>
+                                <p style="font-size: 13px; margin-top: 8px; color: rgba(255,255,255,0.3);">
+                                    💡 Dica: "Apartamento 2 quartos na Mooca" ou "Casa com quintal"
+                                </p>
+                            </div>
+                        `;
+                        return;
+                    }
+
+                    let html = `<div style="margin-bottom: 16px; text-align: left; color: rgba(255,255,255,0.5); font-size: 13px;">
+                        🏠 <strong style="color: #D4AF37;">${matches.length}</strong> imóveis encontrados para "${query}"
+                    </div>`;
+
+                    matches.forEach(prop => {
+                        const imgUrl = prop.imagens && prop.imagens.length > 0 
+                            ? prop.imagens[0] 
+                            : 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=200&q=80';
+
+                        let priceText = '';
+                        if (prop.finalidade && prop.finalidade.includes('Venda') && prop.valor_venda) {
+                            priceText = formatCurrency(prop.valor_venda);
+                        } else if (prop.valor_locacao) {
+                            priceText = formatCurrency(prop.valor_locacao) + '/mês';
+                        } else {
+                            priceText = 'Sob Consulta';
+                        }
+
+                        const tag = prop.finalidade || 'Imóvel';
+                        const details = `${prop.area_util || ''}m² · ${prop.quartos || 0} quartos · ${prop.banheiros || 0} banheiros`;
+
+                        html += `
+                            <div class="ai-result-card" onclick="window.location.href='imovel_${prop.id}.html'">
+                                <img src="${imgUrl}" alt="${prop.tipo || 'Imóvel'}">
+                                <div class="ai-result-info">
+                                    <span class="ai-result-tag">${tag}</span>
+                                    <h4>${prop.tipo || 'Imóvel'} em ${prop.bairro || 'localização'}</h4>
+                                    <div class="ai-result-price">${priceText}</div>
+                                    <div class="ai-result-details">${details}</div>
+                                </div>
+                                <span class="ai-result-arrow">›</span>
+                            </div>
+                        `;
+                    });
+
+                    resultsContent.innerHTML = html;
+                    resultsContent.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+
+                // ============================================================
+                // BUSCA PRINCIPAL
+                // ============================================================
+                async function performSearch(query) {
+                    if (!query || !query.trim()) return;
+
+                    const searchTerm = query.trim();
+
+                    // Mostrar loading
+                    loading.style.display = 'block';
+                    resultsArea.style.display = 'none';
+
+                    // Carregar imóveis se necessário
+                    if (allProperties.length === 0) {
+                        await fetchProperties();
+                    }
+
+                    // Buscar
+                    const results = searchProperties(searchTerm);
+
+                    // Esconder loading
+                    loading.style.display = 'none';
+
+                    // Mostrar resultados
+                    renderResults(results, searchTerm);
+                }
+
+                // ============================================================
+                // EVENTOS
+                // ============================================================
+
+                // Botão Buscar
+                if (btnBuscar) {
+                    btnBuscar.addEventListener('click', () => {
+                        performSearch(input.value);
+                    });
+                }
+
+                // Enter
+                if (input) {
+                    input.addEventListener('keydown', (e) => {
+                        if (e.key === 'Enter') {
+                            e.preventDefault();
+                            performSearch(input.value);
+                        }
+                    });
+                }
+
+                // Chips de sugestão
+                chips.forEach(chip => {
+                    chip.addEventListener('click', () => {
+                        const query = chip.dataset.query;
+                        if (input) input.value = query;
+                        performSearch(query);
+                    });
+                });
+
+                // Carregar imóveis em background
+                fetchProperties();
+
+                console.log('🤖 Agente de IA inicializado!');
+            })();
+
+            // ============================================================
+            // FIM DO AGENTE DE IA
+            // ============================================================
         </script>
         
         <!-- Analytics Tracker -->
