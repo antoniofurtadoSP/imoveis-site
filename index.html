@@ -2374,22 +2374,89 @@
                 }
 
 // ============================================================
-// MOTOR DE BUSCA
+// MOTOR DE BUSCA - VERSÃO CORRIGIDA COM FILTROS EXATOS
 // ============================================================
 function searchProperties(query) {
     if (!query || !allProperties || allProperties.length === 0) return [];
 
-    const q = query.toLowerCase();
+    const q = query.toLowerCase().trim();
 
-    // Bairro
-    let bairroMatch = q.match(/(?:em|no|na|para)\s+([a-zA-Zçãõáéíóúâêîôûàèìòù\s]+)/i);
-    let bairro = bairroMatch ? normalizeText(bairroMatch[1].trim()) : null;
+    // NORMALIZAÇÃO AVANÇADA
+    function normalizeSearch(text) {
+        if (!text) return '';
+        return text.toLowerCase()
+            .normalize('NFD')
+            .replace(/[\u0300-\u036f]/g, '')
+            .replace(/[^a-z0-9\s-]/g, '')
+            .replace(/\s+/g, ' ')
+            .trim();
+    }
 
-    // Tipo
-    let tipoMatch = q.match(/(casa|apartamento|terreno|comercial|cobertura|sobrado|kitnet|studio|loft|galpão|sala|ponto comercial|loja)/i);
-    let tipo = tipoMatch ? normalizeText(tipoMatch[1]) : null;
+    // ============================================================
+    // EXTRAÇÃO INTELIGENTE DE BAIRRO
+    // ============================================================
+    let bairro = null;
+    let bairroOriginal = null;
 
-    // Finalidade
+    // 1. Tenta capturar após preposição
+    let bairroMatch = q.match(/(?:em|no|na|para|de|do|da)\s+([a-záéíóúâêîôûàèìòùç\s-]+)/i);
+    if (bairroMatch) {
+        bairroOriginal = bairroMatch[1].trim();
+        bairro = normalizeSearch(bairroOriginal);
+    }
+
+    // 2. Se não achou, tenta o último termo como possível bairro
+    if (!bairro) {
+        const partes = q.split(/\s+/);
+        const stopWords = ['venda', 'comprar', 'alugar', 'locação', 'aluguel', 'locar', 'busco', 'procuro', 'quero', 'preciso'];
+        for (let i = partes.length - 1; i >= 0; i--) {
+            const palavra = normalizeSearch(partes[i]);
+            if (palavra.length > 2 && !stopWords.includes(palavra)) {
+                bairroOriginal = partes[i];
+                bairro = palavra;
+                break;
+            }
+        }
+    }
+
+    // ============================================================
+    // EXTRAÇÃO DE TIPO
+    // ============================================================
+    let tipo = null;
+    const tiposExatos = {
+        'apartamento': 'apartamento',
+        'apto': 'apartamento',
+        'ap': 'apartamento',
+        'flat': 'apartamento',
+        'studio': 'apartamento',
+        'loft': 'apartamento',
+        'kitnet': 'apartamento',
+        'casa': 'casa',
+        'terreno': 'terreno',
+        'comercial': 'comercial',
+        'sala': 'comercial',
+        'loja': 'comercial',
+        'galpão': 'comercial',
+        'galpao': 'comercial',
+        'cobertura': 'cobertura',
+        'sobrado': 'sobrado'
+    };
+
+    const palavras = q.split(/\s+/);
+    for (const palavra of palavras) {
+        const palavraNorm = normalizeSearch(palavra);
+        for (const [key, value] of Object.entries(tiposExatos)) {
+            if (palavraNorm.includes(key) || key.includes(palavraNorm)) {
+                tipo = value;
+                break;
+            }
+        }
+        if (tipo) break;
+    }
+
+    // ============================================================
+    // EXTRAÇÃO DE FINALIDADE
+    // ============================================================
     let finalidade = null;
     if (q.includes('venda') || q.includes('comprar') || q.includes('compra') || q.includes('adquirir')) {
         finalidade = 'Venda';
@@ -2397,74 +2464,151 @@ function searchProperties(query) {
         finalidade = 'Locação';
     }
 
-    // Quartos
-    let quartosMatch = q.match(/(\d+)\s*quartos?/i);
-    let quartos = quartosMatch ? parseInt(quartosMatch[1]) : null;
+    // ============================================================
+    // EXTRAÇÃO DE QUARTOS
+    // ============================================================
+    let quartos = null;
+    const quartosMatch = q.match(/(\d+)\s*quartos?/i);
+    if (quartosMatch) quartos = parseInt(quartosMatch[1]);
 
-    // Preço
-    let priceMatch = q.match(/(?:at[eé]?|at[eé]? )?R?\$? ?([\d.]+)/i);
-    let price = priceMatch ? parseFloat(priceMatch[1].replace(/\./g, '')) : null;
+    // ============================================================
+    // EXTRAÇÃO DE PREÇO
+    // ============================================================
+    let price = null;
+    const priceMatch = q.match(/(?:at[eé]?|at[eé]? )?R?\$? ?([\d.,]+)/i);
+    if (priceMatch) {
+        price = parseFloat(priceMatch[1].replace(/\./g, '').replace(',', '.'));
+    }
 
-    const scored = allProperties.map(prop => {
+    // ============================================================
+    // FILTRO E SCORING
+    // ============================================================
+    
+    let resultadosFiltrados = allProperties.filter(prop => {
+        let atende = true;
+
+        // FILTRO OBRIGATÓRIO: Bairro
+        if (bairro && prop.bairro) {
+            const propBairroNorm = normalizeSearch(prop.bairro);
+            const bairroEncontrado = propBairroNorm === bairro || 
+                                     propBairroNorm.includes(bairro) || 
+                                     bairro.includes(propBairroNorm);
+            if (!bairroEncontrado) atende = false;
+        }
+
+        // FILTRO OBRIGATÓRIO: Tipo
+        if (tipo && atende) {
+            const propTipo = normalizeSearch(prop.tipo || '');
+            const tipoEncontrado = propTipo.includes(tipo) || tipo.includes(propTipo);
+            if (!tipoEncontrado) atende = false;
+        }
+
+        // FILTRO OBRIGATÓRIO: Finalidade
+        if (finalidade && atende) {
+            const propFinalidade = prop.finalidade || '';
+            const finalidadeEncontrada = propFinalidade.includes(finalidade) || 
+                                         (propFinalidade.includes('Venda/Locação') && 
+                                          (finalidade === 'Venda' || finalidade === 'Locação'));
+            if (!finalidadeEncontrada) atende = false;
+        }
+
+        // FILTRO OPCIONAL: Quartos
+        if (quartos && atende) {
+            const propQuartos = parseInt(prop.quartos) || 0;
+            if (propQuartos < quartos) atende = false;
+        }
+
+        // FILTRO OPCIONAL: Preço
+        if (price && atende) {
+            const valor = finalidade === 'Venda' ? (prop.valor_venda || 0) : (prop.valor_locacao || 0);
+            if (valor > 0 && valor > price * 1.5) atende = false;
+        }
+
+        return atende;
+    });
+
+    // Fallback: se não encontrou nada com os filtros obrigatórios
+    if (resultadosFiltrados.length === 0) {
+        resultadosFiltrados = allProperties.filter(prop => {
+            let score = 0;
+            if (bairro && prop.bairro) {
+                const propBairroNorm = normalizeSearch(prop.bairro);
+                if (propBairroNorm === bairro || propBairroNorm.includes(bairro) || bairro.includes(propBairroNorm)) {
+                    score += 50;
+                }
+            }
+            if (tipo && prop.tipo) {
+                const propTipo = normalizeSearch(prop.tipo);
+                if (propTipo.includes(tipo) || tipo.includes(propTipo)) {
+                    score += 30;
+                }
+            }
+            if (finalidade && prop.finalidade) {
+                if (prop.finalidade.includes(finalidade)) {
+                    score += 20;
+                }
+            }
+            return score > 20;
+        });
+    }
+
+    // SCORING PARA ORDENAÇÃO
+    const scored = resultadosFiltrados.map(prop => {
         let score = 0;
         let matches = [];
 
-        // BAIRRO (prioridade máxima)
+        // BAIRRO
         if (bairro && prop.bairro) {
-            const propBairro = normalizeText(prop.bairro);
-            if (propBairro === bairro || propBairro.includes(bairro) || bairro.includes(propBairro)) {
-                score += 50;
-                matches.push('bairro');
+            const propBairroNorm = normalizeSearch(prop.bairro);
+            if (propBairroNorm === bairro) {
+                score += 100;
+                matches.push('bairro_exato');
+            } else if (propBairroNorm.includes(bairro) || bairro.includes(propBairroNorm)) {
+                score += 70;
+                matches.push('bairro_parcial');
             }
             const bairroWords = bairro.split(/\s+/);
+            const propBairroWords = propBairroNorm.split(/\s+/);
+            let matchCount = 0;
             for (const word of bairroWords) {
-                if (word.length > 2 && propBairro.includes(word)) {
-                    score += 10;
+                if (word.length > 2 && propBairroWords.some(pw => pw.includes(word) || word.includes(pw))) {
+                    matchCount++;
                 }
             }
-        }
-
-        // FINALIDADE
-        if (finalidade && prop.finalidade) {
-            if (prop.finalidade.includes(finalidade)) {
-                score += 40;
-                matches.push('finalidade');
-            } else if (prop.finalidade.includes('Venda/Locação') && (finalidade === 'Venda' || finalidade === 'Locação')) {
-                score += 20;
-                matches.push('finalidade_parcial');
+            if (matchCount > 0) {
+                score += matchCount * 10;
             }
         }
 
         // TIPO
         if (tipo && prop.tipo) {
-            const propTipo = normalizeText(prop.tipo);
-            if (propTipo.includes(tipo) || tipo.includes(propTipo)) {
+            const propTipo = normalizeSearch(prop.tipo);
+            if (propTipo === tipo) {
+                score += 50;
+                matches.push('tipo_exato');
+            } else if (propTipo.includes(tipo) || tipo.includes(propTipo)) {
                 score += 30;
-                matches.push('tipo');
+                matches.push('tipo_parcial');
             }
-            const sinonimos = {
-                'apartamento': ['apto', 'ap', 'flat', 'studio', 'loft', 'kitnet'],
-                'casa': ['casa', 'residência', 'sobrado', 'vila'],
-                'terreno': ['lote', 'gleba'],
-                'comercial': ['sala', 'loja', 'galpão', 'comércio', 'ponto comercial'],
-                'cobertura': ['penthouse']
-            };
-            for (const [key, values] of Object.entries(sinonimos)) {
-                if (values.some(v => tipo.includes(v) || v.includes(tipo))) {
-                    if (key === propTipo) {
-                        score += 20;
-                        matches.push('tipo_sinonimo');
-                    }
-                }
+        }
+
+        // FINALIDADE
+        if (finalidade && prop.finalidade) {
+            if (prop.finalidade === finalidade) {
+                score += 40;
+                matches.push('finalidade_exata');
+            } else if (prop.finalidade.includes(finalidade)) {
+                score += 25;
+                matches.push('finalidade_parcial');
             }
         }
 
         // QUARTOS
         if (quartos && prop.quartos) {
-            if (prop.quartos >= quartos) {
+            const propQuartos = parseInt(prop.quartos) || 0;
+            if (propQuartos >= quartos) {
                 score += 20;
-                matches.push('quartos');
-                if (prop.quartos <= quartos + 1) {
+                if (propQuartos <= quartos + 1) {
                     score += 10;
                 }
             }
@@ -2472,50 +2616,32 @@ function searchProperties(query) {
 
         // PREÇO
         if (price) {
-            const venda = prop.valor_venda || 0;
-            const locacao = prop.valor_locacao || 0;
-            if (venda > 0 && venda <= price * 1.5) {
-                score += 25;
-                matches.push('preco');
-            } else if (locacao > 0 && locacao <= price * 1.5) {
-                score += 25;
-                matches.push('preco');
+            const valor = finalidade === 'Venda' ? (prop.valor_venda || 0) : (prop.valor_locacao || 0);
+            if (valor > 0 && valor <= price * 1.5) {
+                score += 20;
             }
         }
 
-        // PALAVRAS-CHAVE NA DESCRIÇÃO
-        const desc = normalizeText(prop.descricao || '');
-        const searchTerms = normalizeText(query).split(/\s+/).filter(w => w.length > 3);
+        // DESCRIÇÃO
+        const desc = normalizeSearch(prop.descricao || '');
+        const searchTerms = normalizeSearch(q).split(/\s+/).filter(w => w.length > 3);
         let keywordMatches = 0;
         for (const term of searchTerms) {
             if (desc.includes(term)) keywordMatches++;
         }
         if (keywordMatches > 0) {
             score += Math.min(keywordMatches * 2, 10);
-            matches.push('descricao');
         }
 
         return { ...prop, score, matches };
     });
 
-    let results = scored.filter(p => p.score > 0);
+    scored.sort((a, b) => b.score - a.score);
 
-    if (bairro) {
-        results.sort((a, b) => {
-            const aBairro = normalizeText(a.bairro || '');
-            const bBairro = normalizeText(b.bairro || '');
-            const aMatch = aBairro.includes(bairro) || bairro.includes(aBairro);
-            const bMatch = bBairro.includes(bairro) || bairro.includes(bBairro);
-            if (aMatch && !bMatch) return -1;
-            if (!aMatch && bMatch) return 1;
-            return b.score - a.score;
-        });
-    } else {
-        results.sort((a, b) => b.score - a.score);
-    }
+    return scored.slice(0, 12);
+}
 
-    return results.slice(0, 8);
-}                // ============================================================
+                // ============================================================
                 // RENDERIZAR RESULTADOS
                 // ============================================================
                 function renderResults(matches, query) {
