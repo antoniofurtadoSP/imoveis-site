@@ -2641,65 +2641,87 @@ function searchProperties(query) {
     return scored.slice(0, 12);
 }
 
-                // ============================================================
-                // RENDERIZAR RESULTADOS
-                // ============================================================
-                function renderResults(matches, query) {
-                    resultsArea.style.display = 'block';
+// ============================================================
+// RENDERIZAR RESULTADOS - COM IMAGENS CORRIGIDAS
+// ============================================================
+function renderResults(matches, query) {
+    resultsArea.style.display = 'block';
 
-                    if (!matches || matches.length === 0) {
-                        resultsContent.innerHTML = `
-                            <div class="ai-no-results">
-                                <div class="ai-no-results-icon">🔍</div>
-                                <h3>Nenhum imóvel encontrado para "${query}"</h3>
-                                <p>Tente usar termos diferentes ou verifique a ortografia.</p>
-                                <p style="font-size: 13px; margin-top: 8px; color: rgba(255,255,255,0.3);">
-                                    💡 Dica: "Apartamento 2 quartos na Mooca" ou "Casa com quintal"
-                                </p>
-                            </div>
-                        `;
-                        return;
-                    }
+    if (!matches || matches.length === 0) {
+        resultsContent.innerHTML = `
+            <div class="ai-no-results">
+                <div class="ai-no-results-icon">🔍</div>
+                <h3>Nenhum imóvel encontrado para "${query}"</h3>
+                <p>Tente usar termos diferentes ou verifique a ortografia.</p>
+                <p style="font-size: 13px; margin-top: 8px; color: rgba(255,255,255,0.3);">
+                    💡 Dica: "Apartamento 2 quartos na Mooca" ou "Casa com quintal"
+                </p>
+            </div>
+        `;
+        return;
+    }
 
-                    let html = `<div style="margin-bottom: 16px; text-align: left; color: rgba(255,255,255,0.5); font-size: 13px;">
-                        🏠 <strong style="color: #D4AF37;">${matches.length}</strong> imóveis encontrados para "${query}"
-                    </div>`;
+    let html = `<div style="margin-bottom: 16px; text-align: left; color: rgba(255,255,255,0.5); font-size: 13px;">
+        🏠 <strong style="color: #D4AF37;">${matches.length}</strong> imóveis encontrados para "${query}"
+    </div>`;
 
-                    matches.forEach(prop => {
-                        const imgUrl = prop.imagens && prop.imagens.length > 0 
-                            ? prop.imagens[0] 
-                            : 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=200&q=80';
+    matches.forEach(prop => {
+        // ============================================================
+        // BUSCAR IMAGEM CORRETAMENTE
+        // ============================================================
+        let imgUrl = 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=200&q=80';
+        
+        if (prop.imagens && prop.imagens.length > 0) {
+            if (typeof prop.imagens[0] === 'string') {
+                imgUrl = prop.imagens[0];
+            } else if (prop.imagens[0].url) {
+                imgUrl = prop.imagens[0].url;
+            } else if (prop.imagens[0].path) {
+                imgUrl = prop.imagens[0].path;
+            }
+        }
+        
+        if (imgUrl && !imgUrl.startsWith('http://') && !imgUrl.startsWith('https://')) {
+            imgUrl = 'https://www.antoniofurtado.com.br/' + imgUrl.replace(/^\/+/, '');
+        }
 
-                        let priceText = '';
-                        if (prop.finalidade && prop.finalidade.includes('Venda') && prop.valor_venda) {
-                            priceText = formatCurrency(prop.valor_venda);
-                        } else if (prop.valor_locacao) {
-                            priceText = formatCurrency(prop.valor_locacao) + '/mês';
-                        } else {
-                            priceText = 'Sob Consulta';
-                        }
+        let priceText = '';
+        if (prop.finalidade && prop.finalidade.includes('Venda') && prop.valor_venda) {
+            priceText = formatCurrency(prop.valor_venda);
+        } else if (prop.valor_locacao) {
+            priceText = formatCurrency(prop.valor_locacao) + '/mês';
+        } else {
+            priceText = 'Sob Consulta';
+        }
 
-                        const tag = prop.finalidade || 'Imóvel';
-                        const details = `${prop.area_util || ''}m² · ${prop.quartos || 0} quartos · ${prop.banheiros || 0} banheiros`;
+        const tag = prop.finalidade || 'Imóvel';
+        
+        let details = [];
+        if (prop.area_util) details.push(prop.area_util + 'm²');
+        if (prop.quartos) details.push(prop.quartos + ' quartos');
+        if (prop.banheiros) details.push(prop.banheiros + ' banheiros');
+        const detailsText = details.join(' · ') || 'Detalhes sob consulta';
 
-                        html += `
-                            <div class="ai-result-card" onclick="window.location.href='imovel_${prop.id}.html'">
-                                <img src="${imgUrl}" alt="${prop.tipo || 'Imóvel'}">
-                                <div class="ai-result-info">
-                                    <span class="ai-result-tag">${tag}</span>
-                                    <h4>${prop.tipo || 'Imóvel'} em ${prop.bairro || 'localização'}</h4>
-                                    <div class="ai-result-price">${priceText}</div>
-                                    <div class="ai-result-details">${details}</div>
-                                </div>
-                                <span class="ai-result-arrow">›</span>
-                            </div>
-                        `;
-                    });
+        let titulo = prop.tipo || 'Imóvel';
+        if (prop.bairro) titulo += ` em ${prop.bairro}`;
 
-                    resultsContent.innerHTML = html;
-                    resultsContent.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
+        html += `
+            <div class="ai-result-card" onclick="window.location.href='imovel_${prop.id}.html'">
+                <img src="${imgUrl}" alt="${titulo}" onerror="this.src='https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=200&q=80'">
+                <div class="ai-result-info">
+                    <span class="ai-result-tag">${tag}</span>
+                    <h4>${titulo}</h4>
+                    <div class="ai-result-price">${priceText}</div>
+                    <div class="ai-result-details">${detailsText}</div>
+                </div>
+                <span class="ai-result-arrow">›</span>
+            </div>
+        `;
+    });
 
+    resultsContent.innerHTML = html;
+    resultsContent.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
                 // ============================================================
                 // BUSCA PRINCIPAL
                 // ============================================================
