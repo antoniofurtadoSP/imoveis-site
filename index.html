@@ -2398,25 +2398,12 @@ function searchProperties(query) {
     let bairro = null;
     let bairroOriginal = null;
 
-    // 1. Tenta capturar após preposição
-    let bairroMatch = q.match(/(?:em|no|na|para|de|do|da)\s+([a-záéíóúâêîôûàèìòùç\s-]+)/i);
+    // 1. Captura somente o trecho final depois de "em", "no" ou "na".
+    // Assim, "pra alugar na Mooca" captura apenas "Mooca".
+    let bairroMatch = q.match(/(?:\bem|\bno|\bna)\s+([a-záéíóúâêîôûàèìòùç\s-]+)$/i);
     if (bairroMatch) {
         bairroOriginal = bairroMatch[1].trim();
         bairro = normalizeSearch(bairroOriginal);
-    }
-
-    // 2. Se não achou, tenta o último termo como possível bairro
-    if (!bairro) {
-        const partes = q.split(/\s+/);
-        const stopWords = ['venda', 'comprar', 'alugar', 'locação', 'aluguel', 'locar', 'busco', 'procuro', 'quero', 'preciso'];
-        for (let i = partes.length - 1; i >= 0; i--) {
-            const palavra = normalizeSearch(partes[i]);
-            if (palavra.length > 2 && !stopWords.includes(palavra)) {
-                bairroOriginal = partes[i];
-                bairro = palavra;
-                break;
-            }
-        }
     }
 
     // ============================================================
@@ -2486,6 +2473,10 @@ function searchProperties(query) {
     
     let resultadosFiltrados = allProperties.filter(prop => {
         let atende = true;
+
+        // FILTRO OBRIGATÓRIO: Status disponível
+        const statusImovel = normalizeSearch(prop.status || '');
+        if (statusImovel && statusImovel !== 'disponivel') atende = false;
 
         // FILTRO OBRIGATÓRIO: Bairro
         if (bairro) {
