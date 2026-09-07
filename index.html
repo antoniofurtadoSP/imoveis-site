@@ -2373,151 +2373,149 @@
                     }
                 }
 
-                // ============================================================
-                // MOTOR DE BUSCA
-                // ============================================================
-                                function searchProperties(query) {
-                    if (!query || !allProperties || allProperties.length === 0) return [];
+// ============================================================
+// MOTOR DE BUSCA
+// ============================================================
+function searchProperties(query) {
+    if (!query || !allProperties || allProperties.length === 0) return [];
 
-                    const q = query.toLowerCase();
+    const q = query.toLowerCase();
 
-                    // Bairro
-                    let bairroMatch = q.match(/(?:em|no|na|para)\s+([a-zA-Zçãõáéíóúâêîôûàèìòù\s]+)/i);
-                    let bairro = bairroMatch ? normalizeText(bairroMatch[1].trim()) : null;
+    // Bairro
+    let bairroMatch = q.match(/(?:em|no|na|para)\s+([a-zA-Zçãõáéíóúâêîôûàèìòù\s]+)/i);
+    let bairro = bairroMatch ? normalizeText(bairroMatch[1].trim()) : null;
 
-                    // Tipo
-                    let tipoMatch = q.match(/(casa|apartamento|terreno|comercial|cobertura|sobrado|kitnet|studio|loft|galpão|sala|ponto comercial|loja)/i);
-                    let tipo = tipoMatch ? normalizeText(tipoMatch[1]) : null;
+    // Tipo
+    let tipoMatch = q.match(/(casa|apartamento|terreno|comercial|cobertura|sobrado|kitnet|studio|loft|galpão|sala|ponto comercial|loja)/i);
+    let tipo = tipoMatch ? normalizeText(tipoMatch[1]) : null;
 
-                    // Finalidade
-                    let finalidade = null;
-                    if (q.includes('venda') || q.includes('comprar') || q.includes('compra') || q.includes('adquirir')) {
-                        finalidade = 'Venda';
-                    } else if (q.includes('alugar') || q.includes('locação') || q.includes('aluguel') || q.includes('locar')) {
-                        finalidade = 'Locação';
-                    }
+    // Finalidade
+    let finalidade = null;
+    if (q.includes('venda') || q.includes('comprar') || q.includes('compra') || q.includes('adquirir')) {
+        finalidade = 'Venda';
+    } else if (q.includes('alugar') || q.includes('locação') || q.includes('aluguel') || q.includes('locar')) {
+        finalidade = 'Locação';
+    }
 
-                    // Quartos
-                    let quartosMatch = q.match(/(\d+)\s*quartos?/i);
-                    let quartos = quartosMatch ? parseInt(quartosMatch[1]) : null;
+    // Quartos
+    let quartosMatch = q.match(/(\d+)\s*quartos?/i);
+    let quartos = quartosMatch ? parseInt(quartosMatch[1]) : null;
 
-                    // Preço
-                    let priceMatch = q.match(/(?:at[eé]?|at[eé]? )?R?\$? ?([\d.]+)/i);
-                    let price = priceMatch ? parseFloat(priceMatch[1].replace(/\./g, '')) : null;
+    // Preço
+    let priceMatch = q.match(/(?:at[eé]?|at[eé]? )?R?\$? ?([\d.]+)/i);
+    let price = priceMatch ? parseFloat(priceMatch[1].replace(/\./g, '')) : null;
 
-                    const scored = allProperties.map(prop => {
-                        let score = 0;
-                        let matches = [];
+    const scored = allProperties.map(prop => {
+        let score = 0;
+        let matches = [];
 
-                        // BAIRRO (prioridade máxima)
-                        if (bairro && prop.bairro) {
-                            const propBairro = normalizeText(prop.bairro);
-                            if (propBairro === bairro || propBairro.includes(bairro) || bairro.includes(propBairro)) {
-                                score += 50;
-                                matches.push('bairro');
-                            }
-                            const bairroWords = bairro.split(/\s+/);
-                            for (const word of bairroWords) {
-                                if (word.length > 2 && propBairro.includes(word)) {
-                                    score += 10;
-                                }
-                            }
-                        }
-
-                        // FINALIDADE
-                        if (finalidade && prop.finalidade) {
-                            if (prop.finalidade.includes(finalidade)) {
-                                score += 40;
-                                matches.push('finalidade');
-                            } else if (prop.finalidade.includes('Venda/Locação') && (finalidade === 'Venda' || finalidade === 'Locação')) {
-                                score += 20;
-                                matches.push('finalidade_parcial');
-                            }
-                        }
-
-                        // TIPO
-                        if (tipo && prop.tipo) {
-                            const propTipo = normalizeText(prop.tipo);
-                            if (propTipo.includes(tipo) || tipo.includes(propTipo)) {
-                                score += 30;
-                                matches.push('tipo');
-                            }
-                            const sinonimos = {
-                                'apartamento': ['apto', 'ap', 'flat', 'studio', 'loft', 'kitnet'],
-                                'casa': ['casa', 'residência', 'sobrado', 'vila'],
-                                'terreno': ['lote', 'gleba'],
-                                'comercial': ['sala', 'loja', 'galpão', 'comércio', 'ponto comercial'],
-                                'cobertura': ['penthouse']
-                            };
-                            for (const [key, values] of Object.entries(sinonimos)) {
-                                if (values.some(v => tipo.includes(v) || v.includes(tipo))) {
-                                    if (key === propTipo) {
-                                        score += 20;
-                                        matches.push('tipo_sinonimo');
-                                    }
-                                }
-                            }
-                        }
-
-                        // QUARTOS
-                        if (quartos && prop.quartos) {
-                            if (prop.quartos >= quartos) {
-                                score += 20;
-                                matches.push('quartos');
-                                if (prop.quartos <= quartos + 1) {
-                                    score += 10;
-                                }
-                            }
-                        }
-
-                        // PREÇO
-                        if (price) {
-                            const venda = prop.valor_venda || 0;
-                            const locacao = prop.valor_locacao || 0;
-                            if (venda > 0 && venda <= price * 1.5) {
-                                score += 25;
-                                matches.push('preco');
-                            } else if (locacao > 0 && locacao <= price * 1.5) {
-                                score += 25;
-                                matches.push('preco');
-                            }
-                        }
-
-                        // PALAVRAS-CHAVE NA DESCRIÇÃO
-                        const desc = normalizeText(prop.descricao || '');
-                        const searchTerms = normalizeText(query).split(/\s+/).filter(w => w.length > 3);
-                        let keywordMatches = 0;
-                        for (const term of searchTerms) {
-                            if (desc.includes(term)) keywordMatches++;
-                        }
-                        if (keywordMatches > 0) {
-                            score += Math.min(keywordMatches * 2, 10);
-                            matches.push('descricao');
-                        }
-
-                        return { ...prop, score, matches };
-                    });
-
-                    let results = scored.filter(p => p.score > 0);
-
-                    if (bairro) {
-                        results.sort((a, b) => {
-                            const aBairro = normalizeText(a.bairro || '');
-                            const bBairro = normalizeText(b.bairro || '');
-                            const aMatch = aBairro.includes(bairro) || bairro.includes(aBairro);
-                            const bMatch = bBairro.includes(bairro) || bairro.includes(bBairro);
-                            if (aMatch && !bMatch) return -1;
-                            if (!aMatch && bMatch) return 1;
-                            return b.score - a.score;
-                        });
-                    } else {
-                        results.sort((a, b) => b.score - a.score);
-                    }
-
-                    return results.slice(0, 8);
+        // BAIRRO (prioridade máxima)
+        if (bairro && prop.bairro) {
+            const propBairro = normalizeText(prop.bairro);
+            if (propBairro === bairro || propBairro.includes(bairro) || bairro.includes(propBairro)) {
+                score += 50;
+                matches.push('bairro');
+            }
+            const bairroWords = bairro.split(/\s+/);
+            for (const word of bairroWords) {
+                if (word.length > 2 && propBairro.includes(word)) {
+                    score += 10;
                 }
+            }
+        }
 
-                // ============================================================
+        // FINALIDADE
+        if (finalidade && prop.finalidade) {
+            if (prop.finalidade.includes(finalidade)) {
+                score += 40;
+                matches.push('finalidade');
+            } else if (prop.finalidade.includes('Venda/Locação') && (finalidade === 'Venda' || finalidade === 'Locação')) {
+                score += 20;
+                matches.push('finalidade_parcial');
+            }
+        }
+
+        // TIPO
+        if (tipo && prop.tipo) {
+            const propTipo = normalizeText(prop.tipo);
+            if (propTipo.includes(tipo) || tipo.includes(propTipo)) {
+                score += 30;
+                matches.push('tipo');
+            }
+            const sinonimos = {
+                'apartamento': ['apto', 'ap', 'flat', 'studio', 'loft', 'kitnet'],
+                'casa': ['casa', 'residência', 'sobrado', 'vila'],
+                'terreno': ['lote', 'gleba'],
+                'comercial': ['sala', 'loja', 'galpão', 'comércio', 'ponto comercial'],
+                'cobertura': ['penthouse']
+            };
+            for (const [key, values] of Object.entries(sinonimos)) {
+                if (values.some(v => tipo.includes(v) || v.includes(tipo))) {
+                    if (key === propTipo) {
+                        score += 20;
+                        matches.push('tipo_sinonimo');
+                    }
+                }
+            }
+        }
+
+        // QUARTOS
+        if (quartos && prop.quartos) {
+            if (prop.quartos >= quartos) {
+                score += 20;
+                matches.push('quartos');
+                if (prop.quartos <= quartos + 1) {
+                    score += 10;
+                }
+            }
+        }
+
+        // PREÇO
+        if (price) {
+            const venda = prop.valor_venda || 0;
+            const locacao = prop.valor_locacao || 0;
+            if (venda > 0 && venda <= price * 1.5) {
+                score += 25;
+                matches.push('preco');
+            } else if (locacao > 0 && locacao <= price * 1.5) {
+                score += 25;
+                matches.push('preco');
+            }
+        }
+
+        // PALAVRAS-CHAVE NA DESCRIÇÃO
+        const desc = normalizeText(prop.descricao || '');
+        const searchTerms = normalizeText(query).split(/\s+/).filter(w => w.length > 3);
+        let keywordMatches = 0;
+        for (const term of searchTerms) {
+            if (desc.includes(term)) keywordMatches++;
+        }
+        if (keywordMatches > 0) {
+            score += Math.min(keywordMatches * 2, 10);
+            matches.push('descricao');
+        }
+
+        return { ...prop, score, matches };
+    });
+
+    let results = scored.filter(p => p.score > 0);
+
+    if (bairro) {
+        results.sort((a, b) => {
+            const aBairro = normalizeText(a.bairro || '');
+            const bBairro = normalizeText(b.bairro || '');
+            const aMatch = aBairro.includes(bairro) || bairro.includes(aBairro);
+            const bMatch = bBairro.includes(bairro) || bairro.includes(bBairro);
+            if (aMatch && !bMatch) return -1;
+            if (!aMatch && bMatch) return 1;
+            return b.score - a.score;
+        });
+    } else {
+        results.sort((a, b) => b.score - a.score);
+    }
+
+    return results.slice(0, 8);
+}                // ============================================================
                 // RENDERIZAR RESULTADOS
                 // ============================================================
                 function renderResults(matches, query) {
