@@ -1686,10 +1686,41 @@
         </div>
 
         <!-- Indicador de carregamento -->
-        <div id="ai-loading" style="display: none; text-align: center; padding: 20px;">
+ <div id="ai-loading" style="display: none; text-align: center; padding: 20px;">
             <div class="ai-spinner"></div>
             <p style="color: rgba(255,255,255,0.6); font-size: 14px; margin-top: 10px;">Analisando o mercado em tempo real...</p>
         </div>
+     </div>
+
+    <!-- FILTRO TRADICIONAL DA PÁGINA DE IMÓVEIS -->
+    <div class="search-filters" id="traditional-property-filters" style="display: none; margin-top: 24px;">
+        <select id="filter-tipo" aria-label="Tipo de imóvel">
+            <option value="">Todos os tipos</option>
+            <option value="Apartamento">Apartamento</option>
+            <option value="Casa">Casa</option>
+            <option value="Comercial">Comercial</option>
+            <option value="Galpão">Galpão</option>
+            <option value="Terreno">Terreno</option>
+            <option value="Studio">Studio</option>
+        </select>
+        <select id="filter-finalidade" aria-label="Finalidade">
+            <option value="">Comprar ou alugar</option>
+            <option value="Venda">Venda</option>
+            <option value="Locação">Locação</option>
+            <option value="Venda/Locação">Venda/Locação</option>
+        </select>
+        <input id="filter-bairro" type="search" placeholder="Bairro ou região" autocomplete="off">
+        <select id="filter-quartos" aria-label="Quantidade mínima de quartos">
+            <option value="">Quartos</option>
+            <option value="1">1+ quarto</option>
+            <option value="2">2+ quartos</option>
+            <option value="3">3+ quartos</option>
+            <option value="4">4+ quartos</option>
+        </select>
+        <input id="filter-preco" type="number" min="0" step="any" placeholder="Preço máximo">
+        <input id="filter-area" type="number" min="0" step="any" placeholder="Área mínima (m²)">
+        <button type="button" onclick="filtrarImoveis()">FILTRAR</button>
+        <button type="button" onclick="limparFiltros()">LIMPAR</button>
     </div>
 
     <style>
