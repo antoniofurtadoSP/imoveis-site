@@ -363,12 +363,12 @@
 
 /* SEÇÃO FEATURED PROPERTIES - AJUSTADO PARA DESKTOP */
         .section {
-            padding: 80px 80px; /* Reduzido de 120px para 80px vertical para subir o conteúdo */
+            padding: 120px 80px;
         }
 
         .section-title {
             text-align: center;
-            font-size: 42px; /* Reduzido levemente de 48px para 42px */
+            font-size: 48px;
             margin-bottom: 20px;
             color: var(--dark);
             text-transform: uppercase;
@@ -379,7 +379,7 @@
             text-align: center;
             font-size: 16px;
             color: var(--gray);
-            margin-bottom: 50px; /* Reduzido de 80px para 50px para aproximar dos cards */
+            margin-bottom: 80px;
             max-width: 600px;
             margin-left: auto;
             margin-right: auto;
@@ -1867,16 +1867,29 @@
         to { transform: rotate(360deg); }
     }
 
-    /* Resultados - Cards de imóveis */
+    /* Resultados - Cards de imóveis em grade, como na página Imóveis */
+    #ai-results-content {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 40px;
+        text-align: left;
+    }
+
+    #ai-results-content > div:first-child {
+        grid-column: 1 / -1;
+    }
+
     .ai-result-card {
         background: rgba(255, 255, 255, 0.04);
         border: 1px solid rgba(255, 255, 255, 0.06);
         border-radius: 16px;
-        padding: 20px 24px;
-        margin-bottom: 14px;
+        position: relative;
+        padding: 0 0 24px;
+        margin-bottom: 0;
         display: flex;
-        gap: 20px;
-        align-items: center;
+        flex-direction: column;
+        gap: 0;
+        align-items: stretch;
         text-align: left;
         transition: all 0.3s ease;
         cursor: pointer;
@@ -1885,13 +1898,13 @@
     .ai-result-card:hover {
         background: rgba(255, 255, 255, 0.07);
         border-color: rgba(212, 175, 55, 0.3);
-        transform: translateX(6px);
+        transform: translateY(-8px);
     }
 
     .ai-result-card img {
-        width: 80px;
-        height: 80px;
-        border-radius: 10px;
+        width: 100%;
+        height: 300px;
+        border-radius: 0;
         object-fit: cover;
         flex-shrink: 0;
         border: 1px solid rgba(255, 255, 255, 0.06);
@@ -1900,6 +1913,7 @@
     .ai-result-info {
         flex: 1;
         min-width: 0;
+        padding: 22px 24px 0;
     }
 
     .ai-result-info .ai-result-tag {
@@ -1939,6 +1953,9 @@
         font-size: 22px;
         transition: color 0.2s;
         flex-shrink: 0;
+        position: absolute;
+        right: 18px;
+        bottom: 18px;
     }
 
     .ai-result-card:hover .ai-result-arrow {
@@ -2009,10 +2026,13 @@
             padding: 4px 12px;
         }
 
+        #ai-results-content {
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
         .ai-result-card {
-            flex-direction: column;
             text-align: center;
-            padding: 16px;
         }
 
         .ai-result-card img {
@@ -2622,7 +2642,8 @@ function renderResults(matches, query) {
             <div class="ai-no-results">
                 <div class="ai-no-results-icon">🔍</div>
                 <h3>Nenhum imóvel encontrado para "${query}"</h3>
-                <p>Tente usar termos diferentes ou verifique a ortografia.</p>
+                <p>Não há imóveis disponíveis que atendam simultaneamente a todos os critérios informados.</p>
+                <p>Tente retirar o bairro ou alterar o tipo e a finalidade da busca.</p>
                 <p style="font-size: 13px; margin-top: 8px; color: rgba(255,255,255,0.3);">
                     💡 Dica: "Apartamento 2 quartos na Mooca" ou "Casa com quintal"
                 </p>
