@@ -2723,9 +2723,18 @@ function renderResults(matches, query) {
         if (prop.banheiros) details.push(prop.banheiros + ' banheiros');
         const detailsText = details.join(' · ') || 'Detalhes sob consulta';
 
-        let titulo = prop.titulo || prop.titulo_anuncio || prop.nome || prop.tipo || 'Imóvel';
+        // O endpoint pode enviar o título vazio (ou apenas espaços). Nesse caso,
+        // reproduzimos o padrão dos cards da página de imóveis: Tipo - Bairro.
+        const tituloCandidatos = [
+            prop.titulo, prop.titulo_anuncio, prop.nome, prop.nome_anuncio,
+            prop.nome_imovel, prop.tipo_imovel, prop.tipo
+        ];
+        let titulo = tituloCandidatos
+            .map(valor => String(valor || '').trim())
+            .find(valor => valor.length > 0) || 'Imóvel';
         if (!prop.titulo && !prop.titulo_anuncio && !prop.nome && prop.bairro) {
-            titulo += ` em ${prop.bairro}`;
+            const tipoTitulo = String(prop.tipo_imovel || prop.tipo || 'Imóvel').trim();
+            titulo = `${tipoTitulo} - ${String(prop.bairro).trim()}`;
         }
 
         html += `
