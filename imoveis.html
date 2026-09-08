@@ -7987,7 +7987,7 @@
             // ============================================================
             // 🤖 AGENTE DE IA - BUSCA POR LINGUAGEM NATURAL
             // ============================================================
-            (function() {{
+            (function() {
                 'use strict';
 
                 const API_BASE = 'https://antoniofurtado.pythonanywhere.com/api';
@@ -8007,49 +8007,49 @@
                 // ============================================================
                 // UTILITÁRIOS
                 // ============================================================
-                function formatCurrency(val) {{
+                function formatCurrency(val) {
                     if (!val || isNaN(val)) return 'Sob Consulta';
-                    return 'R$ ' + Number(val).toLocaleString('pt-BR', {{ minimumFractionDigits: 0, maximumFractionDigits: 0 }});
-                }}
+                    return 'R$ ' + Number(val).toLocaleString('pt-BR', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+                }
 
-                function normalizeText(text) {{
+                function normalizeText(text) {
                     return text.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-                }}
+                }
 
-                function extractSearchTerms(text) {{
+                function extractSearchTerms(text) {
                     const stopWords = ['quero', 'busco', 'procuro', 'gostaria', 'preciso', 'encontrar', 'um', 'uma', 'de', 'da', 'do', 'para', 'com', 'por', 'em', 'no', 'na', 'os', 'as'];
                     const words = text.toLowerCase().split(/\s+/);
                     return words.filter(w => w.length > 2 && !stopWords.includes(w));
-                }}
+                }
 
                 // ============================================================
                 // API
                 // ============================================================
-                async function fetchProperties() {{
-                    try {{
-                        const res = await fetch(`${{API_BASE}}/imoveis?status=Disponível&por_pagina=100`);
+                async function fetchProperties() {
+                    try {
+                        const res = await fetch(`${API_BASE}/imoveis?status=Disponível&por_pagina=100`);
                         const data = await res.json();
-                        if (data.sucesso) {{
+                        if (data.sucesso) {
                             allProperties = data.imoveis || [];
                             return allProperties;
-                        }}
+                        }
                         return [];
-                    }} catch (err) {{
+                    } catch (err) {
                         console.error('Erro ao buscar imóveis:', err);
                         return [];
-                    }}
-                }}
+                    }
+                }
 
 // ============================================================
 // MOTOR DE BUSCA - VERSÃO CORRIGIDA COM FILTROS EXATOS
 // ============================================================
-function searchProperties(query) {{
+function searchProperties(query) {
     if (!query || !allProperties || allProperties.length === 0) return [];
 
     const q = query.toLowerCase().trim();
 
     // NORMALIZAÇÃO AVANÇADA
-    function normalizeSearch(text) {{
+    function normalizeSearch(text) {
         if (!text) return '';
         return text.toLowerCase()
             .normalize('NFD')
@@ -8057,7 +8057,7 @@ function searchProperties(query) {{
             .replace(/[^a-z0-9\s-]/g, '')
             .replace(/\s+/g, ' ')
             .trim();
-    }}
+    }
 
     // ============================================================
     // EXTRAÇÃO INTELIGENTE DE BAIRRO
@@ -8068,16 +8068,16 @@ function searchProperties(query) {{
     // 1. Captura somente o trecho final depois de "em", "no" ou "na".
     // Assim, "pra alugar na Mooca" captura apenas "Mooca".
     let bairroMatch = q.match(/(?:\bem|\bno|\bna)\s+([a-záéíóúâêîôûàèìòùç\s-]+)$/i);
-    if (bairroMatch) {{
+    if (bairroMatch) {
         bairroOriginal = bairroMatch[1].trim();
         bairro = normalizeSearch(bairroOriginal);
-    }}
+    }
 
     // ============================================================
     // EXTRAÇÃO DE TIPO
     // ============================================================
     let tipo = null;
-    const tiposExatos = {{
+    const tiposExatos = {
         'apartamento': 'apartamento',
         'apto': 'apartamento',
         'ap': 'apartamento',
@@ -8094,29 +8094,29 @@ function searchProperties(query) {{
         'galpao': 'comercial',
         'cobertura': 'cobertura',
         'sobrado': 'sobrado'
-    }};
+    };
 
     const palavras = q.split(/\s+/);
-    for (const palavra of palavras) {{
+    for (const palavra of palavras) {
         const palavraNorm = normalizeSearch(palavra);
-        for (const [key, value] of Object.entries(tiposExatos)) {{
-            if (palavraNorm.includes(key) || key.includes(palavraNorm)) {{
+        for (const [key, value] of Object.entries(tiposExatos)) {
+            if (palavraNorm.includes(key) || key.includes(palavraNorm)) {
                 tipo = value;
                 break;
-            }}
-        }}
+            }
+        }
         if (tipo) break;
-    }}
+    }
 
     // ============================================================
     // EXTRAÇÃO DE FINALIDADE
     // ============================================================
     let finalidade = null;
-    if (q.includes('venda') || q.includes('comprar') || q.includes('compra') || q.includes('adquirir')) {{
+    if (q.includes('venda') || q.includes('comprar') || q.includes('compra') || q.includes('adquirir')) {
         finalidade = 'Venda';
-    }} else if (q.includes('alugar') || q.includes('locação') || q.includes('aluguel') || q.includes('locar')) {{
+    } else if (q.includes('alugar') || q.includes('locação') || q.includes('aluguel') || q.includes('locar')) {
         finalidade = 'Locação';
-    }}
+    }
 
     // ============================================================
     // EXTRAÇÃO DE QUARTOS
@@ -8130,15 +8130,15 @@ function searchProperties(query) {{
     // ============================================================
     let price = null;
     const priceMatch = q.match(/(?:at[eé]?|at[eé]? )?R?\$? ?([\d.,]+)/i);
-    if (priceMatch) {{
+    if (priceMatch) {
         price = parseFloat(priceMatch[1].replace(/\./g, '').replace(',', '.'));
-    }}
+    }
 
     // ============================================================
     // FILTRO E SCORING
     // ============================================================
     
-    let resultadosFiltrados = allProperties.filter(prop => {{
+    let resultadosFiltrados = allProperties.filter(prop => {
         let atende = true;
 
         // FILTRO OBRIGATÓRIO: Status disponível
@@ -8146,149 +8146,149 @@ function searchProperties(query) {{
         if (statusImovel && statusImovel !== 'disponivel') atende = false;
 
         // FILTRO OBRIGATÓRIO: Bairro
-        if (bairro) {{
+        if (bairro) {
             const propBairroNorm = normalizeSearch(prop.bairro || '');
             const bairroEncontrado = propBairroNorm === bairro || 
                                      propBairroNorm.includes(bairro) || 
                                      bairro.includes(propBairroNorm);
             if (!bairroEncontrado) atende = false;
-        }}
+        }
 
         // FILTRO OBRIGATÓRIO: Tipo
-        if (tipo && atende) {{
+        if (tipo && atende) {
             const propTipo = normalizeSearch(prop.tipo || '');
             const tipoEncontrado = propTipo !== '' && (propTipo.includes(tipo) || tipo.includes(propTipo));
             if (!tipoEncontrado) atende = false;
-        }}
+        }
 
         // FILTRO OBRIGATÓRIO: Finalidade
-        if (finalidade && atende) {{
+        if (finalidade && atende) {
             const propFinalidade = normalizeSearch(prop.finalidade || '');
             const finalidadeNorm = normalizeSearch(finalidade);
             const finalidadeEncontrada = propFinalidade.includes(finalidadeNorm) || 
                                          (propFinalidade.includes(finalidadeNorm) && 
                                           (finalidade === 'Venda' || finalidade === 'Locação'));
             if (!finalidadeEncontrada) atende = false;
-        }}
+        }
 
         // FILTRO OPCIONAL: Quartos
-        if (quartos && atende) {{
+        if (quartos && atende) {
             const propQuartos = parseInt(prop.quartos) || 0;
             if (propQuartos < quartos) atende = false;
-        }}
+        }
 
         // FILTRO OPCIONAL: Preço
-        if (price && atende) {{
+        if (price && atende) {
             const valor = finalidade === 'Venda' ? (prop.valor_venda || 0) : (prop.valor_locacao || 0);
             if (valor > 0 && valor > price * 1.5) atende = false;
-        }}
+        }
 
         return atende;
-    }});
+    });
 
     // Não ampliar a busca quando não há correspondência: os critérios informados
     // pelo usuário são obrigatórios e o resultado correto é "nenhum encontrado".
 
     // SCORING PARA ORDENAÇÃO
-    const scored = resultadosFiltrados.map(prop => {{
+    const scored = resultadosFiltrados.map(prop => {
         let score = 0;
         let matches = [];
 
         // BAIRRO
-        if (bairro && prop.bairro) {{
+        if (bairro && prop.bairro) {
             const propBairroNorm = normalizeSearch(prop.bairro);
-            if (propBairroNorm === bairro) {{
+            if (propBairroNorm === bairro) {
                 score += 100;
                 matches.push('bairro_exato');
-            }} else if (propBairroNorm.includes(bairro) || bairro.includes(propBairroNorm)) {{
+            } else if (propBairroNorm.includes(bairro) || bairro.includes(propBairroNorm)) {
                 score += 70;
                 matches.push('bairro_parcial');
-            }}
+            }
             const bairroWords = bairro.split(/\s+/);
             const propBairroWords = propBairroNorm.split(/\s+/);
             let matchCount = 0;
-            for (const word of bairroWords) {{
-                if (word.length > 2 && propBairroWords.some(pw => pw.includes(word) || word.includes(pw))) {{
+            for (const word of bairroWords) {
+                if (word.length > 2 && propBairroWords.some(pw => pw.includes(word) || word.includes(pw))) {
                     matchCount++;
-                }}
-            }}
-            if (matchCount > 0) {{
+                }
+            }
+            if (matchCount > 0) {
                 score += matchCount * 10;
-            }}
-        }}
+            }
+        }
 
         // TIPO
-        if (tipo && prop.tipo) {{
+        if (tipo && prop.tipo) {
             const propTipo = normalizeSearch(prop.tipo);
-            if (propTipo === tipo) {{
+            if (propTipo === tipo) {
                 score += 50;
                 matches.push('tipo_exato');
-            }} else if (propTipo.includes(tipo) || tipo.includes(propTipo)) {{
+            } else if (propTipo.includes(tipo) || tipo.includes(propTipo)) {
                 score += 30;
                 matches.push('tipo_parcial');
-            }}
-        }}
+            }
+        }
 
         // FINALIDADE
-        if (finalidade && prop.finalidade) {{
-            if (prop.finalidade === finalidade) {{
+        if (finalidade && prop.finalidade) {
+            if (prop.finalidade === finalidade) {
                 score += 40;
                 matches.push('finalidade_exata');
-            }} else if (prop.finalidade.includes(finalidade)) {{
+            } else if (prop.finalidade.includes(finalidade)) {
                 score += 25;
                 matches.push('finalidade_parcial');
-            }}
-        }}
+            }
+        }
 
         // QUARTOS
-        if (quartos && prop.quartos) {{
+        if (quartos && prop.quartos) {
             const propQuartos = parseInt(prop.quartos) || 0;
-            if (propQuartos >= quartos) {{
+            if (propQuartos >= quartos) {
                 score += 20;
-                if (propQuartos <= quartos + 1) {{
+                if (propQuartos <= quartos + 1) {
                     score += 10;
-                }}
-            }}
-        }}
+                }
+            }
+        }
 
         // PREÇO
-        if (price) {{
+        if (price) {
             const valor = finalidade === 'Venda' ? (prop.valor_venda || 0) : (prop.valor_locacao || 0);
-            if (valor > 0 && valor <= price * 1.5) {{
+            if (valor > 0 && valor <= price * 1.5) {
                 score += 20;
-            }}
-        }}
+            }
+        }
 
         // DESCRIÇÃO
         const desc = normalizeSearch(prop.descricao || '');
         const searchTerms = normalizeSearch(q).split(/\s+/).filter(w => w.length > 3);
         let keywordMatches = 0;
-        for (const term of searchTerms) {{
+        for (const term of searchTerms) {
             if (desc.includes(term)) keywordMatches++;
-        }}
-        if (keywordMatches > 0) {{
+        }
+        if (keywordMatches > 0) {
             score += Math.min(keywordMatches * 2, 10);
-        }}
+        }
 
-        return {{ ...prop, score, matches }};
-    }});
+        return { ...prop, score, matches };
+    });
 
     scored.sort((a, b) => b.score - a.score);
 
     return scored.slice(0, 12);
-}}
+}
 
 // ============================================================
 // RENDERIZAR RESULTADOS - COM IMAGENS CORRIGIDAS
 // ============================================================
-function renderResults(matches, query) {{
+function renderResults(matches, query) {
     resultsArea.style.display = 'block';
 
-    if (!matches || matches.length === 0) {{
+    if (!matches || matches.length === 0) {
         resultsContent.innerHTML = `
             <div class="ai-no-results">
                 <div class="ai-no-results-icon">🔍</div>
-                <h3>Nenhum imóvel encontrado para "${{query}}"</h3>
+                <h3>Nenhum imóvel encontrado para "${query}"</h3>
                 <p>Não há imóveis disponíveis que atendam simultaneamente a todos os critérios informados.</p>
                 <p>Tente retirar o bairro ou alterar o tipo e a finalidade da busca.</p>
                 <p style="font-size: 13px; margin-top: 8px; color: rgba(255,255,255,0.3);">
@@ -8297,13 +8297,13 @@ function renderResults(matches, query) {{
             </div>
         `;
         return;
-    }}
+    }
 
     let html = `<div style="margin-bottom: 16px; text-align: left; color: rgba(255,255,255,0.5); font-size: 13px;">
-        🏠 <strong style="color: #D4AF37;">${{matches.length}}</strong> imóveis encontrados para "${{query}}"
+        🏠 <strong style="color: #D4AF37;">${matches.length}</strong> imóveis encontrados para "${query}"
     </div>`;
 
-    matches.forEach(prop => {{
+    matches.forEach(prop => {
         // ============================================================
         // BUSCAR IMAGEM CORRETAMENTE
         // ============================================================
@@ -8311,33 +8311,33 @@ function renderResults(matches, query) {{
         
         // A API pode retornar imagens como array, JSON serializado ou em campos alternativos.
         let imagens = prop.imagens || prop.imagens_urls || prop.fotos || prop.images || prop.imagem_principal || prop.imagem || prop.foto;
-        if (typeof imagens === 'string') {{
-            try {{ imagens = JSON.parse(imagens); }} catch (e) {{ imagens = [imagens]; }}
-        }}
+        if (typeof imagens === 'string') {
+            try { imagens = JSON.parse(imagens); } catch (e) { imagens = [imagens]; }
+        }
         if (!Array.isArray(imagens)) imagens = imagens ? [imagens] : [];
         const primeiraImagem = imagens[0];
-        if (primeiraImagem) {{
+        if (primeiraImagem) {
             if (typeof primeiraImagem === 'string') imgUrl = primeiraImagem;
-            else if (typeof primeiraImagem === 'object') {{
+            else if (typeof primeiraImagem === 'object') {
                 imgUrl = primeiraImagem.url || primeiraImagem.path || primeiraImagem.arquivo || primeiraImagem.nome || imgUrl;
-            }}
-        }}
+            }
+        }
         
         // URLs antigas do backend podem estar indisponíveis (404); as fotos publicadas
         // pelo gerador ficam em db_imagens no domínio principal.
         imgUrl = String(imgUrl).replace(/^https?:\/\/[^/]+\/db_imagens\//i, SITE_BASE + '/db_imagens/');
-        if (imgUrl && !/^https?:\/\//i.test(imgUrl)) {{
+        if (imgUrl && !/^https?:\/\//i.test(imgUrl)) {
             imgUrl = SITE_BASE + '/' + String(imgUrl).replace(/^\/+/, '');
-        }}
+        }
 
         let priceText = '';
-        if (prop.finalidade && prop.finalidade.includes('Venda') && prop.valor_venda) {{
+        if (prop.finalidade && prop.finalidade.includes('Venda') && prop.valor_venda) {
             priceText = formatCurrency(prop.valor_venda);
-        }} else if (prop.valor_locacao) {{
+        } else if (prop.valor_locacao) {
             priceText = formatCurrency(prop.valor_locacao) + '/mês';
-        }} else {{
+        } else {
             priceText = 'Sob Consulta';
-        }}
+        }
 
         const tag = prop.finalidade || 'Imóvel';
         
@@ -8347,35 +8347,37 @@ function renderResults(matches, query) {{
         if (prop.banheiros) details.push(prop.banheiros + ' banheiros');
         const detailsText = details.join(' · ') || 'Detalhes sob consulta';
 
-        let titulo = prop.tipo || 'Imóvel';
-        if (prop.bairro) titulo += ` em ${{prop.bairro}}`;
+        let titulo = prop.titulo || prop.titulo_anuncio || prop.nome || prop.tipo || 'Imóvel';
+        if (!prop.titulo && !prop.titulo_anuncio && !prop.nome && prop.bairro) {
+            titulo += ` em ${prop.bairro}`;
+        }
 
         html += `
-            <div class="property-card ai-filter-property-card" onclick="window.location.href='imovel_${{prop.id}}.html'">
-                <div class="property-badge" style="background: #c0a062;">${{tag}}</div>
+            <div class="property-card ai-filter-property-card" onclick="window.location.href='imovel_${prop.id}.html'">
+                <div class="property-badge" style="background: #c0a062;">${tag}</div>
                 <div class="property-image">
-                    <img src="${{imgUrl}}" alt="${{titulo}}" onerror="this.src='https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&q=80'">
+                    <img src="${imgUrl}" alt="${titulo}" onerror="this.src='https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&q=80'">
                 </div>
                 <div class="property-info">
-                    <div class="property-location">${{prop.bairro || 'São Paulo'}} • São Paulo</div>
-                    <h3 class="property-title">${{titulo}}</h3>
+                    <div class="property-location">${prop.bairro || 'São Paulo'} • ${prop.cidade || 'São Paulo'}</div>
+                    <h3 class="property-title">${titulo}</h3>
                     <div class="property-features">
-                        <span>${{detailsText}}</span>
+                        <span>${detailsText}</span>
                     </div>
-                    <div class="property-price">${{priceText}}</div>
-                    <a href="imovel_${{prop.id}}.html" class="property-button" onclick="event.stopPropagation()">VER DETALHES</a>
+                    <div class="property-price">${priceText}</div>
+                    <a href="imovel_${prop.id}.html" class="property-button" onclick="event.stopPropagation()">VER DETALHES</a>
                 </div>
             </div>
         `;
-    }});
+    });
 
     resultsContent.innerHTML = html;
-    resultsContent.scrollIntoView({{ behavior: 'smooth', block: 'start' }});
-}}
+    resultsContent.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
                 // ============================================================
                 // BUSCA PRINCIPAL
                 // ============================================================
-                async function performSearch(query) {{
+                async function performSearch(query) {
                     if (!query || !query.trim()) return;
 
                     const searchTerm = query.trim();
@@ -8385,9 +8387,9 @@ function renderResults(matches, query) {{
                     resultsArea.style.display = 'none';
 
                     // Carregar imóveis se necessário
-                    if (allProperties.length === 0) {{
+                    if (allProperties.length === 0) {
                         await fetchProperties();
-                    }}
+                    }
 
                     // Buscar
                     const results = searchProperties(searchTerm);
@@ -8397,43 +8399,43 @@ function renderResults(matches, query) {{
 
                     // Mostrar resultados
                     renderResults(results, searchTerm);
-                }}
+                }
 
                 // ============================================================
                 // EVENTOS
                 // ============================================================
 
                 // Botão Buscar
-                if (btnBuscar) {{
-                    btnBuscar.addEventListener('click', () => {{
+                if (btnBuscar) {
+                    btnBuscar.addEventListener('click', () => {
                         performSearch(input.value);
-                    }});
-                }}
+                    });
+                }
 
                 // Enter
-                if (input) {{
-                    input.addEventListener('keydown', (e) => {{
-                        if (e.key === 'Enter') {{
+                if (input) {
+                    input.addEventListener('keydown', (e) => {
+                        if (e.key === 'Enter') {
                             e.preventDefault();
                             performSearch(input.value);
-                        }}
-                    }});
-                }}
+                        }
+                    });
+                }
 
                 // Chips de sugestão
-                chips.forEach(chip => {{
-                    chip.addEventListener('click', () => {{
+                chips.forEach(chip => {
+                    chip.addEventListener('click', () => {
                         const query = chip.dataset.query;
                         if (input) input.value = query;
                         performSearch(query);
-                    }});
-                }});
+                    });
+                });
 
                 // Carregar imóveis em background
                 fetchProperties();
 
                 console.log('🤖 Agente de IA inicializado!');
-            }})();
+            })();
 
             // ============================================================
             // FIM DO AGENTE DE IA

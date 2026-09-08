@@ -2828,8 +2828,10 @@ function renderResults(matches, query) {
         if (prop.banheiros) details.push(prop.banheiros + ' banheiros');
         const detailsText = details.join(' · ') || 'Detalhes sob consulta';
 
-        let titulo = prop.tipo || 'Imóvel';
-        if (prop.bairro) titulo += ` em ${prop.bairro}`;
+        let titulo = prop.titulo || prop.titulo_anuncio || prop.nome || prop.tipo || 'Imóvel';
+        if (!prop.titulo && !prop.titulo_anuncio && !prop.nome && prop.bairro) {
+            titulo += ` em ${prop.bairro}`;
+        }
 
         html += `
             <div class="property-card ai-filter-property-card" onclick="window.location.href='imovel_${prop.id}.html'">
@@ -2838,7 +2840,7 @@ function renderResults(matches, query) {
                     <img src="${imgUrl}" alt="${titulo}" onerror="this.src='https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&q=80'">
                 </div>
                 <div class="property-info">
-                    <div class="property-location">${prop.bairro || 'São Paulo'} • São Paulo</div>
+                    <div class="property-location">${prop.bairro || 'São Paulo'} • ${prop.cidade || 'São Paulo'}</div>
                     <h3 class="property-title">${titulo}</h3>
                     <div class="property-features">
                         <span>${detailsText}</span>
