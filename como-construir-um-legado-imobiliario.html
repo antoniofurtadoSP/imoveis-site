@@ -68,6 +68,8 @@
             line-height: 1.6;
             width: 100%;
             max-width: 100vw;
+            /* Reserva sempre o mesmo espaço para o header fixo. */
+            padding-top: 130px !important;
         }
 
         /* TIPOGRAFIA LUXURY */
@@ -182,12 +184,22 @@
             }
             
             .logo-img {
-                height: 60px;
+                height: 80px;
             }
             
+            header {
+                height: 130px;
+                min-height: 130px;
+            }
+
             nav {
-                min-height: 90px;
-                padding: 12px 30px;
+                height: 130px;
+                min-height: 130px;
+                padding: 15px 20px;
+            }
+
+            body {
+                padding-top: 130px !important;
             }
         }
                 body { padding-top: 100px; }
@@ -217,15 +229,19 @@
 
         /* HEADER MINIMALISTA */
         header {
-            position: fixed;
+            position: fixed !important;
             top: 0;
             left: 0;
             width: 100%;
+            height: 130px;
+            min-height: 130px;
             z-index: 1000;
-            background: #1a1a1a;
-            backdrop-filter: blur(10px);
-            transition: all 0.5s ease;
-            overflow-x: hidden;
+            background: #1a1a1a !important;
+            color: #fff;
+            /* Sem transição/backdrop para evitar o flash branco no carregamento. */
+            transition: none !important;
+            backdrop-filter: none;
+            overflow: visible;
         }
 
         nav {
@@ -236,8 +252,9 @@
             max-width: 1400px;
             margin: 0 auto;
             width: 100%;
+            height: 130px;
+            min-height: 130px;
             box-sizing: border-box;
-            min-height: 100px;
         }
 
         .nav-links {
