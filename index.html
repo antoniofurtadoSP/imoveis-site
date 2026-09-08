@@ -208,8 +208,10 @@
 
         .nav-links {
             display: flex;
-            gap: 28px;
+            align-items: center;
+            gap: 22px;
             list-style: none;
+            flex-wrap: nowrap;
         }
 
         .nav-links a {
@@ -217,6 +219,7 @@
             text-decoration: none;
             font-size: 13px;
             text-transform: uppercase;
+            white-space: nowrap;
             transition: color 0.3s;
         }
 
@@ -1596,10 +1599,10 @@
         }
         
             /* Escala restaurada da página inicial */
-            nav { min-height: 120px; padding: 20px 50px; }
-            .logo-img { height: 100px; }
-            .nav-links { gap: 36px; }
-            .nav-links a { font-size: 15px; }
+            nav { min-height: 120px; padding: 20px 50px; max-width: 1520px; }
+            .logo-img { height: 78px; }
+            .nav-links { gap: 24px; }
+            .nav-links a { font-size: 13px; }
             .hero-content { min-height: 115vh; padding: 160px 50px 140px; }
             .hero-content h1 { font-size: 82px; }
             .hero-content p { font-size: 22px; max-width: 760px; }
