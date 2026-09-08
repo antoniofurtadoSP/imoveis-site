@@ -2828,12 +2828,8 @@ function renderResults(matches, query) {
         if (prop.banheiros) details.push(prop.banheiros + ' banheiros');
         const detailsText = details.join(' · ') || 'Detalhes sob consulta';
 
-        const tituloAPI = prop.titulo || prop.titulo_anuncio || prop.nome || '';
-        const primeiraLinhaDescricao = String(prop.descricao || '')
-            .split(/?
-/).map(linha => linha.trim()).find(Boolean) || '';
-        let titulo = tituloAPI || primeiraLinhaDescricao || prop.tipo || 'Imóvel';
-        if (!tituloAPI && !primeiraLinhaDescricao && prop.bairro) {
+        let titulo = prop.titulo || prop.titulo_anuncio || prop.nome || prop.tipo || 'Imóvel';
+        if (!prop.titulo && !prop.titulo_anuncio && !prop.nome && prop.bairro) {
             titulo += ` em ${prop.bairro}`;
         }
 
