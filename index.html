@@ -2832,15 +2832,20 @@ function renderResults(matches, query) {
         if (prop.bairro) titulo += ` em ${prop.bairro}`;
 
         html += `
-            <div class="ai-result-card" onclick="window.location.href='imovel_${prop.id}.html'">
-                <img src="${imgUrl}" alt="${titulo}" onerror="this.src='https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=200&q=80'">
-                <div class="ai-result-info">
-                    <span class="ai-result-tag">${tag}</span>
-                    <h4>${titulo}</h4>
-                    <div class="ai-result-price">${priceText}</div>
-                    <div class="ai-result-details">${detailsText}</div>
+            <div class="property-card ai-filter-property-card" onclick="window.location.href='imovel_${prop.id}.html'">
+                <div class="property-badge" style="background: #c0a062;">${tag}</div>
+                <div class="property-image">
+                    <img src="${imgUrl}" alt="${titulo}" onerror="this.src='https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&q=80'">
                 </div>
-                <span class="ai-result-arrow">›</span>
+                <div class="property-info">
+                    <div class="property-location">${prop.bairro || 'São Paulo'} • São Paulo</div>
+                    <h3 class="property-title">${titulo}</h3>
+                    <div class="property-features">
+                        <span>${detailsText}</span>
+                    </div>
+                    <div class="property-price">${priceText}</div>
+                    <a href="imovel_${prop.id}.html" class="property-button" onclick="event.stopPropagation()">VER DETALHES</a>
+                </div>
             </div>
         `;
     });
