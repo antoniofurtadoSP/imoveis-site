@@ -2312,7 +2312,7 @@
         <!-- IMÓVEIS: TEASER (cards completos ficam em imoveis.html) -->
         <section class="section" id="properties" style="text-align:center;">
             <h2 class="section-title">IMÓVEIS PARA COMPRA E LOCAÇÃO</h2>
-            <p class="section-subtitle">A venda e a locação seguem fazendo parte do nosso trabalho — sempre com o mesmo padrão de gestão e cuidado. Confira nossas 180 oportunidades disponíveis.</p>
+            <p class="section-subtitle">A venda e a locação seguem fazendo parte do nosso trabalho — sempre com o mesmo padrão de gestão e cuidado. Confira nossas 181 oportunidades disponíveis.</p>
             <a href="imoveis.html" style="display:inline-block; background:#111; color:#fff; padding:16px 40px; border-radius:2px; font-weight:600; letter-spacing:1px; text-decoration:none; text-transform:uppercase; font-size:14px;">Ver todos os imóveis</a>
         </section>
 
@@ -2574,7 +2574,7 @@ function searchProperties(query) {
 
     // Preço máximo: entende R$ 2.500, até 2500, valor de 2500 etc.
     let price = null;
-    const priceMatch = q.match(/(?:r\$|ate|abaixo de|menos de|valor de|por ate)?\s*(\d(1, 3)(?:[.\s]\d{3})*(?:,\d{1,2})?|\d+(?:,\d{1,2})?)/i);
+    const priceMatch = q.match(/(?:r\$|ate|abaixo de|menos de|valor de|por ate)?\s*(\d{1,3}(?:[.\s]\d{3})*(?:,\d{1,2})?|\d+(?:,\d{1,2})?)/i);
     if (priceMatch) {
         const raw = priceMatch[1].replace(/\s/g, '').replace(/\./g, '').replace(',', '.');
         const parsed = Number(raw);
@@ -2874,7 +2874,5 @@ function renderResults(matches, query) {
             }
         })();
         </script>
-        <!-- AGENTE IA - BUSCA INTELIGENTE -->
-        <script src="ai-agent.js"></script>
     </body>
     </html>
