@@ -2665,8 +2665,36 @@ function searchProperties(query) {
 // ============================================================
 // RENDERIZAR RESULTADOS - COM IMAGENS CORRIGIDAS
 // ============================================================
+// Esconde a listagem completa (grid + paginação) enquanto o Agente de IA mostra
+// resultados filtrados. So existe #properties-grid na pagina de imoveis; na home
+// essa funcao nao encontra o elemento e nao faz nada (comportamento da home preservado).
+function alternarListagemCompleta(mostrar) {
+    const grid = document.getElementById('properties-grid');
+    if (!grid) return;
+    const secaoCompleta = document.getElementById('properties');
+    if (secaoCompleta) secaoCompleta.style.display = mostrar ? '' : 'none';
+}
+
+window.aiVoltarTodosImoveis = function() {
+    resultsArea.style.display = 'none';
+    resultsContent.innerHTML = '';
+    if (input) input.value = '';
+    alternarListagemCompleta(true);
+    const secaoCompleta = document.getElementById('properties');
+    if (secaoCompleta) secaoCompleta.scrollIntoView({ behavior: 'smooth', block: 'start' });
+};
+
+const BOTAO_VOLTAR_TODOS = `
+    <div style="text-align:center; margin-top: 28px;">
+        <button onclick="window.aiVoltarTodosImoveis()" style="background:transparent;border:1px solid rgba(255,255,255,0.25);color:#D4AF37;padding:12px 28px;border-radius:4px;font-weight:600;letter-spacing:0.5px;cursor:pointer;font-size:13px;text-transform:uppercase;">
+            Ver todos os imóveis
+        </button>
+    </div>
+`;
+
 function renderResults(matches, query) {
     resultsArea.style.display = 'block';
+    alternarListagemCompleta(false);
 
     if (!matches || matches.length === 0) {
         resultsContent.innerHTML = `
@@ -2679,7 +2707,7 @@ function renderResults(matches, query) {
                     💡 Dica: "Apartamento 2 quartos na Mooca" ou "Casa com quintal"
                 </p>
             </div>
-        `;
+        ` + BOTAO_VOLTAR_TODOS;
         return;
     }
 
@@ -2763,6 +2791,8 @@ function renderResults(matches, query) {
             </div>
         `;
     });
+
+    html += BOTAO_VOLTAR_TODOS;
 
     resultsContent.innerHTML = html;
     resultsContent.scrollIntoView({ behavior: 'smooth', block: 'start' });
