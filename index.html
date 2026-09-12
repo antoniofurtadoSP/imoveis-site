@@ -2555,12 +2555,16 @@ function searchProperties(query) {
 
     // Sinônimos comuns de tipo; o valor comparado é a categoria do cadastro.
     const typeAliases = {
-        'apartamento': 'apartamento', 'apto': 'apartamento', 'ap': 'apartamento',
-        'flat': 'apartamento', 'studio': 'apartamento', 'loft': 'apartamento', 'kitnet': 'apartamento',
-        'casa': 'casa', 'sobrado': 'sobrado', 'cobertura': 'cobertura',
-        'terreno': 'terreno', 'comercial': 'comercial', 'sala': 'comercial',
-        'loja': 'comercial', 'galpao': 'comercial', 'chacara': 'chacara',
-        'sitio': 'propriedade rural', 'rural': 'propriedade rural'
+        'apartamento': 'apartamento', 'apartamentos': 'apartamento', 'apto': 'apartamento', 'aptos': 'apartamento', 'ap': 'apartamento',
+        'flat': 'apartamento', 'flats': 'apartamento', 'studio': 'apartamento', 'studios': 'apartamento',
+        'loft': 'apartamento', 'lofts': 'apartamento', 'kitnet': 'apartamento', 'kitnets': 'apartamento',
+        'casa': 'casa', 'casas': 'casa', 'sobrado': 'sobrado', 'sobrados': 'sobrado', 'cobertura': 'cobertura', 'coberturas': 'cobertura',
+        'terreno': 'terreno', 'terrenos': 'terreno',
+        'comercial': 'comercial', 'comerciais': 'comercial', 'sala': 'comercial', 'salas': 'comercial',
+        'loja': 'comercial', 'lojas': 'comercial', 'galpao': 'comercial', 'galpoes': 'comercial',
+        'escritorio': 'comercial', 'escritorios': 'comercial',
+        'chacara': 'chacara', 'chacaras': 'chacara',
+        'sitio': 'propriedade rural', 'sitios': 'propriedade rural', 'rural': 'propriedade rural', 'rurais': 'propriedade rural'
     };
     let tipo = null;
     for (const word of words) {
@@ -2652,7 +2656,11 @@ function searchProperties(query) {
         return { ...prop, score, matches: [] };
     });
     scored.sort((a, b) => b.score - a.score);
-    return scored.slice(0, 12);
+    // Quando bairro/tipo/finalidade/quartos/preco realmente restringiram a lista (strict),
+    // mostra todos os resultados relevantes em vez de truncar em 12; o corte de 12 fica
+    // reservado para o fallback totalmente livre (sem nenhum criterio reconhecido na frase).
+    const limite = (candidates === strict) ? Math.min(scored.length, 30) : 12;
+    return scored.slice(0, limite);
 }
 // ============================================================
 // RENDERIZAR RESULTADOS - COM IMAGENS CORRIGIDAS
