@@ -4,7 +4,7 @@
     <Provider>Antonio Furtado Gestão Patrimonial Imobiliária</Provider>
     <Email>contato@antoniofurtado.com.br</Email>
     <ContactName>Antonio Furtado</ContactName>
-    <PublishDate>2026-09-14T11:33:02</PublishDate>
+    <PublishDate>2026-09-14T14:31:21</PublishDate>
   </Header>
   <Listings>
     <Listing>
@@ -13173,25 +13173,38 @@ Propriedade autossustentável, unindo produção rural e lazer familiar em um s�
       <PublicationType>STANDARD</PublicationType>
       <DetailViewUrl>https://www.antoniofurtado.com.br/imovel_39.html</DetailViewUrl>
       <Media>
-        <Item medium="image" caption="imagem1" primary="true">https://www.antoniofurtado.com.br/db_imagens/20260213201414_whatsapp-image-2026-02-13-at-20-06-49-1.jpeg</Item>
-        <Item medium="image" caption="imagem2">https://www.antoniofurtado.com.br/db_imagens/20260213201414_whatsapp-image-2026-02-13-at-20-06-49.jpeg</Item>
-        <Item medium="image" caption="imagem3">https://www.antoniofurtado.com.br/db_imagens/20260213201414_whatsapp-image-2026-02-13-at-20-06-50-1.jpeg</Item>
-        <Item medium="image" caption="imagem4">https://www.antoniofurtado.com.br/db_imagens/20260213201414_whatsapp-image-2026-02-13-at-20-06-50-2.jpeg</Item>
-        <Item medium="image" caption="imagem5">https://www.antoniofurtado.com.br/db_imagens/20260213201414_whatsapp-image-2026-02-13-at-20-06-50-3.jpeg</Item>
-        <Item medium="image" caption="imagem6">https://www.antoniofurtado.com.br/db_imagens/20260213201414_whatsapp-image-2026-02-13-at-20-06-50.jpeg</Item>
-        <Item medium="image" caption="imagem7">https://www.antoniofurtado.com.br/db_imagens/20260213201414_whatsapp-image-2026-02-13-at-20-06-51-1.jpeg</Item>
-        <Item medium="image" caption="imagem8">https://www.antoniofurtado.com.br/db_imagens/20260213201414_whatsapp-image-2026-02-13-at-20-06-51-2.jpeg</Item>
-        <Item medium="image" caption="imagem9">https://www.antoniofurtado.com.br/db_imagens/20260213201414_whatsapp-image-2026-02-13-at-20-06-51-3.jpeg</Item>
-        <Item medium="image" caption="imagem10">https://www.antoniofurtado.com.br/db_imagens/20260213201414_whatsapp-image-2026-02-13-at-20-06-51.jpeg</Item>
-        <Item medium="image" caption="imagem11">https://www.antoniofurtado.com.br/db_imagens/20260213201414_whatsapp-image-2026-02-13-at-20-06-52.jpeg</Item>
-        <Item medium="image" caption="imagem12">https://www.antoniofurtado.com.br/db_imagens/20260213201414_whatsapp-image-2026-02-13-at-20-06-53.jpeg</Item>
-        <Item medium="image" caption="imagem13">https://www.antoniofurtado.com.br/db_imagens/20260213201414_whatsapp-image-2026-02-13-at-20-06-55.jpeg</Item>
+        <Item medium="image" caption="imagem1" primary="true">https://www.antoniofurtado.com.br/db_imagens/20260914142320_WhatsApp%20Image%202026-09-14%20at%2014.18.33.jpeg</Item>
+        <Item medium="image" caption="imagem2">https://www.antoniofurtado.com.br/db_imagens/20260914142320_WhatsApp%20Image%202026-09-14%20at%2014.18.35%20(2).jpeg</Item>
+        <Item medium="image" caption="imagem3">https://www.antoniofurtado.com.br/db_imagens/20260914142320_WhatsApp%20Image%202026-09-14%20at%2014.18.34.jpeg</Item>
+        <Item medium="image" caption="imagem4">https://www.antoniofurtado.com.br/db_imagens/20260914142320_WhatsApp%20Image%202026-09-14%20at%2014.18.34%20(1).jpeg</Item>
+        <Item medium="image" caption="imagem5">https://www.antoniofurtado.com.br/db_imagens/20260914142320_WhatsApp%20Image%202026-09-14%20at%2014.18.35%20(1).jpeg</Item>
+        <Item medium="image" caption="imagem6">https://www.antoniofurtado.com.br/db_imagens/20260914142319_WhatsApp%20Image%202026-09-14%20at%2014.18.33%20(1).jpeg</Item>
+        <Item medium="image" caption="imagem7">https://www.antoniofurtado.com.br/db_imagens/20260914142320_WhatsApp%20Image%202026-09-14%20at%2014.18.34%20(2).jpeg</Item>
+        <Item medium="image" caption="imagem8">https://www.antoniofurtado.com.br/db_imagens/20260914142320_WhatsApp%20Image%202026-09-14%20at%2014.18.35%20(3).jpeg</Item>
+        <Item medium="image" caption="imagem9">https://www.antoniofurtado.com.br/db_imagens/20260914142321_WhatsApp%20Image%202026-09-14%20at%2014.18.36%20(1).jpeg</Item>
+        <Item medium="image" caption="imagem10">https://www.antoniofurtado.com.br/db_imagens/20260914142321_WhatsApp%20Image%202026-09-14%20at%2014.18.35.jpeg</Item>
+        <Item medium="image" caption="imagem11">https://www.antoniofurtado.com.br/db_imagens/20260914142321_WhatsApp%20Image%202026-09-14%20at%2014.18.36%20(2).jpeg</Item>
+        <Item medium="image" caption="imagem12">https://www.antoniofurtado.com.br/db_imagens/20260914142321_WhatsApp%20Image%202026-09-14%20at%2014.18.36.jpeg</Item>
+        <Item medium="image" caption="imagem13">https://www.antoniofurtado.com.br/db_imagens/20260914142321_WhatsApp%20Image%202026-09-14%20at%2014.18.37.jpeg</Item>
       </Media>
       <Details>
         <UsageType>Commercial</UsageType>
         <PropertyType>Commercial / Comercial</PropertyType>
-        <Description>Excelente loja comercial com 110m², estrategicamente localizado no coração da Mooca. O espaço está pronto para operação, com acabamento moderno, incluindo detalhes em tijolinho aparente, iluminação embutida e área de atendimento estruturada. Oportunidade de Ouro: O grande diferencial deste imóvel é o boom demográfico imediato.</Description>
-        <RentalPrice currency="BRL">5400</RentalPrice>
+        <Description>Ponto Comercial para Restaurante na Mooca | 110m² na Rua Conselheiro João Alfredo
+
+Excelente oportunidade de locação de loja comercial na Mooca, ideal para restaurantes, bares, cafeterias, hamburguerias e estabelecimentos do ramo de alimentação. Localizado na tradicional Rua Conselheiro João Alfredo, em São Paulo, o imóvel possui 110m² de área útil com layout funcional para receber seu público com conforto e eficiência.
+Destaques e Estrutura do Imóvel:
+Espaço Amplo: 110m² de área útil ideal para salão de atendimento e montagem de cozinha industrial ou operacional.
+Ambiente Achegado: Acabamento moderno com tijolinho aparente e projeto de iluminação embutida, criando uma atmosfera acolhedora para clientes.
+Infraestrutura: Área de atendimento estruturada e 2 banheiros para clientes e colaboradores.
+Alto Potencial de Vendas: Região com boom demográfico imediato, excelente fluxo local e alta demanda por opções gastronômicas.
+Valores e Informações Financeiras:
+Aluguel: R$ 5.500,00/mês
+IPTU: R$ 480,00/mês
+Condomínio: Sob consulta
+O Ponto gastronômico perfeito para expandir ou iniciar sua operação comercial no coração da Mooca.
+Agende uma visita com o consultor Antonio Furtado (CRECI 208024) e garanta o espaço ideal para o seu restaurante.</Description>
+        <RentalPrice currency="BRL">5500</RentalPrice>
         <PropertyAdministrationFee currency="BRL">0</PropertyAdministrationFee>
         <YearlyTax currency="BRL">480</YearlyTax>
         <LotArea unit="square metres">110</LotArea>
