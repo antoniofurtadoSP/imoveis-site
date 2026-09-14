@@ -8176,7 +8176,12 @@ function searchProperties(query) {
         .sort((a, b) => normalizeSearch(b).length - normalizeSearch(a).length);
     for (const candidate of knownNeighborhoods) {
         const candidateNorm = normalizeSearch(candidate);
-        if (candidateNorm && (q === candidateNorm || q.includes(candidateNorm))) {
+        if (!candidateNorm) continue;
+        // Evita que um bairro cadastrado com o mesmo nome de uma palavra de tipo
+        // (ex.: um imóvel com bairro preenchido como "Comercial" por engano) sequestre
+        // a busca por tipo, escondendo todos os outros imóveis do mesmo tipo em bairros reais.
+        if (typeAliases[candidateNorm]) continue;
+        if (q === candidateNorm || q.includes(candidateNorm)) {
             bairro = candidateNorm;
             bairroOriginal = candidate;
             break;
