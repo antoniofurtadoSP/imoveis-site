@@ -4,9 +4,142 @@
     <Provider>Antonio Furtado Gestão Patrimonial Imobiliária</Provider>
     <Email>contato@antoniofurtado.com.br</Email>
     <ContactName>Antonio Furtado</ContactName>
-    <PublishDate>2026-09-15T00:25:02</PublishDate>
+    <PublishDate>2026-09-16T19:03:11</PublishDate>
   </Header>
   <Listings>
+    <Listing>
+      <ListingID>IMOB-00231</ListingID>
+      <Title>Comercial para alugar em Ipiranga, São Paulo</Title>
+      <TransactionType>For Rent</TransactionType>
+      <PublicationType>STANDARD</PublicationType>
+      <DetailViewUrl>https://www.antoniofurtado.com.br/imovel_231.html</DetailViewUrl>
+      <Media>
+        <Item medium="image" caption="imagem1" primary="true">https://www.antoniofurtado.com.br/db_imagens/20260916185301_WhatsApp%20Image%202026-09-16%20at%2017.49.55.jpeg</Item>
+        <Item medium="image" caption="imagem2">https://www.antoniofurtado.com.br/db_imagens/20260916185301_WhatsApp%20Image%202026-09-16%20at%2017.49.54.jpeg</Item>
+        <Item medium="image" caption="imagem3">https://www.antoniofurtado.com.br/db_imagens/20260916185712_b431304f-69a1-4c2e-acb7-bec19598b231.jpg</Item>
+        <Item medium="image" caption="imagem4">https://www.antoniofurtado.com.br/db_imagens/20260916185711_de388571-7f69-470f-bbf4-80c66cf6df83.jpg</Item>
+        <Item medium="image" caption="imagem5">https://www.antoniofurtado.com.br/db_imagens/20260916185301_WhatsApp%20Image%202026-09-16%20at%2017.49.55%20(1).jpeg</Item>
+        <Item medium="image" caption="imagem6">https://www.antoniofurtado.com.br/db_imagens/20260916185711_408c8a4a-36e8-4434-85e9-4fb0e2bcbdc2.jpg</Item>
+        <Item medium="image" caption="imagem7">https://www.antoniofurtado.com.br/db_imagens/20260916185711_bc60be7e-4f87-4683-81bc-dcb24e1627e6.jpg</Item>
+        <Item medium="image" caption="imagem8">https://www.antoniofurtado.com.br/db_imagens/20260916185711_689c9976-5787-4ef0-9995-6e77c4cd5ecb.jpg</Item>
+        <Item medium="image" caption="imagem9">https://www.antoniofurtado.com.br/db_imagens/20260916185711_b59b69cd-cda3-4b24-8338-2205c83bf3ac.jpg</Item>
+        <Item medium="image" caption="imagem10">https://www.antoniofurtado.com.br/db_imagens/20260916185711_813042ce-ae8a-44c6-943b-9b808aac5948.jpg</Item>
+      </Media>
+      <Details>
+        <UsageType>Commercial</UsageType>
+        <PropertyType>Commercial / Comercial</PropertyType>
+        <Description>Galpão Industrial para Locação no Ipiranga, São Paulo (600m²)
+Excelente oportunidade para empresas e indústrias que buscam infraestrutura completa e localização estratégica na Zona Sul de São Paulo.
+Destaques do Imóvel
+Área Total: 600 m² de área construída
+Capacidade de Carga: Equipado com ponte rolante funcional com capacidade para 3 toneladas
+Estrutura Administrativa: Múltiplos escritórios privativos para operação corporativa
+Infraestrutura Completa: Vestiários masculinos e femininos, banheiros e cozinha/copa
+Localização Privilegiada Localizado na Rua Dom Lucas Obes, 1138, em região com fácil acesso às principais vias de escoamento e transporte de cargas de São Paulo.
+Valores
+Aluguel: R$ 22.000,00 / mês
+IPTU: R$ 1.399,03 / mês</Description>
+        <RentalPrice currency="BRL">22000</RentalPrice>
+        <PropertyAdministrationFee currency="BRL">0</PropertyAdministrationFee>
+        <YearlyTax currency="BRL">1399.03</YearlyTax>
+        <LotArea unit="square metres">600</LotArea>
+        <LivingArea unit="square metres">600</LivingArea>
+        <Bedrooms>0</Bedrooms>
+        <Suites>0</Suites>
+        <Bathrooms>2</Bathrooms>
+        <Garage type="Parking Space">0</Garage>
+      </Details>
+      <Location displayAddress="Street">
+        <Country abbreviation="BR">Brasil</Country>
+        <State abbreviation="SP">SP</State>
+        <City>São Paulo</City>
+        <Neighborhood>Ipiranga</Neighborhood>
+        <Address>Rua Dom Lucas Obes</Address>
+        <StreetNumber>1138</StreetNumber>
+        <PostalCode>04212-020</PostalCode>
+        <Latitude>-23.5886147</Latitude>
+        <Longitude>-46.5962769</Longitude>
+      </Location>
+      <ContactInfo>
+        <Name>Antonio Furtado</Name>
+        <Email>contato@antoniofurtado.com.br</Email>
+        <Website>https://www.antoniofurtado.com.br</Website>
+        <OfficeName>Antonio Furtado Gestão Patrimonial Imobiliária</OfficeName>
+      </ContactInfo>
+    </Listing>
+    <Listing>
+      <ListingID>IMOB-00230</ListingID>
+      <Title>Casa para alugar em Mooca, São Paulo</Title>
+      <TransactionType>For Rent</TransactionType>
+      <PublicationType>STANDARD</PublicationType>
+      <DetailViewUrl>https://www.antoniofurtado.com.br/imovel_230.html</DetailViewUrl>
+      <Media>
+        <Item medium="image" caption="imagem1" primary="true">https://www.antoniofurtado.com.br/db_imagens/20260916184333_WhatsApp%20Image%202026-09-16%20at%2018.38.52%20(1).jpeg</Item>
+        <Item medium="image" caption="imagem2">https://www.antoniofurtado.com.br/db_imagens/20260916184331_WhatsApp%20Image%202026-09-16%20at%2018.38.54.jpeg</Item>
+        <Item medium="image" caption="imagem3">https://www.antoniofurtado.com.br/db_imagens/20260916184332_WhatsApp%20Image%202026-09-16%20at%2018.38.49%20(2).jpeg</Item>
+        <Item medium="image" caption="imagem4">https://www.antoniofurtado.com.br/db_imagens/20260916184332_WhatsApp%20Image%202026-09-16%20at%2018.38.49%20(1).jpeg</Item>
+        <Item medium="image" caption="imagem5">https://www.antoniofurtado.com.br/db_imagens/20260916184332_WhatsApp%20Image%202026-09-16%20at%2018.38.49.jpeg</Item>
+        <Item medium="image" caption="imagem6">https://www.antoniofurtado.com.br/db_imagens/20260916184333_WhatsApp%20Image%202026-09-16%20at%2018.38.51%20(2).jpeg</Item>
+        <Item medium="image" caption="imagem7">https://www.antoniofurtado.com.br/db_imagens/20260916184333_WhatsApp%20Image%202026-09-16%20at%2018.38.52%20(2).jpeg</Item>
+        <Item medium="image" caption="imagem8">https://www.antoniofurtado.com.br/db_imagens/20260916184333_WhatsApp%20Image%202026-09-16%20at%2018.38.52%20(3).jpeg</Item>
+        <Item medium="image" caption="imagem9">https://www.antoniofurtado.com.br/db_imagens/20260916184333_WhatsApp%20Image%202026-09-16%20at%2018.38.53%20(1).jpeg</Item>
+        <Item medium="image" caption="imagem10">https://www.antoniofurtado.com.br/db_imagens/20260916184331_WhatsApp%20Image%202026-09-16%20at%2018.38.48%20(1).jpeg</Item>
+        <Item medium="image" caption="imagem11">https://www.antoniofurtado.com.br/db_imagens/20260916184332_WhatsApp%20Image%202026-09-16%20at%2018.38.49%20(3).jpeg</Item>
+        <Item medium="image" caption="imagem12">https://www.antoniofurtado.com.br/db_imagens/20260916184332_WhatsApp%20Image%202026-09-16%20at%2018.38.50%20(1).jpeg</Item>
+        <Item medium="image" caption="imagem13">https://www.antoniofurtado.com.br/db_imagens/20260916184333_WhatsApp%20Image%202026-09-16%20at%2018.38.52.jpeg</Item>
+        <Item medium="image" caption="imagem14">https://www.antoniofurtado.com.br/db_imagens/20260916184333_WhatsApp%20Image%202026-09-16%20at%2018.38.53%20(2).jpeg</Item>
+        <Item medium="image" caption="imagem15">https://www.antoniofurtado.com.br/db_imagens/20260916184334_WhatsApp%20Image%202026-09-16%20at%2018.38.53.jpeg</Item>
+        <Item medium="image" caption="imagem16">https://www.antoniofurtado.com.br/db_imagens/20260916184332_WhatsApp%20Image%202026-09-16%20at%2018.38.51%20(1).jpeg</Item>
+        <Item medium="image" caption="imagem17">https://www.antoniofurtado.com.br/db_imagens/20260916184332_WhatsApp%20Image%202026-09-16%20at%2018.38.50%20(2).jpeg</Item>
+        <Item medium="image" caption="imagem18">https://www.antoniofurtado.com.br/db_imagens/20260916184333_WhatsApp%20Image%202026-09-16%20at%2018.38.51.jpeg</Item>
+      </Media>
+      <Details>
+        <UsageType>Residential</UsageType>
+        <PropertyType>Residential / Casa</PropertyType>
+        <Description>Casa para Alugar na Mooca com 2 Quartos e 72 m² – Ótima Localização
+
+Procurando uma casa aconchegante e pronta para morar na Zona Leste de São Paulo? Esta é a oportunidade ideal para quem busca praticidade, conforto e excelente localização no tradicional bairro da Mooca.
+Destaques do Imóvel:
+Área útil: 72 m² bem distribuídos.
+Dormitórios: 2 quartos amplos, arejados e com ótima iluminação natural.
+Salas e Ambientes: Sala de estar confortável, ideal para momentos de descanso e convivência.
+Cozinha e Serviço: Cozinha funcional com boa disposição de espaço e área de serviço independente.
+Banheiro: 1 banheiro social.
+Acabamento: Imóvel recém-pintado e com piso de madeira preservado, pronto para entrar e morar.
+Localização Privilegiada: Localizada na Rua Henrique Dantas, no coração da Mooca, a casa oferece fácil acesso a comércios locais, supermercados, padarias tradicionais, escolas e vias de acesso da região. Próximo às opções de transporte público e estações de trem e metrô como Juventus-Mooca, Bresser-Mooca e Brás.
+Valores:
+Aluguel: R$ 2.300,00 / mês
+Condomínio: Isento
+IPTU: A consultar
+Agende sua visita e venha conhecer seu novo lar na Mooca!</Description>
+        <RentalPrice currency="BRL">2300</RentalPrice>
+        <PropertyAdministrationFee currency="BRL">0</PropertyAdministrationFee>
+        <YearlyTax currency="BRL">0</YearlyTax>
+        <LotArea unit="square metres">72</LotArea>
+        <LivingArea unit="square metres">72</LivingArea>
+        <Bedrooms>2</Bedrooms>
+        <Suites>0</Suites>
+        <Bathrooms>1</Bathrooms>
+        <Garage type="Parking Space">0</Garage>
+      </Details>
+      <Location displayAddress="Street">
+        <Country abbreviation="BR">Brasil</Country>
+        <State abbreviation="SP">SP</State>
+        <City>São Paulo</City>
+        <Neighborhood>Mooca</Neighborhood>
+        <Address>Rua Henrique Dantas</Address>
+        <StreetNumber>14</StreetNumber>
+        <PostalCode>03112-060</PostalCode>
+        <Latitude>-23.5579526</Latitude>
+        <Longitude>-46.6013458</Longitude>
+      </Location>
+      <ContactInfo>
+        <Name>Antonio Furtado</Name>
+        <Email>contato@antoniofurtado.com.br</Email>
+        <Website>https://www.antoniofurtado.com.br</Website>
+        <OfficeName>Antonio Furtado Gestão Patrimonial Imobiliária</OfficeName>
+      </ContactInfo>
+    </Listing>
     <Listing>
       <ListingID>IMOB-00229</ListingID>
       <Title>Apartamento à venda em Jardim Independência, São Paulo</Title>
