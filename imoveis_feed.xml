@@ -4,9 +4,84 @@
     <Provider>Antonio Furtado Gestão Patrimonial Imobiliária</Provider>
     <Email>contato@antoniofurtado.com.br</Email>
     <ContactName>Antonio Furtado</ContactName>
-    <PublishDate>2026-09-16T19:03:11</PublishDate>
+    <PublishDate>2026-09-17T13:50:47</PublishDate>
   </Header>
   <Listings>
+    <Listing>
+      <ListingID>IMOB-00232</ListingID>
+      <Title>Apartamento à venda em Vila Monumento, São Paulo</Title>
+      <TransactionType>For Sale</TransactionType>
+      <PublicationType>STANDARD</PublicationType>
+      <DetailViewUrl>https://www.antoniofurtado.com.br/imovel_232.html</DetailViewUrl>
+      <Media>
+        <Item medium="image" caption="imagem1" primary="true">https://www.antoniofurtado.com.br/db_imagens/20260917123118_WhatsApp%20Image%202026-09-17%20at%2012.01.36%20(1).jpeg</Item>
+        <Item medium="image" caption="imagem2">https://www.antoniofurtado.com.br/db_imagens/20260917123119_WhatsApp%20Image%202026-09-17%20at%2012.01.36%20(2).jpeg</Item>
+        <Item medium="image" caption="imagem3">https://www.antoniofurtado.com.br/db_imagens/20260917123119_WhatsApp%20Image%202026-09-17%20at%2012.01.36.jpeg</Item>
+        <Item medium="image" caption="imagem4">https://www.antoniofurtado.com.br/db_imagens/20260917123119_WhatsApp%20Image%202026-09-17%20at%2012.01.37%20(1).jpeg</Item>
+        <Item medium="image" caption="imagem5">https://www.antoniofurtado.com.br/db_imagens/20260917123119_WhatsApp%20Image%202026-09-17%20at%2012.01.37%20(2).jpeg</Item>
+        <Item medium="image" caption="imagem6">https://www.antoniofurtado.com.br/db_imagens/20260917123119_WhatsApp%20Image%202026-09-17%20at%2012.01.37%20(3).jpeg</Item>
+        <Item medium="image" caption="imagem7">https://www.antoniofurtado.com.br/db_imagens/20260917123119_WhatsApp%20Image%202026-09-17%20at%2012.01.37.jpeg</Item>
+        <Item medium="image" caption="imagem8">https://www.antoniofurtado.com.br/db_imagens/20260917123119_WhatsApp%20Image%202026-09-17%20at%2012.01.38%20(1).jpeg</Item>
+        <Item medium="image" caption="imagem9">https://www.antoniofurtado.com.br/db_imagens/20260917123119_WhatsApp%20Image%202026-09-17%20at%2012.01.38%20(2).jpeg</Item>
+        <Item medium="image" caption="imagem10">https://www.antoniofurtado.com.br/db_imagens/20260917123120_WhatsApp%20Image%202026-09-17%20at%2012.01.38%20(3).jpeg</Item>
+        <Item medium="image" caption="imagem11">https://www.antoniofurtado.com.br/db_imagens/20260917123120_WhatsApp%20Image%202026-09-17%20at%2012.01.38%20(4).jpeg</Item>
+        <Item medium="image" caption="imagem12">https://www.antoniofurtado.com.br/db_imagens/20260917123120_WhatsApp%20Image%202026-09-17%20at%2012.01.38.jpeg</Item>
+        <Item medium="image" caption="imagem13">https://www.antoniofurtado.com.br/db_imagens/20260917123120_WhatsApp%20Image%202026-09-17%20at%2012.01.39%20(1).jpeg</Item>
+        <Item medium="image" caption="imagem14">https://www.antoniofurtado.com.br/db_imagens/20260917123120_WhatsApp%20Image%202026-09-17%20at%2012.01.39%20(2).jpeg</Item>
+        <Item medium="image" caption="imagem15">https://www.antoniofurtado.com.br/db_imagens/20260917123120_WhatsApp%20Image%202026-09-17%20at%2012.01.39%20(3).jpeg</Item>
+        <Item medium="image" caption="imagem16">https://www.antoniofurtado.com.br/db_imagens/20260917123120_WhatsApp%20Image%202026-09-17%20at%2012.01.39.jpeg</Item>
+      </Media>
+      <Details>
+        <UsageType>Residential</UsageType>
+        <PropertyType>Residential / Apartamento</PropertyType>
+        <Description>Se você procura praticidade, conforto e uma localização privilegiada em São Paulo, este apartamento de 63 m² na Vila Monumento é a escolha ideal.
+Localizado na tradicional Avenida Dom Pedro I, em frente à base militar do 4° COMAR (Aeronáutica), o imóvel oferece um ambiente seguro, bem iluminado e pronto para morar.
+Destaques do Apartamento:
+Área útil: 63 m² bem distribuídos
+Dormitórios: 2 quartos espaçosos com armários embutidos
+Vaga de garagem: 1 vaga coberta e fixa
+Banheiro: 1 banheiro social
+Cozinha e Serviço: Cozinha equipada com armários planejados e área de serviço separada
+Infraestrutura e Condomínio:
+Condomínio pet friendly (aceita animais de estimação)
+Custo de condomínio acessível: R$ 240,00/mês
+IPTU: R$ 157,00/mês
+Localização Privilegiada:
+Situado em um dos trechos mais valorizados da Zona Sul de São Paulo, o imóvel garante acesso rápido ao Parque da Independência (Museu do Ipiranga), comércios locais, padarias, farmácias, supermercados e vias de acesso para o Centro e demais regiões da cidade.
+Valores: 
+Venda: R$ 400.000,00
+Condomínio: R$ 240,00
+IPTU: R$ 157,00
+Agende sua visita e venha conhecer seu novo lar na Vila Monumento.</Description>
+        <ListPrice currency="BRL">400000</ListPrice>
+        <PropertyAdministrationFee currency="BRL">240</PropertyAdministrationFee>
+        <YearlyTax currency="BRL">157</YearlyTax>
+        <LotArea unit="square metres">63</LotArea>
+        <LivingArea unit="square metres">63</LivingArea>
+        <Bedrooms>2</Bedrooms>
+        <Suites>0</Suites>
+        <Bathrooms>1</Bathrooms>
+        <Garage type="Parking Space">1</Garage>
+      </Details>
+      <Location displayAddress="Street">
+        <Country abbreviation="BR">Brasil</Country>
+        <State abbreviation="SP">SP</State>
+        <City>São Paulo</City>
+        <Neighborhood>Vila Monumento</Neighborhood>
+        <Address>Avenida Dom Pedro I</Address>
+        <StreetNumber>141</StreetNumber>
+        <Complement>Apto 12</Complement>
+        <PostalCode>01552-001</PostalCode>
+        <Latitude>-23.5706747</Latitude>
+        <Longitude>-46.6111757</Longitude>
+      </Location>
+      <ContactInfo>
+        <Name>Antonio Furtado</Name>
+        <Email>contato@antoniofurtado.com.br</Email>
+        <Website>https://www.antoniofurtado.com.br</Website>
+        <OfficeName>Antonio Furtado Gestão Patrimonial Imobiliária</OfficeName>
+      </ContactInfo>
+    </Listing>
     <Listing>
       <ListingID>IMOB-00231</ListingID>
       <Title>Comercial para alugar em Ipiranga, São Paulo</Title>
