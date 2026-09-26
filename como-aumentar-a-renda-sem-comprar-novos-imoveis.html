@@ -1255,7 +1255,7 @@
             /* Menu vira um painel dropdown de largura total, escondido por
                padrão, aberto ao tocar no hamburguer. Substitui o antigo
                menu horizontal com rolagem, que cortava os itens. */
-            .nav-links {
+            .site-nav-links {
                 position: fixed;
                 top: 76px;
                 left: 0;
@@ -1270,17 +1270,17 @@
                 transition: max-height 0.35s ease;
             }
 
-            .nav-links.active {
+            .site-nav-links.active {
                 max-height: 80vh;
                 overflow-y: auto;
             }
 
-            .nav-links li {
+            .site-nav-links li {
                 width: 100%;
                 border-top: 1px solid rgba(255,255,255,0.08);
             }
 
-            .nav-links a {
+            .site-nav-links a {
                 display: block;
                 width: 100%;
                 padding: 16px 24px;
@@ -1361,7 +1361,7 @@
                 font-size: 18px;
             }
 
-            .nav-links {
+            .site-nav-links {
                 top: 68px;
             }
 
@@ -1380,7 +1380,7 @@
                 padding: 20px 40px;
             }
             
-            .nav-links {
+            .site-nav-links {
                 gap: 30px;
             }
         }
@@ -2050,7 +2050,7 @@
 
             // Menu hamburguer (mobile)
             function toggleMenuMobile(btn) {
-                const nav = document.querySelector('.nav-links');
+                const nav = document.querySelector('.site-nav-links');
                 if (!nav) return;
                 const aberto = nav.classList.toggle('active');
                 btn.classList.toggle('active', aberto);
@@ -2060,11 +2060,11 @@
 
             // Fecha o menu ao clicar em um link ou fora dele
             document.addEventListener('click', function (e) {
-                const nav = document.querySelector('.nav-links');
+                const nav = document.querySelector('.site-nav-links');
                 const btn = document.querySelector('.menu-toggle');
                 if (!nav || !btn || !nav.classList.contains('active')) return;
                 const cliqueDentro = nav.contains(e.target) || btn.contains(e.target);
-                const cliqueEmLink = e.target.closest('.nav-links a');
+                const cliqueEmLink = e.target.closest('.site-nav-links a');
                 if (cliqueEmLink || !cliqueDentro) {
                     nav.classList.remove('active');
                     btn.classList.remove('active');
@@ -2076,7 +2076,7 @@
             // Fecha o menu automaticamente se a tela for redimensionada para desktop
             window.addEventListener('resize', function () {
                 if (window.innerWidth > 768) {
-                    const nav = document.querySelector('.nav-links');
+                    const nav = document.querySelector('.site-nav-links');
                     const btn = document.querySelector('.menu-toggle');
                     if (nav) nav.classList.remove('active');
                     if (btn) {
