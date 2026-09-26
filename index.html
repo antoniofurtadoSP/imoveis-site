@@ -2508,13 +2508,19 @@
                 // ============================================================
                 async function fetchProperties() {
                     try {
-                        const res = await fetch(`${API_BASE}/imoveis?status=Disponível&por_pagina=100`);
-                        const data = await res.json();
-                        if (data.sucesso) {
-                            allProperties = data.imoveis || [];
-                            return allProperties;
-                        }
-                        return [];
+                        let pagina = 1;
+                        let totalPaginas = 1;
+                        let todosImoveis = [];
+                        do {
+                            const res = await fetch(`${API_BASE}/imoveis?status=Disponível&por_pagina=200&pagina=${pagina}`);
+                            const data = await res.json();
+                            if (!data.sucesso) break;
+                            todosImoveis = todosImoveis.concat(data.imoveis || []);
+                            totalPaginas = data.total_paginas || 1;
+                            pagina++;
+                        } while (pagina <= totalPaginas);
+                        allProperties = todosImoveis;
+                        return allProperties;
                     } catch (err) {
                         console.error('Erro ao buscar imóveis:', err);
                         return [];
