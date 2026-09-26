@@ -764,6 +764,7 @@
         /* PAGINAÇÃO */
         .pagination {
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
             align-items: center;
             gap: 10px;
@@ -772,6 +773,7 @@
         }
 
         .pagination-btn {
+            flex-shrink: 0;
             padding: 12px 22px;
             background: white;
             color: var(--dark);
@@ -1388,6 +1390,16 @@
             
             .section {
                 padding: 60px 20px;
+            }
+
+            .pagination {
+                gap: 6px;
+            }
+
+            .pagination-btn {
+                padding: 10px 14px;
+                font-size: 13px;
+                min-width: 40px;
             }
         }
         
