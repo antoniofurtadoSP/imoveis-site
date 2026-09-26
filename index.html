@@ -2716,7 +2716,7 @@ window.aiVoltarTodosImoveis = function() {
 };
 
 const BOTAO_VOLTAR_TODOS = `
-    <div style="text-align:center; margin-top: 28px;">
+    <div style="grid-column: 1 / -1; text-align:center; margin-top: 28px;">
         <button onclick="window.aiVoltarTodosImoveis()" style="background:transparent;border:1px solid rgba(255,255,255,0.25);color:#D4AF37;padding:12px 28px;border-radius:4px;font-weight:600;letter-spacing:0.5px;cursor:pointer;font-size:13px;text-transform:uppercase;">
             Ver todos os imóveis
         </button>
@@ -2732,7 +2732,7 @@ const AI_RESULTADOS_POR_PAGINA = 12;
 
 function gerarPaginacaoAI(totalPaginas) {
     if (totalPaginas <= 1) return '';
-    let html = '<div class="pagination" style="margin-top:28px; margin-bottom: 8px;">';
+    let html = '<div class="pagination" style="grid-column: 1 / -1; margin-top:28px; margin-bottom: 8px;">';
     const anteriorDisabled = aiPaginaAtual === 1 ? 'disabled' : '';
     html += `<button class="pagination-btn" onclick="window.aiIrParaPagina(${aiPaginaAtual - 1})" ${anteriorDisabled}>‹ Anterior</button>`;
     const _janela = (typeof window !== 'undefined' && window.innerWidth <= 480) ? 1 : 2;
