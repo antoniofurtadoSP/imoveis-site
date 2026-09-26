@@ -8347,11 +8347,9 @@ function searchProperties(query) {
         return { ...prop, score, matches: [] };
     });
     scored.sort((a, b) => b.score - a.score);
-    // Quando bairro/tipo/finalidade/quartos/preco realmente restringiram a lista (strict),
-    // mostra todos os resultados relevantes em vez de truncar em 12; o corte de 12 fica
-    // reservado para o fallback totalmente livre (sem nenhum criterio reconhecido na frase).
-    const limite = (candidates === strict) ? Math.min(scored.length, 30) : 12;
-    return scored.slice(0, limite);
+    // Retorna TODOS os resultados relevantes; a exibição é paginada em renderResults,
+    // então não há mais necessidade de truncar a lista aqui (nem em 30, nem em 12).
+    return scored;
 }
 // ============================================================
 // RENDERIZAR RESULTADOS - COM IMAGENS CORRIGIDAS
@@ -8383,9 +8381,52 @@ const BOTAO_VOLTAR_TODOS = `
     </div>
 `;
 
+// Estado da paginação dos resultados do Agente de IA (mantém a busca e a página atual
+// para não precisar refazer a busca a cada clique de paginação).
+let aiUltimosResultados = [];
+let aiUltimaQuery = '';
+let aiPaginaAtual = 1;
+const AI_RESULTADOS_POR_PAGINA = 12;
+
+function gerarPaginacaoAI(totalPaginas) {
+    if (totalPaginas <= 1) return '';
+    let html = '<div class="pagination" style="margin-top:28px; margin-bottom: 8px;">';
+    const anteriorDisabled = aiPaginaAtual === 1 ? 'disabled' : '';
+    html += `<button class="pagination-btn" onclick="window.aiIrParaPagina(${aiPaginaAtual - 1})" ${anteriorDisabled}>‹ Anterior</button>`;
+    for (let i = 1; i <= totalPaginas; i++) {
+        if (i === 1 || i === totalPaginas || (i >= aiPaginaAtual - 2 && i <= aiPaginaAtual + 2)) {
+            const ativo = i === aiPaginaAtual ? 'active' : '';
+            html += `<button class="pagination-btn page-number ${ativo}" onclick="window.aiIrParaPagina(${i})">${i}</button>`;
+        } else if (i === aiPaginaAtual - 3 || i === aiPaginaAtual + 3) {
+            html += '<span style="color:rgba(255,255,255,0.3); padding: 0 6px;">…</span>';
+        }
+    }
+    const proximoDisabled = aiPaginaAtual === totalPaginas ? 'disabled' : '';
+    html += `<button class="pagination-btn" onclick="window.aiIrParaPagina(${aiPaginaAtual + 1})" ${proximoDisabled}>Próximo ›</button>`;
+    html += '</div>';
+    return html;
+}
+
+window.aiIrParaPagina = function(pagina) {
+    aiPaginaAtual = pagina;
+    renderResultsPage();
+    const topoResultados = document.getElementById('ai-results-area');
+    if (topoResultados) topoResultados.scrollIntoView({ behavior: 'smooth', block: 'start' });
+};
+
 function renderResults(matches, query) {
+    aiUltimosResultados = matches || [];
+    aiUltimaQuery = query;
+    aiPaginaAtual = 1;
+    renderResultsPage();
+}
+
+function renderResultsPage() {
     resultsArea.style.display = 'block';
     alternarListagemCompleta(false);
+
+    const matches = aiUltimosResultados;
+    const query = aiUltimaQuery;
 
     if (!matches || matches.length === 0) {
         resultsContent.innerHTML = `
@@ -8402,11 +8443,16 @@ function renderResults(matches, query) {
         return;
     }
 
+    const totalPaginas = Math.max(1, Math.ceil(matches.length / AI_RESULTADOS_POR_PAGINA));
+    aiPaginaAtual = Math.min(Math.max(1, aiPaginaAtual), totalPaginas);
+    const inicioPagina = (aiPaginaAtual - 1) * AI_RESULTADOS_POR_PAGINA;
+    const matchesDaPagina = matches.slice(inicioPagina, inicioPagina + AI_RESULTADOS_POR_PAGINA);
+
     let html = `<div style="margin-bottom: 16px; text-align: left; color: rgba(255,255,255,0.5); font-size: 13px;">
-        🏠 <strong style="color: #D4AF37;">${matches.length}</strong> imóveis encontrados para "${query}"
+        🏠 <strong style="color: #D4AF37;">${matches.length}</strong> imóveis encontrados para "${query}"${totalPaginas > 1 ? ` · página ${aiPaginaAtual} de ${totalPaginas}` : ''}
     </div>`;
 
-    matches.forEach(prop => {
+    matchesDaPagina.forEach(prop => {
         // ============================================================
         // BUSCAR IMAGEM CORRETAMENTE
         // ============================================================
@@ -8483,6 +8529,7 @@ function renderResults(matches, query) {
         `;
     });
 
+    html += gerarPaginacaoAI(totalPaginas);
     html += BOTAO_VOLTAR_TODOS;
 
     resultsContent.innerHTML = html;
