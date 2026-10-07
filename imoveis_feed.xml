@@ -4,9 +4,93 @@
     <Provider>Antonio Furtado Gestão Patrimonial Imobiliária</Provider>
     <Email>contato@antoniofurtado.com.br</Email>
     <ContactName>Antonio Furtado</ContactName>
-    <PublishDate>2026-09-30T23:45:27</PublishDate>
+    <PublishDate>2026-10-07T07:53:17</PublishDate>
   </Header>
   <Listings>
+    <Listing>
+      <ListingID>IMOB-00236</ListingID>
+      <Title>Sobrado à venda em Jardim Papai Noel, São Paulo</Title>
+      <TransactionType>For Sale</TransactionType>
+      <PublicationType>STANDARD</PublicationType>
+      <DetailViewUrl>https://www.antoniofurtado.com.br/imovel_236.html</DetailViewUrl>
+      <Media>
+        <Item medium="image" caption="imagem1" primary="true">https://www.antoniofurtado.com.br/db_imagens/20261007074308_WhatsApp%20Image%202026-10-07%20at%2007.16.18.jpeg</Item>
+        <Item medium="image" caption="imagem2">https://www.antoniofurtado.com.br/db_imagens/20261007074307_WhatsApp%20Image%202026-10-07%20at%2007.15.44.jpeg</Item>
+        <Item medium="image" caption="imagem3">https://www.antoniofurtado.com.br/db_imagens/20261007074307_WhatsApp%20Image%202026-10-07%20at%2007.15.20.jpeg</Item>
+        <Item medium="image" caption="imagem4">https://www.antoniofurtado.com.br/db_imagens/20261007074307_WhatsApp%20Image%202026-10-07%20at%2007.14.34.jpeg</Item>
+        <Item medium="image" caption="imagem5">https://www.antoniofurtado.com.br/db_imagens/20261007074308_WhatsApp%20Image%202026-10-07%20at%2007.16.48.jpeg</Item>
+        <Item medium="image" caption="imagem6">https://www.antoniofurtado.com.br/db_imagens/20261007074308_WhatsApp%20Image%202026-10-07%20at%2007.17.11.jpeg</Item>
+        <Item medium="image" caption="imagem7">https://www.antoniofurtado.com.br/db_imagens/20261007074308_WhatsApp%20Image%202026-10-07%20at%2007.17.38.jpeg</Item>
+        <Item medium="image" caption="imagem8">https://www.antoniofurtado.com.br/db_imagens/20261007074308_WhatsApp%20Image%202026-10-07%20at%2007.18.02.jpeg</Item>
+        <Item medium="image" caption="imagem9">https://www.antoniofurtado.com.br/db_imagens/20261007074308_WhatsApp%20Image%202026-10-07%20at%2007.18.32.jpeg</Item>
+        <Item medium="image" caption="imagem10">https://www.antoniofurtado.com.br/db_imagens/20261007074308_WhatsApp%20Image%202026-10-07%20at%2007.19.03.jpeg</Item>
+        <Item medium="image" caption="imagem11">https://www.antoniofurtado.com.br/db_imagens/20261007074308_WhatsApp%20Image%202026-10-07%20at%2007.19.30.jpeg</Item>
+        <Item medium="image" caption="imagem12">https://www.antoniofurtado.com.br/db_imagens/20261007074308_WhatsApp%20Image%202026-10-07%20at%2007.19.54.jpeg</Item>
+        <Item medium="image" caption="imagem13">https://www.antoniofurtado.com.br/db_imagens/20261007074308_WhatsApp%20Image%202026-10-07%20at%2007.20.18.jpeg</Item>
+        <Item medium="image" caption="imagem14">https://www.antoniofurtado.com.br/db_imagens/20261007074308_WhatsApp%20Image%202026-10-07%20at%2007.20.38.jpeg</Item>
+        <Item medium="image" caption="imagem15">https://www.antoniofurtado.com.br/db_imagens/20261007074308_WhatsApp%20Image%202026-10-07%20at%2007.20.57.jpeg</Item>
+        <Item medium="image" caption="imagem16">https://www.antoniofurtado.com.br/db_imagens/20261007074308_WhatsApp%20Image%202026-10-07%20at%2007.21.17.jpeg</Item>
+        <Item medium="image" caption="imagem17">https://www.antoniofurtado.com.br/db_imagens/20261007074309_WhatsApp%20Image%202026-10-07%20at%2007.21.41.jpeg</Item>
+        <Item medium="image" caption="imagem18">https://www.antoniofurtado.com.br/db_imagens/20261007074309_WhatsApp%20Image%202026-10-07%20at%2007.22.06.jpeg</Item>
+        <Item medium="image" caption="imagem19">https://www.antoniofurtado.com.br/db_imagens/20261007074309_WhatsApp%20Image%202026-10-07%20at%2007.22.26.jpeg</Item>
+        <Item medium="image" caption="imagem20">https://www.antoniofurtado.com.br/db_imagens/20261007074309_WhatsApp%20Image%202026-10-07%20at%2007.22.51.jpeg</Item>
+        <Item medium="image" caption="imagem21">https://www.antoniofurtado.com.br/db_imagens/20261007074309_WhatsApp%20Image%202026-10-07%20at%2007.23.11.jpeg</Item>
+        <Item medium="image" caption="imagem22">https://www.antoniofurtado.com.br/db_imagens/20261007074309_WhatsApp%20Image%202026-10-07%20at%2007.23.34.jpeg</Item>
+        <Item medium="image" caption="imagem23">https://www.antoniofurtado.com.br/db_imagens/20261007074309_WhatsApp%20Image%202026-10-07%20at%2007.23.58.jpeg</Item>
+        <Item medium="image" caption="imagem24">https://www.antoniofurtado.com.br/db_imagens/20261007074309_WhatsApp%20Image%202026-10-07%20at%2007.24.19.jpeg</Item>
+        <Item medium="image" caption="imagem25">https://www.antoniofurtado.com.br/db_imagens/20261007074309_WhatsApp%20Image%202026-10-07%20at%2007.24.51.jpeg</Item>
+        <Item medium="image" caption="imagem26">https://www.antoniofurtado.com.br/db_imagens/20261007074309_WhatsApp%20Image%202026-10-07%20at%2007.25.10.jpeg</Item>
+      </Media>
+      <Details>
+        <UsageType>Residential</UsageType>
+        <PropertyType>Residential / Sobrado</PropertyType>
+        <Description>Oportunidade de locação no Brás. Sobrado geminado amplo e totalmente reformado, localizado na Rua Piratininga. Excelente opção para quem busca espaço, conforto e praticidade em uma das regiões mais tradicionais e acessíveis de São Paulo.
+Destaques do Imóvel
+Localização Estratégica: Situado na Rua Piratininga, no coração do Brás. Região com forte infraestrutura de comércio, serviços, transporte e fácil acesso às principais vias da cidade.
+Espaço e Conforto: São 200 m² de área útil com cômodos amplos, arejados e iluminação natural favorecida.
+Imóvel Reformado: Estrutura renovada, pronta para morar, unindo o charme do piso em taco de madeira trabalhado ao acabamento moderno.
+Pet Friendly: Seu animal de estimação é bem-vindo.
+Distribuição dos Cômodos
+3 dormitórios amplos
+Ampla sala de estar para dois ambientes
+Cozinha espaçosa
+2 banheiros
+Área de serviço independente
+Quintal nos fundos
+Valores e Condições
+Aluguel: R$ 3.000,00/mês
+IPTU: R$ 300,00/mês (aproximadamente)
+Total: R$ 3.300,00/mês
+Não possui vaga de garagem.
+Entre em contato para agendar uma visita e conhecer os detalhes deste sobrado na Rua Piratininga. CRECI 208024</Description>
+        <ListPrice currency="BRL">0</ListPrice>
+        <PropertyAdministrationFee currency="BRL">0</PropertyAdministrationFee>
+        <YearlyTax currency="BRL">300</YearlyTax>
+        <LotArea unit="square metres">200</LotArea>
+        <LivingArea unit="square metres">200</LivingArea>
+        <Bedrooms>3</Bedrooms>
+        <Suites>0</Suites>
+        <Bathrooms>2</Bathrooms>
+        <Garage type="Parking Space">0</Garage>
+      </Details>
+      <Location displayAddress="Street">
+        <Country abbreviation="BR">Brasil</Country>
+        <State abbreviation="SP">SP</State>
+        <City>São Paulo</City>
+        <Neighborhood>Jardim Papai Noel</Neighborhood>
+        <Address>Rua Piratininga</Address>
+        <StreetNumber>717</StreetNumber>
+        <PostalCode>04884-370</PostalCode>
+        <Latitude>-23.5468601</Latitude>
+        <Longitude>-46.6198693</Longitude>
+      </Location>
+      <ContactInfo>
+        <Name>Antonio Furtado</Name>
+        <Email>contato@antoniofurtado.com.br</Email>
+        <Website>https://www.antoniofurtado.com.br</Website>
+        <OfficeName>Antonio Furtado Gestão Patrimonial Imobiliária</OfficeName>
+      </ContactInfo>
+    </Listing>
     <Listing>
       <ListingID>IMOB-00235</ListingID>
       <Title>Apartamento para alugar em Vila Nova Conceição, São Paulo</Title>
