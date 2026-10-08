@@ -4,13 +4,13 @@
     <Provider>Antonio Furtado Gestão Patrimonial Imobiliária</Provider>
     <Email>contato@antoniofurtado.com.br</Email>
     <ContactName>Antonio Furtado</ContactName>
-    <PublishDate>2026-10-07T18:59:27</PublishDate>
+    <PublishDate>2026-10-08T19:36:21</PublishDate>
   </Header>
   <Listings>
     <Listing>
       <ListingID>IMOB-00236</ListingID>
-      <Title>Sobrado à venda em Jardim Papai Noel, São Paulo</Title>
-      <TransactionType>For Sale</TransactionType>
+      <Title>Sobrado para alugar em Brás, São Paulo</Title>
+      <TransactionType>For Rent</TransactionType>
       <PublicationType>STANDARD</PublicationType>
       <DetailViewUrl>https://www.antoniofurtado.com.br/imovel_236.html</DetailViewUrl>
       <Media>
@@ -63,7 +63,7 @@ IPTU: R$ 300,00/mês (aproximadamente)
 Total: R$ 3.300,00/mês
 Não possui vaga de garagem.
 Entre em contato para agendar uma visita e conhecer os detalhes deste sobrado na Rua Piratininga. CRECI 208024</Description>
-        <ListPrice currency="BRL">0</ListPrice>
+        <RentalPrice currency="BRL">3000</RentalPrice>
         <PropertyAdministrationFee currency="BRL">0</PropertyAdministrationFee>
         <YearlyTax currency="BRL">300</YearlyTax>
         <LotArea unit="square metres">200</LotArea>
@@ -77,12 +77,13 @@ Entre em contato para agendar uma visita e conhecer os detalhes deste sobrado na
         <Country abbreviation="BR">Brasil</Country>
         <State abbreviation="SP">SP</State>
         <City>São Paulo</City>
-        <Neighborhood>Jardim Papai Noel</Neighborhood>
+        <Neighborhood>Brás</Neighborhood>
         <Address>Rua Piratininga</Address>
         <StreetNumber>717</StreetNumber>
-        <PostalCode>04884-370</PostalCode>
-        <Latitude>-23.5468601</Latitude>
-        <Longitude>-46.6198693</Longitude>
+        <Complement>lado par</Complement>
+        <PostalCode>03042-000</PostalCode>
+        <Latitude>-23.5508748</Latitude>
+        <Longitude>-46.6169092</Longitude>
       </Location>
       <ContactInfo>
         <Name>Antonio Furtado</Name>
