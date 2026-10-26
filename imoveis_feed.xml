@@ -4,9 +4,99 @@
     <Provider>Antonio Furtado Gestão Patrimonial Imobiliária</Provider>
     <Email>contato@antoniofurtado.com.br</Email>
     <ContactName>Antonio Furtado</ContactName>
-    <PublishDate>2026-10-24T00:48:07</PublishDate>
+    <PublishDate>2026-10-26T00:16:56</PublishDate>
   </Header>
   <Listings>
+    <Listing>
+      <ListingID>IMOB-00237</ListingID>
+      <Title>Apartamento para alugar em Tatuapé, São Paulo</Title>
+      <TransactionType>For Rent</TransactionType>
+      <PublicationType>STANDARD</PublicationType>
+      <DetailViewUrl>https://www.antoniofurtado.com.br/imovel_237.html</DetailViewUrl>
+      <Media>
+        <Item medium="image" caption="imagem1" primary="true">https://www.antoniofurtado.com.br/db_imagens/20261025235626_WhatsApp%20Image%202026-10-22%20at%2012.23.25.jpeg</Item>
+        <Item medium="image" caption="imagem2">https://www.antoniofurtado.com.br/db_imagens/20261025235624_WhatsApp%20Image%202026-10-22%20at%2012.23.21%20(3).jpeg</Item>
+        <Item medium="image" caption="imagem3">https://www.antoniofurtado.com.br/db_imagens/20261025235626_WhatsApp%20Image%202026-10-22%20at%2012.23.26.jpeg</Item>
+        <Item medium="image" caption="imagem4">https://www.antoniofurtado.com.br/db_imagens/20261025235624_WhatsApp%20Image%202026-10-22%20at%2012.23.22.jpeg</Item>
+        <Item medium="image" caption="imagem5">https://www.antoniofurtado.com.br/db_imagens/20261025235626_WhatsApp%20Image%202026-10-22%20at%2012.23.26%20(2).jpeg</Item>
+        <Item medium="image" caption="imagem6">https://www.antoniofurtado.com.br/db_imagens/20261025235623_WhatsApp%20Image%202026-10-22%20at%2012.23.15%20(1).jpeg</Item>
+        <Item medium="image" caption="imagem7">https://www.antoniofurtado.com.br/db_imagens/20261025235623_WhatsApp%20Image%202026-10-22%20at%2012.23.16.jpeg</Item>
+        <Item medium="image" caption="imagem8">https://www.antoniofurtado.com.br/db_imagens/20261025235623_WhatsApp%20Image%202026-10-22%20at%2012.23.20.jpeg</Item>
+        <Item medium="image" caption="imagem9">https://www.antoniofurtado.com.br/db_imagens/20261025235623_WhatsApp%20Image%202026-10-22%20at%2012.23.21%20(1).jpeg</Item>
+        <Item medium="image" caption="imagem10">https://www.antoniofurtado.com.br/db_imagens/20261025235624_WhatsApp%20Image%202026-10-22%20at%2012.23.21%20(2).jpeg</Item>
+        <Item medium="image" caption="imagem11">https://www.antoniofurtado.com.br/db_imagens/20261025235624_WhatsApp%20Image%202026-10-22%20at%2012.23.21.jpeg</Item>
+        <Item medium="image" caption="imagem12">https://www.antoniofurtado.com.br/db_imagens/20261025235624_WhatsApp%20Image%202026-10-22%20at%2012.23.22%20(1).jpeg</Item>
+        <Item medium="image" caption="imagem13">https://www.antoniofurtado.com.br/db_imagens/20261025235624_WhatsApp%20Image%202026-10-22%20at%2012.23.22%20(2).jpeg</Item>
+        <Item medium="image" caption="imagem14">https://www.antoniofurtado.com.br/db_imagens/20261025235624_WhatsApp%20Image%202026-10-22%20at%2012.23.22%20(3).jpeg</Item>
+        <Item medium="image" caption="imagem15">https://www.antoniofurtado.com.br/db_imagens/20261025235625_WhatsApp%20Image%202026-10-22%20at%2012.23.23%20(1).jpeg</Item>
+        <Item medium="image" caption="imagem16">https://www.antoniofurtado.com.br/db_imagens/20261025235625_WhatsApp%20Image%202026-10-22%20at%2012.23.23%20(2).jpeg</Item>
+        <Item medium="image" caption="imagem17">https://www.antoniofurtado.com.br/db_imagens/20261025235625_WhatsApp%20Image%202026-10-22%20at%2012.23.23.jpeg</Item>
+        <Item medium="image" caption="imagem18">https://www.antoniofurtado.com.br/db_imagens/20261025235625_WhatsApp%20Image%202026-10-22%20at%2012.23.24%20(1).jpeg</Item>
+        <Item medium="image" caption="imagem19">https://www.antoniofurtado.com.br/db_imagens/20261025235625_WhatsApp%20Image%202026-10-22%20at%2012.23.24%20(2).jpeg</Item>
+        <Item medium="image" caption="imagem20">https://www.antoniofurtado.com.br/db_imagens/20261025235625_WhatsApp%20Image%202026-10-22%20at%2012.23.24%20(3).jpeg</Item>
+        <Item medium="image" caption="imagem21">https://www.antoniofurtado.com.br/db_imagens/20261025235625_WhatsApp%20Image%202026-10-22%20at%2012.23.24.jpeg</Item>
+        <Item medium="image" caption="imagem22">https://www.antoniofurtado.com.br/db_imagens/20261025235626_WhatsApp%20Image%202026-10-22%20at%2012.23.26%20(1).jpeg</Item>
+        <Item medium="image" caption="imagem23">https://www.antoniofurtado.com.br/db_imagens/20261025235626_WhatsApp%20Image%202026-10-22%20at%2012.23.26%20(3).jpeg</Item>
+        <Item medium="image" caption="imagem24">https://www.antoniofurtado.com.br/db_imagens/20261025235626_WhatsApp%20Image%202026-10-22%20at%2012.23.26%20(4).jpeg</Item>
+        <Item medium="image" caption="imagem25">https://www.antoniofurtado.com.br/db_imagens/20261025235626_WhatsApp%20Image%202026-10-22%20at%2012.23.27%20(1).jpeg</Item>
+        <Item medium="image" caption="imagem26">https://www.antoniofurtado.com.br/db_imagens/20261025235626_WhatsApp%20Image%202026-10-22%20at%2012.23.27%20(2).jpeg</Item>
+        <Item medium="image" caption="imagem27">https://www.antoniofurtado.com.br/db_imagens/20261025235627_WhatsApp%20Image%202026-10-22%20at%2012.23.27.jpeg</Item>
+        <Item medium="image" caption="imagem28">https://www.antoniofurtado.com.br/db_imagens/20261025235627_WhatsApp%20Image%202026-10-22%20at%2012.23.28%20(1).jpeg</Item>
+        <Item medium="image" caption="imagem29">https://www.antoniofurtado.com.br/db_imagens/20261025235627_WhatsApp%20Image%202026-10-22%20at%2012.23.28%20(2).jpeg</Item>
+        <Item medium="image" caption="imagem30">https://www.antoniofurtado.com.br/db_imagens/20261025235627_WhatsApp%20Image%202026-10-22%20at%2012.23.28%20(3).jpeg</Item>
+        <Item medium="image" caption="imagem31">https://www.antoniofurtado.com.br/db_imagens/20261025235627_WhatsApp%20Image%202026-10-22%20at%2012.23.28.jpeg</Item>
+        <Item medium="image" caption="imagem32">https://www.antoniofurtado.com.br/db_imagens/20261025235627_WhatsApp%20Image%202026-10-22%20at%2012.23.29%20(1).jpeg</Item>
+        <Item medium="image" caption="imagem33">https://www.antoniofurtado.com.br/db_imagens/20261025235627_WhatsApp%20Image%202026-10-22%20at%2012.23.29.jpeg</Item>
+        <Item medium="image" caption="imagem34">https://www.antoniofurtado.com.br/db_imagens/20261025235628_WhatsApp%20Image%202026-10-22%20at%2012.23.14.jpeg</Item>
+        <Item medium="image" caption="imagem35">https://www.antoniofurtado.com.br/db_imagens/20261025235628_WhatsApp%20Image%202026-10-22%20at%2012.23.15.jpeg</Item>
+      </Media>
+      <Details>
+        <UsageType>Residential</UsageType>
+        <PropertyType>Residential / Apartamento</PropertyType>
+        <Description>Apartamento para Alugar no Tatuapé ao Lado do Parque do Piqueri
+Excelente oportunidade de locação no Tatuapé, localizado em um condomínio clube completo e com infraestrutura diferenciada, bem ao lado do Parque do Piqueri. O imóvel oferece o equilíbrio ideal entre praticidade, lazer e tranquilidade para o seu dia a dia.
+Características do Imóvel:
+Área útil de 92m² com excelente distribuição dos espaços.
+3 dormitórios, sendo 1 suíte, além de quarto de serviço.
+3 banheiros no total.
+Sacada equipada com persiana de vidro.
+2 vagas de garagem demarcadas.
+Estrutura do Condomínio: O condomínio conta com lazer completo, portaria e segurança 24 horas, elevador e áreas comuns voltadas para o conforto dos moradores, incluindo academia e piscina.
+Condições de Locação:
+Valor do aluguel: R$ 5.500 por mês.
+Condomínio: R$ 900 por mês.
+IPTU: R$ 180 por mês.
+Garantias aceitas: Seguro fiança, fiador ou 3 meses de caução.
+Entre em contato diretamente com o proprietário pelos canais de atendimento da plataforma para agendar uma visita e conhecer o imóvel.</Description>
+        <RentalPrice currency="BRL">5500</RentalPrice>
+        <PropertyAdministrationFee currency="BRL">900</PropertyAdministrationFee>
+        <YearlyTax currency="BRL">180</YearlyTax>
+        <LotArea unit="square metres">92</LotArea>
+        <LivingArea unit="square metres">92</LivingArea>
+        <Bedrooms>3</Bedrooms>
+        <Suites>1</Suites>
+        <Bathrooms>3</Bathrooms>
+        <Garage type="Parking Space">2</Garage>
+      </Details>
+      <Location displayAddress="Street">
+        <Country abbreviation="BR">Brasil</Country>
+        <State abbreviation="SP">SP</State>
+        <City>São Paulo</City>
+        <Neighborhood>Tatuapé</Neighborhood>
+        <Address>Rua Tuiuti</Address>
+        <StreetNumber>589</StreetNumber>
+        <Complement>589</Complement>
+        <PostalCode>03081-900</PostalCode>
+        <Latitude>-23.5234251</Latitude>
+        <Longitude>-46.5749868</Longitude>
+      </Location>
+      <ContactInfo>
+        <Name>Antonio Furtado</Name>
+        <Email>contato@antoniofurtado.com.br</Email>
+        <Website>https://www.antoniofurtado.com.br</Website>
+        <OfficeName>Antonio Furtado Gestão Patrimonial Imobiliária</OfficeName>
+      </ContactInfo>
+    </Listing>
     <Listing>
       <ListingID>IMOB-00236</ListingID>
       <Title>Sobrado para alugar em Brás, São Paulo</Title>
