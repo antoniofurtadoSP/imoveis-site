@@ -4,9 +4,119 @@
     <Provider>Antonio Furtado Gestão Patrimonial Imobiliária</Provider>
     <Email>contato@antoniofurtado.com.br</Email>
     <ContactName>Antonio Furtado</ContactName>
-    <PublishDate>2026-11-03T22:12:33</PublishDate>
+    <PublishDate>2026-11-04T21:02:28</PublishDate>
   </Header>
   <Listings>
+    <Listing>
+      <ListingID>IMOB-00238</ListingID>
+      <Title>Apartamento à venda em Tatuapé, São Paulo</Title>
+      <TransactionType>For Sale</TransactionType>
+      <PublicationType>STANDARD</PublicationType>
+      <DetailViewUrl>https://www.antoniofurtado.com.br/imovel_238.html</DetailViewUrl>
+      <Media>
+        <Item medium="image" caption="imagem1" primary="true">https://www.antoniofurtado.com.br/db_imagens/20261104204739_WhatsApp%20Image%202026-10-27%20at%2017.41.10.jpeg</Item>
+        <Item medium="image" caption="imagem2">https://www.antoniofurtado.com.br/db_imagens/20261104204739_WhatsApp%20Image%202026-10-27%20at%2017.41.09%20(1).jpeg</Item>
+        <Item medium="image" caption="imagem3">https://www.antoniofurtado.com.br/db_imagens/20261104204739_WhatsApp%20Image%202026-10-27%20at%2017.41.09.jpeg</Item>
+        <Item medium="image" caption="imagem4">https://www.antoniofurtado.com.br/db_imagens/20261104204739_WhatsApp%20Image%202026-10-27%20at%2017.41.10%20(1).jpeg</Item>
+        <Item medium="image" caption="imagem5">https://www.antoniofurtado.com.br/db_imagens/20261104204739_WhatsApp%20Image%202026-10-27%20at%2017.41.10%20(2).jpeg</Item>
+        <Item medium="image" caption="imagem6">https://www.antoniofurtado.com.br/db_imagens/20261104204739_WhatsApp%20Image%202026-10-27%20at%2017.41.10%20(3).jpeg</Item>
+        <Item medium="image" caption="imagem7">https://www.antoniofurtado.com.br/db_imagens/20261104204739_WhatsApp%20Image%202026-10-27%20at%2017.41.11%20(1).jpeg</Item>
+        <Item medium="image" caption="imagem8">https://www.antoniofurtado.com.br/db_imagens/20261104204739_WhatsApp%20Image%202026-10-27%20at%2017.41.11%20(2).jpeg</Item>
+        <Item medium="image" caption="imagem9">https://www.antoniofurtado.com.br/db_imagens/20261104204740_WhatsApp%20Image%202026-10-27%20at%2017.41.11%20(3).jpeg</Item>
+        <Item medium="image" caption="imagem10">https://www.antoniofurtado.com.br/db_imagens/20261104204740_WhatsApp%20Image%202026-10-27%20at%2017.41.11.jpeg</Item>
+        <Item medium="image" caption="imagem11">https://www.antoniofurtado.com.br/db_imagens/20261104204740_WhatsApp%20Image%202026-10-27%20at%2017.41.12.jpeg</Item>
+        <Item medium="image" caption="imagem12">https://www.antoniofurtado.com.br/db_imagens/20261104204740_WhatsApp%20Image%202026-10-27%20at%2017.41.33%20(3).jpeg</Item>
+        <Item medium="image" caption="imagem13">https://www.antoniofurtado.com.br/db_imagens/20261104204740_WhatsApp%20Image%202026-10-27%20at%2017.41.34%20(1).jpeg</Item>
+        <Item medium="image" caption="imagem14">https://www.antoniofurtado.com.br/db_imagens/20261104204740_WhatsApp%20Image%202026-10-27%20at%2017.41.34.jpeg</Item>
+        <Item medium="image" caption="imagem15">https://www.antoniofurtado.com.br/db_imagens/20261104204741_WhatsApp%20Image%202026-10-27%20at%2017.41.33%20(1).jpeg</Item>
+        <Item medium="image" caption="imagem16">https://www.antoniofurtado.com.br/db_imagens/20261104204741_WhatsApp%20Image%202026-10-27%20at%2017.41.33%20(2).jpeg</Item>
+        <Item medium="image" caption="imagem17">https://www.antoniofurtado.com.br/db_imagens/20261104204741_WhatsApp%20Image%202026-10-27%20at%2017.41.33.jpeg</Item>
+        <Item medium="image" caption="imagem18">https://www.antoniofurtado.com.br/db_imagens/20261104204741_WhatsApp%20Image%202026-10-27%20at%2017.41.50%20(1).jpeg</Item>
+        <Item medium="image" caption="imagem19">https://www.antoniofurtado.com.br/db_imagens/20261104204741_WhatsApp%20Image%202026-10-27%20at%2017.41.50.jpeg</Item>
+        <Item medium="image" caption="imagem20">https://www.antoniofurtado.com.br/db_imagens/20261104204741_WhatsApp%20Image%202026-10-27%20at%2017.41.51%20(1).jpeg</Item>
+        <Item medium="image" caption="imagem21">https://www.antoniofurtado.com.br/db_imagens/20261104204741_WhatsApp%20Image%202026-10-27%20at%2017.41.51%20(2).jpeg</Item>
+        <Item medium="image" caption="imagem22">https://www.antoniofurtado.com.br/db_imagens/20261104204741_WhatsApp%20Image%202026-10-27%20at%2017.41.51%20(3).jpeg</Item>
+        <Item medium="image" caption="imagem23">https://www.antoniofurtado.com.br/db_imagens/20261104204742_WhatsApp%20Image%202026-10-27%20at%2017.41.51.jpeg</Item>
+        <Item medium="image" caption="imagem24">https://www.antoniofurtado.com.br/db_imagens/20261104204742_WhatsApp%20Image%202026-10-27%20at%2017.41.52.jpeg</Item>
+        <Item medium="image" caption="imagem25">https://www.antoniofurtado.com.br/db_imagens/20261104204742_WhatsApp%20Image%202026-10-27%20at%2017.42.35%20(2).jpeg</Item>
+        <Item medium="image" caption="imagem26">https://www.antoniofurtado.com.br/db_imagens/20261104204742_WhatsApp%20Image%202026-10-27%20at%2017.42.32.jpeg</Item>
+        <Item medium="image" caption="imagem27">https://www.antoniofurtado.com.br/db_imagens/20261104204742_WhatsApp%20Image%202026-10-27%20at%2017.42.33%20(1).jpeg</Item>
+        <Item medium="image" caption="imagem28">https://www.antoniofurtado.com.br/db_imagens/20261104204742_WhatsApp%20Image%202026-10-27%20at%2017.42.33%20(2).jpeg</Item>
+        <Item medium="image" caption="imagem29">https://www.antoniofurtado.com.br/db_imagens/20261104204742_WhatsApp%20Image%202026-10-27%20at%2017.42.33%20(3).jpeg</Item>
+        <Item medium="image" caption="imagem30">https://www.antoniofurtado.com.br/db_imagens/20261104204742_WhatsApp%20Image%202026-10-27%20at%2017.42.33.jpeg</Item>
+        <Item medium="image" caption="imagem31">https://www.antoniofurtado.com.br/db_imagens/20261104204743_WhatsApp%20Image%202026-10-27%20at%2017.42.34.jpeg</Item>
+        <Item medium="image" caption="imagem32">https://www.antoniofurtado.com.br/db_imagens/20261104204743_WhatsApp%20Image%202026-10-27%20at%2017.42.35%20(1).jpeg</Item>
+        <Item medium="image" caption="imagem33">https://www.antoniofurtado.com.br/db_imagens/20261104204743_WhatsApp%20Image%202026-10-27%20at%2017.42.35.jpeg</Item>
+        <Item medium="image" caption="imagem34">https://www.antoniofurtado.com.br/db_imagens/20261104204743_WhatsApp%20Image%202026-10-27%20at%2017.42.36%20(1).jpeg</Item>
+        <Item medium="image" caption="imagem35">https://www.antoniofurtado.com.br/db_imagens/20261104204743_WhatsApp%20Image%202026-10-27%20at%2017.42.36%20(2).jpeg</Item>
+        <Item medium="image" caption="imagem36">https://www.antoniofurtado.com.br/db_imagens/20261104204743_WhatsApp%20Image%202026-10-27%20at%2017.42.36.jpeg</Item>
+        <Item medium="image" caption="imagem37">https://www.antoniofurtado.com.br/db_imagens/20261104204743_WhatsApp%20Image%202026-10-27%20at%2017.42.37%20(1).jpeg</Item>
+        <Item medium="image" caption="imagem38">https://www.antoniofurtado.com.br/db_imagens/20261104204744_WhatsApp%20Image%202026-10-27%20at%2017.42.37%20(2).jpeg</Item>
+        <Item medium="image" caption="imagem39">https://www.antoniofurtado.com.br/db_imagens/20261104204744_WhatsApp%20Image%202026-10-27%20at%2017.42.37%20(3).jpeg</Item>
+        <Item medium="image" caption="imagem40">https://www.antoniofurtado.com.br/db_imagens/20261104204744_WhatsApp%20Image%202026-10-27%20at%2017.42.37.jpeg</Item>
+        <Item medium="image" caption="imagem41">https://www.antoniofurtado.com.br/db_imagens/20261104204744_WhatsApp%20Image%202026-10-27%20at%2017.42.38%20(1).jpeg</Item>
+        <Item medium="image" caption="imagem42">https://www.antoniofurtado.com.br/db_imagens/20261104204744_WhatsApp%20Image%202026-10-27%20at%2017.42.38%20(2).jpeg</Item>
+        <Item medium="image" caption="imagem43">https://www.antoniofurtado.com.br/db_imagens/20261104204744_WhatsApp%20Image%202026-10-27%20at%2017.42.38.jpeg</Item>
+        <Item medium="image" caption="imagem44">https://www.antoniofurtado.com.br/db_imagens/20261104204744_WhatsApp%20Image%202026-10-27%20at%2017.46.39%20(1).jpeg</Item>
+        <Item medium="image" caption="imagem45">https://www.antoniofurtado.com.br/db_imagens/20261104204744_WhatsApp%20Image%202026-10-27%20at%2017.46.39%20(2).jpeg</Item>
+        <Item medium="image" caption="imagem46">https://www.antoniofurtado.com.br/db_imagens/20261104204745_WhatsApp%20Image%202026-10-27%20at%2017.46.39%20(3).jpeg</Item>
+        <Item medium="image" caption="imagem47">https://www.antoniofurtado.com.br/db_imagens/20261104204745_WhatsApp%20Image%202026-10-27%20at%2017.46.39.jpeg</Item>
+        <Item medium="image" caption="imagem48">https://www.antoniofurtado.com.br/db_imagens/20261104204745_WhatsApp%20Image%202026-10-27%20at%2017.46.56%20(2).jpeg</Item>
+        <Item medium="image" caption="imagem49">https://www.antoniofurtado.com.br/db_imagens/20261104204745_WhatsApp%20Image%202026-10-27%20at%2017.46.56%20(3).jpeg</Item>
+        <Item medium="image" caption="imagem50">https://www.antoniofurtado.com.br/db_imagens/20261104204745_WhatsApp%20Image%202026-10-27%20at%2017.46.55%20(1).jpeg</Item>
+        <Item medium="image" caption="imagem51">https://www.antoniofurtado.com.br/db_imagens/20261104204745_WhatsApp%20Image%202026-10-27%20at%2017.46.55.jpeg</Item>
+        <Item medium="image" caption="imagem52">https://www.antoniofurtado.com.br/db_imagens/20261104204745_WhatsApp%20Image%202026-10-27%20at%2017.46.56%20(1).jpeg</Item>
+        <Item medium="image" caption="imagem53">https://www.antoniofurtado.com.br/db_imagens/20261104204746_WhatsApp%20Image%202026-10-27%20at%2017.46.56.jpeg</Item>
+      </Media>
+      <Details>
+        <UsageType>Residential</UsageType>
+        <PropertyType>Residential / Apartamento</PropertyType>
+        <Description>Apartamento Duplex à Venda no Tatuapé com 3 Quartos e Lazer Completo 
+Descrição do Imóvel
+Se você procura conforto, sofisticação e localização privilegiada na Zona Leste de São Paulo, este apartamento duplex à venda no Tatuapé é a escolha ideal. Com 128 m² de área útil, o imóvel oferece uma planta muito bem distribuída, ideal para famílias que valorizam o bem-estar.
+Diferenciais do Apartamento:
+3 dormitórios, sendo 1 suíte equipada com sacada privativa.
+Ambientes integrados: ampla sala de estar e sala de jantar com varanda.
+Cozinha planejada repleta de armários.
+Área de serviço funcional com armários, despensa, banheiro de empregada e entrada de serviço independente.
+2 vagas de garagem demarcadas e depósito privativo.
+Lazer e Comodidades no Condomínio:
+O Condomínio Parque Imperial oferece infraestrutura completa de lazer e segurança para toda a família:
+Piscina aquecida adulta e infantil com cascata.
+Sauna e academia nova equipada.
+Salão de festas e espaço com churrasqueira.
+Quadra poliesportiva, playground e brinquedoteca.
+Localização Privilegiada no Tatuapé:
+Localizado na Rua Aguapeí, na Vila Santo Estevão, o bairro é um dos mais valorizados de São Paulo. A região conta com excelente infraestrutura, estando próxima a escolas, universidades, hospitais, laboratórios, padarias, restaurantes renomados e opções variadas de comércio. Além disso, possui fácil acesso às principais vias da cidade e transporte público eficiente.</Description>
+        <ListPrice currency="BRL">1180000</ListPrice>
+        <PropertyAdministrationFee currency="BRL">1830</PropertyAdministrationFee>
+        <YearlyTax currency="BRL">940</YearlyTax>
+        <LotArea unit="square metres">128</LotArea>
+        <LivingArea unit="square metres">128</LivingArea>
+        <Bedrooms>3</Bedrooms>
+        <Suites>1</Suites>
+        <Bathrooms>2</Bathrooms>
+        <Garage type="Parking Space">2</Garage>
+      </Details>
+      <Location displayAddress="Street">
+        <Country abbreviation="BR">Brasil</Country>
+        <State abbreviation="SP">SP</State>
+        <City>São Paulo</City>
+        <Neighborhood>Tatuapé</Neighborhood>
+        <Address>Rua Aguapeí</Address>
+        <StreetNumber>235</StreetNumber>
+        <Complement>apto 43</Complement>
+        <PostalCode>03325-000</PostalCode>
+        <Latitude>-23.5516699</Latitude>
+        <Longitude>-46.5586308</Longitude>
+      </Location>
+      <ContactInfo>
+        <Name>Antonio Furtado</Name>
+        <Email>contato@antoniofurtado.com.br</Email>
+        <Website>https://www.antoniofurtado.com.br</Website>
+        <OfficeName>Antonio Furtado Gestão Patrimonial Imobiliária</OfficeName>
+      </ContactInfo>
+    </Listing>
     <Listing>
       <ListingID>IMOB-00237</ListingID>
       <Title>Apartamento para alugar em Tatuapé, São Paulo</Title>
