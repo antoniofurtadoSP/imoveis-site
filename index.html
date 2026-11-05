@@ -2857,7 +2857,7 @@ function renderResultsPage() {
             <div class="property-card ai-filter-property-card" onclick="window.location.href='imovel_${prop.id}.html'">
                 <div class="property-badge" style="background: #c0a062;">${tag}</div>
                 <div class="property-image">
-                    <img src="${imgUrl}" alt="${titulo}" onerror="this.src='https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&q=80'">
+                    <img src="${imgUrl}" alt="${titulo}" onerror="this.src='https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&q=80'" loading="lazy" decoding="async">
                 </div>
                 <div class="property-info">
                     <div class="property-location">${prop.bairro || 'São Paulo'} • ${prop.cidade || 'São Paulo'}</div>
